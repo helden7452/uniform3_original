@@ -44,6 +44,7 @@ const nextConfig = {
   },
   compress: true,
   output: 'standalone',
+  distDir: '.next',
   webpack: (config, { isServer }) => {
     config.resolve.alias['@'] = path.resolve(__dirname, 'src');
     
