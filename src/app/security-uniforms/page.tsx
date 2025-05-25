@@ -32,39 +32,11 @@ const articles = [
     imageSrc: '/images/security_uniforms/fabric-standards.jpg',
   },
   {
-    id: 4,
-    title: 'الفرق بين زي حراس الأمن في المنشآت المختلفة (بنوك، مجمعات تجارية، مواقع صناعية)',
-    slug: 'differences-between-security-guard-uniforms-in-various-facilities',
-    excerpt: 'مقارنة تفصيلية بين أزياء حراس الأمن في المنشآت المختلفة والمعايير الخاصة بكل قطاع.',
-    imageSrc: '/images/security_uniforms/different-facilities.jpg',
-  },
-  {
-    id: 5,
-    title: 'تصميم زي أمني عملي: جيوب كافية للمعدات وسهولة الحركة',
-    slug: 'designing-practical-security-uniform-pockets-and-mobility',
-    excerpt: 'مواصفات تصميم الزي الأمني العملي الذي يوفر جيوب كافية للمعدات ويسمح بسهولة الحركة أثناء تأدية المهام.',
-    imageSrc: '/images/security_uniforms/practical-design.jpg',
-  },
-  {
     id: 6,
     title: 'دور الألوان الداكنة والشارات الرسمية في تصميم زي الأمن',
     slug: 'role-of-dark-colors-and-official-badges-in-security-uniform-design',
     excerpt: 'أهمية استخدام الألوان الداكنة والشارات الرسمية في تصميم زي الأمن وتأثيرها النفسي والعملي.',
     imageSrc: '/images/security_uniforms/dark-colors-badges.jpg',
-  },
-  {
-    id: 7,
-    title: 'يونيفورم الأمن النسائي: تصميمات عملية ومناسبة لطبيعة العمل',
-    slug: 'female-security-uniforms-practical-designs-for-work-nature',
-    excerpt: 'تصميمات زي الأمن النسائي التي تجمع بين العملية ومناسبتها لطبيعة العمل مع احترام الخصوصية الثقافية.',
-    imageSrc: '/images/security_uniforms/female-uniforms.jpg',
-  },
-  {
-    id: 8,
-    title: 'تخصيص زي الأمن بشعار الشركة الأمنية أو المنشأة المحروسة',
-    slug: 'customizing-security-uniforms-with-company-logo',
-    excerpt: 'كيفية تخصيص زي الأمن بشعار الشركة الأمنية أو المنشأة المحروسة بطريقة احترافية تعزز الهوية البصرية.',
-    imageSrc: '/images/security_uniforms/custom-logos.jpg',
   },
   {
     id: 9,
@@ -74,116 +46,11 @@ const articles = [
     imageSrc: '/images/security_uniforms/reflective-vests.jpg',
   },
   {
-    id: 10,
-    title: 'نصائح للحفاظ على مظهر زي الأمن وزيادة عمره الافتراضي',
-    slug: 'tips-for-maintaining-security-uniform-appearance',
-    excerpt: 'نصائح عملية للحفاظ على مظهر زي الأمن لفترة أطول وزيادة عمره الافتراضي رغم ظروف العمل الصعبة.',
-    imageSrc: '/images/security_uniforms/maintenance-tips.jpg',
-  },
-  {
-    id: 11,
-    title: 'معايير ومواصفات زي شركات الأمن المعتمدة في المملكة العربية السعودية',
-    slug: 'standards-specifications-for-approved-security-companies-uniforms',
-    excerpt: 'المعايير والمواصفات الرسمية لزي شركات الأمن المعتمدة في المملكة العربية السعودية وكيفية الالتزام بها.',
-    imageSrc: '/images/security_uniforms/saudi-standards.jpg',
-  },
-  {
     id: 12,
     title: 'أفضل أنواع الأحذية التكتيكية (Tactical Boots) لرجال الأمن',
     slug: 'best-tactical-boots-for-security-personnel',
     excerpt: 'مراجعة لأفضل أنواع الأحذية التكتيكية المناسبة لرجال الأمن مع مقارنة بين الخيارات المختلفة.',
     imageSrc: '/images/security_uniforms/tactical-boots.jpg',
-  },
-  {
-    id: 13,
-    title: 'الإكسسوارات الأساسية لزي رجل الأمن (حزام، حاملات معدات، قبعة)',
-    slug: 'essential-accessories-for-security-personnel-uniform',
-    excerpt: 'دليل الإكسسوارات الأساسية التي يجب توفرها مع زي رجل الأمن وأهمية كل منها في أداء المهام الأمنية.',
-    imageSrc: '/images/security_uniforms/essential-accessories.jpg',
-  },
-  {
-    id: 14,
-    title: 'أفضل الموردين لزي الأمن عالي الجودة والمطابق للمواصفات في السعودية',
-    slug: 'best-suppliers-for-high-quality-security-uniforms-in-saudi-arabia',
-    excerpt: 'دليل لأبرز موردي زي الأمن عالي الجودة والمطابق للمواصفات في المملكة العربية السعودية مع معايير الاختيار.',
-    imageSrc: '/images/security_uniforms/top-suppliers.jpg',
-  },
-  {
-    id: 15,
-    title: 'زي الأمن للعمل الليلي: أهمية العناصر العاكسة والرؤية الواضحة',
-    slug: 'night-shift-security-uniforms-reflective-elements-visibility',
-    excerpt: 'المواصفات الخاصة بزي الأمن المخصص للعمل الليلي وأهمية العناصر العاكسة لضمان الرؤية الواضحة والسلامة.',
-    imageSrc: '/images/security_uniforms/night-shift.jpg',
-  },
-  {
-    id: 16,
-    title: 'زي الأمن الصيفي والشتوي: التكيف مع الظروف المناخية في المملكة',
-    slug: 'summer-winter-security-uniforms-adapting-to-climate-conditions',
-    excerpt: 'مواصفات زي الأمن المناسب للمواسم المختلفة وكيفية تصميمه للتكيف مع الظروف المناخية المتغيرة في المملكة.',
-    imageSrc: '/images/security_uniforms/seasonal-uniforms.jpg',
-  },
-  {
-    id: 17,
-    title: 'تأثير الزي الموحد على أداء وانضباط فريق الأمن',
-    slug: 'impact-of-uniforms-on-security-team-performance-discipline',
-    excerpt: 'دراسة تأثير الزي الموحد على مستوى أداء وانضباط فريق الأمن والعلاقة بين المظهر الاحترافي والأداء المهني.',
-    imageSrc: '/images/security_uniforms/performance-impact.jpg',
-  },
-  {
-    id: 18,
-    title: 'هل يختلف زي الأمن الخاص عن زي الأمن في المنشآت العامة؟',
-    slug: 'differences-between-private-public-security-uniforms',
-    excerpt: 'مقارنة بين زي الأمن الخاص وزي الأمن في المنشآت العامة من حيث التصميم، المواصفات، والمتطلبات القانونية.',
-    imageSrc: '/images/security_uniforms/private-public-differences.jpg',
-  },
-  {
-    id: 19,
-    title: 'اتجاهات حديثة في تصميم زي الأمن: دمج التكنولوجيا والمواد المتقدمة',
-    slug: 'modern-trends-in-security-uniform-design-technology-integration',
-    excerpt: 'استعراض أحدث الاتجاهات في تصميم زي الأمن التي تدمج التكنولوجيا والمواد المتقدمة لتعزيز الأداء والسلامة.',
-    imageSrc: '/images/security_uniforms/modern-trends.jpg',
-  },
-  {
-    id: 20,
-    title: 'حلول اقتصادية لتوفير زي أمن فعال للشركات والمؤسسات',
-    slug: 'economic-solutions-for-effective-security-uniforms',
-    excerpt: 'حلول عملية واقتصادية لتوفير زي أمن فعال للشركات والمؤسسات مع الحفاظ على معايير الجودة والمظهر الاحترافي.',
-    imageSrc: '/images/security_uniforms/economic-solutions.jpg',
-  },
-  {
-    id: 21,
-    title: 'أهمية توفير مقاسات مناسبة ومريحة لجميع أفراد طاقم الأمن',
-    slug: 'importance-of-proper-sizes-for-security-personnel',
-    excerpt: 'فوائد توفير مقاسات مناسبة ومريحة لزي جميع أفراد طاقم الأمن وتأثير ذلك على الأداء والرضا الوظيفي.',
-    imageSrc: '/images/security_uniforms/proper-sizing.jpg',
-  },
-  {
-    id: 22,
-    title: 'التدريب على ارتداء وصيانة الزي الأمني بشكل صحيح',
-    slug: 'training-on-proper-wearing-maintenance-of-security-uniforms',
-    excerpt: 'أهمية تدريب أفراد الأمن على الطريقة الصحيحة لارتداء وصيانة الزي الأمني للحفاظ على المظهر الاحترافي.',
-    imageSrc: '/images/security_uniforms/uniform-training.jpg',
-  },
-  {
-    id: 23,
-    title: 'دور الزي الموحد في تمييز أفراد الأمن عن الجمهور',
-    slug: 'role-of-uniforms-in-distinguishing-security-personnel',
-    excerpt: 'أهمية الزي الموحد في تمييز أفراد الأمن عن الجمهور وتسهيل التعرف عليهم في حالات الطوارئ والمواقف المختلفة.',
-    imageSrc: '/images/security_uniforms/distinguishing-personnel.jpg',
-  },
-  {
-    id: 24,
-    title: 'الزي التكتيكي (Tactical Uniform) مقابل الزي الأمني التقليدي: متى يُستخدم كل منهما؟',
-    slug: 'tactical-uniform-vs-traditional-security-uniform',
-    excerpt: 'مقارنة بين الزي التكتيكي والزي الأمني التقليدي من حيث المواصفات والمزايا والعيوب ومجالات الاستخدام المناسبة.',
-    imageSrc: '/images/security_uniforms/tactical-vs-traditional.jpg',
-  },
-  {
-    id: 25,
-    title: 'تجارب شركات أمنية سعودية في تطوير وتحسين زي أفرادها',
-    slug: 'experiences-of-saudi-security-companies-in-developing-uniforms',
-    excerpt: 'قصص نجاح واقعية لشركات أمنية سعودية في تطوير وتحسين زي أفرادها وتأثير ذلك على مستوى الخدمة وصورة الشركة.',
-    imageSrc: '/images/security_uniforms/saudi-companies-experiences.jpg',
   },
 ];
 
@@ -198,96 +65,186 @@ export default function SecurityUniformsPage() {
       />
     
       <section className="mb-16">
-        <div className="relative w-full h-64 md:h-96 mb-8 rounded-lg overflow-hidden">
-          <Image
-            src="/images/security_uniforms/header.jpg"
-            alt="زي قطاع الأمن الموحد"
-            fill
-            style={{ objectFit: 'cover' }}
-            priority
-            className="brightness-75"
-          />
-          <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-4 bg-gradient-to-b from-transparent to-primary/50">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white drop-shadow-lg">زي قطاع الأمن</h1>
-            <p className="text-xl md:text-2xl max-w-3xl text-white drop-shadow-md">
-              كل ما تحتاج معرفته عن الزي الموحد لشركات الأمن والحراسات في المملكة العربية السعودية
-            </p>
-          </div>
-        </div>
-
-        <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-          <h2 className="text-3xl font-bold text-primary mb-6">أهمية الزي الموحد في قطاع الأمن</h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            يمثل الزي الموحد في قطاع الأمن أكثر من مجرد ملابس يرتديها أفراد الأمن. إنه يمثل رمزاً للسلطة، والنظام، والثقة. فالزي الأمني المناسب يساهم في فرض الهيبة، تعزيز الشعور بالأمان لدى الجمهور، وتمييز أفراد الأمن بسهولة في حالات الطوارئ والمواقف الحرجة.
-          </p>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            في خبراء الزي الموحد، نفهم جيداً أن زي الأمن يجب أن يجمع بين المظهر الاحترافي والأداء العملي. لذلك، نقدم تصاميم تلبي المتطلبات الخاصة لقطاع الأمن في المملكة العربية السعودية، مع التركيز على المتانة، الراحة، وسهولة الحركة، مع الالتزام بالمعايير والمواصفات المعتمدة.
-          </p>
-          <p className="text-gray-700 leading-relaxed">
-            استكشف مجموعة المقالات التالية للتعرف على جميع جوانب زي الأمن، من اختيار التصاميم والأقمشة المناسبة إلى أفضل الممارسات للعناية به والحفاظ على مظهره المهني والرسمي.
+        <div className="text-center mb-14">
+          <h1 className="text-3xl md:text-4xl font-bold mb-4">زي قطاع الأمن والحراسة المتخصص</h1>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            مجموعة متنوعة من الأزياء الموحدة لقطاع الأمن والحراسات المصممة خصيصاً للسوق السعودي مع مراعاة أعلى معايير الجودة والسلامة المهنية.
           </p>
         </div>
-      </section>
 
-      <section className="mb-12">
-        <h2 className="text-3xl font-bold text-primary mb-8">مقالات عن زي الأمن</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {articles.map((article) => (
-            <div key={article.id} className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:-translate-y-1">
-              <div className="relative h-56 w-full">
-                <Image
-                  src={article.imageSrc}
-                  alt={article.title}
-                  fill
-                  style={{ objectFit: 'cover' }}
-                  className="transition-transform duration-300 hover:scale-105"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-primary mb-3 line-clamp-2">
-                  <Link href={`/security-uniforms/${article.slug}`} className="hover:text-accent transition-colors">
+            <Link
+              href={`/security-uniforms/${article.slug}`}
+              key={article.id}
+              className="group"
+            >
+              <div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover-lift">
+                <div className="relative h-48">
+                  <Image
+                    src={article.imageSrc}
+                    alt={article.title}
+                    fill
+                    className="object-cover transition-all duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
                     {article.title}
-                  </Link>
-                </h3>
-                <p className="text-gray-700 mb-4 line-clamp-3">{article.excerpt}</p>
-                <Link 
-                  href={`/security-uniforms/${article.slug}`} 
-                  className="inline-block bg-primary text-white rounded-lg px-4 py-2 text-sm font-medium hover:bg-primary-dark transition-colors"
-                >
-                  اقرأ المزيد
-                </Link>
+                  </h3>
+                  <p className="text-gray-600 text-sm line-clamp-3">
+                    {article.excerpt}
+                  </p>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
-
-      <section className="mb-12">
-        <div className="bg-gradient-to-r from-primary to-accent text-white rounded-lg shadow-md p-8">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="md:w-2/3 mb-6 md:mb-0">
-              <h2 className="text-2xl font-bold mb-4">هل تحتاج إلى زي موحد لشركتك الأمنية؟</h2>
-              <p className="mb-4">
-                نحن في خبراء الزي الموحد نقدم حلولاً متكاملة للزي الأمني تناسب جميع شركات الأمن والحراسات بمختلف أحجامها، مع التركيز على المتانة والمظهر الاحترافي والالتزام بالمعايير المعتمدة.
-              </p>
-              <Link 
-                href="/contact" 
-                className="inline-block bg-white text-primary rounded-lg px-6 py-3 font-medium hover:bg-gray-100 transition-colors"
-              >
-                طلب استشارة مجانية
-              </Link>
-            </div>
-            <div className="md:w-1/3 flex justify-center">
-              <div className="relative h-40 w-40">
-                <Image
-                  src="/images/security_uniforms/cta-icon.png"
-                  alt="طلب زي أمني"
-                  fill
-                  style={{ objectFit: 'contain' }}
-                />
+      
+      <section className="my-16 bg-gray-50 p-8 rounded-lg">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">خبراء في تصنيع وتوريد يونيفورم الأمن بجميع أشكاله</h2>
+            <p className="text-gray-600 mb-6">
+              نقدم تشكيلة متنوعة من الأزياء الموحدة لقطاع الأمن والحراسات بدءًا من الزي الرسمي وحتى الملابس التكتيكية، مع خيارات مختلفة تناسب متطلبات كل منشأة والمناخ السعودي.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <div className="bg-white p-4 rounded-lg shadow-sm flex items-center">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+                  <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="font-bold">تصميم آمن</h3>
+                  <p className="text-sm text-gray-600">مطابق لمعايير السلامة</p>
+                </div>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-sm flex items-center">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+                  <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="font-bold">تخصيص كامل</h3>
+                  <p className="text-sm text-gray-600">بحسب متطلبات المنشأة</p>
+                </div>
               </div>
             </div>
           </div>
+          <div className="relative h-64 md:h-80 overflow-hidden rounded-lg">
+            <Image
+              src="/images/security_uniforms/security_guards_lineup.jpg"
+              alt="أزياء موحدة لقطاع الأمن"
+              fill
+              className="object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="my-16">
+        <div className="text-center mb-12">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">لماذا الزي الموحد مهم لفرق الأمن؟</h2>
+          <p className="text-gray-600 max-w-3xl mx-auto">
+            يلعب الزي الموحد دوراً محورياً في نجاح أعمال الحراسة الأمنية عبر ترسيخ الهيبة وتعزيز الثقة
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+              <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-bold mb-3">سهولة التمييز والتعرف</h3>
+            <p className="text-gray-600">
+              يساعد الزي الموحد على تمييز أفراد الأمن بسهولة من قبل الجمهور خاصة في حالات الطوارئ، مما يسهل طلب المساعدة عند الحاجة.
+            </p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+              <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-bold mb-3">تعزيز الهيبة والسلطة</h3>
+            <p className="text-gray-600">
+              يمنح الزي الرسمي هيبة وثقة لرجال الأمن، مما يساهم في ضمان الاحترام والامتثال للتعليمات الأمنية من قبل الزوار والمراجعين.
+            </p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+              <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-bold mb-3">الانتماء للفريق</h3>
+            <p className="text-gray-600">
+              يعزز الزي الموحد الشعور بالانتماء والوحدة بين أفراد فريق الأمن، مما يحسن الأداء الجماعي ويرفع من الروح المعنوية.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="my-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div>
+            <h2 className="text-2xl md:text-3xl font-bold mb-6">أنواع الزي الأمني حسب المنشأة</h2>
+            <div className="space-y-4">
+              <div className="bg-white p-4 rounded-lg shadow-sm border-r-4 border-primary">
+                <h3 className="font-bold text-lg mb-1">زي الأمن للمرافق الحكومية</h3>
+                <p className="text-gray-600">تصاميم رسمية تعكس هيبة المؤسسات الحكومية مع الالتزام بالألوان والشارات الرسمية.</p>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-sm border-r-4 border-primary">
+                <h3 className="font-bold text-lg mb-1">زي الأمن للمجمعات التجارية والمولات</h3>
+                <p className="text-gray-600">أزياء أنيقة تجمع بين المظهر المهني والراحة للعمل لساعات طويلة في بيئة استهلاكية.</p>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-sm border-r-4 border-primary">
+                <h3 className="font-bold text-lg mb-1">زي الأمن للمنشآت الصناعية</h3>
+                <p className="text-gray-600">تصاميم متينة مع عناصر عاكسة للضوء ومقاومة للحرارة والمواد الكيميائية حسب طبيعة الصناعة.</p>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-sm border-r-4 border-primary">
+                <h3 className="font-bold text-lg mb-1">زي الأمن للفنادق والمنتجعات</h3>
+                <p className="text-gray-600">أزياء أنيقة تتناسب مع الطابع الفاخر للمنشآت الفندقية مع الحفاظ على الطابع الأمني.</p>
+              </div>
+            </div>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <div className="relative h-48 rounded-lg overflow-hidden">
+              <Image src="/images/security_uniforms/government_security.jpg" alt="زي الأمن للمرافق الحكومية" fill className="object-cover" />
+            </div>
+            <div className="relative h-48 rounded-lg overflow-hidden">
+              <Image src="/images/security_uniforms/mall_security.jpg" alt="زي الأمن للمجمعات التجارية" fill className="object-cover" />
+            </div>
+            <div className="relative h-48 rounded-lg overflow-hidden">
+              <Image src="/images/security_uniforms/industrial_security.jpg" alt="زي الأمن للمنشآت الصناعية" fill className="object-cover" />
+            </div>
+            <div className="relative h-48 rounded-lg overflow-hidden">
+              <Image src="/images/security_uniforms/hotel_security.jpg" alt="زي الأمن للفنادق" fill className="object-cover" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="my-16 bg-gradient-to-r from-primary/10 to-accent/10 p-8 rounded-lg">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">ناقش احتياجاتك معنا</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            نقدم استشارات مجانية لمساعدتك في اختيار الزي الأمني المناسب لمنشأتك. تواصل معنا اليوم للحصول على عرض سعر مخصص.
+          </p>
+        </div>
+        <div className="flex justify-center">
+          <Link 
+            href="/contact" 
+            className="bg-accent hover:bg-accent/90 text-white px-8 py-4 rounded-lg text-lg font-medium transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg inline-block"
+          >
+            احصل على عرض سعر
+          </Link>
         </div>
       </section>
     </div>
