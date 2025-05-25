@@ -3,13 +3,17 @@
 # Exit immediately if a command exits with a non-zero status
 set -e
 
+# Display Node and npm versions for debugging
+echo "Node version: $(node -v)"
+echo "NPM version: $(npm -v)"
+
 # Ensure TypeScript and types are installed
 echo "Installing TypeScript and type dependencies..."
-npm install --save-exact typescript@5.8.3 @types/react@18.3.22 @types/node@20.17.50 @types/react-dom
+npm install --force typescript @types/react @types/node @types/react-dom
 
-# Show installed TypeScript version
+# Verify TypeScript is installed without using direct path
 echo "TypeScript version:"
-./node_modules/.bin/tsc --version
+npx tsc --version
 
 # Run the build
 echo "Running Next.js build..."
