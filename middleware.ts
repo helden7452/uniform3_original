@@ -5,6 +5,7 @@ import type { NextRequest } from 'next/server';
 const locales = ['ar-SA'];
 const defaultLocale = 'ar-SA';
 
+// Get the preferred locale, similar to the above
 function getLocale(request: NextRequest) {
   // For simplicity, we're always using the default locale
   // In a production app, you might check Accept-Language headers
@@ -13,33 +14,37 @@ function getLocale(request: NextRequest) {
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
-  
-  // Special handling for root path
-  if (pathname === '/') {
-    // Redirect root to default locale
-    request.nextUrl.pathname = `/${defaultLocale}`;
-    return NextResponse.redirect(request.nextUrl);
+
+  // Prevent redirect for API routes, static files, and other special files
+  if (
+    pathname.startsWith('/_next') ||
+    pathname.startsWith('/api') ||
+    pathname.startsWith('/static') ||
+    pathname.startsWith('/images') ||
+    pathname.includes('.') // This catches files like favicon.ico, etc.
+  ) {
+    return NextResponse.next();
   }
-  
-  // Check if the pathname has a supported locale
+
+  // Check if the pathname already has a locale
   const pathnameHasLocale = locales.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   );
 
-  if (pathnameHasLocale) return NextResponse.next();
+  if (pathnameHasLocale) {
+    return NextResponse.next();
+  }
 
-  // Special handling for paths without locale
-  // Append the default locale to the beginning of the path
+  // Redirect to the locale version - including the / route
   const locale = getLocale(request);
-  request.nextUrl.pathname = `/${locale}${pathname}`;
-  return NextResponse.redirect(request.nextUrl);
+  const newPath = pathname === '/' ? `/${locale}` : `/${locale}${pathname}`;
+  return NextResponse.redirect(new URL(newPath, request.url));
 }
 
 export const config = {
-  matcher: [
-    // Skip all internal paths (_next)
-    '/((?!_next|api|static|public|favicon.ico|images).*)',
-    // Add homepage matcher
-    '/'
-  ],
+  // Match all request paths except for the ones starting with:
+  // - _next/static (static files)
+  // - _next/image (image optimization files)
+  // - favicon.ico (favicon file)
+  matcher: ['/((?!_next/static|_next/image|favicon.ico|images).*)'],
 }; 

@@ -1,4 +1,4 @@
-import { Locale, getDictionary } from '@/utils/i18n';
+import { Locale, getDictionary, locales } from '@/utils/i18n';
 import Link from 'next/link';
 import Script from 'next/script';
 import { Metadata } from 'next';
@@ -7,6 +7,11 @@ import Image from 'next/image';
 type Props = {
   params: { locale: Locale };
 };
+
+// Generate static params for all supported locales
+export async function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
 
 // إنشاء ميتاداتا ديناميكية للصفحة الرئيسية
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
