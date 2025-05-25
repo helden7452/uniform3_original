@@ -78,30 +78,57 @@ export function getCategoryPlaceholderPath(category: UniformCategory): string {
 
 // التحقق من صحة مسار الصورة
 export function validateImagePath(path: string): boolean {
+  if (!path) return false;
+  
   // التحقق من أن المسار يتبع النمط المطلوب: /images/category_name/image.jpg
   return !!path.match(/^\/images\/[^\/]+\/[^\/]+\.[a-zA-Z]+$/);
 }
 
 // إصلاح مسار الصورة ليتوافق مع النمط المطلوب
 export function fixImagePath(path: string, defaultCategory: string = 'uniform'): string {
-  if (!path) return `/images/placeholder.jpg`;
-  
-  // إذا كان المسار صحيحاً، أعده كما هو
-  if (validateImagePath(path)) return path;
-  
-  // إذا كان المسار يبدأ بـ /images/ لكنه لا يتبع النمط المطلوب
-  if (path.startsWith('/images/')) {
-    const parts = path.split('/');
-    if (parts.length >= 3) {
-      // تأكد من وجود اسم الفئة واسم الصورة
-      return `/images/${parts[2]}/${parts[parts.length - 1]}`;
+  try {
+    // صورة افتراضية إذا كان المسار فارغًا
+    if (!path) return `/images/placeholder.jpg`;
+    
+    // إذا كان المسار يحتوي على http، فهو خارجي ونعيده كما هو
+    if (path.includes('http')) return path;
+    
+    // إذا كان المسار صحيحاً، أعده كما هو
+    if (validateImagePath(path)) return path;
+    
+    // إذا كان المسار يبدأ بـ /images/ لكنه لا يتبع النمط المطلوب
+    if (path.startsWith('/images/')) {
+      const parts = path.split('/');
+      if (parts.length >= 3) {
+        // تأكد من وجود اسم الفئة واسم الصورة
+        const categoryPart = parts[2] || defaultCategory;
+        const imageName = parts[parts.length - 1] || 'placeholder.jpg';
+        return `/images/${categoryPart}/${imageName}`;
+      }
+      
+      // إذا لم يكن هناك قسمين على الأقل بعد /images/
+      return `/images/${defaultCategory}/placeholder.jpg`;
     }
+    
+    // إذا كان المسار لا يبدأ بـ /
+    if (!path.startsWith('/')) {
+      // نتحقق إذا كانت الصورة تحتوي على مسار فرعي
+      if (path.includes('/')) {
+        const parts = path.split('/');
+        const categoryPart = defaultCategory;
+        const imageName = parts[parts.length - 1] || 'placeholder.jpg';
+        return `/images/${categoryPart}/${imageName}`;
+      }
+      
+      // إذا كان اسم ملف فقط
+      return `/images/${defaultCategory}/${path}`;
+    }
+    
+    // أي حالة أخرى، استخدم الصورة البديلة
+    return `/images/${defaultCategory}/placeholder.jpg`;
+  } catch (error) {
+    // في حالة حدوث خطأ غير متوقع، أعد الصورة البديلة
+    console.error('Error fixing image path:', error);
+    return `/images/placeholder.jpg`;
   }
-  
-  // إذا كان المسار لا يبدأ بـ / أو لا يحتوي على http، أضفه إلى المسار الافتراضي
-  if (!path.startsWith('/') && !path.includes('http')) {
-    return `/images/${defaultCategory}/${path}`;
-  }
-  
-  return path;
 } 

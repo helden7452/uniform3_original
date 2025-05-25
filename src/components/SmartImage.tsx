@@ -33,19 +33,29 @@ export default function SmartImage({
   onLoad,
   onClick,
 }: SmartImageProps) {
-  const [imgSrc, setImgSrc] = useState<string>(src);
+  const [imgSrc, setImgSrc] = useState<string>(src || fallbackSrc);
   const [isLoading, setLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
     // إعادة تعيين الحالة عند تغيير src
-    setImgSrc(src);
-    setLoading(true);
-    setHasError(false);
+    if (src) {
+      setImgSrc(src);
+      setLoading(true);
+      setHasError(false);
+    }
   }, [src]);
 
   const handleError = () => {
-    if (!hasError) {
+    if (!hasError && imgSrc !== fallbackSrc) {
+      // تجنب الوقوع في حلقة لا نهائية إذا فشلت الصورة البديلة أيضًا
+      setImgSrc(fallbackSrc);
+      setHasError(true);
+    } else if (imgSrc === fallbackSrc && hasError) {
+      // إذا فشلت الصورة البديلة أيضًا، نستخدم صورة فارغة بدلاً من محاولة التحميل مرة أخرى
+      setLoading(false);
+      // لا نقوم بالتسجيل في وحدة التحكم إذا فشلت الصورة البديلة أيضًا لتجنب تسجيل الكثير من الأخطاء
+    } else {
       console.warn(`Error loading image: ${src}, falling back to: ${fallbackSrc}`);
       setImgSrc(fallbackSrc);
       setHasError(true);
@@ -56,6 +66,10 @@ export default function SmartImage({
     setLoading(false);
     if (onLoad) onLoad();
   };
+
+  // تحديد قيم العرض والارتفاع الافتراضية إذا لم يتم توفيرها
+  const imageWidth = !fill && !width ? 800 : width;
+  const imageHeight = !fill && !height ? 600 : height;
 
   return (
     <div 
@@ -85,8 +99,8 @@ export default function SmartImage({
       <Image
         src={imgSrc}
         alt={alt}
-        width={!fill ? width : undefined}
-        height={!fill ? height : undefined}
+        width={!fill ? imageWidth : undefined}
+        height={!fill ? imageHeight : undefined}
         priority={priority}
         fill={fill}
         className={`transition-opacity duration-300 ${
@@ -94,6 +108,7 @@ export default function SmartImage({
         }`}
         onError={handleError}
         onLoad={handleLoad}
+        sizes={fill ? "100vw" : undefined}
       />
     </div>
   );

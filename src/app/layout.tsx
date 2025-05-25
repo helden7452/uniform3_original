@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import { Tajawal } from 'next/font/google';
 import Link from 'next/link';
 import Script from 'next/script';
+import Image from 'next/image';
 
 const tajawal = Tajawal({
   subsets: ['arabic'],
@@ -56,7 +57,15 @@ export default function RootLayout({
           <div className="container mx-auto py-4 px-4">
             <nav className="flex flex-col md:flex-row justify-between items-center">
               <Link href="/" className="text-2xl font-bold text-primary hover:text-accent transition-colors duration-300 flex items-center">
-                <img src="/images/logo.png" alt="شعار خبراء الزي الموحد" className="h-10 ml-2" />
+                <div className="relative h-10 w-10 ml-2">
+                  <Image 
+                    src="/images/logo.png" 
+                    alt="شعار خبراء الزي الموحد" 
+                    fill 
+                    sizes="40px"
+                    className="object-contain"
+                  />
+                </div>
                 <span>خبراء الزي الموحد</span>
               </Link>
               <ul className="flex space-x-reverse space-x-6 mt-4 md:mt-0">
@@ -68,7 +77,7 @@ export default function RootLayout({
             </nav>
           </div>
         </header>
-        <div className="min-h-screen pt-16">{children}</div>
+        <div className="min-h-screen pt-20">{children}</div>
         <footer className="bg-primary text-white py-12">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -122,14 +131,18 @@ export default function RootLayout({
             </div>
           </div>
         </footer>
-        <Script src="https://unpkg.com/aos@next/dist/aos.js" />
-        <Script id="aos-init">
+        <Script 
+          src="https://unpkg.com/aos@next/dist/aos.js" 
+          strategy="afterInteractive"
+        />
+        <Script 
+          id="aos-init" 
+          strategy="afterInteractive"
+        >
           {`
-            document.addEventListener('DOMContentLoaded', function() {
-              AOS.init({
-                duration: 800,
-                once: true,
-              });
+            AOS.init({
+              duration: 800,
+              once: true,
             });
           `}
         </Script>
