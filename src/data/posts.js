@@ -25,7 +25,7 @@ const posts = [
     "slug": "latest-corporate-uniform-design-trends",
     "title": "أحدث اتجاهات تصميم الزي الموحد للشركات في عام 2025",
     "excerpt": "استعراض لأحدث الاتجاهات والابتكارات في مجال تصميم الزي الموحد للشركات والمؤسسات، مع التركيز على التصاميم العصرية التي تجمع بين الأناقة والعملية",
-    "coverImage": "/images/corporate_uniforms/أحدث اتجاهات تصميم الزي الموحد للشركات في عام 2025.jpg",
+    "coverImage": "/images/corporate_uniforms/impact-of-corporate-uniforms-on-work-environment-team-spirit.jpg",
     "date": "2025-05-25",
     "readTime": "9 دقائق للقراءة",
     "author": "nora-mohammed",

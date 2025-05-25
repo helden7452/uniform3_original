@@ -19,8 +19,8 @@ export default function BlogPostPage() {
   // Create author object in the format expected by the BlogPost component
   const author = {
     id: authorData?.id || 'nora-mohammed',
-    name: authorData?.name || 'نورة محمد',
-    title: authorData?.title || 'مصممة أزياء موحدة',
+    name: authorData?.name || 'عبدالله محمد',
+    title: authorData?.title || 'مصمم أزياء',
     image: authorData?.avatar || '/images/author/nora-mohammed.png',
   };
 
@@ -245,7 +245,7 @@ export default function BlogPostPage() {
         slug="latest-corporate-uniform-design-trends"
         author={author}
         publishDate="2025-05-25"
-        coverImage="/images/corporate_uniforms/أحدث اتجاهات تصميم الزي الموحد للشركات في عام 2025.jpg"
+        coverImage="/images/corporate_uniforms/are-corporate-uniforms-necessary-for-all-companies-header.jpg"
         readingTime="9 دقائق للقراءة"
         tags={["تصميم الأزياء", "الزي الموحد", "اتجاهات 2025", "الشركات"]}
       />

@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -42,16 +43,41 @@ export default function BlogPost({
     day: 'numeric',
   });
 
+  // State to track if sections are loaded
+  const [contentLoaded, setContentLoaded] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  
+  // Effect to simulate progressive loading
+  useEffect(() => {
+    // Set content loaded after a small delay to allow for DOM painting
+    const contentTimer = setTimeout(() => {
+      setContentLoaded(true);
+    }, 100);
+    
+    // Set visible with a small delay for animation
+    const visibilityTimer = setTimeout(() => {
+      setIsVisible(true);
+    }, 200);
+    
+    return () => {
+      clearTimeout(contentTimer);
+      clearTimeout(visibilityTimer);
+    };
+  }, []);
+
   return (
-    <article className="bg-white rounded-lg shadow-md overflow-hidden">
-      {/* Cover Image */}
-      <div className="relative h-[400px] w-full">
+    <article className={`bg-white rounded-lg shadow-md overflow-hidden transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+      {/* Cover Image with blur placeholder */}
+      <div className="relative h-[400px] w-full overflow-hidden">
         <Image
           src={coverImage}
           alt={title}
           fill
           className="object-cover"
-          priority
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          loading="eager" // Load only the hero image eagerly
+          placeholder="blur" 
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPj/HwADBwIAMCbHYQAAAABJRU5ErkJggg=="
         />
       </div>
 
@@ -72,7 +98,7 @@ export default function BlogPost({
         {/* Title */}
         <h1 className="text-3xl font-bold text-gray-900 mb-4">{title}</h1>
         
-        {/* Author */}
+        {/* Author with lazy loading */}
         <div className="flex items-center mb-6">
           <div className="relative w-12 h-12 rounded-full overflow-hidden">
             <Image
@@ -80,6 +106,8 @@ export default function BlogPost({
               alt={author.name}
               fill
               className="object-cover"
+              loading="lazy"
+              sizes="48px"
             />
           </div>
           <div className="mr-3">
@@ -88,14 +116,14 @@ export default function BlogPost({
           </div>
         </div>
         
-        {/* Content */}
-        <div className="article-content prose prose-lg max-w-none">
+        {/* Content with progressive loading */}
+        <div className={`article-content prose prose-lg max-w-none transition-opacity duration-500 ${contentLoaded ? 'opacity-100' : 'opacity-0'}`}>
           <div dangerouslySetInnerHTML={{ __html: content }} />
         </div>
         
-        {/* Tags */}
+        {/* Tags with lazy loading */}
         {tags && tags.length > 0 && (
-          <div className="mt-8 pt-6 border-t border-gray-200">
+          <div className={`mt-8 pt-6 border-t border-gray-200 transition-opacity duration-300 ${contentLoaded ? 'opacity-100' : 'opacity-0'}`}>
             <h3 className="text-lg font-semibold mb-3">الوسوم:</h3>
             <div className="flex flex-wrap gap-2">
               {tags.map((tag) => (
@@ -111,8 +139,8 @@ export default function BlogPost({
           </div>
         )}
         
-        {/* Share Section */}
-        <div className="mt-8 flex justify-center">
+        {/* Share Section with lazy loading */}
+        <div className={`mt-8 flex justify-center transition-opacity duration-700 ${contentLoaded ? 'opacity-100' : 'opacity-0'}`}>
           <div className="text-center">
             <h3 className="text-lg font-semibold mb-3">مشاركة المقال</h3>
             <div className="flex justify-center space-x-reverse space-x-4">
