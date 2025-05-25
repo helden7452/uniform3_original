@@ -1,0 +1,35 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+  
+[build.environment]
+  NEXT_PUBLIC_SITE_URL = "https://a5fi.com"
+  NEXT_PUBLIC_SITE_NAME = "خبراء الزي الموحد"
+  NODE_VERSION = "18"
+  
+[context.production.environment]
+  NEXT_PUBLIC_SITE_URL = "https://a5fi.com"
+  NODE_ENV = "production"
+
+[[headers]]
+  for = "/*"
+    [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    
+# Handle Next.js routes
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+  
+# Optimize assets caching
+[[headers]]
+  for = "/images/*"
+    [headers.values]
+    Cache-Control = "public, max-age=31536000"
+    
+[[headers]]
+  for = "/_next/static/*"
+    [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable" 
