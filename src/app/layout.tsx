@@ -5,6 +5,15 @@ import Link from 'next/link';
 import Script from 'next/script';
 import Image from 'next/image';
 
+// Extender la interfaz Window para incluir AOS
+declare global {
+  interface Window {
+    AOS?: {
+      init(config: { duration: number; once: boolean }): void;
+    };
+  }
+}
+
 const tajawal = Tajawal({
   subsets: ['arabic'],
   weight: ['400', '500', '700', '800'],
@@ -51,6 +60,8 @@ export default function RootLayout({
     <html lang="ar" dir="rtl" className={`${tajawal.variable} scroll-smooth`}>
       <head>
         <link rel="icon" href="/images/favicon.ico" />
+        {/* Cargar AOS CSS directamente en la cabecera para evitar FOUC */}
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
       </head>
       <body className="font-sans bg-gray-50">
         <header className="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
@@ -131,18 +142,23 @@ export default function RootLayout({
             </div>
           </div>
         </footer>
+        
+        {/* Cargar AOS JavaScript sin onLoad */}
         <Script 
           src="https://unpkg.com/aos@next/dist/aos.js" 
           strategy="afterInteractive"
         />
-        <Script 
-          id="aos-init" 
-          strategy="afterInteractive"
-        >
+        
+        {/* Inicializar AOS con un script separado */}
+        <Script id="aos-init" strategy="afterInteractive">
           {`
-            AOS.init({
-              duration: 800,
-              once: true,
+            document.addEventListener('DOMContentLoaded', function() {
+              if (typeof window !== 'undefined' && window.AOS) {
+                window.AOS.init({
+                  duration: 800,
+                  once: true
+                });
+              }
             });
           `}
         </Script>
