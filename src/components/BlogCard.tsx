@@ -37,6 +37,8 @@ export default function BlogCard({
             src={coverImage}
             alt={title}
             fill
+            loading="lazy"
+            sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
             className="object-cover"
           />
         </div>

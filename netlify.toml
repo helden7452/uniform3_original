@@ -3,13 +3,13 @@
   publish = ".next"
   
 [build.environment]
-  NEXT_PUBLIC_SITE_URL = "https://a5fi.com"
+  NEXT_PUBLIC_SITE_URL = "https://stalwart-rolypoly-a8dd20.netlify.app/"
   NEXT_PUBLIC_SITE_NAME = "خبراء الزي الموحد"
   NODE_VERSION = "18.18.0"
   NODE_ENV = "production"
   
 [context.production.environment]
-  NEXT_PUBLIC_SITE_URL = "https://a5fi.com"
+  NEXT_PUBLIC_SITE_URL = "https://stalwart-rolypoly-a8dd20.netlify.app/"
   NODE_ENV = "production"
 
 [[headers]]

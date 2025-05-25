@@ -1,5 +1,38 @@
 const posts = [
   {
+    "slug": "choosing-suitable-fabrics-for-hot-climate",
+    "title": "اختيار الأقمشة المناسبة للمناخ الحار: دليل شامل للزي الموحد في السعودية",
+    "excerpt": "نصائح متخصصة لاختيار أفضل الأقمشة للزي الموحد التي تناسب المناخ الحار في المملكة العربية السعودية، مع التركيز على الراحة والأداء العملي والمظهر المهني",
+    "coverImage": "/images/corporate_uniforms/choosing-suitable-fabrics-hot-climate.jpg",
+    "date": "2025-06-01",
+    "readTime": "7 دقائق للقراءة",
+    "author": "khalid-saeed",
+    "category": "blog",
+    "featured": true
+  },
+  {
+    "slug": "importance-of-uniforms-in-corporate-identity",
+    "title": "أهمية الزي الموحد في تعزيز الهوية المؤسسية وبناء صورة احترافية",
+    "excerpt": "كيف يساهم الزي الموحد بشكل فعال في تعزيز الهوية المؤسسية وبناء الانتماء الداخلي وتعزيز الصورة الاحترافية للمؤسسات والشركات السعودية",
+    "coverImage": "/images/corporate_uniforms/corporate-identity-uniforms.jpg",
+    "date": "2025-05-28",
+    "readTime": "8 دقائق للقراءة",
+    "author": "sarah-abdullah",
+    "category": "blog",
+    "featured": true
+  },
+  {
+    "slug": "latest-corporate-uniform-design-trends",
+    "title": "أحدث اتجاهات تصميم الزي الموحد للشركات في عام 2025",
+    "excerpt": "استعراض لأحدث الاتجاهات والابتكارات في مجال تصميم الزي الموحد للشركات والمؤسسات، مع التركيز على التصاميم العصرية التي تجمع بين الأناقة والعملية",
+    "coverImage": "/images/corporate_uniforms/latest-design-trends.jpg",
+    "date": "2025-05-25",
+    "readTime": "9 دقائق للقراءة",
+    "author": "nora-mohammed",
+    "category": "blog",
+    "featured": true
+  },
+  {
     "slug": "designing-corporate-uniforms-reflecting-company-culture",
     "title": "تصميم زي رسمي يعكس ثقافة الشركة: من الشركات الناشئة إلى الكبرى",
     "excerpt": "دليل شامل لتصميم زي رسمي يعبر عن القيم والهوية المؤسسية، مع استراتيجيات مخصصة للشركات بمختلف أحجامها وقطاعاتها، ودراسة تأثير الزي على ثقافة العمل",

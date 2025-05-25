@@ -134,6 +134,8 @@ export default function BlogPostPage({ params }: PageProps) {
                         src={relatedPost.coverImage}
                         alt={relatedPost.title}
                         fill
+                        loading="lazy"
+                        sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                         className="object-cover"
                       />
                     </div>
@@ -151,6 +153,7 @@ export default function BlogPostPage({ params }: PageProps) {
                             src={avatar}
                             alt={relatedAuthor?.name || "مؤلف"}
                             fill
+                            loading="lazy"
                             className="object-cover"
                           />
                         </div>
