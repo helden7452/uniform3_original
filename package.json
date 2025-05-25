@@ -13,18 +13,20 @@
     "netlify:setup-env": "node scripts/setup-netlify-env.js"
   },
   "dependencies": {
+    "@types/node": "20.17.50",
+    "@types/react": "18.3.22",
+    "@types/react-dom": "18.2.22",
     "autoprefixer": "^10.4.18",
+    "framer-motion": "12.12.2",
     "next": "^14.2.0",
     "postcss": "^8.4.36",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-intersection-observer": "9.16.0",
     "react-slick": "^0.30.3",
     "slick-carousel": "^1.8.1",
     "tailwindcss": "^3.4.1",
-    "typescript": "5.8.3",
-    "@types/node": "20.17.50",
-    "@types/react": "18.3.22",
-    "@types/react-dom": "18.2.22"
+    "typescript": "5.8.3"
   },
   "devDependencies": {
     "@netlify/plugin-nextjs": "^5.11.2",
