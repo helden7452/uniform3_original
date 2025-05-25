@@ -3,7 +3,7 @@ const authors = [
     id: "admin",
     name: "فريق يونيفورم إكسبيرتس",
     bio: "فريق متخصص في مجال تصميم وإنتاج الأزياء الموحدة للشركات والمؤسسات المختلفة.",
-    avatar: "/images/author/admin.png",
+    avatar: "/images/author/author-1.jpg",
     title: "فريق المحتوى",
     email: "info@uniform-experts.com",
     socialLinks: {
@@ -16,7 +16,7 @@ const authors = [
     id: "ahmed_nasser",
     name: "أحمد ناصر",
     bio: "خبير في تصميم الأزياء الموحدة للشركات مع خبرة تزيد عن 10 سنوات في المجال.",
-    avatar: "/images/author/ahmed-nasser.png",
+    avatar: "/images/author/khalid-saeed.png",
     title: "مصمم أزياء موحدة",
     email: "ahmed@uniform-experts.com",
     socialLinks: {
