@@ -14,14 +14,22 @@ function getLocale(request: NextRequest) {
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   
+  // Special handling for root path
+  if (pathname === '/') {
+    // Redirect root to default locale
+    request.nextUrl.pathname = `/${defaultLocale}`;
+    return NextResponse.redirect(request.nextUrl);
+  }
+  
   // Check if the pathname has a supported locale
   const pathnameHasLocale = locales.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   );
 
-  if (pathnameHasLocale) return;
+  if (pathnameHasLocale) return NextResponse.next();
 
-  // Redirect if there is no locale
+  // Special handling for paths without locale
+  // Append the default locale to the beginning of the path
   const locale = getLocale(request);
   request.nextUrl.pathname = `/${locale}${pathname}`;
   return NextResponse.redirect(request.nextUrl);
@@ -30,6 +38,8 @@ export function middleware(request: NextRequest) {
 export const config = {
   matcher: [
     // Skip all internal paths (_next)
-    '/((?!_next|api|static|public|favicon.ico).*)',
+    '/((?!_next|api|static|public|favicon.ico|images).*)',
+    // Add homepage matcher
+    '/'
   ],
 }; 

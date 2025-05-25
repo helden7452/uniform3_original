@@ -32,4 +32,29 @@
 [[headers]]
   for = "/_next/static/*"
     [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable" 
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Redirect rules to handle internationalization
+[[redirects]]
+  from = "/"
+  to = "/ar-SA"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/about"
+  to = "/ar-SA/about"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/contact"
+  to = "/ar-SA/contact"
+  status = 302
+  force = true
+
+# Fallback for all routes
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404 

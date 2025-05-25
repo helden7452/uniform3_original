@@ -14,14 +14,8 @@ const nextConfig = {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
-  optimizeCss: true,
   swcMinify: true,
   trailingSlash: false,
-  experimental: {
-    optimizeFonts: true,
-    optimizePackageImports: ['next', 'react', 'react-dom'],
-    optimizeServerReact: true,
-  },
   async headers() {
     return [
       {
@@ -53,6 +47,13 @@ const nextConfig = {
   },
   compress: true,
   output: 'standalone',
+  exportPathMap: async function() {
+    return {
+      '/': { page: '/[locale]', query: { locale: 'ar-SA' } },
+      '/about': { page: '/[locale]/about', query: { locale: 'ar-SA' } },
+      '/contact': { page: '/[locale]/contact', query: { locale: 'ar-SA' } },
+    };
+  },
 };
 
-module.exports = nextConfig; 
+module.exports = nextConfig;
