@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+const path = require('path');
+
 const nextConfig = {
   reactStrictMode: true,
   // No need for i18n in next.config.js when using App Router with middleware
@@ -42,6 +44,11 @@ const nextConfig = {
   },
   compress: true,
   output: 'standalone',
+  webpack: (config, { isServer }) => {
+    config.resolve.alias['@'] = path.resolve(__dirname, 'src');
+    
+    return config;
+  }
 };
 
 module.exports = nextConfig;
