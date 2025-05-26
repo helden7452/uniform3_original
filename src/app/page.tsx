@@ -7,7 +7,13 @@ import CtaSection from '@/components/CtaSection';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function HomePage() {
+import { Locale, getDictionary } from '@/utils/i18n';
+
+interface LocalePageProps {
+  params: { locale: Locale };
+}
+
+export default async function HomePage({ params }: LocalePageProps) {
   // Define uniform categories
   const categories = [
     {
@@ -39,10 +45,10 @@ export default function HomePage() {
   return (
     <main>
       {/* Hero Section */}
-      <HeroSection />
+      <HeroSection locale={params.locale} dictionary={await getDictionary(params.locale)} />
 
       {/* Categories Section */}
-      <section className="py-16 bg-gray-50">
+      <section id="categories" className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="section-title mx-auto text-center mb-6 pb-2 inline-block" data-aos="fade-up">قطاعاتنا</h2>

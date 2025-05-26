@@ -4,50 +4,59 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Locale, defaultLocale } from '@/utils/i18n';
 
-const slideData = [
-  {
-    id: 1,
-    title: 'خبراء الزي الموحد في المملكة العربية السعودية',
-    subtitle: 'حلول متكاملة للزي الموحد تجمع بين الجودة والراحة والتميز',
-    description: 'نقدم تصاميم عصرية تناسب مختلف القطاعات مع التركيز على الجودة والراحة',
-    buttonText: 'تواصل معنا',
-    buttonLink: '/contact',
-    secondaryButtonText: 'خدماتنا',
-    secondaryButtonLink: '/services',
-    image: '/images/hero-bg.jpg',
-    overlayColor: 'rgba(0, 0, 0, 0.5)',
-    position: 'center',
-  },
-  {
-    id: 2,
-    title: 'زي القطاع الصحي',
-    subtitle: 'تصميم وتصنيع زي طبي عالي الجودة',
-    description: 'أزياء طبية مريحة ومتينة تناسب مختلف التخصصات في القطاع الصحي',
-    buttonText: 'استكشف',
-    buttonLink: '/healthcare-uniforms',
-    secondaryButtonText: 'طلب عرض سعر',
-    secondaryButtonLink: '/contact?sector=healthcare',
-    image: '/images/healthcare_uniforms.jpg',
-    overlayColor: 'rgba(0, 0, 0, 0.4)',
-    position: 'center',
-  },
-  {
-    id: 3,
-    title: 'زي قطاع الضيافة والفنادق',
-    subtitle: 'زي أنيق وعملي للفنادق والمطاعم والمنتجعات',
-    description: 'نصمم أزياء تعكس هوية منشأتك وتعزز من الصورة الاحترافية للعاملين',
-    buttonText: 'استكشف',
-    buttonLink: '/hospitality-uniforms',
-    secondaryButtonText: 'مشاريعنا',
-    secondaryButtonLink: '/projects?category=hospitality',
-    image: '/images/hospitality_uniforms.jpg',
-    overlayColor: 'rgba(0, 0, 0, 0.45)',
-    position: 'center',
-  },
-];
+interface HeroSectionProps {
+  locale: Locale;
+  dictionary: any;
+}
 
-const HeroSection = () => {
+const HeroSection = ({ locale, dictionary }: HeroSectionProps) => {
+  const isRTL = locale === 'ar-SA';
+  
+  const getSlideData = () => [
+    {
+      id: 1,
+      title: dictionary?.home?.hero?.title || 'Uniform Experts in Saudi Arabia',
+      subtitle: dictionary?.home?.hero?.subtitle || 'Comprehensive uniform solutions combining quality, comfort, and excellence',
+      description: dictionary?.home?.hero?.description || 'We provide modern designs suitable for various sectors with a focus on quality and comfort',
+      buttonText: dictionary?.home?.hero?.cta || dictionary?.common?.buttons?.contactUs || 'Contact Us',
+      buttonLink: locale === defaultLocale ? '/contact' : `/${locale}/contact`,
+      secondaryButtonText: dictionary?.home?.hero?.secondaryCta || dictionary?.common?.buttons?.ourServices || 'Our Services',
+      secondaryButtonLink: '#categories',
+      image: '/images/hero-bg.jpg',
+      overlayColor: 'rgba(0, 0, 0, 0.5)',
+      position: 'center',
+    },
+    {
+      id: 2,
+      title: dictionary?.home?.hero?.slides?.healthcare?.title || dictionary?.categories?.healthcare || 'Healthcare Uniforms',
+      subtitle: dictionary?.home?.hero?.slides?.healthcare?.subtitle || 'Design and manufacture high-quality medical uniforms',
+      description: dictionary?.home?.hero?.slides?.healthcare?.description || 'Comfortable and durable medical uniforms suitable for various specialties in the healthcare sector',
+      buttonText: dictionary?.common?.buttons?.explore || 'Explore',
+      buttonLink: locale === defaultLocale ? '/healthcare-uniforms' : `/${locale}/healthcare-uniforms`,
+      secondaryButtonText: dictionary?.common?.buttons?.requestQuote || 'Request Quote',
+      secondaryButtonLink: locale === defaultLocale ? '/contact?sector=healthcare' : `/${locale}/contact?sector=healthcare`,
+      image: '/images/healthcare_uniforms.jpg',
+      overlayColor: 'rgba(0, 0, 0, 0.4)',
+      position: 'center',
+    },
+    {
+      id: 3,
+      title: dictionary?.home?.hero?.slides?.hospitality?.title || dictionary?.categories?.hospitality || 'Hospitality Uniforms',
+      subtitle: dictionary?.home?.hero?.slides?.hospitality?.subtitle || 'Elegant and practical uniforms for hotels, restaurants, and resorts',
+      description: dictionary?.home?.hero?.slides?.hospitality?.description || 'We design uniforms that reflect your establishment\'s identity and enhance the professional image of staff',
+      buttonText: dictionary?.common?.buttons?.explore || 'Explore',
+      buttonLink: locale === defaultLocale ? '/hospitality-uniforms' : `/${locale}/hospitality-uniforms`,
+      secondaryButtonText: dictionary?.common?.buttons?.ourProjects || 'Our Projects',
+      secondaryButtonLink: locale === defaultLocale ? '/projects?category=hospitality' : `/${locale}/projects?category=hospitality`,
+      image: '/images/hospitality_uniforms.jpg',
+      overlayColor: 'rgba(0, 0, 0, 0.45)',
+      position: 'center',
+    },
+  ];
+
+  const slideData = getSlideData();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [animating, setAnimating] = useState(false);
   const [isAutoplay, setIsAutoplay] = useState(true);
@@ -275,7 +284,7 @@ const HeroSection = () => {
             <button 
               onClick={goToPrevSlide}
               className="bg-black/30 hover:bg-black/50 text-white w-12 h-12 rounded-full flex items-center justify-center backdrop-blur-sm transition-all duration-300 transform hover:scale-110"
-              aria-label="السابق"
+              aria-label={isRTL ? "السابق" : "Previous"}
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -285,7 +294,7 @@ const HeroSection = () => {
             <button 
               onClick={goToNextSlide}
               className="bg-black/30 hover:bg-black/50 text-white w-12 h-12 rounded-full flex items-center justify-center backdrop-blur-sm transition-all duration-300 transform hover:scale-110"
-              aria-label="التالي"
+              aria-label={isRTL ? "التالي" : "Next"}
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -305,7 +314,7 @@ const HeroSection = () => {
                     currentSlide === index ? 'w-12 bg-accent' : 'w-3 bg-white/60 hover:bg-white'
                   }`}
                   onClick={() => goToSlide(index)}
-                  aria-label={`الانتقال إلى الشريحة ${index + 1}`}
+                  aria-label={isRTL ? `الانتقال إلى الشريحة ${index + 1}` : `Go to slide ${index + 1}`}
                 >
                   {currentSlide === index && (
                     <div 
@@ -321,7 +330,10 @@ const HeroSection = () => {
               <button 
                 onClick={toggleAutoplay}
                 className="bg-black/30 hover:bg-black/50 text-white w-10 h-10 rounded-full flex items-center justify-center backdrop-blur-sm transition-all"
-                aria-label={isAutoplay ? "إيقاف التشغيل التلقائي" : "تشغيل تلقائي"}
+                aria-label={isAutoplay 
+                  ? (isRTL ? "إيقاف التشغيل التلقائي" : "Pause autoplay") 
+                  : (isRTL ? "تشغيل تلقائي" : "Start autoplay")
+                }
               >
                 {isAutoplay ? (
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
