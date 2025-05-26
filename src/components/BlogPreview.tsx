@@ -33,16 +33,6 @@ const recentPosts: BlogPost[] = [
     date: '3 يونيو 2023',
     readTime: 5,
   },
-  {
-    id: 3,
-    title: 'أحدث اتجاهات تصميم الزي الموحد للشركات في 2023',
-    excerpt: 'تعرف على أحدث صيحات وتوجهات تصميم الزي الموحد للشركات في عام 2023 ومواكبة العصر مع الحفاظ على الراحة والأداء الوظيفي',
-    slug: '/blog/latest-corporate-uniform-design-trends',
-    image: '/images/blog/blog-3.jpg',
-    category: 'تصميم',
-    date: '22 يونيو 2023',
-    readTime: 6,
-  },
 ];
 
 const BlogPreview = () => {

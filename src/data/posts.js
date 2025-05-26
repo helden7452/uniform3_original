@@ -11,28 +11,6 @@ const posts = [
     "featured": true
   },
   {
-    "slug": "importance-of-uniforms-in-corporate-identity",
-    "title": "أهمية الزي الموحد في تعزيز الهوية المؤسسية وبناء صورة احترافية",
-    "excerpt": "كيف يساهم الزي الموحد بشكل فعال في تعزيز الهوية المؤسسية وبناء الانتماء الداخلي وتعزيز الصورة الاحترافية للمؤسسات والشركات السعودية",
-    "coverImage": "/images/corporate_uniforms/accessories-complementing-corporate-uniforms.jpg",
-    "date": "2025-05-28",
-    "readTime": "8 دقائق للقراءة",
-    "author": "sarah-abdullah",
-    "category": "blog",
-    "featured": true
-  },
-  {
-    "slug": "latest-corporate-uniform-design-trends",
-    "title": "أحدث اتجاهات تصميم الزي الموحد للشركات في عام 2025",
-    "excerpt": "استعراض لأحدث الاتجاهات والابتكارات في مجال تصميم الزي الموحد للشركات والمؤسسات، مع التركيز على التصاميم العصرية التي تجمع بين الأناقة والعملية",
-    "coverImage": "/images/corporate_uniforms/impact-of-corporate-uniforms-on-work-environment-team-spirit.jpg",
-    "date": "2025-05-25",
-    "readTime": "9 دقائق للقراءة",
-    "author": "nora-mohammed",
-    "category": "blog",
-    "featured": true
-  },
-  {
     "slug": "designing-corporate-uniforms-reflecting-company-culture",
     "title": "تصميم زي رسمي يعكس ثقافة الشركة: من الشركات الناشئة إلى الكبرى",
     "excerpt": "دليل شامل لتصميم زي رسمي يعبر عن القيم والهوية المؤسسية، مع استراتيجيات مخصصة للشركات بمختلف أحجامها وقطاعاتها، ودراسة تأثير الزي على ثقافة العمل",
@@ -42,17 +20,6 @@ const posts = [
     "author": "ahmed-abdullah",
     "category": "corporate-uniforms",
     "featured": true
-  },
-  {
-    "slug": "sustainable-corporate-uniforms-eco-friendly-options",
-    "title": "زي رسمي مستدام: خيارات صديقة للبيئة للشركات الواعية",
-    "excerpt": "دليل شامل عن خيارات الزي الرسمي المستدام والصديق للبيئة للمؤسسات المهتمة بالاستدامة، مع عرض للخامات المبتكرة وأفضل الممارسات لتقليل البصمة البيئية",
-    "coverImage": "/images/corporate_uniforms/sustainable-corporate-uniforms-eco-friendly-options.jpg",
-    "date": "2025-05-10",
-    "readTime": "9 دقائق للقراءة",
-    "author": "nora-mohammed",
-    "category": "corporate-uniforms",
-    "featured": false
   },
   {
     "slug": "common-mistakes-to-avoid-when-choosing-corporate-uniforms",
@@ -86,17 +53,6 @@ const posts = [
     "author": "sarah-abdullah",
     "category": "corporate-uniforms",
     "featured": true
-  },
-  {
-    "slug": "role-of-corporate-uniforms-in-promoting-equality-professionalism",
-    "title": "دور الزي الرسمي في تعزيز المساواة والمهنية في بيئة العمل",
-    "excerpt": "كيف يمكن للزي الموحد أن يلعب دوراً محورياً في تعزيز المساواة بين الموظفين وخلق بيئة عمل مهنية موحدة",
-    "coverImage": "/images/corporate_uniforms/employee_uniforms.jpg",
-    "date": "2025-04-15",
-    "readTime": "7 دقائق للقراءة",
-    "author": "ahmed-abdullah",
-    "category": "corporate-uniforms",
-    "featured": false
   },
   {
     "slug": "how-to-ensure-appropriate-sizes-for-all-employees",

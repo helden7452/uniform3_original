@@ -1,50 +1,71 @@
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
-
-// Supported locales
-const locales = ['ar-SA'];
-const defaultLocale = 'ar-SA';
-
-// Get the preferred locale, similar to the above
-function getLocale(request: NextRequest) {
-  // For simplicity, we're always using the default locale
-  // In a production app, you might check Accept-Language headers
-  return defaultLocale;
-}
+import { NextRequest, NextResponse } from 'next/server';
+import { locales, defaultLocale, pathnameHasLocale, getLocaleFromPathname } from './src/utils/i18n';
 
 export function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl;
-
-  // Prevent redirect for API routes, static files, and other special files
-  if (
-    pathname.startsWith('/_next') ||
-    pathname.startsWith('/api') ||
-    pathname.startsWith('/static') ||
-    pathname.startsWith('/images') ||
-    pathname.includes('.') // This catches files like favicon.ico, etc.
-  ) {
-    return NextResponse.next();
-  }
-
+  const pathname = request.nextUrl.pathname;
+  
   // Check if the pathname already has a locale
-  const pathnameHasLocale = locales.some(
-    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
-  );
-
-  if (pathnameHasLocale) {
+  const pathnameHasLocalePrefix = pathnameHasLocale(pathname);
+  
+  // If pathname has locale, continue
+  if (pathnameHasLocalePrefix) {
     return NextResponse.next();
   }
+  
+  // Get locale from Accept-Language header or use default
+  const locale = getLocaleFromRequest(request) || defaultLocale;
+  
+  // For default locale (Arabic), don't add prefix to URL
+  if (locale === defaultLocale) {
+    return NextResponse.next();
+  }
+  
+  // For non-default locales, redirect to locale-prefixed URL
+  const newUrl = new URL(`/${locale}${pathname}`, request.url);
+  return NextResponse.redirect(newUrl);
+}
 
-  // Redirect to the locale version - including the / route
-  const locale = getLocale(request);
-  const newPath = pathname === '/' ? `/${locale}` : `/${locale}${pathname}`;
-  return NextResponse.redirect(new URL(newPath, request.url));
+function getLocaleFromRequest(request: NextRequest): string | undefined {
+  // Check if locale is in cookie
+  const localeCookie = request.cookies.get('locale')?.value;
+  if (localeCookie && locales.includes(localeCookie as any)) {
+    return localeCookie;
+  }
+  
+  // Check Accept-Language header
+  const acceptLanguage = request.headers.get('accept-language');
+  if (acceptLanguage) {
+    // Parse Accept-Language header
+    const languages = acceptLanguage
+      .split(',')
+      .map(lang => {
+        const [code, q = '1'] = lang.trim().split(';q=');
+        return { code: code.trim(), quality: parseFloat(q) };
+      })
+      .sort((a, b) => b.quality - a.quality);
+    
+    // Find matching locale
+    for (const lang of languages) {
+      // Check exact match
+      if (locales.includes(lang.code as any)) {
+        return lang.code;
+      }
+      
+      // Check language part (e.g., 'en' from 'en-US')
+      const langCode = lang.code.split('-')[0];
+      const matchingLocale = locales.find(locale => locale.startsWith(langCode));
+      if (matchingLocale) {
+        return matchingLocale;
+      }
+    }
+  }
+  
+  return undefined;
 }
 
 export const config = {
-  // Match all request paths except for the ones starting with:
-  // - _next/static (static files)
-  // - _next/image (image optimization files)
-  // - favicon.ico (favicon file)
-  matcher: ['/((?!_next/static|_next/image|favicon.ico|images).*)'],
-}; 
+  matcher: [
+    // Skip all internal paths (_next, api, etc.)
+    '/((?!_next|api|favicon.ico|images|.*\\.).*)',
+  ],
+};

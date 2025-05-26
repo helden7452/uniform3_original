@@ -18,13 +18,6 @@ const articles = [
     imageSrc: '/images/corporate_uniforms/corporate-identity.jpg',
   },
   {
-    id: 2,
-    title: 'أحدث اتجاهات تصميم الزي الموحد للشركات في عام 2025',
-    slug: 'latest-corporate-uniform-design-trends',
-    excerpt: 'نظرة على أحدث اتجاهات التصميم في عالم الزي الموحد للشركات من حيث الألوان، القصات، الأقمشة، والتقنيات المستخدمة.',
-    imageSrc: '/images/corporate_uniforms/design-trends-2025.jpg',
-  },
-  {
     id: 5,
     title: 'كيف تعكس أزياء الشركات الموحدة ثقافة وقيم المؤسسة؟',
     slug: 'how-corporate-uniforms-reflect-company-identity-values',

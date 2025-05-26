@@ -2,8 +2,8 @@ import '@/styles/globals.css';
 import { Metadata } from 'next';
 import { Tajawal } from 'next/font/google';
 import Link from 'next/link';
-import Script from 'next/script';
 import Image from 'next/image';
+import AOSInitializer from '@/components/AOSInitializer';
 
 const tajawal = Tajawal({
   subsets: ['arabic'],
@@ -131,21 +131,7 @@ export default function RootLayout({
             </div>
           </div>
         </footer>
-        <Script 
-          src="https://unpkg.com/aos@next/dist/aos.js" 
-          strategy="afterInteractive"
-        />
-        <Script 
-          id="aos-init" 
-          strategy="afterInteractive"
-        >
-          {`
-            AOS.init({
-              duration: 800,
-              once: true,
-            });
-          `}
-        </Script>
+        <AOSInitializer />
       </body>
     </html>
   );

@@ -1,142 +1,171 @@
-import '@/styles/globals.css';
+import { Inter, Tajawal } from 'next/font/google';
+import { Locale, locales, getDictionary, defaultLocale } from '@/utils/i18n';
 import { Metadata } from 'next';
-import { Tajawal } from 'next/font/google';
-import Script from 'next/script';
-import { locales, Locale } from '@/utils/i18n';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import AOSInitializer from '@/components/AOSInitializer';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
+import '../globals.css';
 
-const tajawal = Tajawal({
+const inter = Inter({ 
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+});
+
+const tajawal = Tajawal({ 
   subsets: ['arabic'],
-  weight: ['400', '500', '700', '800'],
+  weight: ['200', '300', '400', '500', '700', '800', '900'],
   variable: '--font-tajawal',
   display: 'swap',
 });
 
-export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://a5fi.com'),
-  title: 'خبراء الزي الموحد في المملكة العربية السعودية | جودة واحترافية',
-  description: 'خبراء في توفير الزي الموحد للشركات والمؤسسات في المملكة العربية السعودية بأعلى معايير الجودة والاحترافية. نقدم حلولاً متكاملة للزي الموحد للقطاع الصحي، الأمن، الضيافة والشركات.',
-  keywords: ['زي موحد', 'يونيفورم', 'زي شركات', 'زي طبي', 'زي أمن', 'زي فنادق', 'زي موحد في السعودية'],
-  applicationName: 'خبراء الزي الموحد',
-  authors: [{ name: 'خبراء الزي الموحد', url: 'https://a5fi.com' }],
-  generator: 'Next.js',
-  referrer: 'origin-when-cross-origin',
-  creator: 'خبراء الزي الموحد',
-  publisher: 'خبراء الزي الموحد',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  alternates: {
-    canonical: 'https://a5fi.com',
-    languages: {
-      'ar-SA': 'https://a5fi.com',
-    },
-  },
-  openGraph: {
-    title: 'خبراء الزي الموحد في المملكة العربية السعودية | جودة واحترافية',
-    description: 'خبراء في توفير الزي الموحد للشركات والمؤسسات في المملكة العربية السعودية بأعلى معايير الجودة والاحترافية',
-    url: 'https://a5fi.com',
-    siteName: 'خبراء الزي الموحد',
-    locale: 'ar_SA',
-    type: 'website',
-    images: [
-      {
-        url: 'https://a5fi.com/images/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'خبراء الزي الموحد في المملكة العربية السعودية',
-      }
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'خبراء الزي الموحد في المملكة العربية السعودية | جودة واحترافية',
-    description: 'خبراء في توفير الزي الموحد للشركات والمؤسسات في المملكة العربية السعودية بأعلى معايير الجودة والاحترافية',
-    images: ['https://a5fi.com/images/twitter-image.jpg'],
-    creator: '@a5fi',
-    site: '@a5fi',
-  },
-  verification: {
-    google: 'verification_token',
-    yandex: 'verification_token',
-    yahoo: 'verification_token',
-    other: {
-      me: ['mailto:info@a5fi.com'],
-    },
-  },
-  category: 'uniform services',
-};
+interface LocaleLayoutProps {
+  children: React.ReactNode;
+  params: { locale: Locale };
+}
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-export default function LocaleLayout({
-  children,
-  params,
-}: {
-  children: React.ReactNode;
-  params: { locale: Locale };
-}) {
+export async function generateMetadata({ params }: { params: { locale: Locale } }): Promise<Metadata> {
+  const dictionary = await getDictionary(params.locale);
+  const isRTL = params.locale === 'ar-SA';
+  
+  return {
+    title: dictionary.common?.meta?.defaultTitle || 'Uniform Experts',
+    description: dictionary.common?.meta?.defaultDescription || 'Professional uniform solutions in Saudi Arabia',
+    keywords: isRTL 
+      ? 'زي موحد, زي طبي, زي أمن, زي فنادق, زي شركات, السعودية'
+      : 'uniforms, medical uniforms, security uniforms, hotel uniforms, corporate uniforms, Saudi Arabia',
+    authors: [{ name: 'Uniform Experts' }],
+    creator: 'Uniform Experts',
+    publisher: 'Uniform Experts',
+    robots: 'index, follow',
+    openGraph: {
+      title: dictionary.common?.meta?.defaultTitle || 'Uniform Experts',
+      description: dictionary.common?.meta?.defaultDescription || 'Professional uniform solutions in Saudi Arabia',
+      type: 'website',
+      locale: params.locale,
+      alternateLocale: locales.filter(l => l !== params.locale),
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: dictionary.common?.meta?.defaultTitle || 'Uniform Experts',
+      description: dictionary.common?.meta?.defaultDescription || 'Professional uniform solutions in Saudi Arabia',
+    },
+    alternates: {
+      languages: {
+        'ar-SA': '/',
+        'en-US': '/en-US',
+      },
+    },
+  };
+}
+
+export default async function LocaleLayout({ children, params }: LocaleLayoutProps) {
+  const dictionary = await getDictionary(params.locale);
+  const isRTL = params.locale === 'ar-SA';
+  
   return (
-    <html lang={params.locale} dir="rtl" className={tajawal.variable}>
-      <body className="min-h-screen flex flex-col">
-        <Header locale={params.locale} />
-        <div className="flex-grow">
+    <html 
+      lang={params.locale} 
+      dir={isRTL ? 'rtl' : 'ltr'}
+      className={`${inter.variable} ${tajawal.variable}`}
+    >
+      <body className={`${isRTL ? 'font-tajawal' : 'font-inter'} antialiased`}>
+        <AOSInitializer />
+        
+        {/* Header */}
+        <header className="bg-white shadow-sm sticky top-0 z-50">
+          <div className="container mx-auto px-4">
+            <div className="flex items-center justify-between h-16">
+              {/* Logo */}
+              <div className="flex-shrink-0">
+                <h1 className="text-xl font-bold text-primary">
+                  Uniform Experts
+                </h1>
+              </div>
+              
+              {/* Navigation */}
+              <nav className="hidden md:flex items-center space-x-8 rtl:space-x-reverse">
+                <a href={params.locale === defaultLocale ? '/' : `/${params.locale}`} className="text-gray-700 hover:text-primary transition-colors">
+                  {dictionary.common?.navigation?.home}
+                </a>
+                <a href={params.locale === defaultLocale ? '/about' : `/${params.locale}/about`} className="text-gray-700 hover:text-primary transition-colors">
+                  {dictionary.common?.navigation?.about}
+                </a>
+                <a href={params.locale === defaultLocale ? '/blog' : `/${params.locale}/blog`} className="text-gray-700 hover:text-primary transition-colors">
+                  {dictionary.common?.navigation?.blog}
+                </a>
+                <a href={params.locale === defaultLocale ? '/contact' : `/${params.locale}/contact`} className="text-gray-700 hover:text-primary transition-colors">
+                  {dictionary.common?.navigation?.contact}
+                </a>
+              </nav>
+              
+              {/* Language Switcher */}
+              <LanguageSwitcher currentLocale={params.locale} dictionary={dictionary} />
+            </div>
+          </div>
+        </header>
+
+        {/* Main Content */}
+        <main>
           {children}
-        </div>
-        <Footer locale={params.locale} />
-        <Script
-          strategy="afterInteractive"
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
-          `}
-        </Script>
-        <Script id="schema-organization" type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "خبراء الزي الموحد",
-              "url": "https://a5fi.com",
-              "logo": "https://a5fi.com/images/logo.png",
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+966-50-000-0000",
-                "contactType": "customer service",
-                "availableLanguage": ["Arabic"]
-              },
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "الرياض",
-                "addressRegion": "الرياض",
-                "addressCountry": "SA"
-              },
-              "sameAs": [
-                "https://facebook.com/a5fi",
-                "https://twitter.com/a5fi",
-                "https://instagram.com/a5fi",
-                "https://linkedin.com/company/a5fi"
-              ]
-            }
-          `}
-        </Script>
+        </main>
+
+        {/* Footer */}
+        <footer className="bg-gray-900 text-white py-12">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              {/* Company Info */}
+              <div className="col-span-1 md:col-span-2">
+                <h3 className="text-xl font-bold mb-4">Uniform Experts</h3>
+                <p className="text-gray-300 mb-4">
+                  {isRTL 
+                    ? 'نحن شركة متخصصة في توفير الزي الموحد للشركات والمؤسسات في المملكة العربية السعودية بأعلى معايير الجودة والاحترافية'
+                    : 'We are a company specialized in providing uniforms for companies and institutions in Saudi Arabia with the highest standards of quality and professionalism'
+                  }
+                </p>
+              </div>
+              
+              {/* Quick Links */}
+              <div>
+                <h4 className="text-lg font-semibold mb-4">{dictionary.common?.footer?.quickLinks || 'Quick Links'}</h4>
+                <ul className="space-y-2">
+                  <li>
+                    <a href={params.locale === defaultLocale ? '/' : `/${params.locale}`} className="text-gray-300 hover:text-white transition-colors">
+                      {dictionary.common?.navigation?.home}
+                    </a>
+                  </li>
+                  <li>
+                    <a href={params.locale === defaultLocale ? '/about' : `/${params.locale}/about`} className="text-gray-300 hover:text-white transition-colors">
+                      {dictionary.common?.navigation?.about}
+                    </a>
+                  </li>
+                  <li>
+                    <a href={params.locale === defaultLocale ? '/contact' : `/${params.locale}/contact`} className="text-gray-300 hover:text-white transition-colors">
+                      {dictionary.common?.navigation?.contact}
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              
+              {/* Contact Info */}
+              <div>
+                <h4 className="text-lg font-semibold mb-4">{dictionary.common?.footer?.contactInfo || 'Contact Info'}</h4>
+                <div className="space-y-2 text-gray-300">
+                  <p>{dictionary.contact?.info?.phone || 'Phone'}: +966 XX XXX XXXX</p>
+                  <p>{dictionary.contact?.info?.email || 'Email'}: info@uniformexperts.sa</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-300">
+              <p>&copy; 2024 Uniform Experts. {dictionary.common?.footer?.rights}</p>
+            </div>
+          </div>
+        </footer>
       </body>
     </html>
   );
-} 
+}

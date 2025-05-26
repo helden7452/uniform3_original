@@ -255,13 +255,12 @@ export default function ArticlePage() {
             <h3 className="text-lg font-semibold mb-3">الوسوم:</h3>
             <div className="flex flex-wrap gap-2">
               {['زي الأمن السعودي', 'يونيفورم الحراسة', 'معايير الزي الأمني', 'ملابس الأمن الخاص', 'زي الحراسات الأمنية', 'أزياء أمن موحدة'].map((tag) => (
-                <Link
+                <span
                   key={tag}
-                  href={`/tag/${tag}`}
-                  className="inline-block bg-gray-100 hover:bg-gray-200 rounded-full px-3 py-1 text-sm font-medium text-gray-800"
+                  className="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-medium text-gray-800"
                 >
                   {tag}
-                </Link>
+                </span>
               ))}
             </div>
           </div>

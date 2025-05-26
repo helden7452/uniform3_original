@@ -1,0 +1,190 @@
+{
+  "common": {
+    "navigation": {
+      "home": "Home",
+      "about": "About Us",
+      "contact": "Contact Us",
+      "blog": "Blog",
+      "services": "Services",
+      "projects": "Projects",
+      "categories": "Categories"
+    },
+    "buttons": {
+      "readMore": "Read More",
+      "contactUs": "Contact Us",
+      "getQuote": "Get Quote",
+      "learnMore": "Learn More",
+      "viewAll": "View All",
+      "explore": "Explore",
+      "requestQuote": "Request Quote",
+      "ourServices": "Our Services",
+      "ourProjects": "Our Projects"
+    },
+    "footer": {
+      "rights": "All Rights Reserved",
+      "privacyPolicy": "Privacy Policy",
+      "terms": "Terms & Conditions",
+      "followUs": "Follow Us",
+      "quickLinks": "Quick Links",
+      "contactInfo": "Contact Information"
+    },
+    "meta": {
+      "defaultTitle": "Uniform Experts - Professional Uniform Solutions in Saudi Arabia",
+      "defaultDescription": "Leading provider of high-quality uniforms for healthcare, security, hospitality, and corporate sectors in Saudi Arabia. Custom designs, premium materials, fast delivery."
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Uniform Experts in Saudi Arabia",
+      "subtitle": "Comprehensive uniform solutions combining quality, comfort, and excellence",
+      "description": "We provide modern designs suitable for various sectors with a focus on quality and comfort",
+      "cta": "Contact Us",
+      "secondaryCta": "Our Services",
+      "slides": {
+        "healthcare": {
+          "title": "Healthcare Uniforms",
+          "subtitle": "Design and manufacture high-quality medical uniforms",
+          "description": "Comfortable and durable medical uniforms suitable for various specialties in the healthcare sector"
+        },
+        "hospitality": {
+          "title": "Hospitality & Hotel Uniforms",
+          "subtitle": "Elegant and practical uniforms for hotels, restaurants, and resorts",
+          "description": "We design uniforms that reflect your establishment's identity and enhance the professional image of staff"
+        }
+      }
+    },
+    "categories": {
+      "title": "Our Sectors",
+      "subtitle": "We provide specialized uniform solutions for various sectors in Saudi Arabia",
+      "healthcare": {
+        "title": "Healthcare Uniforms",
+        "description": "Uniforms for hospitals and medical centers designed for comfort and practical performance while considering medical environment requirements"
+      },
+      "security": {
+        "title": "Security & Guard Uniforms",
+        "description": "Durable and practical uniforms for the security sector, designed to withstand various conditions while considering the Saudi climate"
+      },
+      "hospitality": {
+        "title": "Hospitality & Hotel Uniforms",
+        "description": "Elegant and practical designs for hospitality and hotel staff, reflecting the highest standards of service and professionalism"
+      },
+      "corporate": {
+        "title": "Corporate Uniforms",
+        "description": "Corporate uniforms that reflect brand identity and enhance institutional belonging with modern designs"
+      }
+    },
+    "whyChooseUs": {
+      "title": "Why Choose Us?",
+      "subtitle": "We excel in providing high-quality services with a focus on meeting our clients' needs",
+      "quality": {
+        "title": "High Quality",
+        "description": "We use the best materials and latest technologies in uniform manufacturing"
+      },
+      "delivery": {
+        "title": "Fast Delivery",
+        "description": "We commit to agreed delivery dates while ensuring quality"
+      },
+      "pricing": {
+        "title": "Competitive Prices",
+        "description": "We offer competitive prices while maintaining the highest quality standards"
+      }
+    },
+    "testimonials": {
+      "title": "Client Reviews",
+      "subtitle": "We take pride in our clients' trust and testimonials about the quality of our products and services"
+    },
+    "blog": {
+      "title": "Latest Articles",
+      "subtitle": "Stay updated with the latest trends and tips in the uniform industry"
+    },
+    "cta": {
+      "title": "Ready to Get Started?",
+      "subtitle": "Contact us today for a free consultation and custom quote",
+      "button": "Get Free Quote"
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "description": "We are a company specialized in providing uniforms for companies and institutions in Saudi Arabia with the highest standards of quality and professionalism",
+    "mission": {
+      "title": "Our Mission",
+      "description": "To provide the best uniform solutions that reflect our clients' identity and meet their needs"
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "To be the first and best partner in the uniform field in Saudi Arabia"
+    },
+    "values": {
+      "title": "Our Values",
+      "quality": "Quality",
+      "innovation": "Innovation",
+      "service": "Customer Service",
+      "integrity": "Integrity"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with us for your uniform needs",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone Number",
+      "company": "Company",
+      "sector": "Sector",
+      "message": "Message",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "Error sending message. Please try again."
+    },
+    "info": {
+      "address": "Address",
+      "phone": "Phone",
+      "email": "Email",
+      "hours": "Working Hours",
+      "location": "Our Location"
+    },
+    "sectors": {
+      "healthcare": "Healthcare",
+      "security": "Security",
+      "hospitality": "Hospitality",
+      "corporate": "Corporate",
+      "other": "Other"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Latest insights and trends in the uniform industry",
+    "readTime": "min read",
+    "author": "Author",
+    "date": "Date",
+    "categories": "Categories",
+    "relatedPosts": "Related Posts",
+    "shareArticle": "Share Article"
+  },
+  "categories": {
+    "healthcare": "Healthcare Uniforms",
+    "security": "Security Uniforms", 
+    "hospitality": "Hospitality Uniforms",
+    "corporate": "Corporate Uniforms",
+    "aviation": "Aviation Uniforms",
+    "all": "All Categories"
+  },
+  "projects": {
+    "title": "Our Projects",
+    "subtitle": "Explore our successful uniform projects across various sectors",
+    "viewProject": "View Project",
+    "clientTestimonial": "Client Testimonial"
+  },
+  "statistics": {
+    "clients": "Happy Clients",
+    "projects": "Completed Projects", 
+    "experience": "Years of Experience",
+    "sectors": "Sectors Served"
+  },
+  "language": {
+    "switch": "Switch Language",
+    "arabic": "العربية",
+    "english": "English"
+  }
+}

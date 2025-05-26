@@ -1,154 +1,186 @@
-import { Locale, getDictionary, locales } from '@/utils/i18n';
-import Link from 'next/link';
-import Script from 'next/script';
-import { Metadata } from 'next';
-import Image from 'next/image';
+import { Locale, getDictionary } from '@/utils/i18n';
+import HeroSection from '@/components/HeroSection';
 
-type Props = {
+interface LocalePageProps {
   params: { locale: Locale };
-};
-
-// Generate static params for all supported locales
-export async function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
 }
 
-// إنشاء ميتاداتا ديناميكية للصفحة الرئيسية
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const dict = await getDictionary(params.locale);
+export default async function LocalePage({ params }: LocalePageProps) {
+  const dictionary = await getDictionary(params.locale);
   
-  return {
-    title: dict.home.hero.title,
-    description: dict.home.hero.subtitle,
-    alternates: {
-      canonical: 'https://a5fi.com',
-      languages: {
-        'ar-SA': 'https://a5fi.com',
-      },
-    },
-    openGraph: {
-      title: dict.home.hero.title,
-      description: dict.home.hero.subtitle,
-      url: 'https://a5fi.com',
-      type: 'website',
-    },
-  };
-}
-
-export default async function Home({
-  params: { locale },
-}: Props) {
-  const dict = await getDictionary(locale);
-
   return (
-    <>
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm">
-          <h1 className="text-4xl font-bold text-center mb-8">
-            {dict.home.hero.title}
-          </h1>
-          <p className="text-xl text-center mb-8">
-            {dict.home.hero.subtitle}
-          </p>
-          <div className="flex justify-center">
-            <Link 
-              href={`/${locale}/contact`}
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            >
-              {dict.home.hero.cta}
-            </Link>
-          </div>
-
-          {/* إضافة صورة بديلة للصورة الحالية لتحسين سرعة التحميل */}
-          <div className="my-12 text-center">
-            <div className="relative h-64 w-full max-w-3xl mx-auto">
-              <Image
-                src="/images/uniform-showcase.jpg"
-                alt="خبراء الزي الموحد - عرض المنتجات"
-                fill
-                priority
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                style={{ objectFit: 'cover', borderRadius: '0.5rem' }}
-              />
-            </div>
-          </div>
-
-          <div className="mt-16">
-            <h2 className="text-2xl font-bold text-center mb-8">
-              {dict.home.features.title}
+    <div>
+      <HeroSection locale={params.locale} dictionary={dictionary} />
+      
+      {/* Categories Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              {dictionary.home?.categories?.title || 'Our Sectors'}
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="p-6 border rounded-lg">
-                <h3 className="font-bold text-xl mb-2">
-                  {dict.home.features.quality.title}
-                </h3>
-                <p>{dict.home.features.quality.description}</p>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              {dictionary.home?.categories?.subtitle || 'We provide specialized uniform solutions for various sectors in Saudi Arabia'}
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Healthcare */}
+            <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div className="h-48 bg-blue-100 flex items-center justify-center">
+                <div className="text-6xl">🏥</div>
               </div>
-              <div className="p-6 border rounded-lg">
-                <h3 className="font-bold text-xl mb-2">
-                  {dict.home.features.customization.title}
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-3 text-gray-900">
+                  {dictionary.categories?.healthcare || 'Healthcare Uniforms'}
                 </h3>
-                <p>{dict.home.features.customization.description}</p>
+                <p className="text-gray-600 mb-4">
+                  {dictionary.home?.categories?.healthcare?.description || 'Uniforms for hospitals and medical centers designed for comfort and practical performance'}
+                </p>
+                <a 
+                  href={params.locale === 'ar-SA' ? '/healthcare-uniforms' : `/${params.locale}/healthcare-uniforms`}
+                  className="text-primary hover:text-primary/80 font-medium"
+                >
+                  {dictionary.common?.buttons?.learnMore || 'Learn More'} →
+                </a>
               </div>
-              <div className="p-6 border rounded-lg">
-                <h3 className="font-bold text-xl mb-2">
-                  {dict.home.features.delivery.title}
+            </div>
+            
+            {/* Security */}
+            <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div className="h-48 bg-gray-100 flex items-center justify-center">
+                <div className="text-6xl">🛡️</div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-3 text-gray-900">
+                  {dictionary.categories?.security || 'Security Uniforms'}
                 </h3>
-                <p>{dict.home.features.delivery.description}</p>
+                <p className="text-gray-600 mb-4">
+                  {dictionary.home?.categories?.security?.description || 'Durable and practical uniforms for the security sector'}
+                </p>
+                <a 
+                  href={params.locale === 'ar-SA' ? '/security-uniforms' : `/${params.locale}/security-uniforms`}
+                  className="text-primary hover:text-primary/80 font-medium"
+                >
+                  {dictionary.common?.buttons?.learnMore || 'Learn More'} →
+                </a>
+              </div>
+            </div>
+            
+            {/* Hospitality */}
+            <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div className="h-48 bg-yellow-100 flex items-center justify-center">
+                <div className="text-6xl">🏨</div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-3 text-gray-900">
+                  {dictionary.categories?.hospitality || 'Hospitality Uniforms'}
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  {dictionary.home?.categories?.hospitality?.description || 'Elegant and practical designs for hospitality and hotel staff'}
+                </p>
+                <a 
+                  href={params.locale === 'ar-SA' ? '/hospitality-uniforms' : `/${params.locale}/hospitality-uniforms`}
+                  className="text-primary hover:text-primary/80 font-medium"
+                >
+                  {dictionary.common?.buttons?.learnMore || 'Learn More'} →
+                </a>
+              </div>
+            </div>
+            
+            {/* Corporate */}
+            <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div className="h-48 bg-green-100 flex items-center justify-center">
+                <div className="text-6xl">🏢</div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-3 text-gray-900">
+                  {dictionary.categories?.corporate || 'Corporate Uniforms'}
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  {dictionary.home?.categories?.corporate?.description || 'Corporate uniforms that reflect brand identity and enhance institutional belonging'}
+                </p>
+                <a 
+                  href={params.locale === 'ar-SA' ? '/corporate-uniforms' : `/${params.locale}/corporate-uniforms`}
+                  className="text-primary hover:text-primary/80 font-medium"
+                >
+                  {dictionary.common?.buttons?.learnMore || 'Learn More'} →
+                </a>
               </div>
             </div>
           </div>
         </div>
-      </main>
-
-      {/* إضافة بيانات منظمة للصفحة لتحسين السيو */}
-      <Script id="homepage-schema" type="application/ld+json">
-        {`
-          {
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            "name": "${dict.home.hero.title}",
-            "description": "${dict.home.hero.subtitle}",
-            "url": "https://a5fi.com",
-            "mainEntity": {
-              "@type": "LocalBusiness",
-              "name": "خبراء الزي الموحد",
-              "image": "https://a5fi.com/images/uniform-showcase.jpg",
-              "telephone": "+966-50-000-0000",
-              "email": "info@a5fi.com",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "الرياض",
-                "addressRegion": "الرياض",
-                "addressCountry": "SA"
-              },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": "24.7136",
-                "longitude": "46.6753"
-              },
-              "priceRange": "$$",
-              "openingHoursSpecification": {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": [
-                  "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"
-                ],
-                "opens": "08:00",
-                "closes": "17:00"
-              },
-              "sameAs": [
-                "https://facebook.com/a5fi",
-                "https://twitter.com/a5fi",
-                "https://instagram.com/a5fi"
-              ]
-            },
-            "speakable": {
-              "@type": "SpeakableSpecification",
-              "cssSelector": ["h1", "h2", "p"]
-            }
-          }
-        `}
-      </Script>
-    </>
+      </section>
+      
+      {/* Why Choose Us Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              {dictionary.home?.whyChooseUs?.title || 'Why Choose Us?'}
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              {dictionary.home?.whyChooseUs?.subtitle || 'We excel in providing high-quality services with a focus on meeting our clients\' needs'}
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="text-2xl">⭐</div>
+              </div>
+              <h3 className="text-xl font-semibold mb-3">
+                {dictionary.home?.whyChooseUs?.quality?.title || 'High Quality'}
+              </h3>
+              <p className="text-gray-600">
+                {dictionary.home?.whyChooseUs?.quality?.description || 'We use the best materials and latest technologies in uniform manufacturing'}
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="text-2xl">🚚</div>
+              </div>
+              <h3 className="text-xl font-semibold mb-3">
+                {dictionary.home?.whyChooseUs?.delivery?.title || 'Fast Delivery'}
+              </h3>
+              <p className="text-gray-600">
+                {dictionary.home?.whyChooseUs?.delivery?.description || 'We commit to agreed delivery dates while ensuring quality'}
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="text-2xl">💰</div>
+              </div>
+              <h3 className="text-xl font-semibold mb-3">
+                {dictionary.home?.whyChooseUs?.pricing?.title || 'Competitive Prices'}
+              </h3>
+              <p className="text-gray-600">
+                {dictionary.home?.whyChooseUs?.pricing?.description || 'We offer competitive prices while maintaining the highest quality standards'}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* CTA Section */}
+      <section className="py-16 bg-primary text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            {dictionary.home?.cta?.title || 'Ready to Get Started?'}
+          </h2>
+          <p className="text-xl mb-8 opacity-90">
+            {dictionary.home?.cta?.subtitle || 'Contact us today for a free consultation and custom quote'}
+          </p>
+          <a 
+            href={params.locale === 'ar-SA' ? '/contact' : `/${params.locale}/contact`}
+            className="bg-white text-primary px-8 py-4 rounded-lg text-lg font-medium hover:bg-gray-100 transition-colors duration-300 inline-block"
+          >
+            {dictionary.home?.cta?.button || dictionary.common?.buttons?.getQuote || 'Get Free Quote'}
+          </a>
+        </div>
+      </section>
+    </div>
   );
-} 
+}
