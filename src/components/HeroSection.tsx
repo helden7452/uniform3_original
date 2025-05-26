@@ -4,7 +4,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Locale, defaultLocale } from '../utils/i18n';
+import { Locale } from '@/utils/i18n';
 
 interface HeroSectionProps {
   locale: Locale;
@@ -21,7 +21,7 @@ const HeroSection = ({ locale, dictionary }: HeroSectionProps) => {
       subtitle: dictionary?.home?.hero?.subtitle || 'Comprehensive uniform solutions combining quality, comfort, and excellence',
       description: dictionary?.home?.hero?.description || 'We provide modern designs suitable for various sectors with a focus on quality and comfort',
       buttonText: dictionary?.home?.hero?.cta || dictionary?.common?.buttons?.contactUs || 'Contact Us',
-      buttonLink: locale === defaultLocale ? '/contact' : `/${locale}/contact`,
+      buttonLink: locale === 'ar-SA' ? '/contact' : `/${locale}/contact`,
       secondaryButtonText: dictionary?.home?.hero?.secondaryCta || dictionary?.common?.buttons?.ourServices || 'Our Services',
       secondaryButtonLink: '#categories',
       image: '/images/hero-bg.jpg',
@@ -34,9 +34,9 @@ const HeroSection = ({ locale, dictionary }: HeroSectionProps) => {
       subtitle: dictionary?.home?.hero?.slides?.healthcare?.subtitle || 'Design and manufacture high-quality medical uniforms',
       description: dictionary?.home?.hero?.slides?.healthcare?.description || 'Comfortable and durable medical uniforms suitable for various specialties in the healthcare sector',
       buttonText: dictionary?.common?.buttons?.explore || 'Explore',
-      buttonLink: locale === defaultLocale ? '/healthcare-uniforms' : `/${locale}/healthcare-uniforms`,
+      buttonLink: locale === 'ar-SA' ? '/healthcare-uniforms' : `/${locale}/healthcare-uniforms`,
       secondaryButtonText: dictionary?.common?.buttons?.requestQuote || 'Request Quote',
-      secondaryButtonLink: locale === defaultLocale ? '/contact?sector=healthcare' : `/${locale}/contact?sector=healthcare`,
+      secondaryButtonLink: locale === 'ar-SA' ? '/contact?sector=healthcare' : `/${locale}/contact?sector=healthcare`,
       image: '/images/healthcare_uniforms.jpg',
       overlayColor: 'rgba(0, 0, 0, 0.4)',
       position: 'center',
@@ -47,9 +47,9 @@ const HeroSection = ({ locale, dictionary }: HeroSectionProps) => {
       subtitle: dictionary?.home?.hero?.slides?.hospitality?.subtitle || 'Elegant and practical uniforms for hotels, restaurants, and resorts',
       description: dictionary?.home?.hero?.slides?.hospitality?.description || 'We design uniforms that reflect your establishment\'s identity and enhance the professional image of staff',
       buttonText: dictionary?.common?.buttons?.explore || 'Explore',
-      buttonLink: locale === defaultLocale ? '/hospitality-uniforms' : `/${locale}/hospitality-uniforms`,
+      buttonLink: locale === 'ar-SA' ? '/hospitality-uniforms' : `/${locale}/hospitality-uniforms`,
       secondaryButtonText: dictionary?.common?.buttons?.ourProjects || 'Our Projects',
-      secondaryButtonLink: locale === defaultLocale ? '/projects?category=hospitality' : `/${locale}/projects?category=hospitality`,
+      secondaryButtonLink: locale === 'ar-SA' ? '/projects?category=hospitality' : `/${locale}/projects?category=hospitality`,
       image: '/images/hospitality_uniforms.jpg',
       overlayColor: 'rgba(0, 0, 0, 0.45)',
       position: 'center',
@@ -371,4 +371,4 @@ const HeroSection = ({ locale, dictionary }: HeroSectionProps) => {
   );
 };
 
-export default HeroSection; 
+export default HeroSection;
