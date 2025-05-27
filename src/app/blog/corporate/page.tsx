@@ -20,8 +20,7 @@ const corporateBlogPosts = [
     readTime: '12 دقيقة',
     publishDate: '2024-01-15',
     author: 'فريق خبراء الزي الموحد',
-    slug: 'corporate-uniforms-guide',
-    tags: ['الزي المؤسسي', 'التصميم', 'السعودية']
+    slug: 'corporate-uniforms-guide'
   },
   {
     id: 'sustainable-corporate-uniforms',
@@ -32,8 +31,7 @@ const corporateBlogPosts = [
     readTime: '10 دقائق',
     publishDate: '2024-01-10',
     author: 'م. أحمد الغامدي',
-    slug: 'sustainable-corporate-uniforms-eco-friendly-options',
-    tags: ['الاستدامة', 'البيئة', 'المسؤولية الاجتماعية']
+    slug: 'sustainable-corporate-uniforms-eco-friendly-options'
   },
   {
     id: 'corporate-identity-uniforms',
@@ -44,8 +42,7 @@ const corporateBlogPosts = [
     readTime: '8 دقائق',
     publishDate: '2024-01-05',
     author: 'د. سارة العتيبي',
-    slug: 'how-corporate-uniforms-reflect-company-identity-values',
-    tags: ['الهوية المؤسسية', 'القيم', 'العلامة التجارية']
+    slug: 'how-corporate-uniforms-reflect-company-identity-values'
   },
   {
     id: 'equality-professionalism-uniforms',
@@ -56,8 +53,7 @@ const corporateBlogPosts = [
     readTime: '9 دقائق',
     publishDate: '2023-12-28',
     author: 'د. سعاد المطيري',
-    slug: 'role-of-corporate-uniforms-in-promoting-equality-professionalism',
-    tags: ['المساواة', 'المهنية', 'بيئة العمل']
+    slug: 'role-of-corporate-uniforms-in-promoting-equality-professionalism'
   },
   {
     id: 'corporate-uniform-trends-2024',
@@ -68,8 +64,7 @@ const corporateBlogPosts = [
     readTime: '7 دقائق',
     publishDate: '2023-12-20',
     author: 'فريق التصميم',
-    slug: 'corporate-uniform-trends-2024',
-    tags: ['الاتجاهات', 'التصميم', '2024']
+    slug: 'corporate-uniform-trends-2024'
   },
   {
     id: 'choosing-corporate-uniform-colors',
@@ -80,8 +75,7 @@ const corporateBlogPosts = [
     readTime: '6 دقائق',
     publishDate: '2023-12-15',
     author: 'أ. منى الشهري',
-    slug: 'choosing-corporate-uniform-colors',
-    tags: ['الألوان', 'علم النفس', 'التصميم']
+    slug: 'choosing-corporate-uniform-colors'
   }
 ];
 
