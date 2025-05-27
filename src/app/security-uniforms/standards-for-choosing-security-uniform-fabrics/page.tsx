@@ -325,17 +325,7 @@ export default function SecurityUniformFabricsPage() {
             {/* Tags Section with improved styling */}
             <div className="mt-12 pt-6 border-t border-gray-200">
               <h3 className="text-lg font-semibold mb-3">الوسوم:</h3>
-              <div className="flex flex-wrap gap-2">
-                {['أقمشة زي الأمن', 'متانة الزي', 'الراحة', 'مقاومة العوامل الجوية', 'ريب ستوب', 'أقمشة تكتيكية', 'زي الأمن في السعودية', 'الأقمشة الذكية'].map((tag) => (
-                  <Link
-                    key={tag}
-                    href={`/tag/${tag}`}
-                    className="inline-block bg-accent/10 hover:bg-accent/20 text-accent rounded-full px-4 py-2 text-sm font-medium transition-colors duration-200"
-                  >
-                    {tag}
-                  </Link>
-                ))}
-              </div>
+              {/* Tags section removed */}
             </div>
             
             {/* Share Section with improved styling */}

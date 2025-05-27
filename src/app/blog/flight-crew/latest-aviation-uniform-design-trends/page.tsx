@@ -242,22 +242,7 @@ export default function ArticlePage() {
               في خبراء الزي الموحد، نواكب هذه الاتجاهات ونقدم استشارات متخصصة لشركات الطيران السعودية والخليجية الراغبة في تطوير زي يجمع بين الأصالة والابتكار. نعمل على توظيف أحدث التقنيات والمواد لتصميم أزياء تلبي احتياجات الطاقم وتعزز الهوية المؤسسية وتسهم في تحقيق تجربة سفر متميزة للمسافرين.
             </p>
           </div>
-          
-          {/* Tags Section */}
-          <div className="mt-8 pt-6 border-t border-gray-200">
-            <h3 className="text-lg font-semibold mb-3">الوسوم:</h3>
-            <div className="flex flex-wrap gap-2">
-              {['اتجاهات تصميم زي الطيران', 'أزياء الطيران 2023', 'مواد متقدمة', 'استدامة', 'تصميم أزياء'].map((tag) => (
-                <Link
-                  key={tag}
-                  href={`/tag/${tag}`}
-                  className="inline-block bg-gray-100 hover:bg-gray-200 rounded-full px-3 py-1 text-sm font-medium text-gray-800"
-                >
-                  {tag}
-                </Link>
-              ))}
-            </div>
-          </div>
+            {/* Tags section removed */}
           
           {/* Share Section */}
           <div className="mt-8 flex justify-center">

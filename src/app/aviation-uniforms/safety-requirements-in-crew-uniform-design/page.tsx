@@ -357,22 +357,7 @@ export default function SafetyRequirementsInCrewUniformDesignPage() {
               مع استمرار التطور التكنولوجي في مجال الأقمشة والتصميم، نتوقع أن تشهد أزياء طواقم الطائرات المزيد من الابتكارات التي تعزز السلامة والراحة والوظيفة، مع الحفاظ على الجاذبية البصرية التي تميز كل شركة طيران. في النهاية، يبقى الهدف الأساسي هو ضمان سلامة الطاقم والركاب، مع عكس الهوية المميزة لصناعة الطيران في المملكة والعالم.
             </p>
           </div>
-          
-          {/* Tags Section */}
-          <div className="mt-8 pt-6 border-t border-gray-200">
-            <h3 className="text-lg font-semibold mb-3">الوسوم:</h3>
-            <div className="flex flex-wrap gap-2">
-              {['زي طواقم الطائرات', 'متطلبات السلامة في الطيران', 'أقمشة مقاومة للحريق', 'يونيفورم مضيفات الطيران', 'معايير السلامة الجوية', 'تصميم أزياء الطيران', 'المواد المقاومة للاشتعال', 'زي المضيفين', 'شركات الطيران السعودية', 'أزياء قمرة القيادة'].map((tag) => (
-                <Link
-                  key={tag}
-                  href={`/tag/${tag}`}
-                  className="inline-block bg-gray-100 hover:bg-gray-200 rounded-full px-3 py-1 text-sm font-medium text-gray-800"
-                >
-                  {tag}
-                </Link>
-              ))}
-            </div>
-          </div>
+            {/* Tags section removed */}
           
           {/* Share Section */}
           <div className="mt-8 flex justify-center">

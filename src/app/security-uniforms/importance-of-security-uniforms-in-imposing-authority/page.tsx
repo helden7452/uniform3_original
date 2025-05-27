@@ -214,17 +214,7 @@ export default function SecurityUniformAuthorityPage() {
             {/* Tags Section with improved styling */}
             <div className="mt-12 pt-6 border-t border-gray-200">
               <h3 className="text-lg font-semibold mb-3">الوسوم:</h3>
-              <div className="flex flex-wrap gap-2">
-                {['الزي الأمني', 'هيبة رجال الأمن', 'يونيفورم القطاع الأمني', 'زي شركات الأمن', 'الشعور بالأمان', 'تصميم الزي الأمني', 'علم نفس الزي الموحد', 'رمزية الزي الأمني', 'الزي الموحد والسلطة', 'الأمن في السعودية'].map((tag) => (
-                  <Link
-                    key={tag}
-                    href={`/tag/${tag}`}
-                    className="inline-block bg-primary/10 hover:bg-primary/20 text-primary rounded-full px-4 py-2 text-sm font-medium transition-colors duration-200"
-                  >
-                    {tag}
-                  </Link>
-                ))}
-              </div>
+              {/* Tags section removed */}
             </div>
             
             {/* Share Section with improved styling */}

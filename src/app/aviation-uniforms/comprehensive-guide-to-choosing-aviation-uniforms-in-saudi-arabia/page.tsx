@@ -307,22 +307,7 @@ export default function AviationUniformsGuidePage() {
               في النهاية، يذكرنا هذا الدليل أن زي الطيران ليس مجرد ملابس، بل هو رسالة بصرية قوية تتحدث عن هوية وقيم شركة الطيران، وبوابة انطباع أولى تفتح الطريق لتجربة طيران متميزة.
             </p>
           </div>
-          
-          {/* Tags Section */}
-          <div className="mt-8 pt-6 border-t border-gray-200">
-            <h3 className="text-lg font-semibold mb-3">الوسوم:</h3>
-            <div className="flex flex-wrap gap-2">
-              {['زي الطيران', 'يونيفورم الطيران', 'شركات الطيران السعودية', 'مضيفين الطيران', 'زي موحد', 'أقمشة الزي الموحد', 'هوية العلامة التجارية'].map((tag) => (
-                <Link
-                  key={tag}
-                  href={`/tag/${tag}`}
-                  className="inline-block bg-gray-100 hover:bg-gray-200 rounded-full px-3 py-1 text-sm font-medium text-gray-800"
-                >
-                  {tag}
-                </Link>
-              ))}
-            </div>
-          </div>
+            {/* Tags section removed */}
           
           {/* Share Section */}
           <div className="mt-8 flex justify-center">

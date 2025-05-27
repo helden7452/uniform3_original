@@ -286,22 +286,7 @@ export default function ArticlePage() {
               في شركة خبراء الزي الموحد، نلتزم بمواكبة أحدث التطورات في تقنيات الأقمشة لتقديم حلول متطورة لعملائنا في قطاع الطيران. نؤمن أن المستقبل يحمل إمكانيات هائلة لتحسين تجربة الطاقم والمسافرين على حد سواء من خلال الابتكار المستمر في مجال أقمشة زي الطيران.
             </p>
           </div>
-          
-          {/* Tags Section */}
-          <div className="mt-8 pt-6 border-t border-gray-200">
-            <h3 className="text-lg font-semibold mb-3">الوسوم:</h3>
-            <div className="flex flex-wrap gap-2">
-              {['تقنيات أقمشة الطيران', 'أقمشة ذكية', 'ابتكارات زي الطيران', 'أقمشة مستدامة', 'راحة طاقم الطيران', 'تكنولوجيا النانو في الأقمشة'].map((tag) => (
-                <Link
-                  key={tag}
-                  href={`/tag/${tag}`}
-                  className="inline-block bg-gray-100 hover:bg-gray-200 rounded-full px-3 py-1 text-sm font-medium text-gray-800"
-                >
-                  {tag}
-                </Link>
-              ))}
-            </div>
-          </div>
+            {/* Tags section removed */}
         </div>
       </article>
     </main>

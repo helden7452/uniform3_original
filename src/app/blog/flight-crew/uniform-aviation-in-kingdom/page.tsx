@@ -112,22 +112,7 @@ export default function ArticlePage() {
               في خبراء الزي الموحد، نفخر بتقديم تصاميم عصرية لأزياء الطيران تلبي احتياجات شركات الطيران السعودية، وتعكس هويتها الفريدة، مع الالتزام بأعلى معايير الجودة والأناقة والراحة.
             </p>
           </div>
-          
-          {/* Tags Section */}
-          <div className="mt-8 pt-6 border-t border-gray-200">
-            <h3 className="text-lg font-semibold mb-3">الوسوم:</h3>
-            <div className="flex flex-wrap gap-2">
-              {['أزياء الطيران', 'الخطوط السعودية', 'يونيفورم الطيران', 'هوية بصرية', 'رؤية 2030'].map((tag) => (
-                <Link
-                  key={tag}
-                  href={`/tag/${tag}`}
-                  className="inline-block bg-gray-100 hover:bg-gray-200 rounded-full px-3 py-1 text-sm font-medium text-gray-800"
-                >
-                  {tag}
-                </Link>
-              ))}
-            </div>
-          </div>
+            {/* Tags section removed */}
           
           {/* Share Section */}
           <div className="mt-8 flex justify-center">

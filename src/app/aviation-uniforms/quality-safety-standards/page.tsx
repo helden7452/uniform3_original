@@ -293,22 +293,7 @@ export default function QualitySafetyStandardsPage() {
               في النهاية، لا يعتبر زي الطيران مجرد عنصر جمالي أو علامة مميزة للشركة، بل هو أداة عمل أساسية وجزء من منظومة السلامة الشاملة التي تضمن رحلات آمنة ومريحة. ومع استمرار تطور قطاع الطيران السعودي وفق رؤية 2030، ستزداد أهمية هذه المعايير وستصبح الشركات السعودية نموذجاً يحتذى به في التوفيق بين المتطلبات العالمية والخصوصية المحلية.
             </p>
           </div>
-          
-          {/* Tags Section */}
-          <div className="mt-8 pt-6 border-t border-gray-200">
-            <h3 className="text-lg font-semibold mb-3">الوسوم:</h3>
-            <div className="flex flex-wrap gap-2">
-              {['معايير زي الطيران', 'الأمان في يونيفورم الطيارين', 'زي مضيفي الطيران', 'أقمشة مقاومة للحريق', 'الخطوط السعودية', 'معايير السلامة في الطيران', 'جودة يونيفورم الطيران', 'زي طاقم الضيافة الجوية', 'معايير ICAO للزي', 'تصميم أزياء الطيران'].map((tag) => (
-                <Link
-                  key={tag}
-                  href={`/tag/${tag}`}
-                  className="inline-block bg-gray-100 hover:bg-gray-200 rounded-full px-3 py-1 text-sm font-medium text-gray-800"
-                >
-                  {tag}
-                </Link>
-              ))}
-            </div>
-          </div>
+            {/* Tags section removed */}
           
           {/* Share Section */}
           <div className="mt-8 flex justify-center">

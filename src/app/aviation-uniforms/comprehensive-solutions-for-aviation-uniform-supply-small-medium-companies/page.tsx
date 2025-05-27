@@ -254,22 +254,7 @@ export default function ArticlePage() {
               في شركة خبراء الزي الموحد، نفخر بتقديم حلول مخصصة للشركات الصغيرة والمتوسطة في قطاع الطيران، تجمع بين الجودة العالية والتكلفة المناسبة، مع مراعاة الاحتياجات الخاصة لكل شركة والامتثال للمعايير المحلية والدولية. نؤمن أن كل شركة، بغض النظر عن حجمها، تستحق زياً موحداً يعكس هويتها ويعزز صورتها المهنية.
             </p>
           </div>
-          
-          {/* Tags Section */}
-          <div className="mt-8 pt-6 border-t border-gray-200">
-            <h3 className="text-lg font-semibold mb-3">الوسوم:</h3>
-            <div className="flex flex-wrap gap-2">
-              {['زي الطيران للشركات الصغيرة', 'توريد يونيفورم الطيران', 'شركات الطيران السعودية', 'تخصيص زي الطيران', 'إدارة تكاليف الزي الموحد', 'زي موحد منخفض التكلفة'].map((tag) => (
-                <Link
-                  key={tag}
-                  href={`/tag/${tag}`}
-                  className="inline-block bg-gray-100 hover:bg-gray-200 rounded-full px-3 py-1 text-sm font-medium text-gray-800"
-                >
-                  {tag}
-                </Link>
-              ))}
-            </div>
-          </div>
+            {/* Tags section removed */}
         </div>
       </article>
     </main>

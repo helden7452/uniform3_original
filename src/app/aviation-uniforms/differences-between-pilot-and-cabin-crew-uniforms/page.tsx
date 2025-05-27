@@ -364,22 +364,7 @@ export default function PilotVsCabinCrewUniformsPage() {
               في المملكة العربية السعودية ودول الخليج، نجحت شركات الطيران في تطوير أزياء تجمع بين المعايير العالمية والهوية المحلية، مما أسهم في تعزيز مكانتها في صناعة الطيران العالمية. ومع التطور المستمر في تقنيات الأقمشة والتصميم، يستمر كلا النوعين من الزي في التطور، مع الحفاظ على الفروق الجوهرية التي تميز كل منهما وتعكس طبيعة الأدوار المختلفة على متن الطائرة.
             </p>
           </div>
-          
-          {/* Tags Section */}
-          <div className="mt-8 pt-6 border-t border-gray-200">
-            <h3 className="text-lg font-semibold mb-3">الوسوم:</h3>
-            <div className="flex flex-wrap gap-2">
-              {['زي الطيارين', 'يونيفورم طاقم الضيافة', 'شارات الطيران', 'أزياء شركات الطيران', 'الخطوط السعودية', 'زي المضيفات', 'رموز الرتب', 'الطيران المدني', 'الزي الرسمي', 'الضيافة الجوية'].map((tag) => (
-                <Link
-                  key={tag}
-                  href={`/tag/${tag}`}
-                  className="inline-block bg-gray-100 hover:bg-gray-200 rounded-full px-3 py-1 text-sm font-medium text-gray-800"
-                >
-                  {tag}
-                </Link>
-              ))}
-            </div>
-          </div>
+            {/* Tags section removed */}
           
           {/* Share Section */}
           <div className="mt-8 flex justify-center">

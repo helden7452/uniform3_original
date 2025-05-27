@@ -266,22 +266,7 @@ export default function ArticlePage() {
               في خبراء الزي الموحد، نقدم استشارات متخصصة لمساعدة شركات الطيران السعودية والخليجية في اختيار الأقمشة المثالية التي تتناسب مع المناخ المحلي وتلبي المعايير العالمية. نعمل على تطوير حلول مخصصة تجمع بين الوظيفة والراحة والأناقة، مع مراعاة الاعتبارات البيئية والاقتصادية لكل شركة.
             </p>
           </div>
-          
-          {/* Tags Section */}
-          <div className="mt-8 pt-6 border-t border-gray-200">
-            <h3 className="text-lg font-semibold mb-3">الوسوم:</h3>
-            <div className="flex flex-wrap gap-2">
-              {['أقمشة زي الطيران', 'المناخ السعودي', 'أقمشة للمناخ الحار', 'راحة الطاقم', 'جودة الأقمشة'].map((tag) => (
-                <Link
-                  key={tag}
-                  href={`/tag/${tag}`}
-                  className="inline-block bg-gray-100 hover:bg-gray-200 rounded-full px-3 py-1 text-sm font-medium text-gray-800"
-                >
-                  {tag}
-                </Link>
-              ))}
-            </div>
-          </div>
+            {/* Tags section removed */}
           
           {/* Share Section */}
           <div className="mt-8 flex justify-center">

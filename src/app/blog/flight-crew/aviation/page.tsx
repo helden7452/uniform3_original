@@ -217,22 +217,7 @@ export default function ArticlePage() {
               في خبراء الزي الموحد، نقدم استشارات متخصصة في تصميم أزياء الطيران التي تجمع بين الأصالة والابتكار، مع الالتزام بأعلى معايير الجودة والسلامة. نفخر بتقديم خدماتنا لشركات الطيران في المملكة العربية السعودية والخليج، مع مراعاة خصوصية الثقافة المحلية والمعايير العالمية.
             </p>
           </div>
-          
-          {/* Tags Section */}
-          <div className="mt-8 pt-6 border-t border-gray-200">
-            <h3 className="text-lg font-semibold mb-3">الوسوم:</h3>
-            <div className="flex flex-wrap gap-2">
-              {['أساسيات تصميم الأزياء', 'أزياء الطيران', 'معايير السلامة', 'الزي الموحد', 'تصميم الأزياء'].map((tag) => (
-                <Link
-                  key={tag}
-                  href={`/tag/${tag}`}
-                  className="inline-block bg-gray-100 hover:bg-gray-200 rounded-full px-3 py-1 text-sm font-medium text-gray-800"
-                >
-                  {tag}
-                </Link>
-              ))}
-            </div>
-          </div>
+            {/* Tags section removed */}
           
           {/* Share Section */}
           <div className="mt-8 flex justify-center">

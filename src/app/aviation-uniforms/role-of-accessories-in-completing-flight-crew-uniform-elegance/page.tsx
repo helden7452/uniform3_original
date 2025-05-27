@@ -308,22 +308,7 @@ export default function ArticlePage() {
             <p className="mb-4">
               مع تطور صناعة الطيران، تتطور معها إكسسوارات الزي لتواكب التقنيات الحديثة والتوجهات نحو الاستدامة، مع الحفاظ على الدور الجوهري المتمثل في عكس القيم والهوية المؤسسية. تظل هذه القطع الصغيرة محوراً أساسياً في التمايز التنافسي بين شركات الطيران، وتعكس مدى التزام الشركة بالتفاصيل والجودة في جميع جوانب خدماتها.
             </p>
-            
-            {/* Tags Section */}
-            <div className="mt-8 pt-6 border-t border-gray-200">
-              <h3 className="text-lg font-semibold mb-3">الوسوم:</h3>
-              <div className="flex flex-wrap gap-2">
-                {['إكسسوارات زي الطيران', 'وشاحات المضيفات', 'شارات الطيارين', 'أناقة طاقم الطيران', 'هوية شركات الطيران', 'تصميم يونيفورم الطيران'].map((tag) => (
-                  <Link
-                    key={tag}
-                    href={`/tag/${tag}`}
-                    className="inline-block bg-gray-100 hover:bg-gray-200 rounded-full px-3 py-1 text-sm font-medium text-gray-800"
-                  >
-                    {tag}
-                  </Link>
-                ))}
-              </div>
-            </div>
+            {/* Tags section removed */}
           </div>
         </div>
       </article>

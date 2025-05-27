@@ -255,22 +255,7 @@ export default function LatestAviationUniformTrendsPage() {
               في النهاية، يبقى زي الطيران عنصرًا حيويًا في استراتيجية العلامة التجارية لشركات الطيران، ويتجاوز دوره مجرد الملابس ليصبح وسيلة للتواصل البصري وتعزيز الثقة والتميز في الخدمة.
             </p>
           </div>
-          
-          {/* Tags Section */}
-          <div className="mt-8 pt-6 border-t border-gray-200">
-            <h3 className="text-lg font-semibold mb-3">الوسوم:</h3>
-            <div className="flex flex-wrap gap-2">
-              {['زي الطيران', 'اتجاهات الموضة', 'تصميم اليونيفورم', 'خطوط جوية', 'المضيفين والمضيفات', 'أقمشة ذكية', 'الأزياء المستدامة', 'هوية الشركات', 'الخطوط السعودية'].map((tag) => (
-                <Link
-                  key={tag}
-                  href={`/tag/${tag}`}
-                  className="inline-block bg-gray-100 hover:bg-gray-200 rounded-full px-3 py-1 text-sm font-medium text-gray-800"
-                >
-                  {tag}
-                </Link>
-              ))}
-            </div>
-          </div>
+            {/* Tags section removed */}
           
           {/* Share Section */}
           <div className="mt-8 flex justify-center">

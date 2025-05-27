@@ -266,7 +266,7 @@ export default function ArticlePage() {
               {['خدمات الأرض', 'زي المطارات', 'زي الطيران', 'سلامة المطارات', 'يونيفورم المطار', 'خدمات المناولة الأرضية'].map((tag) => (
                 <Link
                   key={tag}
-                  href={`/tag/${tag}`}
+                  href="#"
                   className="inline-block bg-gray-100 hover:bg-gray-200 rounded-full px-3 py-1 text-sm font-medium text-gray-800"
                 >
                   {tag}

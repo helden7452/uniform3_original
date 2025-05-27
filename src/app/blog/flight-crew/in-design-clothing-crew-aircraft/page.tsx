@@ -174,22 +174,7 @@ export default function ArticlePage() {
               في خبراء الزي الموحد، نواكب أحدث الابتكارات العالمية في مجال تصميم ملابس طاقم الطائرة، ونسعى دائماً لتقديم حلول متميزة تجمع بين الإبداع، الجودة العالية، والمراعاة للخصوصية الثقافية لشركات الطيران في المملكة العربية السعودية والخليج العربي.
             </p>
           </div>
-          
-          {/* Tags Section */}
-          <div className="mt-8 pt-6 border-t border-gray-200">
-            <h3 className="text-lg font-semibold mb-3">الوسوم:</h3>
-            <div className="flex flex-wrap gap-2">
-              {['ابتكارات أزياء الطيران', 'تقنيات الأقمشة الذكية', 'تصميم مستدام', 'ملابس طاقم الطائرة', 'أزياء مبتكرة'].map((tag) => (
-                <Link
-                  key={tag}
-                  href={`/tag/${tag}`}
-                  className="inline-block bg-gray-100 hover:bg-gray-200 rounded-full px-3 py-1 text-sm font-medium text-gray-800"
-                >
-                  {tag}
-                </Link>
-              ))}
-            </div>
-          </div>
+            {/* Tags section removed */}
           
           {/* Share Section */}
           <div className="mt-8 flex justify-center">
