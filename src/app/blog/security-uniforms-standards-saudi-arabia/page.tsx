@@ -253,7 +253,16 @@ export default function ArticlePage() {
           {/* Tags Section */}
           <div className="mt-8 pt-6 border-t border-gray-200">
             <h3 className="text-lg font-semibold mb-3">الوسوم:</h3>
-            {/* Tags section removed */}
+            <div className="flex flex-wrap gap-2">
+              {['زي الأمن السعودي', 'يونيفورم الحراسة', 'معايير الزي الأمني', 'ملابس الأمن الخاص', 'زي الحراسات الأمنية', 'أزياء أمن موحدة'].map((tag) => (
+                <span
+                  key={tag}
+                  className="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-medium text-gray-800"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
           </div>
           
           {/* Share Section */}
