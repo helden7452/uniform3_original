@@ -71,12 +71,26 @@ const sustainabilitySecurityArticles = [
   },
 ];
 
-export default function DynamicArabicRoute() {
+export default function DynamicSlugRoute() {
   const params = useParams();
   const router = useRouter();
   const slug = params.slug as string[];
 
-  // Handle specific Arabic routes
+  // Combine the functionality of both routes
+  useEffect(() => {
+    if (slug && slug.length > 0) {
+      const path = slug.join('/');
+      
+      // Handle Arabic routes that need redirect to localized versions
+      if (path.match(/[\u0600-\u06FF]/) && !path.startsWith('ar-SA/')) {
+        // If it's an Arabic route but not already prefixed with locale
+        router.push(`/ar-SA/${path}`);
+        return;
+      }
+    }
+  }, [slug, router]);
+
+  // Handle specific routes
   if (slug && slug.length === 2 && slug[0] === 'الاستدامة' && slug[1] === 'security-uniforms') {
     return (
       <CategoryPage
@@ -90,11 +104,7 @@ export default function DynamicArabicRoute() {
     );
   }
 
-  // For other routes, redirect to 404
-  useEffect(() => {
-    router.push('/404');
-  }, [router]);
-
+  // Loading state while redirecting
   return (
     <div className="min-h-screen flex items-center justify-center">
       <div className="text-center">
