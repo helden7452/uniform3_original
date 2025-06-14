@@ -115,18 +115,25 @@ const content = `
 `;
 
 export default function PrivateAviationUniformsPage() {
+  const author = {
+    id: 'uniform-experts-team',
+    name: 'فريق خبراء الزي الموحد',
+    title: 'فريق المحتوى المتخصص',
+    image: '/images/author/uniform-experts-team.jpg'
+  };
+
   return (
     <BlogPost
-      title="زي الطيران الخاص: تصميمات فريدة للطائرات الخاصة ورجال الأعمال"
+      title="أزياء الطيران الخاص: تصاميم مميزة للطائرات التجارية الخاصة"
+      excerpt="دليل شامل لتصميم واختيار الأزياء الموحدة المميزة للطيران الخاص والطائرات التجارية الفاخرة مع التركيز على الفخامة والراحة"
       content={content}
-      category="Aviation Uniforms"
-      categoryArabic="زي قطاع الطيران"
-      categorySlug="aviation-uniforms"
-      image="/images/aviation_uniforms/private_aviation_uniforms.jpg"
-      date="2024-01-19"
-      author="فريق خبراء الزي الموحد"
-      authorImage="/images/authors/uniform-experts-team.jpg"
-      relatedPosts={relatedPosts}
+      category="aviation-uniforms"
+      slug="private-aviation-uniforms-unique-designs-for-business-jets"
+      author={author}
+      publishDate="2024-01-14"
+      coverImage="/images/aviation_uniforms/private_aviation_uniforms.jpg"
+      readingTime="11 دقيقة"
+      tags={['الطيران الخاص', 'تصاميم فاخرة', 'طائرات تجارية', 'زي طيران مميز']}
     />
   );
 }

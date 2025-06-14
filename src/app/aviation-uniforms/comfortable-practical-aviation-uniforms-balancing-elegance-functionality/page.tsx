@@ -115,18 +115,25 @@ const content = `
 `;
 
 export default function ComfortablePracticalUniformsPage() {
+  const author = {
+    id: 'uniform-experts-team',
+    name: 'فريق خبراء الزي الموحد',
+    title: 'فريق المحتوى المتخصص',
+    image: '/images/author/uniform-experts-team.jpg'
+  };
+
   return (
     <BlogPost
       title="زي الطيران مريح وعملي: الموازنة بين الأناقة والأداء الوظيفي"
+      excerpt="استراتيجيات تحقيق التوازن بين الأناقة والأداء الوظيفي في تصميم زي الطيران لضمان الراحة والعملية دون التضحية بالمظهر الاحترافي"
       content={content}
-      category="Aviation Uniforms"
-      categoryArabic="زي قطاع الطيران"
-      categorySlug="aviation-uniforms"
-      image="/images/aviation_uniforms/comfortable_aviation_uniforms.jpg"
-      date="2024-01-21"
-      author="فريق خبراء الزي الموحد"
-      authorImage="/images/authors/uniform-experts-team.jpg"
-      relatedPosts={relatedPosts}
+      category="aviation-uniforms"
+      slug="comfortable-practical-aviation-uniforms-balancing-elegance-functionality"
+      author={author}
+      publishDate="2024-01-21"
+      coverImage="/images/aviation_uniforms/comfortable_aviation_uniforms.jpg"
+      readingTime="15 دقيقة"
+      tags={['زي طيران مريح', 'يونيفورم عملي', 'أناقة زي الطيران', 'راحة طاقم الطيران', 'أداء وظيفي']}
     />
   );
 }

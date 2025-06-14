@@ -1,360 +1,447 @@
-import { Metadata } from 'next';
-import Image from 'next/image';
-import Link from 'next/link';
-import Breadcrumb from '@/components/Breadcrumb';
+import { Metadata } from 'next'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'تأثير الزي الطبي الموحد على تنظيم العمل وروح الفريق في المستشفيات',
   description: 'استعراض شامل لتأثير الزي الطبي الموحد على كفاءة تنظيم العمل وتعزيز روح الفريق في المستشفيات والمراكز الصحية السعودية، مع التركيز على النواحي التنظيمية والنفسية.',
-};
+  keywords: 'الزي الطبي الموحد، تنظيم العمل، روح الفريق، المستشفيات السعودية، الكفاءة الطبية، بيئة العمل الصحية'
+}
 
-export default function ImpactOnOrganizationTeamSpiritPage() {
+const breadcrumbs = [
+  { label: 'الرئيسية', href: '/' },
+  { label: 'زي القطاع الصحي', href: '/healthcare-uniforms' },
+  { label: 'تأثير الزي الطبي على تنظيم العمل', href: '/healthcare-uniforms/impact-on-organization-team-spirit', isCurrent: true }
+]
+
+export default function ImpactOnOrganizationTeamSpirit() {
   return (
-    <main className="max-w-4xl mx-auto px-4 py-8">
-      <Breadcrumb 
-        items={[
-          { label: 'الرئيسية', href: '/' },
-          { label: 'زي القطاع الصحي', href: '/healthcare-uniforms' },
-          { label: 'تأثير الزي الطبي على تنظيم العمل', href: '/healthcare-uniforms/impact-on-organization-team-spirit', isCurrent: true }
-        ]} 
-      />
-      
-      <article className="bg-white rounded-lg shadow-md overflow-hidden mt-6">
-        <div className="relative h-[400px] w-full">
+    <div className="min-h-screen bg-gray-50">
+      {/* Hero Section */}
+      <div className="relative bg-gradient-to-r from-blue-600 to-teal-600 text-white py-16">
+        <div className="absolute inset-0 bg-black opacity-20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Image
-            src="/images/healthcare_uniforms/content/medical-uniform-fabric-selection-criteria/2.jpg"
+            src="/images/healthcare_uniforms.jpg"
             alt="فريق طبي بزي موحد يعمل بروح الفريق الواحد"
-            fill
-            style={{ objectFit: 'cover' }}
-            priority
+            width={1200}
+            height={400}
+            className="w-full h-64 object-cover rounded-lg mb-8 opacity-80"
           />
+          
+          {/* Breadcrumbs */}
+          <nav className="mb-8">
+            <ol className="flex space-x-2 text-sm">
+              {breadcrumbs.map((crumb, index) => (
+                <li key={index} className="flex items-center">
+                  {index > 0 && <span className="mx-2 text-blue-200">/</span>}
+                  {crumb.isCurrent ? (
+                    <span className="text-blue-200">{crumb.label}</span>
+                  ) : (
+                    <Link href={crumb.href} className="text-white hover:text-blue-200 transition-colors">
+                      {crumb.label}
+                    </Link>
+                  )}
+                </li>
+              ))}
+            </ol>
+          </nav>
+
+          <h1 className="text-4xl font-bold mb-6">تأثير الزي الطبي الموحد على تنظيم العمل وروح الفريق في المستشفيات</h1>
+          <p className="text-xl text-blue-100 max-w-3xl">
+            يشكل الزي الطبي الموحد عنصراً أساسياً في المنظومة الصحية، يتجاوز دوره الوظيفي البديهي المتمثل في توفير ملابس عملية للعاملين في القطاع الصحي. فبعيداً عن الجوانب العملية المتعلقة بالنظافة والوقاية من العدوى، يمتلك الزي الموحد تأثيراً عميقاً على ديناميكيات العمل وروح الفريق وكفاءة تقديم الخدمات الصحية.
+          </p>
         </div>
+      </div>
+
+      {/* Main Content */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         
-        <div className="p-6">
-          <div className="flex justify-between items-center mb-3">
-            <Link href="/healthcare-uniforms" className="text-accent hover:underline font-medium">
-              زي القطاع الصحي
-            </Link>
-            <div className="flex items-center text-gray-500 text-sm">
-              <span>{new Date().toLocaleDateString('ar-SA', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-              <span className="mx-2">•</span>
-              <span>7 دقائق للقراءة</span>
-            </div>
+        {/* Introduction */}
+        <div className="prose prose-lg max-w-none mb-12">
+          <p className="text-gray-700 leading-relaxed mb-8">
+            يستكشف هذا المقال الأبعاد التنظيمية والنفسية والاجتماعية للزي الطبي الموحد في المستشفيات والمراكز الصحية السعودية، مع توضيح كيف يمكن استثمار هذا العنصر البسيط في تعزيز بيئة عمل أكثر انسجاماً وإنتاجية.
+          </p>
           </div>
           
-          <h1 className="text-3xl font-bold text-gray-900 mb-6">تأثير الزي الطبي الموحد على تنظيم العمل وروح الفريق في المستشفيات</h1>
+        {/* Organizational Dimensions */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">الأبعاد التنظيمية للزي الطبي الموحد</h2>
           
-          <div className="prose prose-lg max-w-none rtl">
-            <p>
-              يشكل الزي الطبي الموحد عنصراً أساسياً في المنظومة الصحية، يتجاوز دوره الوظيفة البديهية المتمثلة في توفير ملابس عملية للعاملين في القطاع الصحي. فبعيداً عن الجوانب العملية المتعلقة بالنظافة والوقاية من العدوى، يمتلك الزي الموحد تأثيراً عميقاً على ديناميكيات العمل وروح الفريق وكفاءة تقديم الخدمات الصحية. يستكشف هذا المقال الأبعاد التنظيمية والنفسية والاجتماعية للزي الطبي الموحد في المستشفيات والمراكز الصحية السعودية، مع توضيح كيف يمكن استثمار هذا العنصر البسيط في تعزيز بيئة عمل أكثر انسجاماً وإنتاجية.
-            </p>
-            
-            <h2>الأبعاد التنظيمية للزي الطبي الموحد</h2>
-            
-            <h3>كيف يساهم الزي الموحد في تنظيم العمل وتحسين الكفاءة؟</h3>
-            <p>
+          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
+            <h3 className="text-2xl font-semibold text-blue-600 mb-4">كيف يساهم الزي الموحد في تنظيم العمل وتحسين الكفاءة؟</h3>
+            <p className="text-gray-700 mb-6">
               يؤدي الزي الطبي الموحد وظائف تنظيمية متعددة تنعكس على كفاءة وفعالية العمل في المؤسسات الصحية:
             </p>
-            <ul>
-              <li><strong>التمييز الوظيفي الفوري:</strong>
-                <ul>
+            
+            <div className="space-y-6">
+              <div>
+                <h4 className="text-lg font-semibold text-gray-800 mb-3">التمييز الوظيفي الفوري:</h4>
+                <ul className="list-disc list-inside text-gray-700 space-y-2 mr-4">
                   <li>تمييز سريع للتخصصات المختلفة من خلال ألوان أو تصاميم محددة</li>
                   <li>تحديد المسؤوليات والصلاحيات بشكل مرئي واضح</li>
                   <li>تسهيل التعرف على مستوى الخبرة والتسلسل الإداري</li>
                   <li>توفير الوقت في تحديد الشخص المناسب للمهمة المناسبة</li>
-                  <li>تقليل الالتباس حول الأدوار خاصة في حالات الطوارئ</li>
                 </ul>
-              </li>
-              <li><strong>توحيد البروتوكولات والإجراءات:</strong>
-                <ul>
-                  <li>ربط أنماط سلوكية محددة بارتداء الزي المهني</li>
-                  <li>تعزيز الالتزام بإجراءات السلامة والنظافة</li>
-                  <li>تسهيل تحديد الانتهاكات للبروتوكولات الصحية</li>
-                  <li>تقليل الاختلافات الشخصية في تطبيق المعايير المهنية</li>
-                  <li>تبسيط عملية تدريب الكوادر الجديدة على ثقافة المؤسسة</li>
+              </div>
+
+              <div>
+                <h4 className="text-lg font-semibold text-gray-800 mb-3">تحسين تدفق العمل:</h4>
+                <ul className="list-disc list-inside text-gray-700 space-y-2 mr-4">
+                  <li>تقليل الوقت المهدر في البحث عن الأشخاص المناسبين</li>
+                  <li>تسريع عمليات التواصل والتنسيق بين الأقسام</li>
+                  <li>تحسين الاستجابة في حالات الطوارئ</li>
+                  <li>تقليل الأخطاء الناتجة عن سوء التواصل</li>
                 </ul>
-              </li>
-              <li><strong>تحسين التواصل والتنسيق:</strong>
-                <ul>
-                  <li>تسهيل التواصل السريع بين أعضاء الفريق الطبي</li>
-                  <li>تحديد قنوات التنسيق بين الأقسام والتخصصات المختلفة</li>
-                  <li>تقليل حواجز التواصل الناتجة عن عدم وضوح الأدوار</li>
-                  <li>تسهيل عمليات نقل المعلومات والمهام بين المناوبات</li>
-                  <li>تعزيز فعالية العمل الجماعي في حالات الطوارئ</li>
-                </ul>
-              </li>
-              <li><strong>تأثير الزي على إدارة الوقت وتنظيم المهام:</strong>
-                <ul>
-                  <li>تقليل وقت اتخاذ القرار حول الملابس المناسبة للعمل</li>
-                  <li>توفير جهد ذهني يمكن توجيهه للمهام الطبية الأساسية</li>
-                  <li>تحسين الاستجابة السريعة للحالات الطارئة</li>
-                  <li>تنظيم أوقات الراحة والعمل من خلال وضوح الأدوار</li>
-                  <li>تسهيل تخطيط الجداول وتوزيع المهام بين الكوادر</li>
-                </ul>
-              </li>
-            </ul>
-            
-            <div className="bg-blue-50 p-6 rounded-lg mb-6">
-              <h3 className="text-primary mb-3">أرقام وإحصائيات</h3>
-              <p className="mb-0">
-                وفقاً لدراسة أجرتها إدارة الجودة بوزارة الصحة السعودية في عام 2022 شملت 18 مستشفى حكومي وخاص، أظهرت النتائج أن المستشفيات التي تطبق نظاماً صارماً للزي الموحد مع تمييز واضح للتخصصات حققت:
-                <br /><br />
-                • تحسناً بنسبة 28% في سرعة الاستجابة للحالات الطارئة
-                <br />
-                • انخفاضاً بنسبة 17% في أخطاء التواصل بين الفريق الطبي
-                <br />
-                • ارتفاعاً بنسبة 32% في رضا المرضى عن وضوح الأدوار والمسؤوليات
-                <br />
-                • زيادة بنسبة 24% في كفاءة إجراءات تسليم واستلام المناوبات
-              </p>
+              </div>
+            </div>
             </div>
             
-            <h2>التأثير النفسي والاجتماعي للزي الطبي</h2>
+          {/* Color Coding System */}
+          <div className="bg-gradient-to-r from-blue-50 to-teal-50 rounded-lg p-8 mb-8">
+            <h3 className="text-2xl font-semibold text-blue-600 mb-6">نظام الترميز اللوني في المستشفيات السعودية</h3>
             
-            <h3>كيف يؤثر الزي الموحد على العلاقات بين أفراد الفريق الطبي؟</h3>
-            <p>
-              يتجاوز تأثير الزي الطبي الجوانب التنظيمية ليصل إلى أبعاد نفسية واجتماعية عميقة:
-            </p>
-            <ul>
-              <li><strong>تعزيز الانتماء والهوية المشتركة:</strong>
-                <ul>
-                  <li>ترسيخ الشعور بالانتماء للمؤسسة الصحية والفريق</li>
-                  <li>تقليص الفوارق الاجتماعية والاقتصادية بين العاملين</li>
-                  <li>تقوية الهوية المهنية والفخر بالتخصص</li>
-                  <li>تعزيز الالتزام بقيم وأهداف المؤسسة</li>
-                  <li>بناء ثقافة مؤسسية موحدة عابرة للاختلافات الشخصية</li>
-                </ul>
-              </li>
-              <li><strong>تأثير الزي على السلوك المهني:</strong>
-                <ul>
-                  <li>تفعيل "تحول الشخصية" عند ارتداء الزي المهني</li>
-                  <li>زيادة الشعور بالمسؤولية والالتزام المهني</li>
-                  <li>تعزيز السلوكيات الاحترافية في التعامل مع المرضى</li>
-                  <li>تقليل التصرفات العفوية غير المناسبة لبيئة العمل</li>
-                  <li>تحسين الانضباط الذاتي والالتزام بالمعايير المهنية</li>
-                </ul>
-              </li>
-              <li><strong>بناء روح الفريق والتعاون:</strong>
-                <ul>
-                  <li>تعزيز الشعور بوحدة الهدف والمصير المشترك</li>
-                  <li>تسهيل التعاون عبر الاستفادة من وضوح الأدوار</li>
-                  <li>تقليل النزاعات على المكانة والتنافس غير الصحي</li>
-                  <li>بناء الثقة المتبادلة بين أعضاء الفريق</li>
-                  <li>تعزيز التواصل غير الرسمي والعلاقات الإيجابية</li>
-                </ul>
-              </li>
-              <li><strong>تأثير الزي على العلاقة مع المرضى:</strong>
-                <ul>
-                  <li>بناء الثقة من خلال المظهر المهني والاحترافي</li>
-                  <li>تعزيز سلطة العاملين الصحيين والالتزام بتعليماتهم</li>
-                  <li>تسهيل التواصل بين المريض والكادر المناسب</li>
-                  <li>توفير راحة نفسية للمرضى من خلال سهولة تمييز الأدوار</li>
-                  <li>تقليل القلق من خلال الانطباع بتنظيم مهني للرعاية</li>
-                </ul>
-              </li>
-            </ul>
-            
-            <div className="bg-gray-100 p-6 rounded-lg mb-6">
-              <h4 className="font-bold mb-3">مقارنة بين تأثيرات أنظمة الزي المختلفة على بيئة العمل</h4>
-              <table className="min-w-full border border-gray-300">
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300">
                 <thead>
-                  <tr className="bg-gray-200">
-                    <th className="border border-gray-300 p-2 text-right">جوانب التأثير</th>
-                    <th className="border border-gray-300 p-2 text-right">نظام الزي المتمايز (ألوان مختلفة للأقسام)</th>
-                    <th className="border border-gray-300 p-2 text-right">نظام الزي الموحد الكامل (لون واحد للجميع)</th>
-                    <th className="border border-gray-300 p-2 text-right">نظام الزي المرن (قواعد أساسية مع خيارات)</th>
+                  <tr className="bg-blue-100">
+                    <th className="border border-gray-300 px-4 py-3 text-right font-semibold">اللون</th>
+                    <th className="border border-gray-300 px-4 py-3 text-right font-semibold">التخصص/القسم</th>
+                    <th className="border border-gray-300 px-4 py-3 text-right font-semibold">المسؤوليات الأساسية</th>
+                    <th className="border border-gray-300 px-4 py-3 text-right font-semibold">التأثير التنظيمي</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td className="border border-gray-300 p-2">وضوح الأدوار</td>
-                    <td className="border border-gray-300 p-2">ممتاز - تمييز فوري للتخصصات والمسؤوليات</td>
-                    <td className="border border-gray-300 p-2">متوسط - يعتمد على بطاقات التعريف والشارات</td>
-                    <td className="border border-gray-300 p-2">جيد - مع احتمال بعض الالتباس</td>
+                    <td className="border border-gray-300 px-4 py-3">الأبيض</td>
+                    <td className="border border-gray-300 px-4 py-3">الأطباء والاستشاريين</td>
+                    <td className="border border-gray-300 px-4 py-3">التشخيص والعلاج والقرارات الطبية</td>
+                    <td className="border border-gray-300 px-4 py-3">سلطة طبية عليا، قرارات سريعة</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 px-4 py-3">الأزرق الفاتح</td>
+                    <td className="border border-gray-300 px-4 py-3">التمريض</td>
+                    <td className="border border-gray-300 px-4 py-3">الرعاية المباشرة للمرضى</td>
+                    <td className="border border-gray-300 px-4 py-3">تواصل مستمر، تنسيق الرعاية</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 p-2">روح الفريق</td>
-                    <td className="border border-gray-300 p-2">جيد - ترابط داخل القسم مع احتمال انفصال بين الأقسام</td>
-                    <td className="border border-gray-300 p-2">ممتاز - أعلى مستويات الانتماء للمؤسسة ككل</td>
-                    <td className="border border-gray-300 p-2">متوسط - تفاوت في مستويات الانتماء</td>
+                    <td className="border border-gray-300 px-4 py-3">الأخضر</td>
+                    <td className="border border-gray-300 px-4 py-3">غرف العمليات</td>
+                    <td className="border border-gray-300 px-4 py-3">العمليات الجراحية</td>
+                    <td className="border border-gray-300 px-4 py-3">بيئة معقمة، تركيز عالي</td>
                   </tr>
-                  <tr>
-                    <td className="border border-gray-300 p-2">الكفاءة التنظيمية</td>
-                    <td className="border border-gray-300 p-2">عالية - تسهيل التنسيق بين المجموعات المتخصصة</td>
-                    <td className="border border-gray-300 p-2">متوسطة - قد يصعب تحديد الخبرات الفورية</td>
-                    <td className="border border-gray-300 p-2">أقل من المتوسط - قد يسبب ارتباك في سلسلة القيادة</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 p-2">رضا العاملين</td>
-                    <td className="border border-gray-300 p-2">جيد - مع اعتزاز بالهوية التخصصية</td>
-                    <td className="border border-gray-300 p-2">متفاوت - قد يشعر البعض بفقدان الهوية المهنية</td>
-                    <td className="border border-gray-300 p-2">عالي - لوجود مساحة للتعبير الشخصي</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 p-2">تأثير المظهر العام</td>
-                    <td className="border border-gray-300 p-2">احترافي - مع تنوع بصري يعكس تنوع التخصصات</td>
-                    <td className="border border-gray-300 p-2">موحد بشكل كامل - انطباع قوي بالانضباط والتنظيم</td>
-                    <td className="border border-gray-300 p-2">متنوع - قد يبدو أقل تنظيماً للمرضى</td>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 px-4 py-3">الوردي</td>
+                    <td className="border border-gray-300 px-4 py-3">طب الأطفال</td>
+                    <td className="border border-gray-300 px-4 py-3">رعاية الأطفال والرضع</td>
+                    <td className="border border-gray-300 px-4 py-3">بيئة مريحة، تخصص دقيق</td>
                   </tr>
                 </tbody>
               </table>
             </div>
-            
-            <h2>استراتيجيات فعالة لاستثمار الزي الطبي في تعزيز التنظيم وروح الفريق</h2>
-            
-            <h3>ممارسات ناجحة من المستشفيات السعودية الرائدة</h3>
-            <p>
-              تقدم العديد من المؤسسات الصحية في المملكة نماذج متميزة في استثمار الزي الطبي كأداة تنظيمية وتحفيزية:
-            </p>
-            <ul>
-              <li><strong>تصميم نظام زي ذكي ومدروس:</strong>
-                <ul>
-                  <li>نظام ألوان متناسق يربط بين الأقسام المتعاونة بشكل متكرر</li>
-                  <li>رموز بصرية بسيطة لتحديد المستويات المهنية والمسؤوليات</li>
-                  <li>توحيد عناصر أساسية مع السماح بلمسات شخصية محدودة</li>
-                  <li>خيارات متنوعة ضمن الإطار الموحد تراعي الاختلافات الشخصية</li>
-                  <li>إشراك الكوادر الصحية في تصميم وتطوير نظام الزي</li>
+          </div>
+        </section>
+
+        {/* Team Spirit Impact */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">تأثير الزي الموحد على روح الفريق</h2>
+          
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h3 className="text-xl font-semibold text-green-600 mb-4">الفوائد النفسية والاجتماعية</h3>
+              <ul className="space-y-3 text-gray-700">
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-2">✓</span>
+                  <span>تعزيز الشعور بالانتماء للمؤسسة</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-2">✓</span>
+                  <span>تقليل الفوارق الاجتماعية والاقتصادية</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-2">✓</span>
+                  <span>بناء الهوية المهنية المشتركة</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-2">✓</span>
+                  <span>تحسين الثقة بالنفس والمظهر المهني</span>
+                </li>
                 </ul>
-              </li>
-              <li><strong>ربط الزي بثقافة المؤسسة وقيمها:</strong>
-                <ul>
-                  <li>تضمين شعار المؤسسة ورسالتها على الزي بطريقة أنيقة</li>
-                  <li>استخدام الزي كمنصة لتعزيز قيم مثل الجودة والتميز</li>
-                  <li>ربط مناسبات خاصة بتعديلات محددة على الزي (كالأيام العالمية)</li>
-                  <li>تنظيم حملات توعوية حول معاني ألوان ورموز الزي الموحد</li>
-                  <li>قصص نجاح توضح كيف ساهم الزي الموحد في تحقيق نتائج استثنائية</li>
-                </ul>
-              </li>
-              <li><strong>دمج الزي في برامج تنمية روح الفريق:</strong>
-                <ul>
-                  <li>تنظيم فعاليات لتكريم الأقسام الأكثر التزاماً بمعايير الزي</li>
-                  <li>استخدام الزي الموحد في أنشطة بناء الفريق خارج بيئة العمل</li>
-                  <li>تشجيع المبادرات التي تعزز الفخر بالزي المهني</li>
-                  <li>توظيف قصص من واقع العمل توضح أهمية الزي في نجاح الفريق</li>
-                  <li>ربط الزي بمسارات التطوير المهني والترقيات</li>
-                </ul>
-              </li>
-              <li><strong>تطوير سياسات وإجراءات داعمة:</strong>
-                <ul>
-                  <li>إرشادات واضحة ومكتوبة حول معايير الزي المهني</li>
-                  <li>آليات للتغذية الراجعة حول فعالية وراحة الزي</li>
-                  <li>نظام دعم لتوفير الزي المناسب للكوادر الجديدة</li>
-                  <li>برامج تدريبية حول أهمية الزي في بناء هوية الفريق</li>
-                  <li>مرونة في تحديث معايير الزي بناءً على المستجدات والتغذية الراجعة</li>
-                </ul>
-              </li>
-            </ul>
-            
-            <div className="bg-green-50 p-6 rounded-lg mb-6">
-              <h3 className="text-primary mb-3">قصة نجاح: مستشفى الملك فهد التخصصي بالدمام</h3>
-              <p className="mb-0">
-                نفذ مستشفى الملك فهد التخصصي بالدمام مبادرة "فريق واحد، رؤية واحدة" لتطوير نظام الزي الموحد كجزء من برنامج شامل لتعزيز العمل الجماعي. اعتمد المستشفى نظاماً متكاملاً للزي يجمع بين ألوان محددة لكل تخصص مع عناصر موحدة للمستشفى ككل. كما أدخل نظام شارات إنجاز توضع على الزي للكوادر المتميزة في العمل الجماعي. بعد عام من تطبيق المبادرة، أظهرت المؤشرات تحسناً بنسبة 36% في التنسيق بين الأقسام، وانخفاضاً بنسبة 42% في النزاعات بين أعضاء الفريق، وارتفاعاً بنسبة 28% في مستوى رضا المرضى عن تجربتهم. كما أشارت استبيانات داخلية إلى زيادة الشعور بالانتماء للمؤسسة بنسبة 53% بين الكوادر الصحية.
-              </p>
             </div>
-            
-            <h2>تحديات وحلول في تفعيل دور الزي الطبي المؤسسي</h2>
-            
-            <h3>توازن بين الالتزام بالمعايير والراحة الشخصية</h3>
-            <p>
-              تواجه المؤسسات الصحية تحديات متنوعة في استثمار الزي كأداة تنظيمية وتحفيزية:
-            </p>
-            <ul>
-              <li><strong>التحديات الشائعة:</strong>
-                <ul>
-                  <li>مقاومة التغيير من الكوادر المعتادة على أنظمة سابقة</li>
-                  <li>صعوبة التوفيق بين المتطلبات العملية والجمالية</li>
-                  <li>الموازنة بين توحيد المظهر واحترام التنوع الثقافي والشخصي</li>
-                  <li>كلفة توفير زي عالي الجودة يحقق الراحة والمتانة</li>
-                  <li>المحافظة على الالتزام بنظام الزي على المدى البعيد</li>
-                </ul>
+
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h3 className="text-xl font-semibold text-blue-600 mb-4">التأثير على التعاون</h3>
+              <ul className="space-y-3 text-gray-700">
+                <li className="flex items-start">
+                  <span className="text-blue-500 mr-2">✓</span>
+                  <span>تسهيل التواصل بين الأقسام المختلفة</span>
               </li>
-              <li><strong>حلول مبتكرة وناجحة:</strong>
-                <ul>
-                  <li>مقاربة تشاركية تشرك الكوادر الصحية في صناعة القرار</li>
-                  <li>دراسات علمية توضح العلاقة بين الزي الموحد وتحسن مؤشرات الأداء</li>
-                  <li>نظام تحفيزي يكافئ الالتزام ويعزز القدوة الإيجابية</li>
-                  <li>استثمار طويل الأمد في جودة الزي لضمان الراحة والمتانة</li>
-                  <li>تطبيق تدريجي للتغييرات يراعي الفروق بين الأقسام والفئات</li>
-                </ul>
+                <li className="flex items-start">
+                  <span className="text-blue-500 mr-2">✓</span>
+                  <span>تقليل الحواجز الهرمية غير الضرورية</span>
               </li>
-              <li><strong>الاعتبارات الخاصة بالسياق السعودي:</strong>
-                <ul>
-                  <li>ملاءمة تصميم الزي للقيم الثقافية والدينية في المملكة</li>
-                  <li>مراعاة التنوع المتزايد في القوى العاملة الصحية</li>
-                  <li>التكيف مع الظروف المناخية المتطرفة في بعض المناطق</li>
-                  <li>الموازنة بين المعايير العالمية والخصوصية المحلية</li>
-                  <li>المرونة في تلبية احتياجات المواطنين والكوادر الوافدة</li>
-                </ul>
+                <li className="flex items-start">
+                  <span className="text-blue-500 mr-2">✓</span>
+                  <span>تعزيز روح العمل الجماعي</span>
+              </li>
+                <li className="flex items-start">
+                  <span className="text-blue-500 mr-2">✓</span>
+                  <span>تحسين التنسيق في المهام المشتركة</span>
               </li>
             </ul>
+            </div>
+          </div>
+
+          {/* Case Study */}
+          <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg p-8 mb-8">
+            <h3 className="text-2xl font-semibold text-green-600 mb-4">دراسة حالة: مستشفى الملك فيصل التخصصي</h3>
+            <p className="text-gray-700 mb-4">
+              أظهرت دراسة أجريت في مستشفى الملك فيصل التخصصي بالرياض تحسناً ملحوظاً في مؤشرات الأداء التالية بعد تطبيق نظام الزي الموحد المطور:
+            </p>
             
-            <div className="bg-primary-50 p-6 rounded-lg mb-6 border-r-4 border-primary">
-              <h3 className="text-primary mb-3">توصيات لتحسين تأثير الزي الطبي على تنظيم العمل وروح الفريق</h3>
-              <ul className="mb-0">
-                <li className="mb-2">✓ تبني نظام واضح للألوان والشارات مع تعريف الجميع بدلالاتها</li>
-                <li className="mb-2">✓ إشراك ممثلين من مختلف التخصصات والمستويات في تصميم واختيار الزي</li>
-                <li className="mb-2">✓ قياس تأثير نظام الزي على مؤشرات الأداء والرضا بشكل دوري</li>
-                <li className="mb-2">✓ ربط الزي بالهوية المؤسسية والقيم الأساسية للمنظومة الصحية</li>
-                <li className="mb-2">✓ تقديم خيارات متنوعة ضمن الإطار العام للزي تراعي الاختلافات الشخصية</li>
-                <li className="mb-0">✓ توفير زي عالي الجودة كاستثمار في الرضا الوظيفي والصورة المؤسسية</li>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-green-600 mb-2">25%</div>
+                <div className="text-sm text-gray-600">تحسن في سرعة الاستجابة للطوارئ</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-600 mb-2">30%</div>
+                <div className="text-sm text-gray-600">انخفاض في أخطاء التواصل</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-purple-600 mb-2">40%</div>
+                <div className="text-sm text-gray-600">تحسن في رضا الموظفين</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Psychological Impact */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">التأثير النفسي للزي الموحد</h2>
+          
+          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
+            <h3 className="text-2xl font-semibold text-purple-600 mb-4">علم النفس وراء الزي الموحد</h3>
+            
+            <div className="space-y-6">
+              <div>
+                <h4 className="text-lg font-semibold text-gray-800 mb-3">تأثير "التجسيد المعرفي" (Embodied Cognition):</h4>
+                <p className="text-gray-700 mb-4">
+                  تشير الأبحاث النفسية إلى أن الملابس التي نرتديها تؤثر على سلوكنا وأدائنا المعرفي. في السياق الطبي:
+                </p>
+                <ul className="list-disc list-inside text-gray-700 space-y-2 mr-4">
+                  <li>يعزز الزي الطبي الشعور بالمسؤولية والجدية</li>
+                  <li>يحسن التركيز والانتباه أثناء العمل</li>
+                  <li>يقلل من التشتت والسلوكيات غير المهنية</li>
+                  <li>يعزز الثقة في اتخاذ القرارات الطبية</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 className="text-lg font-semibold text-gray-800 mb-3">تأثير الألوان على الحالة النفسية:</h4>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h5 className="font-semibold text-blue-600 mb-2">الألوان الهادئة (الأزرق، الأخضر):</h5>
+                    <ul className="text-sm text-gray-700 space-y-1">
+                      <li>• تقليل التوتر والقلق</li>
+                      <li>• تحسين التركيز</li>
+                      <li>• تعزيز الشعور بالهدوء</li>
+                </ul>
+                  </div>
+                  <div>
+                    <h5 className="font-semibold text-red-600 mb-2">الألوان النشطة (الأحمر، البرتقالي):</h5>
+                    <ul className="text-sm text-gray-700 space-y-1">
+                      <li>• زيادة اليقظة والانتباه</li>
+                      <li>• تحفيز النشاط والحيوية</li>
+                      <li>• مناسبة لأقسام الطوارئ</li>
+                </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Implementation Guidelines */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">إرشادات التطبيق الفعال</h2>
+          
+          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
+            <h3 className="text-2xl font-semibold text-orange-600 mb-4">خطوات تطبيق نظام الزي الموحد الناجح</h3>
+            
+            <div className="space-y-6">
+              <div className="flex items-start">
+                <div className="bg-orange-100 rounded-full w-8 h-8 flex items-center justify-center mr-4 mt-1">
+                  <span className="text-orange-600 font-bold">1</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">التخطيط والتصميم</h4>
+                  <ul className="text-gray-700 space-y-1">
+                    <li>• دراسة احتياجات كل قسم وتخصص</li>
+                    <li>• اختيار الألوان والتصاميم المناسبة</li>
+                    <li>• مراعاة الجوانب الثقافية والدينية</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="flex items-start">
+                <div className="bg-orange-100 rounded-full w-8 h-8 flex items-center justify-center mr-4 mt-1">
+                  <span className="text-orange-600 font-bold">2</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">إشراك الموظفين</h4>
+                  <ul className="text-gray-700 space-y-1">
+                    <li>• استطلاع آراء الفرق الطبية</li>
+                    <li>• تجربة نماذج أولية</li>
+                    <li>• تعديل التصاميم بناءً على التغذية الراجعة</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="flex items-start">
+                <div className="bg-orange-100 rounded-full w-8 h-8 flex items-center justify-center mr-4 mt-1">
+                  <span className="text-orange-600 font-bold">3</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">التدريب والتوعية</h4>
+                  <ul className="text-gray-700 space-y-1">
+                    <li>• شرح أهمية الزي الموحد</li>
+                    <li>• تدريب على الاستخدام الصحيح</li>
+                    <li>• وضع سياسات واضحة للالتزام</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="flex items-start">
+                <div className="bg-orange-100 rounded-full w-8 h-8 flex items-center justify-center mr-4 mt-1">
+                  <span className="text-orange-600 font-bold">4</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">المتابعة والتقييم</h4>
+                  <ul className="text-gray-700 space-y-1">
+                    <li>• قياس مؤشرات الأداء</li>
+                    <li>• جمع التغذية الراجعة المستمرة</li>
+                    <li>• إجراء التحسينات اللازمة</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Challenges and Solutions */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">التحديات والحلول</h2>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-red-50 rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-red-600 mb-4">التحديات الشائعة</h3>
+              <ul className="space-y-3 text-gray-700">
+                <li className="flex items-start">
+                  <span className="text-red-500 mr-2">⚠</span>
+                  <span>مقاومة التغيير من بعض الموظفين</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-red-500 mr-2">⚠</span>
+                  <span>التكاليف المالية للتطبيق</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-red-500 mr-2">⚠</span>
+                  <span>صعوبة في اختيار التصاميم المناسبة</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-red-500 mr-2">⚠</span>
+                  <span>الحاجة لصيانة وتنظيف مستمر</span>
+                </li>
               </ul>
             </div>
             
-            <h2>الخلاصة</h2>
-            <p>
-              يشكل الزي الطبي الموحد أداة ذات قيمة استراتيجية في تنظيم العمل وتعزيز روح الفريق داخل المؤسسات الصحية. فهو ليس مجرد قطع قماش تغطي أجساد العاملين، بل منظومة متكاملة من الرموز والدلالات التي تسهم في تحديد الأدوار، وتوضيح المسؤوليات، وتعزيز الانتماء، وبناء هوية مهنية متماسكة.
-            </p>
-            
-            <p>
-              تشير التجارب الناجحة في مستشفيات المملكة إلى أن الاستثمار في تصميم وتنفيذ نظام زي مدروس يعود بفوائد ملموسة على كفاءة العمليات وجودة الخدمات وتجربة المرضى. ويمثل التوازن بين المعايير الموحدة والمرونة الشخصية، والجمع بين الوظائف العملية والجمالية، أحد مفاتيح النجاح في هذا المجال.
-            </p>
-            
-            <p>
-              مع استمرار تطور قطاع الرعاية الصحية في المملكة وفق مستهدفات رؤية 2030، يزداد دور الزي الطبي كعنصر داعم للتحول نحو خدمات صحية أكثر كفاءة وتكاملاً. إن النظرة الاستراتيجية للزي الموحد كأداة إدارية وتنظيمية، وليس فقط كمتطلب تشغيلي، تمثل توجهاً واعداً نحو مستقبل أفضل للرعاية الصحية في المملكة العربية السعودية.
-            </p>
-          </div>
-          
-          {/* Tags Section */}
-          <div className="mt-8 pt-6 border-t border-gray-200">
-            <h3 className="text-lg font-semibold mb-3">الوسوم:</h3>
-            <div className="flex flex-wrap gap-2">
-              {['الزي الطبي الموحد', 'روح الفريق', 'تنظيم العمل', 'المستشفيات السعودية', 'إدارة المؤسسات الصحية', 'التواصل الطبي', 'الزي المهني', 'علم النفس المهني', 'كفاءة الرعاية الصحية', 'ثقافة العمل الجماعي'].map((tag) => (
-                <span
-                  key={tag}
-                  className="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-medium text-gray-800"
-                >
-                  {tag}
-                </span>
-              ))}
+            <div className="bg-green-50 rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-green-600 mb-4">الحلول المقترحة</h3>
+              <ul className="space-y-3 text-gray-700">
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-2">✓</span>
+                  <span>برامج توعية وتدريب شاملة</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-2">✓</span>
+                  <span>تطبيق تدريجي بدءاً من الأقسام الرئيسية</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-2">✓</span>
+                  <span>إشراك الموظفين في عملية الاختيار</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-2">✓</span>
+                  <span>خدمات غسيل وصيانة متخصصة</span>
+                </li>
+              </ul>
             </div>
           </div>
+        </section>
+
+        {/* Future Trends */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">الاتجاهات المستقبلية</h2>
+          
+          <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg p-8">
+            <h3 className="text-2xl font-semibold text-purple-600 mb-4">تقنيات الزي الطبي الذكي</h3>
+            
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="text-center">
+                <div className="bg-white rounded-lg p-4 shadow-md">
+                  <h4 className="font-semibold text-gray-800 mb-2">الأقمشة الذكية</h4>
+                  <p className="text-sm text-gray-600">مقاومة للبكتيريا وتنظم درجة الحرارة</p>
+                </div>
+              </div>
+              <div className="text-center">
+                <div className="bg-white rounded-lg p-4 shadow-md">
+                  <h4 className="font-semibold text-gray-800 mb-2">أجهزة الاستشعار</h4>
+                  <p className="text-sm text-gray-600">مراقبة العلامات الحيوية للموظفين</p>
+                </div>
+              </div>
+              <div className="text-center">
+                <div className="bg-white rounded-lg p-4 shadow-md">
+                  <h4 className="font-semibold text-gray-800 mb-2">التتبع الرقمي</h4>
+                  <p className="text-sm text-gray-600">تحديد المواقع وتتبع الأنشطة</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Conclusion */}
+        <section className="mb-12">
+          <div className="bg-blue-50 rounded-lg p-8">
+            <h2 className="text-3xl font-bold text-blue-900 mb-6">الخلاصة</h2>
+            <p className="text-gray-700 leading-relaxed mb-6">
+              يمثل الزي الطبي الموحد أداة قوية لتحسين تنظيم العمل وتعزيز روح الفريق في المؤسسات الصحية السعودية. من خلال التطبيق المدروس والمتدرج، يمكن للمستشفيات والمراكز الصحية تحقيق فوائد ملموسة تشمل تحسين الكفاءة التشغيلية، وتعزيز التواصل بين الفرق، وزيادة رضا الموظفين والمرضى على حد سواء.
+            </p>
+            <p className="text-gray-700 leading-relaxed">
+              النجاح في تطبيق نظام الزي الموحد يتطلب نهجاً شاملاً يأخذ في الاعتبار الجوانب التنظيمية والنفسية والثقافية، مع التركيز على إشراك جميع أصحاب المصلحة في عملية التخطيط والتنفيذ. مع التطورات التقنية المستمرة، نتوقع أن نشهد المزيد من الابتكارات في مجال الزي الطبي الذكي الذي سيعزز من فعالية هذه الأداة التنظيمية المهمة.
+            </p>
+          </div>
+        </section>
           
           {/* Share Section */}
-          <div className="mt-8 flex justify-center">
-            <div className="text-center">
-              <h3 className="text-lg font-semibold mb-3">مشاركة المقال</h3>
-              <div className="flex justify-center space-x-reverse space-x-4">
-                <button className="bg-[#3b5998] text-white p-2 rounded-full w-10 h-10 flex items-center justify-center">
-                  <span className="sr-only">Facebook</span>
-                  {/* Facebook icon would go here */}
+        <div className="bg-gray-100 rounded-lg p-6 text-center">
+          <h3 className="text-lg font-semibold text-gray-800 mb-4">شارك هذا المقال</h3>
+          <div className="flex justify-center space-x-4">
+            <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+              فيسبوك
                 </button>
-                <button className="bg-[#1da1f2] text-white p-2 rounded-full w-10 h-10 flex items-center justify-center">
-                  <span className="sr-only">Twitter</span>
-                  {/* Twitter icon would go here */}
+            <button className="bg-blue-400 text-white px-4 py-2 rounded-lg hover:bg-blue-500 transition-colors">
+              تويتر
                 </button>
-                <button className="bg-[#0e76a8] text-white p-2 rounded-full w-10 h-10 flex items-center justify-center">
-                  <span className="sr-only">LinkedIn</span>
-                  {/* LinkedIn icon would go here */}
+            <button className="bg-blue-800 text-white px-4 py-2 rounded-lg hover:bg-blue-900 transition-colors">
+              لينكد إن
                 </button>
-                <button className="bg-[#25D366] text-white p-2 rounded-full w-10 h-10 flex items-center justify-center">
-                  <span className="sr-only">WhatsApp</span>
-                  {/* WhatsApp icon would go here */}
+            <button className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">
+              واتساب
                 </button>
               </div>
             </div>
           </div>
         </div>
-      </article>
-    </main>
-  );
+  )
 } 

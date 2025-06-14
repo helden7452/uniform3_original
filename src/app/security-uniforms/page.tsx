@@ -81,18 +81,18 @@ export default function SecurityUniformsPage() {
             >
               <div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover-lift">
                 <div className="relative h-48">
-                  <Image
-                    src={article.imageSrc}
-                    alt={article.title}
-                    fill
+                <Image
+                  src={article.imageSrc}
+                  alt={article.title}
+                  fill
                     className="object-cover transition-all duration-500 group-hover:scale-110"
-                  />
+                />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
-                <div className="p-6">
+              </div>
+              <div className="p-6">
                   <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
                     {article.title}
-                  </h3>
+                </h3>
                   <p className="text-gray-600 text-sm line-clamp-3">
                     {article.excerpt}
                   </p>
@@ -102,7 +102,7 @@ export default function SecurityUniformsPage() {
           ))}
         </div>
       </section>
-      
+
       <section className="my-16 bg-gray-50 p-8 rounded-lg">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div>
@@ -136,7 +136,7 @@ export default function SecurityUniformsPage() {
             </div>
           </div>
           <div className="relative h-64 md:h-80 overflow-hidden rounded-lg">
-            <Image
+                <Image
               src="/images/security_uniforms/security_guards_lineup.jpg"
               alt="أزياء موحدة لقطاع الأمن"
               fill

@@ -96,19 +96,26 @@ const content = `
 </ul>
 `;
 
-export default function AviationUniformImportancePage() {
+export default function ProfessionalAviationCrewUniformsPage() {
+  const author = {
+    id: 'uniform-experts-team',
+    name: 'فريق خبراء الزي الموحد',
+    title: 'فريق المحتوى المتخصص',
+    image: '/images/author/uniform-experts-team.jpg'
+  };
+
   return (
     <BlogPost
-      title="أهمية الزي الموحد الاحترافي لطواقم الطيران وانعكاسه على صورة الشركة"
+      title="أهمية الزي المهني لطاقم الطيران في صورة الشركة المؤسسية"
+      excerpt="دراسة تأثير الزي المهني لطاقم الطيران على صورة الشركة وثقة العملاء والمعايير العالمية للطيران المدني"
       content={content}
-      category="Aviation Uniforms"
-      categoryArabic="زي قطاع الطيران"
-      categorySlug="aviation-uniforms"
-      image="/images/aviation_uniforms/airline_uniforms.jpg"
-      date="2024-01-16"
-      author="فريق خبراء الزي الموحد"
-      authorImage="/images/authors/uniform-experts-team.jpg"
-      relatedPosts={relatedPosts}
+      category="aviation-uniforms"
+      slug="importance-of-professional-aviation-crew-uniforms-company-image"
+      author={author}
+      publishDate="2024-01-15"
+      coverImage="/images/aviation_uniforms/professional_crew_uniforms.jpg"
+      readingTime="10 دقيقة"
+      tags={['طاقم الطيران', 'الصورة المؤسسية', 'الزي المهني', 'معايير الطيران']}
     />
   );
 }

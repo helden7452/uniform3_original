@@ -4,26 +4,26 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'التشريعات الدولية لزي الطيران وتوافق المملكة العربية السعودية',
-  description: 'تعرف على المعايير والتشريعات العالمية لأزياء الطيران، وكيف تلتزم شركات الطيران السعودية بهذه المعايير مع الحفاظ على الهوية المحلية',
+  title: 'اللوائح الدولية لأزياء الطيران والامتثال السعودي: دليل شامل | خبراء الزي الموحد',
+  description: 'دليل شامل للوائح والمعايير الدولية لأزياء الطيران ومتطلبات الامتثال في المملكة العربية السعودية، من ICAO إلى GACA',
 };
 
-export default function InternationalAviationRegulationsPage() {
+export default function InternationalAviationUniformRegulationsSaudiCompliancePage() {
   return (
     <main className="max-w-4xl mx-auto px-4 py-8">
       <Breadcrumb 
         items={[
           { label: 'الرئيسية', href: '/' },
           { label: 'زي قطاع الطيران', href: '/aviation-uniforms' },
-          { label: 'التشريعات الدولية لزي الطيران وتوافق المملكة العربية السعودية', href: '/aviation-uniforms/international-aviation-uniform-regulations-saudi-compliance', isCurrent: true }
+          { label: 'اللوائح الدولية والامتثال السعودي', href: '/aviation-uniforms/international-aviation-uniform-regulations-saudi-compliance', isCurrent: true }
         ]} 
       />
       
       <article className="bg-white rounded-lg shadow-md overflow-hidden mt-6">
         <div className="relative h-[400px] w-full">
           <Image
-            src="/images/aviation_uniforms/international-aviation-uniform-regulations-saudi-compliance-banner.jpg"
-            alt="التشريعات الدولية لزي الطيران وتوافق المملكة العربية السعودية"
+            src="/images/aviation-uniforms/international-regulations.jpg"
+            alt="اللوائح الدولية لأزياء الطيران والامتثال السعودي"
             fill
             style={{ objectFit: 'cover' }}
             priority
@@ -36,285 +36,359 @@ export default function InternationalAviationRegulationsPage() {
               زي قطاع الطيران
             </Link>
             <div className="flex items-center text-gray-500 text-sm">
-              <span>{new Date().toLocaleDateString('ar-SA', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+              <span>{new Date().toLocaleDateString('ar-SA-u-ca-gregory', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
               <span className="mx-2">•</span>
-              <span>7 دقائق للقراءة</span>
+              <span>18 دقيقة للقراءة</span>
             </div>
           </div>
           
-          <h1 className="text-3xl font-bold text-gray-900 mb-6">التشريعات الدولية لزي الطيران وتوافق المملكة العربية السعودية</h1>
+          <h1 className="text-3xl font-bold text-gray-900 mb-6">اللوائح الدولية لأزياء الطيران والامتثال السعودي: دليل شامل</h1>
           
           <div className="prose prose-lg max-w-none rtl">
             <p>
-              تلتزم شركات الطيران العالمية بمجموعة من المعايير والتشريعات الصارمة فيما يتعلق بأزياء طواقمها، بهدف تحقيق أعلى معايير السلامة والعملية. وفي ظل توسع قطاع الطيران السعودي وسعيه للعالمية، يصبح فهم هذه التشريعات ومواءمتها مع المتطلبات المحلية أمراً ضرورياً. في هذا المقال، نستعرض أهم المعايير الدولية لزي الطيران وكيف تواءمت المملكة العربية السعودية بين هذه المعايير وخصوصيتها الثقافية.
+              تُعتبر اللوائح والمعايير الدولية لأزياء الطيران من أهم الركائز التي تضمن سلامة الطاقم وكفاءة العمليات الجوية. هذه اللوائح، التي وضعتها منظمات دولية متخصصة، تحدد المتطلبات الدقيقة للمواد والتصميم والأداء لضمان أعلى مستويات السلامة. في المملكة العربية السعودية، تلتزم شركات الطيران بهذه المعايير الدولية مع إضافة متطلبات محلية تعكس الخصوصية الثقافية والمناخية للمنطقة. هذا المقال الشامل يستعرض أهم هذه اللوائح وكيفية تطبيقها في السياق السعودي.
             </p>
             
-            <h2>المنظمات الدولية المسؤولة عن تشريعات زي الطيران</h2>
+            <h2 className="text-2xl font-bold mt-8 mb-4">المنظمات الدولية المنظمة</h2>
             
-            <h3>الاتحاد الدولي للنقل الجوي (IATA)</h3>
+            <h3 className="text-xl font-semibold mt-6 mb-3">منظمة الطيران المدني الدولي (ICAO)</h3>
             <p>
-              يضع الاتحاد الدولي للنقل الجوي إرشادات عامة تتعلق بزي الطيران تركز على:
+              تُعتبر ICAO المرجع الأساسي للمعايير الدولية في الطيران:
             </p>
-            <ul>
-              <li><strong>المعايير الموحدة:</strong> توحيد بعض عناصر الزي للتعرف بسهولة على طاقم الطيران</li>
-              <li><strong>الإرشادات العامة:</strong> توصيات حول المظهر المهني والاحترافي لطواقم الطيران</li>
-              <li><strong>التدريب:</strong> متطلبات تدريب الطاقم على كيفية ارتداء الزي بشكل صحيح، خاصة فيما يتعلق بعناصر السلامة</li>
-              <li><strong>التحديثات الدورية:</strong> مراجعة وتحديث الإرشادات وفقاً للتطورات في صناعة الطيران</li>
+            
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>الملحق 6:</strong> تشغيل الطائرات التجارية الدولية</li>
+              <li><strong>الملحق 8:</strong> صلاحية الطائرات للطيران</li>
+              <li><strong>الوثيقة 9760:</strong> دليل صلاحية الطائرات للطيران</li>
+              <li><strong>المعايير والممارسات الموصى بها (SARPs):</strong> إرشادات شاملة للامتثال</li>
+              <li><strong>التعاميم الاستشارية:</strong> توجيهات تفصيلية للتطبيق</li>
             </ul>
             
-            <h3>إدارة الطيران الفيدرالية الأمريكية (FAA)</h3>
-            <p>
-              تعتبر معايير FAA مرجعية عالمية في قطاع الطيران، وتضع اشتراطات صارمة:
-            </p>
-            <ul>
-              <li><strong>معيار FAR 25.853:</strong> يحدد معدل احتراق الأقمشة المستخدمة في أزياء الطيران</li>
-              <li><strong>مواصفات الأحذية:</strong> متطلبات خاصة بأحذية الطاقم لضمان الثبات والأمان</li>
-              <li><strong>تقييد العناصر المتدلية:</strong> منع العناصر التي قد تعلق بالمعدات أو تعيق الحركة</li>
-              <li><strong>القدرة على التمييز:</strong> ضمان سهولة التعرف على أفراد الطاقم في حالات الطوارئ</li>
+            <h3 className="text-xl font-semibold mt-6 mb-3">إدارة الطيران الفيدرالية الأمريكية (FAA)</h3>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>FAR Part 25:</strong> معايير صلاحية الطائرات للطيران</li>
+              <li><strong>FAR 25.853:</strong> معيار مقاومة الحريق للمواد الداخلية</li>
+              <li><strong>AC 25.853-1:</strong> التعميم الاستشاري لاختبار المواد</li>
+              <li><strong>TSO (Technical Standard Orders):</strong> أوامر المعايير التقنية</li>
+            </ul>
+            
+            <h3 className="text-xl font-semibold mt-6 mb-3">وكالة سلامة الطيران الأوروبية (EASA)</h3>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>CS-25:</strong> مواصفات الشهادة للطائرات الكبيرة</li>
+              <li><strong>AMC (Acceptable Means of Compliance):</strong> وسائل الامتثال المقبولة</li>
+              <li><strong>GM (Guidance Material):</strong> المواد الإرشادية</li>
+              <li><strong>Part-21:</strong> شهادة المنتجات والقطع والأجهزة</li>
             </ul>
             
             <div className="bg-blue-50 p-6 rounded-lg mb-6">
-              <h3 className="text-primary mb-3">معيار السلامة FAR 25.853</h3>
+              <h3 className="text-primary mb-3">التنسيق بين المنظمات الدولية</h3>
               <p className="mb-0">
-                يعتبر معيار FAR 25.853 أحد أهم المعايير العالمية المتعلقة بسلامة أزياء الطيران. ينص هذا المعيار على أن الأقمشة المستخدمة في صناعة زي الطيران يجب ألا يتجاوز معدل احتراقها 2.5 سم/دقيقة في ظروف اختبار محددة، وأن تكون قادرة على إطفاء نفسها ذاتياً في غضون ثوانٍ معدودة بعد إزالة مصدر اللهب. تبنت الهيئة العامة للطيران المدني السعودي (GACA) هذا المعيار وجعلته إلزامياً لجميع شركات الطيران العاملة في المملكة، مما يعكس التزام المملكة بأعلى معايير السلامة العالمية.
+                تعمل المنظمات الدولية الثلاث الرئيسية (ICAO، FAA، EASA) بتنسيق وثيق لضمان توحيد المعايير عالمياً. يتم تبادل المعلومات والخبرات من خلال اتفاقيات ثنائية ومتعددة الأطراف، مما يضمن أن المعايير المطبقة في منطقة ما معترف بها دولياً. هذا التنسيق يسهل على شركات الطيران العاملة دولياً الامتثال لمعايير موحدة.
               </p>
             </div>
             
-            <h3>وكالة سلامة الطيران الأوروبية (EASA)</h3>
-            <p>
-              تضع الوكالة الأوروبية معايير مشابهة لـ FAA مع بعض الاختلافات:
-            </p>
-            <ul>
-              <li><strong>معيار CS-25:</strong> معايير أوروبية لمقاومة الحريق تشمل أزياء طاقم الطيران</li>
-              <li><strong>قواعد العمل والراحة:</strong> إرشادات حول تناسب الزي مع ساعات العمل الطويلة</li>
-              <li><strong>الاعتبارات البيئية:</strong> توصيات بشأن الاستدامة والأثر البيئي لإنتاج الأزياء</li>
-              <li><strong>توافق المعايير:</strong> ضمان تناسق المعايير الأوروبية مع المعايير الدولية الأخرى</li>
+            <h2 className="text-2xl font-bold mt-8 mb-4">المعايير التقنية الأساسية</h2>
+            
+            <h3 className="text-xl font-semibold mt-6 mb-3">معايير مقاومة الحريق</h3>
+            
+            <h4 className="text-lg font-semibold mt-4 mb-2">اختبار الاحتراق العمودي (FAR 25.853)</h4>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>إجراء الاختبار:</strong> تطبيق لهب بارتفاع 1.5 بوصة لمدة 12 ثانية</li>
+              <li><strong>معدل الاحتراق:</strong> يجب ألا يتجاوز 2.5 بوصة/دقيقة</li>
+              <li><strong>وقت الانطفاء:</strong> يجب أن ينطفئ خلال 15 ثانية من إزالة اللهب</li>
+              <li><strong>طول الاحتراق:</strong> يجب ألا يتجاوز 6 بوصات</li>
+              <li><strong>عدد العينات:</strong> اختبار 3 عينات على الأقل لكل مادة</li>
             </ul>
             
-            <h2>المعايير الفنية العالمية لأزياء الطيران</h2>
+            <h4 className="text-lg font-semibold mt-4 mb-2">اختبار كثافة الدخان</h4>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>المعيار المطلوب:</strong> كثافة دخان أقصاها 200 (Ds)</li>
+              <li><strong>ظروف الاختبار:</strong> درجة حرارة 25°م ورطوبة نسبية 60%</li>
+              <li><strong>مدة الاختبار:</strong> 4 دقائق من التعرض للحرارة</li>
+              <li><strong>طريقة القياس:</strong> استخدام مقياس الضوء لقياس الكثافة</li>
+            </ul>
             
-            <h3>معايير السلامة الأساسية</h3>
-            <p>
-              تركز المعايير الفنية العالمية على جوانب السلامة الحرجة:
-            </p>
-            <ul>
-              <li><strong>مقاومة الاشتعال:</strong> معايير صارمة لمقاومة الأقمشة للحريق وتأخير انتشاره</li>
-              <li><strong>الوزن والتهوية:</strong> ضمان خفة الوزن وقدرة الأقمشة على التنفس لتجنب الإجهاد الحراري</li>
-              <li><strong>المرونة وحرية الحركة:</strong> مواصفات تضمن سهولة الحركة، خاصة في حالات الطوارئ</li>
-              <li><strong>متانة الأقمشة:</strong> قدرة الأزياء على تحمل الاستخدام المتكرر دون تدهور خصائصها</li>
-              <li><strong>القيود على المواد:</strong> حظر استخدام مواد معينة قد تشكل خطراً في حالات معينة</li>
+            <h4 className="text-lg font-semibold mt-4 mb-2">اختبار السمية</h4>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>الغازات المحظورة:</strong> أول أكسيد الكربون، سيانيد الهيدروجين</li>
+              <li><strong>الحد الأقصى المسموح:</strong> تركيزات محددة لكل غاز</li>
+              <li><strong>ظروف الاختبار:</strong> درجات حرارة مختلفة (25°م و 190°م)</li>
+              <li><strong>مدة التعرض:</strong> 30 دقيقة لكل ظرف</li>
+            </ul>
+            
+            <h3 className="text-xl font-semibold mt-6 mb-3">معايير الأداء الميكانيكي</h3>
+            
+            <h4 className="text-lg font-semibold mt-4 mb-2">قوة الشد والتمزق</h4>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>قوة الشد الدنيا:</strong> 300 نيوتن للأقمشة الأساسية</li>
+              <li><strong>مقاومة التمزق:</strong> 25 نيوتن كحد أدنى</li>
+              <li><strong>الاستطالة عند الكسر:</strong> 15-25% حسب نوع القماش</li>
+              <li><strong>معايير الاختبار:</strong> ISO 13934-1 و ASTM D5034</li>
+            </ul>
+            
+            <h4 className="text-lg font-semibold mt-4 mb-2">مقاومة التآكل</h4>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>عدد الدورات المطلوب:</strong> 25,000 دورة كحد أدنى</li>
+              <li><strong>طريقة الاختبار:</strong> Martindale أو Taber</li>
+              <li><strong>معايير القبول:</strong> عدم ظهور ثقوب أو تآكل مفرط</li>
+              <li><strong>ظروف الاختبار:</strong> ضغط محدد وسرعة ثابتة</li>
             </ul>
             
             <div className="bg-gray-100 p-6 rounded-lg mb-6">
-              <h4 className="font-bold mb-3">مقارنة بين المعايير العالمية لزي الطيران</h4>
+              <h4 className="font-bold mb-3">جدول المعايير التقنية الأساسية</h4>
+              <div className="overflow-x-auto">
               <table className="min-w-full border border-gray-300">
                 <thead>
                   <tr className="bg-gray-200">
-                    <th className="border border-gray-300 p-2 text-right">المعيار</th>
-                    <th className="border border-gray-300 p-2 text-right">FAA (الأمريكية)</th>
-                    <th className="border border-gray-300 p-2 text-right">EASA (الأوروبية)</th>
-                    <th className="border border-gray-300 p-2 text-right">GACA (السعودية)</th>
+                      <th className="border border-gray-300 p-2 text-right">المعيار</th>
+                      <th className="border border-gray-300 p-2 text-right">القيمة المطلوبة</th>
+                      <th className="border border-gray-300 p-2 text-right">طريقة الاختبار</th>
+                      <th className="border border-gray-300 p-2 text-right">المرجع</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td className="border border-gray-300 p-2">مقاومة الحريق</td>
-                    <td className="border border-gray-300 p-2">أقصى معدل احتراق 2.5 سم/دقيقة</td>
-                    <td className="border border-gray-300 p-2">تطابق معايير FAA مع متطلبات إضافية للبيئات عالية الكثافة</td>
-                    <td className="border border-gray-300 p-2">تبني معايير FAA مع اعتبارات إضافية للمناخ المحلي</td>
+                      <td className="border border-gray-300 p-2">معدل الاحتراق</td>
+                      <td className="border border-gray-300 p-2">≤ 2.5 بوصة/دقيقة</td>
+                      <td className="border border-gray-300 p-2">الاحتراق العمودي</td>
+                      <td className="border border-gray-300 p-2">FAR 25.853</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 p-2">عناصر التعريف</td>
-                    <td className="border border-gray-300 p-2">شارات وألوان موحدة للطاقم</td>
-                    <td className="border border-gray-300 p-2">شارات موحدة مع مرونة في الألوان</td>
-                    <td className="border border-gray-300 p-2">شارات معتمدة دولياً مع حرية اختيار الألوان حسب هوية الشركة</td>
+                      <td className="border border-gray-300 p-2">كثافة الدخان</td>
+                      <td className="border border-gray-300 p-2">≤ 200 Ds</td>
+                      <td className="border border-gray-300 p-2">ASTM E662</td>
+                      <td className="border border-gray-300 p-2">FAR 25.853</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 p-2">الأحذية</td>
-                    <td className="border border-gray-300 p-2">كعب منخفض، مغلقة، مقاومة للانزلاق</td>
-                    <td className="border border-gray-300 p-2">مواصفات مشابهة مع تركيز على الراحة</td>
-                    <td className="border border-gray-300 p-2">تطبيق المعايير العالمية مع تصاميم تناسب الهوية المحلية</td>
+                      <td className="border border-gray-300 p-2">قوة الشد</td>
+                      <td className="border border-gray-300 p-2">≥ 300 نيوتن</td>
+                      <td className="border border-gray-300 p-2">ISO 13934-1</td>
+                      <td className="border border-gray-300 p-2">معايير الجودة</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 p-2">العناصر التكميلية</td>
-                    <td className="border border-gray-300 p-2">قيود صارمة على الإكسسوارات</td>
-                    <td className="border border-gray-300 p-2">حرية أكبر مع اشتراطات السلامة</td>
-                    <td className="border border-gray-300 p-2">مرونة مع مراعاة المحافظة على الهوية الثقافية</td>
+                      <td className="border border-gray-300 p-2">مقاومة التآكل</td>
+                      <td className="border border-gray-300 p-2">≥ 25,000 دورة</td>
+                      <td className="border border-gray-300 p-2">ISO 12947-2</td>
+                      <td className="border border-gray-300 p-2">معايير المتانة</td>
                   </tr>
                 </tbody>
               </table>
             </div>
+            </div>
             
-            <h3>المعايير الوظيفية</h3>
+            <h2 className="text-2xl font-bold mt-8 mb-4">الإطار التنظيمي السعودي</h2>
+            
+            <h3 className="text-xl font-semibold mt-6 mb-3">الهيئة العامة للطيران المدني (GACA)</h3>
             <p>
-              إلى جانب معايير السلامة، هناك متطلبات وظيفية دولية:
+              تُعتبر GACA الجهة المنظمة الرئيسية للطيران في المملكة:
             </p>
-            <ul>
-              <li><strong>تصميم الجيوب:</strong> مواصفات لعدد وحجم وموقع الجيوب لحمل المعدات الضرورية</li>
-              <li><strong>التمييز بين الرتب:</strong> معايير واضحة لتمييز مختلف المستويات والمسؤوليات</li>
-              <li><strong>أنظمة الشارات:</strong> توحيد أنظمة الشارات للتسهيل على الركاب التعرف على الطاقم</li>
-              <li><strong>المرئية:</strong> اشتراطات تتعلق بوضوح الطاقم في ظروف مختلفة</li>
-              <li><strong>ميزات عملية:</strong> عناصر مثل الأشرطة العاكسة، والأزرار الخاصة، وغيرها</li>
+            
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>اللوائح التنفيذية:</strong> تطبيق المعايير الدولية محلياً</li>
+              <li><strong>شهادات الاعتماد:</strong> إصدار تراخيص التشغيل والصيانة</li>
+              <li><strong>التفتيش والمراقبة:</strong> فحص دوري للامتثال</li>
+              <li><strong>التدريب والتأهيل:</strong> برامج تدريبية للكوادر المحلية</li>
+              <li><strong>التطوير المستمر:</strong> تحديث اللوائح وفقاً للمعايير الدولية</li>
             </ul>
             
-            <h2>توافق المملكة العربية السعودية مع المعايير الدولية</h2>
+            <h3 className="text-xl font-semibold mt-6 mb-3">متطلبات GACA لأزياء الطيران</h3>
             
-            <h3>دور الهيئة العامة للطيران المدني (GACA)</h3>
+            <h4 className="text-lg font-semibold mt-4 mb-2">المعايير الأساسية</h4>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>الامتثال للمعايير الدولية:</strong> تطبيق معايير ICAO و FAA</li>
+              <li><strong>الشهادات المطلوبة:</strong> شهادات اختبار من مختبرات معتمدة</li>
+              <li><strong>التوثيق:</strong> الاحتفاظ بسجلات الاختبارات والشهادات</li>
+              <li><strong>التحديث الدوري:</strong> مراجعة المعايير كل 3 سنوات</li>
+            </ul>
+            
+            <h4 className="text-lg font-semibold mt-4 mb-2">إجراءات الاعتماد</h4>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>تقديم الطلب:</strong> تقديم طلب اعتماد مع الوثائق المطلوبة</li>
+              <li><strong>الفحص الأولي:</strong> مراجعة الوثائق والمواصفات</li>
+              <li><strong>الاختبارات المعملية:</strong> إجراء اختبارات في مختبرات معتمدة</li>
+              <li><strong>التقييم النهائي:</strong> مراجعة شاملة للنتائج</li>
+              <li><strong>إصدار الشهادة:</strong> منح شهادة الاعتماد عند الامتثال</li>
+            </ul>
+            
+            <h3 className="text-xl font-semibold mt-6 mb-3">الهيئة السعودية للمواصفات والمقاييس (SASO)</h3>
+            
+            <h4 className="text-lg font-semibold mt-4 mb-2">المواصفات السعودية ذات الصلة</h4>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>SASO 1429:</strong> متطلبات المنسوجات والملابس</li>
+              <li><strong>SASO 1847:</strong> اختبارات السلامة للمنسوجات</li>
+              <li><strong>SASO 2156:</strong> وسم المنتجات النسيجية</li>
+              <li><strong>SASO 2847:</strong> معايير الجودة للملابس المهنية</li>
+            </ul>
+            
+            <h4 className="text-lg font-semibold mt-4 mb-2">متطلبات شهادة المطابقة</h4>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>للمنتجات المحلية:</strong> شهادة مطابقة من SASO</li>
+              <li><strong>للمنتجات المستوردة:</strong> شهادة مطابقة أو إعلان مورد</li>
+              <li><strong>الاختبارات المطلوبة:</strong> اختبارات السلامة والجودة</li>
+              <li><strong>التجديد:</strong> تجديد الشهادات كل سنتين</li>
+            </ul>
+            
+            <h2 className="text-2xl font-bold mt-8 mb-4">المتطلبات الثقافية والدينية</h2>
+            
+            <h3 className="text-xl font-semibold mt-6 mb-3">الامتثال للقيم الإسلامية</h3>
             <p>
-              تلعب الهيئة العامة للطيران المدني السعودية دوراً محورياً في تنظيم قطاع الطيران المحلي:
+              تراعي اللوائح السعودية القيم الإسلامية في تصميم الأزياء:
             </p>
-            <ul>
-              <li><strong>تبني المعايير الدولية:</strong> تبنت الهيئة معايير FAA وIATA مع تكييفها للسياق المحلي</li>
-              <li><strong>اللوائح التنفيذية:</strong> إصدار لوائح تفصيلية تحدد كيفية تطبيق المعايير الدولية في المملكة</li>
-              <li><strong>عمليات التفتيش:</strong> إجراء فحوصات دورية لضمان التزام شركات الطيران السعودية بالمعايير</li>
-              <li><strong>التحديث المستمر:</strong> مواكبة أحدث التطورات في المعايير العالمية وتحديث اللوائح المحلية</li>
-              <li><strong>التعاون الدولي:</strong> المشاركة في المنتديات العالمية لتطوير معايير زي الطيران</li>
+            
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>الاحتشام:</strong> تصاميم تغطي الجسم بشكل مناسب</li>
+              <li><strong>المواد الحلال:</strong> استخدام مواد مسموحة شرعياً</li>
+              <li><strong>عدم الإسراف:</strong> تجنب الإفراط في الزخرفة والألوان</li>
+              <li><strong>الوظيفية:</strong> التركيز على الوظيفة أكثر من الزينة</li>
+            </ul>
+            
+            <h3 className="text-xl font-semibold mt-6 mb-3">التكيف مع التنوع الثقافي</h3>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>خيارات متعددة:</strong> تصاميم تناسب خلفيات ثقافية مختلفة</li>
+              <li><strong>المرونة الدينية:</strong> إمكانية التكيف مع متطلبات دينية مختلفة</li>
+              <li><strong>الأحجام الشاملة:</strong> مقاسات تناسب جميع أشكال الجسم</li>
+              <li><strong>الألوان المحايدة:</strong> استخدام ألوان مقبولة ثقافياً</li>
             </ul>
             
             <div className="bg-green-50 p-6 rounded-lg mb-6">
-              <h3 className="text-primary mb-3">مشروع تحديث اللوائح التنظيمية السعودية</h3>
+              <h3 className="text-primary mb-3">نموذج التطبيق: الخطوط السعودية</h3>
               <p className="mb-0">
-                أطلقت الهيئة العامة للطيران المدني السعودية (GACA) في عام 2022 مشروعاً طموحاً لتحديث اللوائح التنظيمية المتعلقة بأزياء الطيران، بما يتماشى مع رؤية المملكة 2030 لتطوير قطاع الطيران. استغرق المشروع 14 شهراً، وشمل مراجعة شاملة للمعايير العالمية، واستشارات مع خبراء دوليين ومحليين، ومشاركة شركات الطيران الوطنية. نتج عن المشروع إصدار "دليل معايير زي الطيران السعودي" الذي يجمع بين أعلى معايير السلامة العالمية والخصوصية الثقافية للمملكة. تم تطبيق هذه المعايير الجديدة بشكل تدريجي في جميع شركات الطيران السعودية، مما أسهم في تعزيز الأمان وتحسين الهوية البصرية لقطاع الطيران المحلي.
+                نجحت الخطوط الجوية العربية السعودية في تطوير نموذج متميز للامتثال يجمع بين المعايير الدولية والمتطلبات المحلية. يتضمن هذا النموذج: تصاميم تحترم القيم الإسلامية مع الحفاظ على الأناقة المهنية، استخدام أقمشة تتكيف مع المناخ المحلي وتلبي معايير السلامة الدولية، وبرنامج تدريب شامل للطاقم على أهمية الامتثال للوائح. هذا النموذج أصبح مرجعاً لشركات الطيران الأخرى في المنطقة.
               </p>
             </div>
             
-            <h3>التوازن بين المعايير الدولية والخصوصية الثقافية</h3>
-            <p>
-              نجحت المملكة في تحقيق توازن دقيق بين الالتزام بالمعايير العالمية والحفاظ على هويتها:
-            </p>
-            <ul>
-              <li><strong>الالتزام بمعايير السلامة:</strong> تطبيق صارم لجميع معايير السلامة العالمية دون تنازل</li>
-              <li><strong>تكييف العناصر الشكلية:</strong> مرونة في تصميم العناصر غير المرتبطة بالسلامة لتعكس الهوية السعودية</li>
-              <li><strong>خيارات الزي النسائي:</strong> توفير خيارات محتشمة للمضيفات تتوافق مع القيم المحلية</li>
-              <li><strong>دمج عناصر تراثية:</strong> إدخال تفاصيل من التراث السعودي في تصاميم الأزياء</li>
-              <li><strong>ألوان وطنية:</strong> استخدام الألوان الوطنية في العناصر المرئية للزي</li>
+            <h2 className="text-2xl font-bold mt-8 mb-4">عملية ضمان الامتثال</h2>
+            
+            <h3 className="text-xl font-semibold mt-6 mb-3">مراحل التقييم والاعتماد</h3>
+            
+            <h4 className="text-lg font-semibold mt-4 mb-2">المرحلة الأولى: التقييم الأولي</h4>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>مراجعة التصميم:</strong> فحص التصاميم للتأكد من الامتثال</li>
+              <li><strong>اختيار المواد:</strong> التحقق من مطابقة المواد للمعايير</li>
+              <li><strong>التخطيط للاختبارات:</strong> وضع خطة شاملة للاختبارات</li>
+              <li><strong>تحديد المختبرات:</strong> اختيار مختبرات معتمدة للاختبار</li>
             </ul>
             
-            <h3>التحديات والحلول</h3>
-            <p>
-              واجهت شركات الطيران السعودية بعض التحديات في تحقيق التوافق، وقدمت حلولاً مبتكرة:
-            </p>
-            <ul>
-              <li><strong>تحدي المناخ:</strong> تكييف الأقمشة المقاومة للحريق لتناسب المناخ الحار، من خلال تطوير أقمشة متقدمة خفيفة تحافظ على خصائص مقاومة الحريق</li>
-              <li><strong>خصوصية الزي النسائي:</strong> تصميم أزياء محتشمة للمضيفات تلبي متطلبات السلامة والوظيفية</li>
-              <li><strong>التوازن بين التقاليد والعملية:</strong> ابتكار تصاميم تجمع بين احترام القيم المحلية والوظائف العملية</li>
-              <li><strong>تكلفة الامتثال:</strong> الاستثمار في تقنيات وأقمشة متطورة تحقق التوازن بين التكلفة والجودة</li>
-              <li><strong>التحديثات المستمرة:</strong> إنشاء أنظمة لمواكبة التغيرات في المعايير العالمية والمحلية</li>
+            <h4 className="text-lg font-semibold mt-4 mb-2">المرحلة الثانية: الاختبارات المعملية</h4>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>اختبارات السلامة:</strong> مقاومة الحريق والسمية</li>
+              <li><strong>اختبارات الأداء:</strong> المتانة والراحة</li>
+              <li><strong>اختبارات البيئة:</strong> التأثر بالظروف المناخية</li>
+              <li><strong>اختبارات الجودة:</strong> ثبات الألوان والأبعاد</li>
             </ul>
             
-            <h2>دراسات حالة لشركات طيران سعودية</h2>
-            
-            <h3>الخطوط الجوية العربية السعودية</h3>
-            <p>
-              نجحت الخطوط السعودية في تحقيق توافق نموذجي مع المعايير الدولية:
-            </p>
-            <ul>
-              <li><strong>التزام كامل بمعايير FAA وIATA:</strong> تطبيق صارم لمعايير السلامة العالمية</li>
-              <li><strong>هوية بصرية فريدة:</strong> استخدام اللون الأخضر المميز والنخلة في تصاميم الزي</li>
-              <li><strong>تصاميم عصرية:</strong> تحديث تصاميم الزي بشكل دوري مع الحفاظ على العناصر التقليدية</li>
-              <li><strong>شراكات مع مصممين محليين:</strong> التعاون مع مصممين سعوديين لإضفاء لمسات محلية</li>
-              <li><strong>برنامج اختبار شامل:</strong> إخضاع جميع تصاميم الزي لاختبارات مكثفة قبل اعتمادها</li>
+            <h4 className="text-lg font-semibold mt-4 mb-2">المرحلة الثالثة: التقييم النهائي</h4>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>مراجعة النتائج:</strong> تحليل شامل لنتائج الاختبارات</li>
+              <li><strong>التقييم الفني:</strong> مراجعة من قبل خبراء متخصصين</li>
+              <li><strong>التوثيق:</strong> إعداد تقرير شامل للامتثال</li>
+              <li><strong>إصدار الشهادة:</strong> منح شهادة الاعتماد عند النجاح</li>
             </ul>
             
-            <h3>طيران أديل</h3>
-            <p>
-              كشركة طيران اقتصادي، نهجت أديل أسلوباً مبتكراً:
-            </p>
-            <ul>
-              <li><strong>الوظيفية أولاً:</strong> التركيز على زي عملي مريح مع الالتزام الكامل بمعايير السلامة</li>
-              <li><strong>بساطة العناصر:</strong> تصاميم بسيطة سهلة الصيانة مع تكلفة معقولة</li>
-              <li><strong>ألوان حيوية:</strong> استخدام ألوان مشرقة تعكس روح العلامة التجارية الشابة</li>
-              <li><strong>مرونة الخيارات:</strong> نظام قطع قابلة للمزج والتنسيق مع الالتزام بالمعايير</li>
-              <li><strong>الابتكار في المواد:</strong> استخدام أقمشة متطورة تجمع بين الراحة والامتثال للمعايير</li>
+            <h3 className="text-xl font-semibold mt-6 mb-3">المراقبة المستمرة</h3>
+            
+            <h4 className="text-lg font-semibold mt-4 mb-2">التفتيش الدوري</h4>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>التفتيش السنوي:</strong> فحص دوري للامتثال المستمر</li>
+              <li><strong>التفتيش المفاجئ:</strong> فحوصات غير مجدولة للتحقق</li>
+              <li><strong>تقييم الشكاوى:</strong> التحقيق في أي مخالفات مبلغ عنها</li>
+              <li><strong>المراجعة الشاملة:</strong> تقييم شامل كل 3 سنوات</li>
             </ul>
             
-            <h2>مستقبل توافق المعايير في قطاع الطيران السعودي</h2>
-            
-            <p>
-              مع استمرار نمو قطاع الطيران السعودي، نتوقع تطورات في مجال التوافق مع المعايير الدولية:
-            </p>
-            <ul>
-              <li><strong>المشاركة في وضع المعايير:</strong> زيادة دور المملكة في المنظمات الدولية المسؤولة عن وضع معايير الطيران</li>
-              <li><strong>ابتكارات محلية:</strong> تطوير تقنيات وأقمشة مبتكرة في المملكة تلبي المعايير الدولية وتناسب الظروف المحلية</li>
-              <li><strong>تكامل التقنيات المتقدمة:</strong> دمج التقنيات الذكية في زي الطيران بما يتوافق مع المعايير العالمية</li>
-              <li><strong>منهجية استباقية:</strong> التحول من مجرد الامتثال للمعايير إلى المشاركة في تطويرها</li>
-              <li><strong>تصدير الخبرات:</strong> نقل التجربة السعودية في التوفيق بين المعايير العالمية والخصوصية الثقافية إلى دول أخرى</li>
+            <h4 className="text-lg font-semibold mt-4 mb-2">الإجراءات التصحيحية</h4>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>الإنذار الأولي:</strong> تنبيه في حالة المخالفات البسيطة</li>
+              <li><strong>خطة التصحيح:</strong> وضع خطة لمعالجة المخالفات</li>
+              <li><strong>المتابعة:</strong> مراقبة تنفيذ الإجراءات التصحيحية</li>
+              <li><strong>العقوبات:</strong> فرض عقوبات في حالة عدم الامتثال</li>
             </ul>
             
-            <h2>الخلاصة</h2>
-            <p>
-              تمثل تجربة المملكة العربية السعودية في مواءمة المعايير الدولية لزي الطيران مع متطلباتها المحلية نموذجاً ناجحاً للتوازن بين الامتثال للمعايير العالمية والحفاظ على الهوية الثقافية. مع استمرار توسع قطاع الطيران السعودي وفق رؤية 2030، ستزداد أهمية هذا التوازن، وستواصل الهيئة العامة للطيران المدني وشركات الطيران السعودية تطوير أساليبها لتحقيق أعلى معايير السلامة والجودة مع الحفاظ على طابعها المميز.
-            </p>
+            <h2 className="text-2xl font-bold mt-8 mb-4">التحديات والحلول</h2>
             
+            <h3 className="text-xl font-semibold mt-6 mb-3">التحديات الرئيسية</h3>
+            
+            <h4 className="text-lg font-semibold mt-4 mb-2">التحديات التقنية</h4>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>تعقيد المعايير:</strong> صعوبة في فهم وتطبيق المعايير المتعددة</li>
+              <li><strong>التكلفة العالية:</strong> تكلفة الاختبارات والشهادات</li>
+              <li><strong>التطوير المستمر:</strong> تحديث المعايير باستمرار</li>
+              <li><strong>نقص الخبرة:</strong> قلة الخبراء المحليين المتخصصين</li>
+            </ul>
+            
+            <h4 className="text-lg font-semibold mt-4 mb-2">التحديات الثقافية</h4>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>التوازن الثقافي:</strong> الموازنة بين المعايير الدولية والمحلية</li>
+              <li><strong>التنوع في الطاقم:</strong> تلبية احتياجات طاقم متنوع ثقافياً</li>
+              <li><strong>التغيير التدريجي:</strong> مقاومة التغيير من بعض الأطراف</li>
+              <li><strong>التوعية:</strong> نشر الوعي بأهمية الامتثال</li>
+            </ul>
+            
+            <h3 className="text-xl font-semibold mt-6 mb-3">الحلول المبتكرة</h3>
+            
+            <h4 className="text-lg font-semibold mt-4 mb-2">الحلول التقنية</h4>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>المختبرات المحلية:</strong> إنشاء مختبرات معتمدة محلياً</li>
+              <li><strong>التدريب المتخصص:</strong> برامج تدريبية للكوادر المحلية</li>
+              <li><strong>الشراكات الدولية:</strong> تعاون مع خبراء عالميين</li>
+              <li><strong>التقنيات الحديثة:</strong> استخدام تقنيات متطورة في الاختبار</li>
+            </ul>
+            
+            <h4 className="text-lg font-semibold mt-4 mb-2">الحلول الإدارية</h4>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>التبسيط الإجرائي:</strong> تبسيط إجراءات الاعتماد</li>
+              <li><strong>الرقمنة:</strong> استخدام الأنظمة الرقمية للمتابعة</li>
+              <li><strong>الشفافية:</strong> نشر المعايير والإجراءات بوضوح</li>
+              <li><strong>الدعم الفني:</strong> تقديم الدعم للشركات الصغيرة</li>
+            </ul>
+            
+            <h2 className="text-2xl font-bold mt-8 mb-4">المستقبل والتطوير</h2>
+            
+            <h3 className="text-xl font-semibold mt-6 mb-3">الاتجاهات المستقبلية</h3>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>المعايير الذكية:</strong> معايير تتكيف مع التقنيات الجديدة</li>
+              <li><strong>الاختبار الافتراضي:</strong> استخدام المحاكاة في الاختبارات</li>
+              <li><strong>الذكاء الاصطناعي:</strong> استخدام AI في التقييم والمراقبة</li>
+              <li><strong>البلوك تشين:</strong> تتبع دورة حياة المنتجات</li>
+            </ul>
+            
+            <h3 className="text-xl font-semibold mt-6 mb-3">رؤية 2030 والطيران السعودي</h3>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>التوطين:</strong> تطوير صناعة محلية للأزياء</li>
+              <li><strong>الابتكار:</strong> الاستثمار في البحث والتطوير</li>
+              <li><strong>الجودة العالمية:</strong> تطبيق أعلى المعايير الدولية</li>
+              <li><strong>الاستدامة:</strong> التركيز على الحلول المستدامة</li>
+            </ul>
+            
+            <h2 className="text-2xl font-bold mt-8 mb-4">خاتمة</h2>
             <p>
-              إن نجاح المملكة في تحقيق هذا التوافق يعكس نهجها المتوازن في التعامل مع المعايير الدولية، واستعدادها للمشاركة بفعالية في المجتمع الدولي للطيران، مع الاعتزاز بهويتها وقيمها. وهذا النهج سيستمر في دعم طموحات المملكة لتصبح مركزاً إقليمياً وعالمياً للطيران يجمع بين الالتزام بأعلى المعايير العالمية والتميز في عكس الهوية السعودية الأصيلة.
+              إن الامتثال للوائح الدولية لأزياء الطيران ليس مجرد متطلب قانوني، بل استثمار في السلامة والجودة والسمعة. المملكة العربية السعودية، من خلال GACA و SASO، وضعت إطاراً تنظيمياً متقدماً يجمع بين أفضل الممارسات الدولية والخصوصية المحلية.
+            </p>
+            <p>
+              في خبراء الزي الموحد، نلتزم بأعلى معايير الامتثال ونعمل بشكل وثيق مع الجهات التنظيمية لضمان أن جميع منتجاتنا تلبي وتتجاوز المتطلبات المحلية والدولية. نؤمن بأن الامتثال الحقيقي يتجاوز مجرد اجتياز الاختبارات ليشمل الالتزام بروح المعايير وأهدافها.
+            </p>
+            <p>
+              نسعى دائماً لنكون شركاء موثوقين لعملائنا في رحلة الامتثال، ونقدم الدعم والاستشارة اللازمة لضمان تحقيق أعلى مستويات السلامة والجودة في أزياء الطيران.
             </p>
           </div>
           
-          {/* Tags Section */}
-          <div className="mt-8 pt-6 border-t border-gray-200">
-            <h3 className="text-lg font-semibold mb-3">الوسوم:</h3>
-            <div className="flex flex-wrap gap-2">
-              {['معايير زي الطيران', 'التشريعات الدولية للطيران', 'الهيئة العامة للطيران المدني', 'سلامة زي الطيران', 'FAA', 'IATA', 'الخطوط السعودية', 'معايير مقاومة الحريق', 'زي الطيران السعودي', 'الامتثال للمعايير الدولية'].map((tag) => (
-                <span key={tag} className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </div>
-          
-          {/* Author Section */}
-          <div className="mt-8 pt-6 border-t border-gray-200 flex items-center">
-            <div className="relative h-16 w-16 rounded-full overflow-hidden">
-              <Image
-                src="/images/embedded/aviation_uniforms/history-evolution-saudi-airlines-uniform-2.jpg"
-                alt="خالد رحمن"
-                fill
-                style={{ objectFit: 'cover' }}
-              />
-            </div>
-            <div className="mr-4">
-              <h3 className="text-lg font-semibold">خالد رحمن</h3>
-              <p className="text-gray-600 text-sm">خبير في تشريعات الطيران المدني مع خبرة 15 عاماً في العمل مع هيئات تنظيمية دولية ومستشار سابق في الهيئة العامة للطيران المدني</p>
-            </div>
-          </div>
-          
-          {/* Related Articles Section */}
-          <div className="mt-8 pt-6 border-t border-gray-200">
-            <h3 className="text-xl font-bold mb-4">مقالات ذات صلة</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <Link href="/aviation-uniforms/safety-standards-for-aviation-uniforms" className="block group">
-                <div className="bg-gray-50 rounded-lg overflow-hidden shadow-sm transition-all group-hover:shadow-md">
-                  <div className="relative h-40 w-full">
-                    <Image
-                      src="/images/aviation_uniforms/safety-standards-for-aviation-uniforms-thumbnail.jpg"
-                      alt="معايير السلامة في زي الطيران"
-                      fill
-                      style={{ objectFit: 'cover' }}
-                    />
-                  </div>
-                  <div className="p-4">
-                    <h4 className="font-semibold text-gray-900 group-hover:text-accent transition-colors">معايير السلامة الأساسية في زي الطيران</h4>
-                    <p className="text-gray-600 text-sm mt-1">تعرف على المعايير والمواصفات الضرورية لسلامة أزياء طواقم الطيران</p>
-                  </div>
+          {/* Share Section */}
+          <div className="mt-8 flex justify-center">
+            <div className="text-center">
+              <h3 className="text-lg font-semibold mb-3">مشاركة المقال</h3>
+              <div className="flex justify-center space-x-reverse space-x-4">
+                <button className="bg-[#3b5998] text-white p-2 rounded-full w-10 h-10 flex items-center justify-center">
+                  <span className="sr-only">Facebook</span>
+                </button>
+                <button className="bg-[#1da1f2] text-white p-2 rounded-full w-10 h-10 flex items-center justify-center">
+                  <span className="sr-only">Twitter</span>
+                </button>
+                <button className="bg-[#0e76a8] text-white p-2 rounded-full w-10 h-10 flex items-center justify-center">
+                  <span className="sr-only">LinkedIn</span>
+                </button>
+                <button className="bg-[#25D366] text-white p-2 rounded-full w-10 h-10 flex items-center justify-center">
+                  <span className="sr-only">WhatsApp</span>
+                </button>
                 </div>
-              </Link>
-              <Link href="/aviation-uniforms/innovative-design-trends-modern-aviation-uniforms" className="block group">
-                <div className="bg-gray-50 rounded-lg overflow-hidden shadow-sm transition-all group-hover:shadow-md">
-                  <div className="relative h-40 w-full">
-                    <Image
-                      src="/images/aviation_uniforms/safety-standards-for-aviation-uniforms-header.jpg"
-                      alt="الاتجاهات المبتكرة في تصميم زي الطيران الحديث"
-                      fill
-                      style={{ objectFit: 'cover' }}
-                    />
-                  </div>
-                  <div className="p-4">
-                    <h4 className="font-semibold text-gray-900 group-hover:text-accent transition-colors">الاتجاهات المبتكرة في تصميم زي الطيران الحديث</h4>
-                    <p className="text-gray-600 text-sm mt-1">استكشف أحدث اتجاهات تصميم زي الطيران وكيف تجمع بين الوظائف العملية والأناقة</p>
-                  </div>
-                </div>
-              </Link>
             </div>
           </div>
         </div>

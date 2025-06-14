@@ -1,11 +1,11 @@
-import React from 'react';
+﻿import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata = {
-  title: 'تصميم زي طاقم الطائرة: دليل شامل للمعايير والعناصر الأساسية | خبراء الزي الموحد',
-  description: 'دليل شامل لتصميم زي طاقم الطائرة يتضمن المعايير العالمية والعناصر الأساسية الواجب توافرها، مع أحدث التوجهات في عالم أزياء الطيران',
+  title: 'تصميم زي طاقم الطيران: خطوات وأفكار مبتكرة | خبراء الزي الموحد',
+  description: 'دليل عملي لتصميم زي طاقم الطيران مع نصائح وأفكار مبتكرة تجمع بين الأناقة والراحة والهوية المؤسسية.'
 };
 
 export default function ArticlePage() {
@@ -16,7 +16,7 @@ export default function ArticlePage() {
           { label: 'الرئيسية', href: '/' },
           { label: 'المدونة', href: '/blog' },
           { label: 'أزياء الطيران', href: '/blog/flight-crew' },
-          { label: 'تصميم زي طاقم الطائرة', href: '/blog/flight-crew/design-uniform-crew-aviation', isCurrent: true }
+          { label: 'تصميم زي طاقم الطيران', href: '/blog/flight-crew/design-uniform-crew-aviation', isCurrent: true }
         ]} 
       />
       
@@ -24,7 +24,7 @@ export default function ArticlePage() {
         <div className="relative h-[400px] w-full">
           <Image
             src="/images/aviation_uniforms/aviation_uniform_design.jpg"
-            alt="تصميم زي طاقم الطائرة: دليل شامل للمعايير والعناصر الأساسية"
+            alt="تصميم زي طاقم الطيران: خطوات وأفكار مبتكرة | خبراء الزي الموحد"
             fill
             style={{ objectFit: 'cover' }}
             priority
@@ -37,17 +37,17 @@ export default function ArticlePage() {
               أزياء الطيران
             </Link>
             <div className="flex items-center text-gray-500 text-sm">
-              <span>{new Date().toLocaleDateString('ar-SA', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-              <span className="mx-2">•</span>
+              <span>{new Date().toLocaleDateString('ar-SA-u-ca-gregory', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+              <span className="mx-2">â€¢</span>
               <span>12 دقيقة للقراءة</span>
             </div>
           </div>
           
-          <h1 className="text-3xl font-bold text-gray-900 mb-6">تصميم زي طاقم الطائرة: دليل شامل للمعايير والعناصر الأساسية</h1>
+          <h1 className="text-3xl font-bold text-gray-900 mb-6">تصميم زي طاقم الطيران: خطوات وأفكار مبتكرة</h1>
           
           <div className="prose prose-lg max-w-none">
             <p className="mb-4">
-              يعد تصميم زي طاقم الطائرة أحد أهم العناصر التي تسهم في تشكيل الهوية البصرية لشركات الطيران، وتؤثر بشكل مباشر على الانطباع الأول للمسافرين، وتعكس مستوى الخدمة والاحترافية. وفي هذا الدليل الشامل، سنتناول المعايير العالمية والعناصر الأساسية التي يجب مراعاتها عند تصميم زي طاقم الطائرة بمختلف فئاته.
+              يعد تصميم زي طاقم الطائرة أحد أهم العناصر التي تسهم في تشكيل الهوية البصرية لشركات الطيران، وتؤثر بشكل مباشر على الانطباع الأول للمسافرين، وتعكس مستوى الخدمة والاحترافية. وفي هذا الدليل الشامل، سنتناول المعايير العالمية والعناصر الأساسية الواجب توافرها، مع أحدث التوجهات في عالم أزياء الطيران.
             </p>
             
             <h2 className="text-2xl font-bold mt-8 mb-4">أهمية تصميم زي طاقم الطائرة</h2>

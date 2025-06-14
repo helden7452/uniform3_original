@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+﻿import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -6,7 +6,7 @@ import BlogCard from '@/components/BlogCard';
 
 export const metadata: Metadata = {
   title: 'مدونة الزي المؤسسي | خبراء الزي الموحد',
-  description: 'اكتشف أحدث المقالات والنصائح حول الزي المؤسسي، تصميم الهوية المؤسسية، والاتجاهات الحديثة في عالم الأزياء المهنية',
+  description: 'اكتشف أحدث المقالات والنصائح حول الزي المؤسسي، تصميم الهوية المؤسسية، وأبرز الاتجاهات الحديثة في عالم الأزياء المهنية للشركات السعودية.',
   keywords: 'مدونة الزي المؤسسي, مقالات الزي المهني, نصائح الزي المؤسسي, تصميم الهوية المؤسسية',
 };
 
@@ -14,7 +14,7 @@ const corporateBlogPosts = [
   {
     id: 'corporate-uniforms-guide',
     title: 'الدليل الشامل للزي المؤسسي في السعودية',
-    excerpt: 'دليل متكامل لاختيار وتصميم الزي المؤسسي المناسب للشركات السعودية مع مراعاة الثقافة المحلية والمعايير الدولية',
+    excerpt: 'دليل متكامل لاختيار وتصميم الزي المؤسسي المناسب للشركات السعودية مع مراعاة الثقافة المحلية والمعايير الدولية.',
     image: '/images/blog/corporate-uniforms-guide.jpg',
     category: 'دليل شامل',
     readTime: '12 دقيقة',
@@ -25,7 +25,7 @@ const corporateBlogPosts = [
   {
     id: 'sustainable-corporate-uniforms',
     title: 'الزي المؤسسي المستدام والخيارات الصديقة للبيئة',
-    excerpt: 'كيف تختار الشركات الزي المؤسسي المستدام الذي يحافظ على البيئة ويعكس قيم المسؤولية الاجتماعية',
+    excerpt: 'كيف تختار الشركات الزي المؤسسي المستدام الذي يحافظ على البيئة ويعكس قيم المسؤولية الاجتماعية.',
     image: '/images/corporate_uniforms/sustainable-eco-friendly-uniforms.jpg',
     category: 'الاستدامة',
     readTime: '10 دقائق',
@@ -36,7 +36,7 @@ const corporateBlogPosts = [
   {
     id: 'corporate-identity-uniforms',
     title: 'كيف يعكس الزي المؤسسي هوية وقيم الشركة',
-    excerpt: 'تأثير الزي المؤسسي على بناء الهوية المؤسسية وتعزيز قيم الشركة أمام العملاء والموظفين',
+    excerpt: 'تأثير الزي المؤسسي على بناء الهوية المؤسسية وتعزيز قيم الشركة أمام العملاء والموظفين.',
     image: '/images/corporate_uniforms/corporate-identity-values.jpg',
     category: 'الهوية المؤسسية',
     readTime: '8 دقائق',
@@ -47,7 +47,7 @@ const corporateBlogPosts = [
   {
     id: 'equality-professionalism-uniforms',
     title: 'دور الزي المؤسسي في تعزيز المساواة والمهنية',
-    excerpt: 'كيف يساهم الزي الموحد في خلق بيئة عمل عادلة ومهنية تقوم على الجدارة والكفاءة',
+    excerpt: 'كيف يساهم الزي الموحد في خلق بيئة عمل عادلة ومهنية تقوم على الجدارة والكفاءة.',
     image: '/images/corporate_uniforms/equality-professionalism-uniforms.jpg',
     category: 'المساواة والمهنية',
     readTime: '9 دقائق',
@@ -58,7 +58,7 @@ const corporateBlogPosts = [
   {
     id: 'corporate-uniform-trends-2024',
     title: 'أحدث اتجاهات الزي المؤسسي لعام 2024',
-    excerpt: 'استكشف أحدث الاتجاهات في تصميم الزي المؤسسي والألوان والأقمشة الرائجة لهذا العام',
+    excerpt: 'استكشف أحدث الاتجاهات في تصميم الزي المؤسسي والألوان والأقمشة الرائجة لهذا العام.',
     image: '/images/blog/corporate-uniform-trends-2024.jpg',
     category: 'الاتجاهات',
     readTime: '7 دقائق',
@@ -69,7 +69,7 @@ const corporateBlogPosts = [
   {
     id: 'choosing-corporate-uniform-colors',
     title: 'كيفية اختيار ألوان الزي المؤسسي المناسبة',
-    excerpt: 'دليل شامل لاختيار الألوان المناسبة للزي المؤسسي وتأثيرها على نفسية الموظفين وانطباع العملاء',
+    excerpt: 'دليل شامل لاختيار الألوان المناسبة للزي المؤسسي وتأثيرها على نفسية الموظفين وانطباع العملاء.',
     image: '/images/blog/corporate-uniform-colors.jpg',
     category: 'التصميم',
     readTime: '6 دقائق',
@@ -147,7 +147,7 @@ export default function CorporateBlogPage() {
                             {corporateBlogPosts[0].author}
                           </p>
                           <p className="text-xs text-gray-500">
-                            {new Date(corporateBlogPosts[0].publishDate).toLocaleDateString('ar-SA')}
+                            {new Date(corporateBlogPosts[0].publishDate).toLocaleDateString('ar-SA-u-ca-gregory')}
                           </p>
                         </div>
                       </div>
@@ -259,7 +259,7 @@ export default function CorporateBlogPage() {
                 </div>
                 <h3 className="text-lg font-semibold text-gray-800 mb-2">الزي الطبي</h3>
                 <p className="text-gray-600 text-sm">
-                  اكتشف أحدث الاتجاهات في الزي الطبي والسكراب المهني
+                  اكتشف أحدث الاتجاهات في الزي الطبي والسكرب المهني
                 </p>
               </Link>
 

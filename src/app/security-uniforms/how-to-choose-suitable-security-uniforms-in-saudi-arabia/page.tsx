@@ -4,11 +4,11 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'كيف تختار الزي الموحد المناسب لرجال الأمن في السعودية؟',
+  title: 'كيف تختار الزي الموحد المناسب لرجال الأمن في السعودية؟ | خبراء الزي الموحد',
   description: 'دليل شامل لاختيار الزي الموحد المناسب لرجال الأمن في السعودية مع مراعاة المعايير المحلية، المتطلبات العملية، والظروف المناخية المختلفة',
 };
 
-export default function HowToChooseSuitableSecurityUniformsPage() {
+export default function SecurityUniformSelectionGuidePage() {
   return (
     <main className="max-w-4xl mx-auto px-4 py-8">
       <Breadcrumb 
@@ -21,7 +21,13 @@ export default function HowToChooseSuitableSecurityUniformsPage() {
       
       <article className="bg-white rounded-lg shadow-md overflow-hidden mt-6">
         <div className="relative h-[400px] w-full">
-          <Image src="/images/security_uniforms/content/how-to-choose-suitable-security-uniforms-in-saudi-arabia/main.jpg" alt="كيف تختار الزي الموحد المناسب لرجال الأمن في السعودية" fill style={{ objectFit: 'cover' }} priority />
+          <Image
+            src="/images/security_uniforms/content/how-to-choose-suitable-security-uniforms-in-saudi-arabia/main.jpg"
+            alt="كيف تختار الزي الموحد المناسب لرجال الأمن في السعودية"
+            fill
+            style={{ objectFit: 'cover' }}
+            priority
+          />
         </div>
         
         <div className="p-6">
@@ -30,260 +36,277 @@ export default function HowToChooseSuitableSecurityUniformsPage() {
               زي الأمن
             </Link>
             <div className="flex items-center text-gray-500 text-sm">
-              <span>{new Date().toLocaleDateString('ar-SA', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+              <span>{new Date().toLocaleDateString('ar-SA-u-ca-gregory', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
               <span className="mx-2">•</span>
-              <span>10 دقائق للقراءة</span>
+              <span>9 دقائق للقراءة</span>
             </div>
           </div>
           
           <h1 className="text-3xl font-bold text-gray-900 mb-6">كيف تختار الزي الموحد المناسب لرجال الأمن في السعودية؟</h1>
           
-          <div className="prose prose-lg max-w-none">
-            <p className="mb-4">
+          <div className="prose prose-lg max-w-none rtl">
+            <p>
               يلعب رجال الأمن دوراً حيوياً في حماية المنشآت والممتلكات والأفراد في المملكة العربية السعودية. وأحد العناصر الأساسية التي تؤثر على كفاءة وفعالية أداء رجال الأمن هو الزي الموحد الذي يرتدونه. فالزي المناسب ليس مجرد قطعة ملابس، بل هو أداة مهمة تساهم في تعزيز السلطة، الهيبة، والمهنية، كما تمكن رجال الأمن من أداء مهامهم بشكل أفضل.
             </p>
-            
-            <p className="mb-4">
+            <p>
               في هذا الدليل الشامل، سنستعرض الاعتبارات الرئيسية التي يجب مراعاتها عند اختيار الزي الموحد المناسب لرجال الأمن في السعودية، مع التركيز على المتطلبات الخاصة بالمناخ المحلي، المعايير التنظيمية، الراحة العملية، والمظهر المهني الذي يعزز الثقة والاحترام.
             </p>
             
             <h2 className="text-2xl font-bold mt-8 mb-4">الاعتبارات التنظيمية والقانونية في السعودية</h2>
             
             <h3 className="text-xl font-bold mt-6 mb-3">1. الالتزام بالمعايير المحلية</h3>
-            <p className="mb-4">
+            <p>
               قبل اختيار زي الأمن، من الضروري فهم المتطلبات القانونية:
             </p>
             <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2"><strong>تصاريح وزارة الداخلية:</strong> يجب أن يتوافق الزي مع المتطلبات المحددة من الجهات المختصة بوزارة الداخلية السعودية</li>
-              <li className="mb-2"><strong>التمييز عن الزي العسكري الرسمي:</strong> يجب أن يكون زي الأمن الخاص متميزاً بشكل واضح عن الزي العسكري الرسمي للجهات الأمنية الحكومية</li>
-              <li className="mb-2"><strong>شعارات وشارات معتمدة:</strong> استخدام الشعارات والشارات المعتمدة فقط من الجهات المختصة</li>
-              <li className="mb-2"><strong>بطاقات الهوية:</strong> توفير حاملات واضحة ومنظمة لبطاقات الهوية والتراخيص</li>
-              <li className="mb-2"><strong>الالتزام بالمواصفات السعودية:</strong> اتباع المواصفات والمقاييس السعودية الخاصة بالأقمشة والملابس</li>
+              <li><strong>التراخيص والتصاريح:</strong> التأكد من أن تصميم الزي يتوافق مع متطلبات وزارة الداخلية</li>
+              <li><strong>الألوان المسموحة:</strong> الالتزام بالألوان المحددة لكل نوع من أنواع الأمن (خاص، عام، منشآت)</li>
+              <li><strong>الشارات والرموز:</strong> استخدام الشارات المعتمدة فقط وتجنب التشابه مع الجهات الحكومية</li>
+              <li><strong>المعايير الدولية:</strong> الالتزام بمعايير السلامة والجودة المعترف بها دولياً</li>
+            </ul>
+            
+            <h3 className="text-xl font-bold mt-6 mb-3">2. التمييز بين أنواع الأمن المختلفة</h3>
+            <p>
+              يجب التمييز بوضوح بين أنواع الأمن المختلفة من خلال الزي:
+            </p>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>الأمن الخاص:</strong> ألوان محددة تميزه عن الأمن الحكومي</li>
+              <li><strong>أمن المنشآت:</strong> تصاميم تعكس طبيعة المنشأة (مستشفيات، مدارس، مراكز تجارية)</li>
+              <li><strong>الحراسات الشخصية:</strong> أزياء أكثر تحفظاً وأناقة</li>
+              <li><strong>أمن الفعاليات:</strong> تصاميم تسهل التعرف عليها في الحشود</li>
             </ul>
             
             <div className="bg-blue-50 p-6 rounded-lg mb-6">
-              <h3 className="text-primary mb-3">معلومة مهمة</h3>
+              <h3 className="text-primary mb-3">نصيحة قانونية</h3>
               <p className="mb-0">
-                وفقًا للائحة التنفيذية لنظام الأمن والحماية الخاصة في المملكة العربية السعودية، يجب أن تلتزم شركات الأمن الخاصة باستخدام زي موحد معتمد من الجهات المختصة، ويمنع استخدام أزياء تشبه أزياء القوات العسكرية أو الأمنية النظامية. كما يجب أن يحمل الزي شعار الشركة بشكل واضح وأن يكون مصنوعًا من مواد ذات جودة عالية تناسب طبيعة العمل والظروف المناخية في المملكة.
+                ينصح بشدة بالتشاور مع الجهات المختصة في وزارة الداخلية قبل اعتماد أي تصميم جديد لزي الأمن، وذلك لضمان الامتثال الكامل للوائح المحلية وتجنب أي مشاكل قانونية. كما يُنصح بالاحتفاظ بنسخ من التراخيص والموافقات الرسمية لتصميم الزي.
               </p>
             </div>
             
-            <h3 className="text-xl font-bold mt-6 mb-3">2. التوافق مع متطلبات المنشأة</h3>
-            <p className="mb-4">
-              يختلف زي الأمن حسب نوع المنشأة وطبيعة عملها:
+            <h2 className="text-2xl font-bold mt-8 mb-4">التكيف مع المناخ السعودي</h2>
+            
+            <h3 className="text-xl font-bold mt-6 mb-3">1. مواجهة تحديات الحرارة العالية</h3>
+            <p>
+              المناخ الحار في السعودية يتطلب اعتبارات خاصة في اختيار زي الأمن:
             </p>
             <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2"><strong>المنشآت الحكومية:</strong> غالبًا ما تتطلب زياً أكثر رسمية وتحفظاً</li>
-              <li className="mb-2"><strong>المجمعات التجارية:</strong> تفضل زياً يجمع بين الأناقة والعملية، وقد يكون أقل صرامة</li>
-              <li className="mb-2"><strong>المنشآت الصناعية:</strong> تتطلب زياً متيناً مع تركيز على عناصر السلامة المهنية</li>
-              <li className="mb-2"><strong>البنوك والمؤسسات المالية:</strong> تفضل زياً رسمياً يعكس الثقة والاحترافية</li>
-              <li className="mb-2"><strong>المستشفيات والمرافق الصحية:</strong> تحتاج لزي يجمع بين الهيبة والود، مع مراعاة الاعتبارات الصحية</li>
+              <li><strong>الأقمشة القابلة للتنفس:</strong> اختيار مواد تسمح بمرور الهواء وتقلل من التعرق</li>
+              <li><strong>الألوان الفاتحة:</strong> تجنب الألوان الداكنة التي تمتص الحرارة (عند الإمكان)</li>
+              <li><strong>التصميم المفتوح:</strong> قصات تسمح بتدوير الهواء حول الجسم</li>
+              <li><strong>الطبقات المتعددة:</strong> إمكانية إزالة أو إضافة طبقات حسب الحاجة</li>
             </ul>
             
-            <h2 className="text-2xl font-bold mt-8 mb-4">اختيار المواد والأقمشة المناسبة للمناخ السعودي</h2>
-            
-            <h3 className="text-xl font-bold mt-6 mb-3">1. مقاومة الحرارة المرتفعة</h3>
-            <p className="mb-4">
-              المناخ الحار في معظم مناطق المملكة يتطلب اعتبارات خاصة:
+            <h3 className="text-xl font-bold mt-6 mb-3">2. التعامل مع التقلبات الموسمية</h3>
+            <p>
+              رغم أن السعودية معروفة بمناخها الحار، إلا أن هناك تقلبات موسمية يجب مراعاتها:
             </p>
             <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2"><strong>أقمشة خفيفة والوزن:</strong> اختيار أقمشة خفيفة تسمح بتنظيم درجة حرارة الجسم</li>
-              <li className="mb-2"><strong>القطن المخلوط:</strong> مزيج من القطن (60%) والبوليستر (40%) يوفر توازناً بين الراحة والمتانة</li>
-              <li className="mb-2"><strong>تقنية الأقمشة المتنفسة:</strong> الاستفادة من التقنيات الحديثة التي تسمح بتهوية أفضل</li>
-              <li className="mb-2"><strong>اللون والامتصاص الحراري:</strong> الألوان الداكنة تمتص الحرارة، لكنها ضرورية لزي الأمن، لذا يجب موازنة ذلك بخفة الوزن والتهوية</li>
-              <li className="mb-2"><strong>معالجة مضادة للأشعة فوق البنفسجية:</strong> حماية إضافية للعاملين في المواقع المكشوفة</li>
-            </ul>
-            
-            <h3 className="text-xl font-bold mt-6 mb-3">2. التكيف مع التغيرات المناخية</h3>
-            <p className="mb-4">
-              تتنوع الظروف المناخية في المملكة بين المناطق وخلال فصول السنة:
-            </p>
-            <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2"><strong>الزي الصيفي والشتوي:</strong> توفير نسختين من الزي تناسب فصلي الصيف والشتاء</li>
-              <li className="mb-2"><strong>طبقات قابلة للإضافة والإزالة:</strong> تصميم يسمح بإضافة طبقات أو إزالتها حسب درجة الحرارة</li>
-              <li className="mb-2"><strong>معاطف للمناطق الباردة:</strong> معاطف إضافية للمناطق الجبلية وخلال فترات البرد</li>
-              <li className="mb-2"><strong>مقاومة الرطوبة:</strong> أقمشة مقاومة للرطوبة للمناطق الساحلية مثل جدة والدمام</li>
-              <li className="mb-2"><strong>الحماية من الرمال والغبار:</strong> تصميمات تحمي من العواصف الرملية في المناطق الصحراوية</li>
+              <li><strong>الشتاء:</strong> توفير خيارات للطبقات الإضافية في المناطق الباردة</li>
+              <li><strong>الأمطار:</strong> مواد مقاومة للماء في المناطق التي تشهد هطول أمطار</li>
+              <li><strong>العواصف الرملية:</strong> تصاميم تحمي من الغبار والرمال</li>
+              <li><strong>التكييف الداخلي:</strong> مرونة في الزي للانتقال بين البيئات المكيفة والخارجية</li>
             </ul>
             
             <div className="bg-gray-100 p-6 rounded-lg mb-6">
-              <h4 className="font-bold mb-3">جدول مقارنة الأقمشة المناسبة لزي الأمن في المناخ السعودي:</h4>
+              <h4 className="font-bold mb-3">مقارنة الأقمشة المناسبة للمناخ السعودي</h4>
+              <div className="overflow-x-auto">
               <table className="min-w-full border border-gray-300">
                 <thead>
                   <tr className="bg-gray-200">
-                    <th className="border border-gray-300 p-2 text-right">نوع القماش</th>
-                    <th className="border border-gray-300 p-2 text-right">المزايا</th>
-                    <th className="border border-gray-300 p-2 text-right">العيوب</th>
-                    <th className="border border-gray-300 p-2 text-right">مناسب لأي منطقة</th>
+                      <th className="border border-gray-300 p-2 text-right">نوع القماش</th>
+                      <th className="border border-gray-300 p-2 text-right">التهوية</th>
+                      <th className="border border-gray-300 p-2 text-right">مقاومة الحرارة</th>
+                      <th className="border border-gray-300 p-2 text-right">المتانة</th>
+                      <th className="border border-gray-300 p-2 text-right">التكلفة</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td className="border border-gray-300 p-2">قطن 100%</td>
-                    <td className="border border-gray-300 p-2">مريح، متنفس، امتصاص العرق</td>
-                    <td className="border border-gray-300 p-2">يتجعد بسهولة، يحتاج كي متكرر</td>
-                    <td className="border border-gray-300 p-2">المناطق الداخلية شديدة الحرارة</td>
+                      <td className="border border-gray-300 p-2">القطن الطبيعي</td>
+                      <td className="border border-gray-300 p-2">ممتازة</td>
+                      <td className="border border-gray-300 p-2">جيدة</td>
+                      <td className="border border-gray-300 p-2">متوسطة</td>
+                      <td className="border border-gray-300 p-2">منخفضة</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 p-2">خليط قطن/بوليستر</td>
-                    <td className="border border-gray-300 p-2">متانة أعلى، مقاومة للتجعد، سهولة العناية</td>
-                    <td className="border border-gray-300 p-2">تهوية أقل من القطن النقي</td>
-                    <td className="border border-gray-300 p-2">عموم المناطق السعودية</td>
+                      <td className="border border-gray-300 p-2">القطن المخلوط</td>
+                      <td className="border border-gray-300 p-2">جيدة</td>
+                      <td className="border border-gray-300 p-2">جيدة</td>
+                      <td className="border border-gray-300 p-2">عالية</td>
+                      <td className="border border-gray-300 p-2">متوسطة</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 p-2">ريبستوب تكتيكي</td>
-                    <td className="border border-gray-300 p-2">متانة عالية، مقاومة للتمزق، تجفيف سريع</td>
-                    <td className="border border-gray-300 p-2">تكلفة أعلى، قد تكون أقل راحة</td>
-                    <td className="border border-gray-300 p-2">المواقع الصناعية والخارجية</td>
+                      <td className="border border-gray-300 p-2">الألياف التقنية</td>
+                      <td className="border border-gray-300 p-2">ممتازة</td>
+                      <td className="border border-gray-300 p-2">ممتازة</td>
+                      <td className="border border-gray-300 p-2">عالية جداً</td>
+                      <td className="border border-gray-300 p-2">عالية</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 p-2">أقمشة بتقنية Coolmax</td>
-                    <td className="border border-gray-300 p-2">تنظيم حرارة الجسم، تجفيف سريع</td>
-                    <td className="border border-gray-300 p-2">تكلفة عالية، أقل رسمية في المظهر</td>
-                    <td className="border border-gray-300 p-2">المناطق ذات الرطوبة العالية</td>
+                      <td className="border border-gray-300 p-2">البوليستر المعالج</td>
+                      <td className="border border-gray-300 p-2">متوسطة</td>
+                      <td className="border border-gray-300 p-2">متوسطة</td>
+                      <td className="border border-gray-300 p-2">عالية</td>
+                      <td className="border border-gray-300 p-2">منخفضة</td>
                   </tr>
                 </tbody>
               </table>
             </div>
+            </div>
             
-            <h2 className="text-2xl font-bold mt-8 mb-4">تصميم وهيكلية الزي الأمني الفعال</h2>
+            <h2 className="text-2xl font-bold mt-8 mb-4">الراحة والوظيفية في التصميم</h2>
             
-            <h3 className="text-xl font-bold mt-6 mb-3">1. العملية وحرية الحركة</h3>
-            <p className="mb-4">
-              يجب أن يسمح الزي بالأداء المثالي للمهام الأمنية:
+            <h3 className="text-xl font-bold mt-6 mb-3">1. التصميم الوظيفي للمهام الأمنية</h3>
+            <p>
+              يجب أن يدعم تصميم الزي المهام اليومية لرجال الأمن:
             </p>
             <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2"><strong>قصة مريحة:</strong> فضفاضة بما يكفي للحركة دون أن تكون واسعة بشكل مفرط</li>
-              <li className="mb-2"><strong>أكمام وبناطيل بقصات عملية:</strong> تسمح بالحركة السريعة والاستجابة للطوارئ</li>
-              <li className="mb-2"><strong>مناطق مرنة:</strong> إضافة مناطق مرنة في الركبتين والمرفقين لسهولة الحركة</li>
-              <li className="mb-2"><strong>خصر مرن أو قابل للتعديل:</strong> لضمان الراحة خلال المناوبات الطويلة</li>
-              <li className="mb-2"><strong>تقليل الخياطات غير الضرورية:</strong> لتجنب الاحتكاك والضغط في مناطق الحركة</li>
+              <li><strong>الجيوب العملية:</strong> توزيع مدروس للجيوب لحمل المعدات الضرورية</li>
+              <li><strong>حرية الحركة:</strong> قصات تسمح بالحركة السريعة والمرونة</li>
+              <li><strong>نقاط التقوية:</strong> تعزيز المناطق المعرضة للتآكل (الركبتين، المرفقين)</li>
+              <li><strong>سهولة الصيانة:</strong> أقمشة قابلة للغسل المتكرر دون فقدان الشكل</li>
             </ul>
             
-            <h3 className="text-xl font-bold mt-6 mb-3">2. الجيوب الوظيفية والإكسسوارات</h3>
-            <p className="mb-4">
-              تعد الجيوب والإكسسوارات مهمة للغاية لفعالية أداء رجال الأمن:
+            <h3 className="text-xl font-bold mt-6 mb-3">2. الراحة في الاستخدام طويل المدى</h3>
+            <p>
+              نظراً لطبيعة عمل رجال الأمن، يجب مراعاة الراحة في الاستخدام المطول:
             </p>
             <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2"><strong>جيوب متعددة الأغراض:</strong> توفير جيوب كافية لحمل المعدات الضرورية</li>
-              <li className="mb-2"><strong>حاملات معدات متخصصة:</strong> مثل حاملات الراديو، المصباح اليدوي، والمعدات الأمنية الأخرى</li>
-              <li className="mb-2"><strong>حزام متين:</strong> يوفر دعماً إضافياً ويسمح بتعليق المعدات</li>
-              <li className="mb-2"><strong>حامل بطاقة الهوية:</strong> موضع واضح ومناسب لبطاقة الهوية والتراخيص</li>
-              <li className="mb-2"><strong>أماكن لشارات الرتبة:</strong> مواضع محددة لإظهار الرتبة والمسؤولية</li>
+              <li><strong>الخياطة المريحة:</strong> تجنب الخياطات الخشنة أو المزعجة</li>
+              <li><strong>المقاسات المتنوعة:</strong> توفير مجموعة واسعة من المقاسات</li>
+              <li><strong>المرونة في التعديل:</strong> إمكانية تعديل الزي ليناسب مختلف أشكال الجسم</li>
+              <li><strong>الوزن الخفيف:</strong> تقليل وزن الزي لتجنب الإجهاد</li>
             </ul>
             
-            <h3 className="text-xl font-bold mt-6 mb-3">3. المظهر المهيب والاحترافي</h3>
-            <p className="mb-4">
-              المظهر المهني يعزز السلطة والاحترام:
+            <h2 className="text-2xl font-bold mt-8 mb-4">المظهر المهني والهوية البصرية</h2>
+            
+            <h3 className="text-xl font-bold mt-6 mb-3">1. تعزيز الصورة المهنية</h3>
+            <p>
+              المظهر المهني يؤثر بشكل مباشر على فعالية رجل الأمن:
             </p>
             <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2"><strong>ألوان داكنة تقليدية:</strong> الأزرق الداكن، الأسود، الرمادي الداكن تعزز الهيبة والسلطة</li>
-              <li className="mb-2"><strong>قصة مستقيمة ومنظمة:</strong> تعكس الانضباط والمهنية</li>
-              <li className="mb-2"><strong>شعار واضح:</strong> يظهر الانتماء المؤسسي والمسؤولية</li>
-              <li className="mb-2"><strong>تفاصيل عسكرية محدودة:</strong> مثل جيوب مربعة وأكتاف مقواة لتعزيز المظهر الرسمي</li>
-              <li className="mb-2"><strong>قابلية الحفاظ على المظهر المرتب:</strong> أقمشة تحافظ على شكلها حتى بعد ساعات طويلة من العمل</li>
+              <li><strong>الأناقة والنظافة:</strong> تصميم يحافظ على مظهر أنيق طوال اليوم</li>
+              <li><strong>التناسق:</strong> توحيد المظهر بين جميع أفراد الفريق الأمني</li>
+              <li><strong>الوضوح:</strong> سهولة التعرف على رجل الأمن من مسافة بعيدة</li>
+              <li><strong>الثقة:</strong> تصميم يعزز ثقة رجل الأمن بنفسه ومظهره</li>
+            </ul>
+            
+            <h3 className="text-xl font-bold mt-6 mb-3">2. الهوية البصرية للمؤسسة</h3>
+            <p>
+              الزي الموحد يجب أن يعكس هوية المؤسسة الأمنية:
+            </p>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>الألوان المؤسسية:</strong> استخدام ألوان تعكس هوية الشركة</li>
+              <li><strong>الشعار والعلامة التجارية:</strong> وضع الشعار بطريقة أنيقة ومرئية</li>
+              <li><strong>التمييز عن المنافسين:</strong> تصميم فريد يميز المؤسسة</li>
+              <li><strong>الرسالة المؤسسية:</strong> عكس قيم ومبادئ المؤسسة من خلال التصميم</li>
             </ul>
             
             <div className="bg-green-50 p-6 rounded-lg mb-6">
-              <h3 className="text-primary mb-3">نصيحة من خبير</h3>
+              <h3 className="text-primary mb-3">دراسة حالة: شركة أمن رائدة في الرياض</h3>
               <p className="mb-0">
-                يقول العقيد متقاعد ناصر الغامدي، خبير في شؤون الأمن الخاص: "عند اختيار زي الأمن، لا تتجاهل أبداً عنصر الراحة للعاملين. فرجل الأمن الذي يعاني من عدم الراحة في زيه سيكون أقل تركيزاً وفعالية. أنصح بتجربة الزي في ظروف مشابهة لبيئة العمل قبل شراء كميات كبيرة، والاستماع لملاحظات العاملين الميدانيين الذين سيرتدونه. كما يجب الموازنة بين المظهر المهيب والوظائف العملية - فالزي المثالي هو الذي يحقق هذا التوازن بكفاءة."
+                قامت إحدى الشركات الأمنية الرائدة في الرياض بإعادة تصميم زي منسوبيها في عام 2022 بناءً على دراسة شاملة شملت آراء الموظفين والعملاء. التصميم الجديد ركز على استخدام أقمشة تقنية متطورة تتكيف مع المناخ الحار، مع دمج عناصر من التراث السعودي في التفاصيل. النتيجة كانت زيادة بنسبة 40% في رضا الموظفين عن زيهم المهني، وتحسن بنسبة 25% في تقييم العملاء لمظهر ومهنية فرق الأمن.
               </p>
             </div>
             
-            <h2 className="text-2xl font-bold mt-8 mb-4">اعتبارات تنوع الأدوار والفريق الأمني</h2>
+            <h2 className="text-2xl font-bold mt-8 mb-4">اعتبارات التكلفة والجودة</h2>
             
-            <h3 className="text-xl font-bold mt-6 mb-3">1. الزي المناسب للمشرفين والقيادات</h3>
-            <p className="mb-4">
-              تمييز القيادات له دور مهم في هيكلية الفريق:
+            <h3 className="text-xl font-bold mt-6 mb-3">1. التوازن بين التكلفة والجودة</h3>
+            <p>
+              اختيار زي الأمن يتطلب توازناً دقيقاً بين التكلفة والجودة:
             </p>
             <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2"><strong>عناصر تمييز الرتبة:</strong> شرائط، نجوم، أو شارات تدل على المستوى القيادي</li>
-              <li className="mb-2"><strong>اختلافات طفيفة في التصميم:</strong> مثل لون مختلف للياقة أو الأكمام</li>
-              <li className="mb-2"><strong>نوعية أعلى من الأقمشة:</strong> تعكس المستوى الوظيفي الأعلى</li>
-              <li className="mb-2"><strong>قطع إضافية:</strong> مثل سترة رسمية للمناسبات الخاصة واللقاءات الرسمية</li>
-              <li className="mb-2"><strong>إكسسوارات محددة:</strong> تميز المشرفين عن باقي أفراد الفريق</li>
+              <li><strong>التكلفة الإجمالية:</strong> حساب تكلفة الشراء والصيانة والاستبدال</li>
+              <li><strong>العمر الافتراضي:</strong> اختيار أقمشة تدوم لفترة أطول</li>
+              <li><strong>تكلفة الصيانة:</strong> أقمشة سهلة التنظيف وقليلة التكلفة في الصيانة</li>
+              <li><strong>القيمة مقابل المال:</strong> تحقيق أفضل قيمة ممكنة للاستثمار</li>
             </ul>
             
-            <h3 className="text-xl font-bold mt-6 mb-3">2. الزي المناسب للأمن النسائي</h3>
-            <p className="mb-4">
-              مع تزايد دور المرأة في القطاع الأمني بالمملكة، أصبح توفير زي مناسب للعنصر النسائي ضرورة:
+            <h3 className="text-xl font-bold mt-6 mb-3">2. معايير الجودة المطلوبة</h3>
+            <p>
+              يجب التأكد من توفر معايير جودة محددة في زي الأمن:
             </p>
             <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2"><strong>الاحتشام مع العملية:</strong> تصميم يجمع بين الالتزام بمعايير الاحتشام والعملية</li>
-              <li className="mb-2"><strong>قصات مريحة:</strong> تناسب طبيعة الجسم النسائي مع الحفاظ على حرية الحركة</li>
-              <li className="mb-2"><strong>خيارات متعددة:</strong> توفير بدائل مثل بنطال أو تنورة طويلة حسب طبيعة العمل والتفضيل الشخصي</li>
-              <li className="mb-2"><strong>حجاب أو غطاء رأس عملي:</strong> مصمم خصيصاً للاستخدام المهني مع ثبات جيد</li>
-              <li className="mb-2"><strong>إكسسوارات مناسبة:</strong> حقائب وحاملات معدات مصممة لتناسب الاستخدام النسائي</li>
+              <li><strong>شهادات الجودة:</strong> الحصول على شهادات معترف بها دولياً</li>
+              <li><strong>اختبارات المتانة:</strong> فحص مقاومة القماش للتمزق والتآكل</li>
+              <li><strong>ثبات الألوان:</strong> مقاومة الألوان للبهتان تحت أشعة الشمس</li>
+              <li><strong>مقاومة الانكماش:</strong> الحفاظ على المقاس بعد الغسيل المتكرر</li>
             </ul>
             
-            <h3 className="text-xl font-bold mt-6 mb-3">3. التمييز بين الأدوار المختلفة</h3>
-            <p className="mb-4">
-              الفريق الأمني يشمل أدواراً متنوعة تتطلب تمييزاً في الزي:
+            <h2 className="text-2xl font-bold mt-8 mb-4">الاعتبارات الثقافية والاجتماعية</h2>
+            
+            <h3 className="text-xl font-bold mt-6 mb-3">1. احترام القيم المحلية</h3>
+            <p>
+              في السعودية، يجب مراعاة القيم الثقافية والدينية في تصميم زي الأمن:
             </p>
             <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2"><strong>الأمن العام:</strong> زي موحد أساسي للمهام اليومية العادية</li>
-              <li className="mb-2"><strong>فريق الاستجابة للطوارئ:</strong> زي تكتيكي يسمح بحركة أكبر والمزيد من المعدات</li>
-              <li className="mb-2"><strong>المراقبة الإلكترونية:</strong> زي أكثر راحة للعمل المكتبي مع الحفاظ على الطابع الرسمي</li>
-              <li className="mb-2"><strong>أمن الاستقبال:</strong> زي أكثر أناقة لكونهم واجهة المنشأة</li>
-              <li className="mb-2"><strong>التمييز اللوني:</strong> استخدام اختلافات لونية بسيطة لتمييز الفرق المختلفة</li>
+              <li><strong>الاحتشام:</strong> تصاميم تراعي قيم الاحتشام للرجال والنساء</li>
+              <li><strong>الراحة في الصلاة:</strong> تصميم يسهل أداء الصلاة</li>
+              <li><strong>المناسبات الدينية:</strong> مرونة في التصميم للمناسبات الخاصة</li>
+              <li><strong>التقاليد المحلية:</strong> دمج عناصر من التراث السعودي عند الإمكان</li>
             </ul>
             
-            <h2 className="text-2xl font-bold mt-8 mb-4">اعتبارات الجودة والتكلفة</h2>
-            
-            <h3 className="text-xl font-bold mt-6 mb-3">1. الموازنة بين الجودة والميزانية</h3>
-            <p className="mb-4">
-              استثمار ذكي في زي الأمن يحقق وفورات على المدى الطويل:
+            <h3 className="text-xl font-bold mt-6 mb-3">2. التكيف مع البيئة الاجتماعية</h3>
+            <p>
+              زي الأمن يجب أن يتكيف مع البيئة الاجتماعية التي يعمل فيها:
             </p>
             <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2"><strong>تكلفة دورة الحياة:</strong> التفكير في التكلفة الإجمالية بما يشمل التنظيف والصيانة والاستبدال</li>
-              <li className="mb-2"><strong>التركيز على المناطق عالية التآكل:</strong> استثمار أكبر في المناطق الأكثر عرضة للتلف</li>
-              <li className="mb-2"><strong>تنويع مستويات الجودة:</strong> جودة أعلى للقطع الأساسية المستخدمة يومياً</li>
-              <li className="mb-2"><strong>الشراء بكميات كبيرة:</strong> الحصول على خصومات للطلبات الكبيرة مع المحافظة على المعايير</li>
-              <li className="mb-2"><strong>التعاقد مع موردين موثوقين:</strong> بناء علاقات مع موردين يقدمون ضمانات على منتجاتهم</li>
-            </ul>
-            
-            <h3 className="text-xl font-bold mt-6 mb-3">2. تدابير لإطالة عمر الزي</h3>
-            <p className="mb-4">
-              ممارسات تضمن الاستفادة القصوى من الاستثمار في الزي:
-            </p>
-            <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2"><strong>إرشادات العناية المناسبة:</strong> تدريب الموظفين على الطرق الصحيحة للعناية بالزي</li>
-              <li className="mb-2"><strong>توفير عدد كافٍ من القطع:</strong> ضمان وجود بديل لتجنب الاستخدام المفرط</li>
-              <li className="mb-2"><strong>معالجات إضافية للحماية:</strong> مثل الطلاء المقاوم للماء والبقع</li>
-              <li className="mb-2"><strong>خدمات غسيل متخصصة:</strong> التعاقد مع خدمات غسيل تفهم متطلبات زي الأمن</li>
-              <li className="mb-2"><strong>الإصلاح السريع:</strong> معالجة التلف البسيط قبل أن يتفاقم</li>
+              <li><strong>البيئات المحافظة:</strong> تصاميم أكثر تحفظاً في المناطق المحافظة</li>
+              <li><strong>البيئات التجارية:</strong> مظهر أكثر أناقة في المراكز التجارية</li>
+              <li><strong>البيئات التعليمية:</strong> تصاميم تناسب البيئة المدرسية أو الجامعية</li>
+              <li><strong>البيئات الطبية:</strong> ألوان ومواد تناسب البيئة الصحية</li>
             </ul>
             
             <div className="bg-primary-50 p-6 rounded-lg mb-6 border-r-4 border-primary">
-              <h3 className="text-primary mb-3">نصائح عملية للاختيار</h3>
-              <ul className="mb-0 list-disc pr-4">
-                <li>اطلب عينات من الموردين واختبرها في ظروف عمل حقيقية قبل الشراء بكميات كبيرة.</li>
-                <li>أشرك العاملين في عملية الاختيار - فهم من سيرتدون الزي ويعرفون احتياجاتهم العملية.</li>
-                <li>ضع في اعتبارك المناخ المحلي للمنطقة المحددة التي سيعمل فيها فريق الأمن.</li>
-                <li>تأكد من وجود خيارات للمقاسات المختلفة، وليس فقط المقاسات "القياسية".</li>
-                <li>خصص ميزانية للتحديث الدوري للزي - عادةً كل سنتين - للحفاظ على المظهر المهني.</li>
+              <h3 className="text-primary mb-3">قائمة مراجعة لاختيار زي الأمن المثالي</h3>
+              <ul className="mb-0">
+                <li className="mb-2">✓ التوافق مع اللوائح المحلية والتراخيص المطلوبة</li>
+                <li className="mb-2">✓ ملاءمة المناخ السعودي والظروف البيئية</li>
+                <li className="mb-2">✓ الراحة والوظيفية في الاستخدام اليومي</li>
+                <li className="mb-2">✓ المظهر المهني والهوية البصرية المميزة</li>
+                <li className="mb-2">✓ التوازن المناسب بين التكلفة والجودة</li>
+                <li className="mb-2">✓ احترام القيم الثقافية والاجتماعية المحلية</li>
+                <li className="mb-2">✓ سهولة الصيانة والعناية</li>
+                <li className="mb-0">✓ توفر المقاسات والتعديلات المطلوبة</li>
               </ul>
             </div>
             
-            <h2 className="text-2xl font-bold mt-8 mb-4">الخلاصة</h2>
-            <p className="mb-4">
-              اختيار الزي المناسب لرجال الأمن في المملكة العربية السعودية هو قرار استراتيجي يؤثر على كفاءة العمل، صورة المؤسسة، وروح الفريق. يتطلب هذا القرار موازنة دقيقة بين عدة عوامل: المتطلبات القانونية والتنظيمية، الملاءمة للمناخ السعودي، العملية وحرية الحركة، المظهر المهني، ومناسبته للأدوار المختلفة.
-            </p>
+            <h2 className="text-2xl font-bold mt-8 mb-4">خطوات عملية لاختيار الزي المناسب</h2>
             
-            <p className="mb-4">
-              مع التطورات المستمرة في مجال الأمن وتقنيات المنسوجات، ومع التوجهات الحديثة التي تفرضها رؤية 2030، أصبح من الممكن اليوم تصميم زي أمني يلبي جميع هذه المتطلبات دون تنازلات كبيرة، مما يسهم في تعزيز مستوى الخدمات الأمنية في المملكة.
-            </p>
+            <h3 className="text-xl font-bold mt-6 mb-3">1. مرحلة التخطيط والتحليل</h3>
+            <ol className="list-decimal pr-6 mb-4">
+              <li className="mb-2"><strong>تحديد الاحتياجات:</strong> تحليل طبيعة العمل والبيئة التشغيلية</li>
+              <li className="mb-2"><strong>دراسة اللوائح:</strong> مراجعة المتطلبات القانونية والتنظيمية</li>
+              <li className="mb-2"><strong>تحديد الميزانية:</strong> وضع ميزانية واقعية للمشروع</li>
+              <li className="mb-2"><strong>جمع الآراء:</strong> استطلاع آراء الموظفين والعملاء</li>
+            </ol>
             
-            <p className="mb-4">
-              في النهاية، فإن الزي المثالي لرجال الأمن هو ذلك الذي يجعلهم فخورين بارتدائه، مرتاحين أثناء أداء واجباتهم، وقادرين على تمثيل مؤسساتهم بالشكل الأمثل، مما ينعكس إيجاباً على المنظومة الأمنية ككل.
+            <h3 className="text-xl font-bold mt-6 mb-3">2. مرحلة التصميم والاختيار</h3>
+            <ol className="list-decimal pr-6 mb-4">
+              <li className="mb-2"><strong>تطوير المفاهيم:</strong> إنشاء عدة مفاهيم تصميمية</li>
+              <li className="mb-2"><strong>اختيار المواد:</strong> تحديد الأقمشة والمواد المناسبة</li>
+              <li className="mb-2"><strong>إنتاج النماذج:</strong> صنع نماذج أولية للاختبار</li>
+              <li className="mb-2"><strong>التقييم والمراجعة:</strong> اختبار النماذج وجمع التغذية الراجعة</li>
+            </ol>
+            
+            <h3 className="text-xl font-bold mt-6 mb-3">3. مرحلة التنفيذ والمتابعة</h3>
+            <ol className="list-decimal pr-6 mb-4">
+              <li className="mb-2"><strong>الإنتاج النهائي:</strong> تصنيع الكميات المطلوبة</li>
+              <li className="mb-2"><strong>التوزيع:</strong> توزيع الأزياء على الموظفين</li>
+              <li className="mb-2"><strong>التدريب:</strong> تدريب الموظفين على العناية بالزي</li>
+              <li className="mb-2"><strong>المتابعة:</strong> مراقبة الأداء وجمع التغذية الراجعة</li>
+            </ol>
+            
+            <h2 className="text-2xl font-bold mt-8 mb-4">خاتمة</h2>
+            <p>
+              اختيار الزي الموحد المناسب لرجال الأمن في السعودية عملية معقدة تتطلب مراعاة عوامل متعددة تشمل المتطلبات القانونية، الظروف المناخية، الراحة العملية، والقيم الثقافية. من خلال اتباع نهج منهجي ومدروس، يمكن للمؤسسات الأمنية اختيار زي يعزز من فعالية أداء موظفيها ويعكس صورة مهنية متميزة.
             </p>
-          </div>
-          
-          {/* Tags Section */}
-          <div className="mt-8 pt-6 border-t border-gray-200">
-            <h3 className="text-lg font-semibold mb-3">الوسوم:</h3>
-            {/* Tags section removed */}
+            <p>
+              الاستثمار في زي أمني عالي الجودة ومناسب للبيئة المحلية ليس مجرد تكلفة تشغيلية، بل استثمار في سمعة المؤسسة وفعالية عملياتها الأمنية. كما أن الزي المناسب يساهم في رفع معنويات الموظفين وزيادة ثقتهم بأنفسهم، مما ينعكس إيجابياً على أدائهم المهني.
+            </p>
+            <p>
+              في خبراء الزي الموحد، نقدم استشارات شاملة وحلول متكاملة لاختيار وتصميم أزياء الأمن التي تلبي جميع المتطلبات المحلية والدولية، مع ضمان أعلى مستويات الجودة والراحة والمظهر المهني المتميز.
+            </p>
           </div>
           
           {/* Share Section */}

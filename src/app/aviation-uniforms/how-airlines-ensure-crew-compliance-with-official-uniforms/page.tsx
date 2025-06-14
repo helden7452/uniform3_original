@@ -87,19 +87,26 @@ const content = `
 </ul>
 `;
 
-export default function AviationUniformCompliancePage() {
+export default function AirlineCompliancePage() {
+  const author = {
+    id: 'uniform-experts-team',
+    name: 'فريق خبراء الزي الموحد',
+    title: 'فريق المحتوى المتخصص',
+    image: '/images/author/uniform-experts-team.jpg'
+  };
+
   return (
     <BlogPost
-      title="كيف تضمن شركات الطيران التزام طواقمها بالزي الرسمي؟"
+      title="كيف تضمن شركات الطيران التزام الطاقم بالزي الرسمي"
+      excerpt="استراتيجيات وسياسات شركات الطيران لضمان التزام طاقم العمل بالزي الرسمي والحفاظ على المظهر المهني المتميز"
       content={content}
-      category="Aviation Uniforms"
-      categoryArabic="زي قطاع الطيران"
-      categorySlug="aviation-uniforms"
-      image="/images/aviation_uniforms/major_airline_uniforms.jpg"
-      date="2024-01-15"
-      author="فريق خبراء الزي الموحد"
-      authorImage="/images/authors/uniform-experts-team.jpg"
-      relatedPosts={relatedPosts}
+      category="aviation-uniforms"
+      slug="how-airlines-ensure-crew-compliance-with-official-uniforms"
+      author={author}
+      publishDate="2024-01-10"
+      coverImage="/images/aviation_uniforms/crew_compliance_uniforms.jpg"
+      readingTime="9 دقيقة"
+      tags={['الالتزام بالزي', 'سياسات الطيران', 'إدارة الموارد البشرية', 'المظهر المهني']}
     />
   );
 }

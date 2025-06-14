@@ -27,8 +27,8 @@ export default function BlogCard({
   author,
   index = 0
 }: BlogCardProps) {
-  // Format date to Arabic locale
-  const formattedDate = new Date(date).toLocaleDateString('ar-SA', {
+  // Format date consistently for both server and client
+  const formattedDate = new Date(date).toLocaleDateString('ar-SA-u-ca-gregory', {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
@@ -51,6 +51,10 @@ export default function BlogCard({
     setImageLoaded(true);
   };
 
+  // Safe category display with fallback
+  const displayCategory = category ? category.replace('-', ' ') : 'مقالة';
+  const categoryUrl = category || 'blog';
+
   return (
     <div 
       className={`bg-white rounded-lg shadow-md overflow-hidden transition-all duration-500 transform ${
@@ -58,7 +62,7 @@ export default function BlogCard({
       } hover:shadow-lg`}
       style={{ transitionDelay: `${index * 100}ms` }}
     >
-      <Link href={`/${category}/${slug}`} className="block">
+      <Link href={`/${categoryUrl}/${slug}`} className="block">
         <div className="relative h-48 w-full overflow-hidden bg-gray-100">
           <div 
             className={`absolute inset-0 bg-gray-200 animate-pulse ${
@@ -74,22 +78,22 @@ export default function BlogCard({
             className={`object-cover transition-opacity duration-500 ${
               imageLoaded ? 'opacity-100' : 'opacity-0'
             }`}
-            onLoadingComplete={handleImageLoad}
+            onLoad={handleImageLoad}
             placeholder="blur" 
             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPj/HwADBwIAMCbHYQAAAABJRU5ErkJggg=="
           />
         </div>
       </Link>
       
-      <div className="p-5">
+      <div className="p-6">
         <div className="flex justify-between items-center mb-2">
-          <Link href={`/${category}`} className="text-accent hover:underline font-medium text-sm">
-            {category.replace('-', ' ')}
+          <Link href={`/${categoryUrl}`} className="text-accent hover:underline font-medium text-sm">
+            {displayCategory}
           </Link>
           <div className="text-gray-500 text-xs">{formattedDate}</div>
         </div>
         
-        <Link href={`/${category}/${slug}`} className="block">
+        <Link href={`/${categoryUrl}/${slug}`} className="block">
           <h2 className="text-xl font-semibold mb-2 text-gray-900 hover:text-accent transition-colors">{title}</h2>
         </Link>
         
@@ -98,7 +102,7 @@ export default function BlogCard({
         <div className="flex justify-between items-center">
           <span className="text-gray-500 text-xs">{readTime}</span>
           <Link 
-            href={`/${category}/${slug}`} 
+            href={`/${categoryUrl}/${slug}`} 
             className="text-accent hover:underline text-sm font-medium"
           >
             اقرأ المزيد

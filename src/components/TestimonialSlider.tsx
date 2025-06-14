@@ -49,7 +49,7 @@ const testimonials: Testimonial[] = [
     role: 'مديرة الخدمات الفندقية',
     company: 'منتجع الواحة السياحي',
     content: 'تعاملنا مع خبراء الزي الموحد كان مثمراً للغاية. قدموا لنا استشارات متميزة في اختيار الأقمشة والتصاميم المناسبة لمناخنا الحار. كما أن الزي الموحد لطاقم الخدمة لدينا نال استحسان النزلاء وساهم في تعزيز صورة المنتجع.',
-    image: '/images/testimonials/client4.jpg',
+    image: '/images/testimonials/client1.jpg',
     rating: 5,
   },
   {
@@ -58,7 +58,7 @@ const testimonials: Testimonial[] = [
     role: 'مدير المشتريات',
     company: 'مجموعة مدارس التميز',
     content: 'نقدر عالياً الجودة والدقة في التنفيذ التي يقدمها خبراء الزي الموحد. تمكنوا من توفير زي مدرسي مريح وعملي لأكثر من 5000 طالب وطالبة، مع الالتزام بمواعيد التسليم رغم ضيق الوقت. شراكة ناجحة نعتز بها.',
-    image: '/images/testimonials/client5.jpg',
+    image: '/images/testimonials/client2.jpg',
     rating: 5,
   },
 ];

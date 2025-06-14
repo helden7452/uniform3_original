@@ -105,19 +105,26 @@ const content = `
 </ul>
 `;
 
-export default function UniformImpactOnMoralePage() {
+export default function ImpactUniformsCrewMoralePage() {
+  const author = {
+    id: 'uniform-experts-team',
+    name: 'فريق خبراء الزي الموحد',
+    title: 'فريق المحتوى المتخصص',
+    image: '/images/author/uniform-experts-team.jpg'
+  };
+
   return (
     <BlogPost
       title="تأثير الزي الموحد على معنويات طاقم الطيران وأدائهم"
+      excerpt="دراسة تأثير الزي الموحد على معنويات طاقم الطيران وأدائهم الوظيفي وكيف يمكن استثماره لتعزيز الانتماء والفخر المؤسسي"
       content={content}
-      category="Aviation Uniforms"
-      categoryArabic="زي قطاع الطيران"
-      categorySlug="aviation-uniforms"
-      image="/images/aviation_uniforms/air_crew_attire.jpg"
-      date="2024-01-18"
-      author="فريق خبراء الزي الموحد"
-      authorImage="/images/authors/uniform-experts-team.jpg"
-      relatedPosts={relatedPosts}
+      category="aviation-uniforms"
+      slug="impact-of-uniforms-on-flight-crew-morale-performance"
+      author={author}
+      publishDate="2024-01-12"
+      coverImage="/images/aviation_uniforms/air_crew_attire.jpg"
+      readingTime="12 دقيقة"
+      tags={['معنويات الطاقم', 'أداء وظيفي', 'الانتماء المؤسسي', 'طاقم الطيران']}
     />
   );
 }

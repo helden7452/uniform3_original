@@ -36,8 +36,8 @@ export default function BlogPost({
   readingTime,
   tags,
 }: BlogPostProps) {
-  // Format date to Arabic locale
-  const formattedDate = new Date(publishDate).toLocaleDateString('ar-SA', {
+  // Format date consistently for both server and client
+  const formattedDate = new Date(publishDate).toLocaleDateString('ar-SA-u-ca-gregory', {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
@@ -65,6 +65,9 @@ export default function BlogPost({
     };
   }, []);
 
+  // Safe category display with fallback
+  const displayCategory = category ? category.replace('-', ' ') : 'مقالة';
+
   return (
     <article className={`bg-white rounded-lg shadow-md overflow-hidden transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
       {/* Cover Image with blur placeholder */}
@@ -85,8 +88,8 @@ export default function BlogPost({
       <div className="p-6">
         {/* Category & Date */}
         <div className="flex justify-between items-center mb-3">
-          <Link href={`/${category}`} className="text-accent hover:underline font-medium">
-            {category.replace('-', ' ')}
+          <Link href={`/${category || 'blog'}`} className="text-accent hover:underline font-medium">
+            {displayCategory}
           </Link>
           <div className="flex items-center text-gray-500 text-sm">
             <span>{formattedDate}</span>
@@ -98,21 +101,25 @@ export default function BlogPost({
         {/* Title */}
         <h1 className="text-3xl font-bold text-gray-900 mb-4">{title}</h1>
         
-        {/* Author with lazy loading */}
+        {/* Author with lazy loading and fallback */}
         <div className="flex items-center mb-6">
           <div className="relative w-12 h-12 rounded-full overflow-hidden">
             <Image
-              src={author.image.startsWith('/') ? author.image : `/images/author/${author.image}`}
-              alt={author.name}
+              src={author?.image?.startsWith('/') ? author.image : `/images/author/${author?.image || 'default.png'}`}
+              alt={author?.name || 'المؤلف'}
               fill
               className="object-cover"
               loading="lazy"
               sizes="48px"
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                target.src = '/images/author/default.png';
+              }}
             />
           </div>
           <div className="mr-3">
-            <div className="font-medium text-gray-900">{author.name}</div>
-            <div className="text-sm text-gray-500">{author.title}</div>
+            <div className="font-medium text-gray-900">{author?.name || 'مؤلف مجهول'}</div>
+            <div className="text-sm text-gray-500">{author?.title || 'كاتب'}</div>
           </div>
         </div>
         

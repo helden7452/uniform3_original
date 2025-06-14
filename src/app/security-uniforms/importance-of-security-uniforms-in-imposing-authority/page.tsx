@@ -25,7 +25,7 @@ export default function SecurityUniformAuthorityPage() {
         <article className="mt-8 bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
           <div className="relative h-[500px] w-full">
             <SmartImage 
-              src="/images/security_uniforms/content/importance-of-security-uniforms-in-imposing-authority/1.jpg" 
+              src="/images/security_uniforms.jpg" 
               alt="هيبة الزي الأمني وتأثيره في فرض السلطة" 
               category="security_uniforms" 
               fill
@@ -156,7 +156,7 @@ export default function SecurityUniformAuthorityPage() {
 
               <div className="relative w-full h-[400px] my-12">
                 <BlogImage
-                  src="/images/security_uniforms/role-of-dark-colors-and-official-badges-in-security-uniform-design_2.jpg"
+                  src="/images/security_uniforms.jpg"
                   alt="تطور الزي الأمني في المملكة العربية السعودية"
                   width={1200}
                   height={400}

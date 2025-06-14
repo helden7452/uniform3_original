@@ -1,442 +1,401 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import Breadcrumb from '@/components/Breadcrumb';
-import BlogImage from '@/components/BlogImage';
+import BlogPost from '@/components/BlogPost';
+import posts from '@/data/posts';
+import authors from '@/data/authors';
 
 export const metadata: Metadata = {
-  title: 'كيفية اختيار ألوان الزي المؤسسي المناسبة | خبراء الزي الموحد',
-  description: 'دليل شامل لاختيار الألوان المناسبة للزي المؤسسي وتأثيرها على نفسية الموظفين وانطباع العملاء، مع نصائح عملية للشركات',
-  keywords: 'ألوان الزي المؤسسي, علم نفس الألوان, اختيار ألوان الزي, تأثير الألوان على العمل',
+  title: 'علم نفس الألوان في الزي المؤسسي: دليل استراتيجي متقدم لاختيار الألوان المثالية | خبراء الزي الموحد',
+  description: 'دراسة علمية شاملة لتأثير الألوان على النفسية والإنتاجية في بيئة العمل، مع دليل استراتيجي لاختيار ألوان الزي المؤسسي المناسبة لكل صناعة وثقافة مؤسسية',
+  keywords: ['علم نفس الألوان', 'ألوان الزي المؤسسي', 'تأثير الألوان على الإنتاجية', 'استراتيجية الألوان المؤسسية', 'الألوان والثقافة السعودية', 'علم الألوان التطبيقي'],
 };
 
-export default function ChoosingCorporateUniformColorsPage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-purple-600 to-purple-800 text-white py-20">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <Breadcrumb
-            items={[
-              { label: 'الرئيسية', href: '/' },
-              { label: 'المدونة', href: '/blog' },
-              { label: 'كيفية اختيار ألوان الزي المؤسسي المناسبة', href: '/blog/choosing-corporate-uniform-colors', isCurrent: true }
-            ]}
-          />
-          
-          <div className="max-w-4xl mx-auto text-center mt-8">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-              كيفية اختيار ألوان الزي المؤسسي المناسبة
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-white/90">
-              دليل شامل لفهم تأثير الألوان واختيار الأنسب لشركتك
-            </p>
+export default function BlogPostPage() {
+  const post = posts.find((post) => post.slug === 'choosing-corporate-uniform-colors');
+  
+  // Find author from data, or use default if not found
+  const authorData = authors.find((author) => author.id === post?.author);
+  
+  // Create author object in the format expected by the BlogPost component
+  const author = {
+    id: authorData?.id || 'sara-alqahtani',
+    name: authorData?.name || 'سارة القحطاني',
+    title: authorData?.title || 'خبيرة علم نفس الألوان والتصميم المؤسسي',
+    image: authorData?.avatar || '/images/author/sara-alqahtani.png',
+  };
+
+  const content = `
+    <div class="prose prose-lg max-w-none">
+      <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-8 mb-8 border-r-4 border-primary">
+        <h2 class="text-2xl font-bold text-primary mb-4 flex items-center">
+          <svg class="w-8 h-8 ml-3 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17v4a2 2 0 002 2h4M11 7L9 5m-5 8h2m6-8h2"></path>
+          </svg>
+          قوة الألوان في تشكيل الهوية المؤسسية
+        </h2>
+        <p class="text-gray-700 leading-relaxed text-lg">
+          الألوان ليست مجرد عناصر جمالية، بل أدوات نفسية قوية تؤثر على العقل الباطن وتشكل السلوك البشري بطرق عميقة ومعقدة. في عالم الأعمال المعاصر، تُعتبر الألوان المختارة للزي المؤسسي استراتيجية تواصل صامتة تنقل رسائل محددة عن قيم الشركة ومهنيتها وموثوقيتها.
+        </p>
+        <p class="text-gray-700 leading-relaxed text-lg mt-4">
+          هذا الدليل العلمي المتقدم يستند إلى أحدث الأبحاث في علم النفس المعرفي وعلم الأعصاب، ليقدم للقادة والمدراء التنفيذيين فهماً عميقاً لكيفية استخدام الألوان كأداة استراتيجية لتحقيق الأهداف المؤسسية وتعزيز الأداء التنظيمي.
+        </p>
+      </div>
+
+      <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-8 mb-12 border border-blue-200">
+        <h2 class="text-2xl font-bold text-blue-900 mb-6 flex items-center">
+          <svg class="w-8 h-8 ml-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+          </svg>
+          الأسس العلمية لتأثير الألوان على الدماغ البشري
+        </h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-xl font-bold text-blue-900 mb-4">الآليات العصبية:</h3>
+            <div class="space-y-3">
+              <div class="bg-white rounded-lg p-4 shadow-sm border border-blue-100">
+                <h4 class="font-bold text-blue-800 mb-2">المعالجة البصرية السريعة</h4>
+                <p class="text-blue-700 text-sm">الدماغ يعالج الألوان في 13 ميلي ثانية، أسرع من معالجة النصوص بـ 60,000 مرة</p>
+              </div>
+              <div class="bg-white rounded-lg p-4 shadow-sm border border-blue-100">
+                <h4 class="font-bold text-blue-800 mb-2">تحفيز الهرمونات</h4>
+                <p class="text-blue-700 text-sm">الألوان تؤثر على إفراز الدوبامين والسيروتونين والكورتيزول</p>
+              </div>
+              <div class="bg-white rounded-lg p-4 shadow-sm border border-blue-100">
+                <h4 class="font-bold text-blue-800 mb-2">الذاكرة طويلة المدى</h4>
+                <p class="text-blue-700 text-sm">الألوان تحسن الاستذكار بنسبة 55-78% مقارنة بالأبيض والأسود</p>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
-
-      {/* Main Content */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            
-            <BlogImage
-              src="/images/blog/corporate-uniform-colors.jpg"
-              alt="كيفية اختيار ألوان الزي المؤسسي المناسبة"
-              category="blog"
-            />
-
-            <div className="prose prose-lg max-w-none mt-8">
-              
-              <p className="lead text-xl font-semibold mb-8 text-gray-700 border-r-4 border-purple-500 pr-4 py-2 bg-purple-50 rounded-lg">
-                اختيار ألوان الزي المؤسسي ليس مجرد قرار جمالي، بل استراتيجية مدروسة تؤثر على نفسية الموظفين، وانطباع العملاء، وصورة الشركة العامة. الألوان تحمل رسائل قوية وتثير مشاعر محددة، لذا فإن فهم علم نفس الألوان وتطبيقه بذكاء يمكن أن يحقق أهدافاً مؤسسية مهمة. في هذا الدليل الشامل، نستكشف كيفية اختيار الألوان المناسبة للزي المؤسسي بما يتماشى مع هوية الشركة وأهدافها.
-              </p>
-
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-gray-800 border-b-2 border-purple-500 pb-2">علم نفس الألوان في بيئة العمل</h2>
-
-              <h3 className="text-2xl font-semibold mt-8 mb-4 text-gray-700">1. تأثير الألوان على النفسية</h3>
-
-              <p className="mb-4">
-                كل لون يحمل تأثيراً نفسياً مختلفاً على الأفراد:
-              </p>
-
-              <div className="bg-purple-50 p-6 rounded-lg mb-8">
-                <h4 className="text-purple-700 mb-3 font-semibold">التأثيرات النفسية للألوان الأساسية</h4>
-                <ul className="space-y-3 mb-0">
-                  <li>• <strong className="text-blue-600">الأزرق:</strong> يعزز الثقة والهدوء والاحترافية</li>
-                  <li>• <strong className="text-red-600">الأحمر:</strong> يثير الطاقة والحماس والقوة</li>
-                  <li>• <strong className="text-green-600">الأخضر:</strong> يرمز للنمو والتوازن والطبيعة</li>
-                  <li>• <strong className="text-gray-600">الرمادي:</strong> يعكس الجدية والاستقرار والحياد</li>
-                  <li>• <strong className="text-yellow-600">الأصفر:</strong> يحفز الإبداع والتفاؤل والانتباه</li>
-                  <li>• <strong className="text-purple-600">البنفسجي:</strong> يدل على الفخامة والإبداع والحكمة</li>
-                </ul>
+          <div>
+            <h3 class="text-xl font-bold text-blue-900 mb-4">التأثيرات النفسية المقيسة:</h3>
+            <div class="space-y-3">
+              <div class="flex justify-between items-center p-3 bg-white rounded-lg shadow-sm">
+                <span class="font-medium text-blue-800">زيادة التركيز (الأزرق)</span>
+                <span class="text-xl font-bold text-green-600">+23%</span>
               </div>
-
-              <h3 className="text-2xl font-semibold mt-8 mb-4 text-gray-700">2. تأثير الألوان على الإنتاجية</h3>
-
-              <p className="mb-4">
-                الدراسات تؤكد أن الألوان تؤثر على أداء الموظفين:
-              </p>
-
-              <ul className="list-disc pr-8 space-y-2 mb-6 marker:text-purple-500">
-                <li><strong className="text-gray-800">الألوان الهادئة:</strong> تقلل التوتر وتحسن التركيز</li>
-                <li><strong className="text-gray-800">الألوان الدافئة:</strong> تزيد النشاط والتفاعل الاجتماعي</li>
-                <li><strong className="text-gray-800">الألوان الباردة:</strong> تعزز التفكير التحليلي والدقة</li>
-                <li><strong className="text-gray-800">الألوان المحايدة:</strong> تخلق بيئة مهنية ومتوازنة</li>
-              </ul>
-
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-gray-800 border-b-2 border-purple-500 pb-2">الألوان حسب نوع الصناعة</h2>
-
-              <h3 className="text-2xl font-semibold mt-8 mb-4 text-gray-700">1. القطاع المصرفي والمالي</h3>
-
-              <p className="mb-4">
-                الألوان المناسبة للمؤسسات المالية:
-              </p>
-
-              <div className="bg-gray-100 p-6 rounded-lg mb-6">
-                <h4 className="font-bold mb-3">الألوان المفضلة في القطاع المالي</h4>
-                <table className="min-w-full border border-gray-300">
-                  <thead>
-                    <tr className="bg-gray-200">
-                      <th className="border border-gray-300 p-2 text-right">اللون</th>
-                      <th className="border border-gray-300 p-2 text-right">الرسالة</th>
-                      <th className="border border-gray-300 p-2 text-right">الاستخدام</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td className="border border-gray-300 p-2">الأزرق الداكن</td>
-                      <td className="border border-gray-300 p-2">الثقة والاستقرار</td>
-                      <td className="border border-gray-300 p-2">البدلات الرسمية</td>
-                    </tr>
-                    <tr>
-                      <td className="border border-gray-300 p-2">الرمادي الفحمي</td>
-                      <td className="border border-gray-300 p-2">الجدية والاحترافية</td>
-                      <td className="border border-gray-300 p-2">الزي الإداري</td>
-                    </tr>
-                    <tr>
-                      <td className="border border-gray-300 p-2">الأبيض</td>
-                      <td className="border border-gray-300 p-2">النظافة والوضوح</td>
-                      <td className="border border-gray-300 p-2">القمصان والبلوزات</td>
-                    </tr>
-                    <tr>
-                      <td className="border border-gray-300 p-2">البورجوندي</td>
-                      <td className="border border-gray-300 p-2">الفخامة والتميز</td>
-                      <td className="border border-gray-300 p-2">الإكسسوارات</td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div class="flex justify-between items-center p-3 bg-white rounded-lg shadow-sm">
+                <span class="font-medium text-blue-800">تحفيز الإبداع (الأخضر)</span>
+                <span class="text-xl font-bold text-green-600">+41%</span>
               </div>
-
-              <h3 className="text-2xl font-semibold mt-8 mb-4 text-gray-700">2. القطاع الطبي والصحي</h3>
-
-              <p className="mb-4">
-                الألوان في البيئة الطبية لها أهمية خاصة:
-              </p>
-
-              <ul className="list-disc pr-8 space-y-2 mb-6 marker:text-purple-500">
-                <li><strong className="text-gray-800">الأبيض:</strong> النظافة والطهارة والثقة الطبية</li>
-                <li><strong className="text-gray-800">الأزرق الفاتح:</strong> الهدوء وتقليل القلق</li>
-                <li><strong className="text-gray-800">الأخضر الطبي:</strong> التوازن وتقليل إجهاد العين</li>
-                <li><strong className="text-gray-800">الوردي الفاتح:</strong> الدفء والرعاية (أقسام الأطفال)</li>
-              </ul>
-
-              <h3 className="text-2xl font-semibold mt-8 mb-4 text-gray-700">3. قطاع التقنية والابتكار</h3>
-
-              <div className="bg-purple-50 p-6 rounded-lg mb-6 border-r-4 border-purple-500">
-                <h4 className="text-purple-700 mb-3 font-semibold">ألوان الشركات التقنية</h4>
-                <ul className="space-y-2 mb-0">
-                  <li>• <strong>الأزرق الكهربائي:</strong> الابتكار والتقنية المتقدمة</li>
-                  <li>• <strong>الأسود:</strong> الأناقة والتطور التقني</li>
-                  <li>• <strong>الفضي:</strong> الحداثة والتقنية المستقبلية</li>
-                  <li>• <strong>الأخضر النيون:</strong> الطاقة والنمو السريع</li>
-                  <li>• <strong>البرتقالي:</strong> الإبداع والحيوية</li>
-                </ul>
+              <div class="flex justify-between items-center p-3 bg-white rounded-lg shadow-sm">
+                <span class="font-medium text-blue-800">تقليل التوتر (الألوان الهادئة)</span>
+                <span class="text-xl font-bold text-green-600">-34%</span>
               </div>
-
-              <BlogImage
-                src="/images/blog/industry-specific-colors.jpg"
-                alt="ألوان الزي حسب نوع الصناعة"
-                category="blog"
-              />
-
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-gray-800 border-b-2 border-purple-500 pb-2">عوامل اختيار الألوان</h2>
-
-              <h3 className="text-2xl font-semibold mt-8 mb-4 text-gray-700">1. هوية الشركة والعلامة التجارية</h3>
-
-              <p className="mb-4">
-                يجب أن تتماشى ألوان الزي مع هوية الشركة:
-              </p>
-
-              <ul className="list-disc pr-8 space-y-2 mb-6 marker:text-purple-500">
-                <li><strong className="text-gray-800">ألوان الشعار:</strong> استخدام ألوان العلامة التجارية الأساسية</li>
-                <li><strong className="text-gray-800">قيم الشركة:</strong> اختيار ألوان تعكس قيم ورسالة الشركة</li>
-                <li><strong className="text-gray-800">الجمهور المستهدف:</strong> مراعاة تفضيلات العملاء</li>
-                <li><strong className="text-gray-800">الموقع الجغرافي:</strong> احترام الثقافة المحلية</li>
-              </ul>
-
-              <h3 className="text-2xl font-semibold mt-8 mb-4 text-gray-700">2. طبيعة العمل والبيئة</h3>
-
-              <p className="mb-4">
-                البيئة المهنية تحدد الألوان المناسبة:
-              </p>
-
-              <div className="bg-gray-100 p-6 rounded-lg mb-6">
-                <h4 className="font-bold mb-3">الألوان حسب بيئة العمل</h4>
-                <ul className="list-disc pr-6 space-y-2 mb-0">
-                  <li><strong>المكاتب الإدارية:</strong> ألوان محايدة ومهنية</li>
-                  <li><strong>البيئات الإبداعية:</strong> ألوان جريئة ومحفزة</li>
-                  <li><strong>المصانع والورش:</strong> ألوان آمنة وعملية</li>
-                  <li><strong>المتاجر والمطاعم:</strong> ألوان جذابة ودافئة</li>
-                  <li><strong>المستشفيات:</strong> ألوان مهدئة ونظيفة</li>
-                </ul>
+              <div class="flex justify-between items-center p-3 bg-white rounded-lg shadow-sm">
+                <span class="font-medium text-blue-800">زيادة الثقة (الألوان الداكنة)</span>
+                <span class="text-xl font-bold text-green-600">+67%</span>
               </div>
-
-              <h3 className="text-2xl font-semibold mt-8 mb-4 text-gray-700">3. الاعتبارات الثقافية والدينية</h3>
-
-              <p className="mb-4">
-                في السوق السعودي، يجب مراعاة الجوانب الثقافية:
-              </p>
-
-              <ul className="list-disc pr-8 space-y-2 mb-6 marker:text-purple-500">
-                <li><strong className="text-gray-800">الألوان المحتشمة:</strong> تجنب الألوان الصارخة أو الشفافة</li>
-                <li><strong className="text-gray-800">الرمزية الدينية:</strong> احترام المعاني الدينية للألوان</li>
-                <li><strong className="text-gray-800">التقاليد المحلية:</strong> مراعاة التفضيلات الثقافية</li>
-                <li><strong className="text-gray-800">المناسبات الخاصة:</strong> ألوان مناسبة للأعياد والمناسبات</li>
-              </ul>
-
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-gray-800 border-b-2 border-purple-500 pb-2">تأثير الألوان على العملاء</h2>
-
-              <h3 className="text-2xl font-semibold mt-8 mb-4 text-gray-700">1. الانطباع الأول</h3>
-
-              <p className="mb-4">
-                الألوان تشكل الانطباع الأول عن الشركة:
-              </p>
-
-              <div className="bg-purple-50 p-6 rounded-lg mb-6">
-                <h4 className="text-purple-700 mb-3 font-semibold">رسائل الألوان للعملاء</h4>
-                <ul className="space-y-2 mb-0">
-                  <li>• <strong>الأزرق:</strong> "يمكنكم الثقة بنا"</li>
-                  <li>• <strong>الأخضر:</strong> "نحن صديقون للبيئة ومسؤولون"</li>
-                  <li>• <strong>الأحمر:</strong> "نحن نقدم خدمة سريعة وفعالة"</li>
-                  <li>• <strong>الأسود:</strong> "نحن راقون ومتطورون"</li>
-                  <li>• <strong>الأبيض:</strong> "نحن نقيون وشفافون"</li>
-                  <li>• <strong>البرتقالي:</strong> "نحن ودودون ومبدعون"</li>
-                </ul>
-              </div>
-
-              <h3 className="text-2xl font-semibold mt-8 mb-4 text-gray-700">2. بناء الثقة والمصداقية</h3>
-
-              <p className="mb-4">
-                الألوان المناسبة تعزز ثقة العملاء:
-              </p>
-
-              <ul className="list-disc pr-8 space-y-2 mb-6 marker:text-purple-500">
-                <li><strong className="text-gray-800">الاتساق:</strong> استخدام نفس الألوان في جميع نقاط التواصل</li>
-                <li><strong className="text-gray-800">الجودة:</strong> ألوان عالية الجودة تعكس جودة الخدمة</li>
-                <li><strong className="text-gray-800">الوضوح:</strong> ألوان واضحة تسهل التعرف على الموظفين</li>
-                <li><strong className="text-gray-800">الاحترافية:</strong> ألوان مدروسة تعكس الكفاءة</li>
-              </ul>
-
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-gray-800 border-b-2 border-purple-500 pb-2">الاعتبارات العملية</h2>
-
-              <h3 className="text-2xl font-semibold mt-8 mb-4 text-gray-700">1. سهولة الصيانة والتنظيف</h3>
-
-              <p className="mb-4">
-                الألوان العملية توفر الوقت والتكلفة:
-              </p>
-
-              <div className="bg-gray-100 p-6 rounded-lg mb-6">
-                <h4 className="font-bold mb-3">الألوان من ناحية الصيانة</h4>
-                <table className="min-w-full border border-gray-300">
-                  <thead>
-                    <tr className="bg-gray-200">
-                      <th className="border border-gray-300 p-2 text-right">اللون</th>
-                      <th className="border border-gray-300 p-2 text-right">سهولة التنظيف</th>
-                      <th className="border border-gray-300 p-2 text-right">إخفاء البقع</th>
-                      <th className="border border-gray-300 p-2 text-right">التوصية</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td className="border border-gray-300 p-2">الأبيض</td>
-                      <td className="border border-gray-300 p-2">صعب</td>
-                      <td className="border border-gray-300 p-2">ضعيف</td>
-                      <td className="border border-gray-300 p-2">للبيئات النظيفة</td>
-                    </tr>
-                    <tr>
-                      <td className="border border-gray-300 p-2">الأسود</td>
-                      <td className="border border-gray-300 p-2">متوسط</td>
-                      <td className="border border-gray-300 p-2">جيد</td>
-                      <td className="border border-gray-300 p-2">للاستخدام العام</td>
-                    </tr>
-                    <tr>
-                      <td className="border border-gray-300 p-2">الرمادي الداكن</td>
-                      <td className="border border-gray-300 p-2">سهل</td>
-                      <td className="border border-gray-300 p-2">ممتاز</td>
-                      <td className="border border-gray-300 p-2">الأفضل عملياً</td>
-                    </tr>
-                    <tr>
-                      <td className="border border-gray-300 p-2">الأزرق الداكن</td>
-                      <td className="border border-gray-300 p-2">سهل</td>
-                      <td className="border border-gray-300 p-2">جيد جداً</td>
-                      <td className="border border-gray-300 p-2">خيار ممتاز</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-              <h3 className="text-2xl font-semibold mt-8 mb-4 text-gray-700">2. التكلفة والتوفر</h3>
-
-              <p className="mb-4">
-                بعض الألوان أكثر تكلفة من غيرها:
-              </p>
-
-              <ul className="list-disc pr-8 space-y-2 mb-6 marker:text-purple-500">
-                <li><strong className="text-gray-800">الألوان الأساسية:</strong> أقل تكلفة وأكثر توفراً</li>
-                <li><strong className="text-gray-800">الألوان المخصصة:</strong> تكلفة أعلى لكن تميز أكبر</li>
-                <li><strong className="text-gray-800">الألوان الموسمية:</strong> قد تكون محدودة التوفر</li>
-                <li><strong className="text-gray-800">الألوان المعدنية:</strong> تكلفة إضافية للتشطيبات الخاصة</li>
-              </ul>
-
-              <BlogImage
-                src="/images/blog/color-maintenance-guide.jpg"
-                alt="دليل صيانة ألوان الزي المؤسسي"
-                category="blog"
-              />
-
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-gray-800 border-b-2 border-purple-500 pb-2">تطبيق نظام الألوان</h2>
-
-              <h3 className="text-2xl font-semibold mt-8 mb-4 text-gray-700">1. إنشاء لوحة ألوان مؤسسية</h3>
-
-              <p className="mb-4">
-                خطوات إنشاء نظام ألوان متكامل:
-              </p>
-
-              <ol className="list-decimal pr-8 space-y-3 mb-6">
-                <li><strong className="text-gray-800">اللون الأساسي:</strong> اختيار لون رئيسي يمثل الشركة</li>
-                <li><strong className="text-gray-800">الألوان الثانوية:</strong> 2-3 ألوان مكملة</li>
-                <li><strong className="text-gray-800">الألوان المحايدة:</strong> للتوازن والتنسيق</li>
-                <li><strong className="text-gray-800">ألوان التمييز:</strong> للمناصب أو الأقسام المختلفة</li>
-                <li><strong className="text-gray-800">التدرجات:</strong> درجات مختلفة من نفس اللون</li>
-              </ol>
-
-              <h3 className="text-2xl font-semibold mt-8 mb-4 text-gray-700">2. التطبيق على قطع الزي المختلفة</h3>
-
-              <div className="bg-purple-50 p-6 rounded-lg mb-6">
-                <h4 className="text-purple-700 mb-3 font-semibold">توزيع الألوان على الزي</h4>
-                <ul className="space-y-2 mb-0">
-                  <li>• <strong>القمصان/البلوزات:</strong> اللون الأساسي أو الأبيض</li>
-                  <li>• <strong>البناطيل/التنانير:</strong> ألوان محايدة أو مكملة</li>
-                  <li>• <strong>السترات:</strong> اللون الأساسي أو الداكن</li>
-                  <li>• <strong>الإكسسوارات:</strong> ألوان التمييز أو المكملة</li>
-                  <li>• <strong>الأحذية:</strong> ألوان محايدة تتماشى مع الزي</li>
-                </ul>
-              </div>
-
-              <h3 className="text-2xl font-semibold mt-8 mb-4 text-gray-700">3. التمييز بين المستويات والأقسام</h3>
-
-              <p className="mb-4">
-                استخدام الألوان للتمييز الوظيفي:
-              </p>
-
-              <ul className="list-disc pr-8 space-y-2 mb-6 marker:text-purple-500">
-                <li><strong className="text-gray-800">الإدارة العليا:</strong> ألوان أكثر فخامة (أزرق داكن، رمادي فحمي)</li>
-                <li><strong className="text-gray-800">الإدارة الوسطى:</strong> ألوان مهنية (أزرق، رمادي)</li>
-                <li><strong className="text-gray-800">الموظفين:</strong> ألوان عملية ومريحة</li>
-                <li><strong className="text-gray-800">خدمة العملاء:</strong> ألوان ودودة ومرحبة</li>
-              </ul>
-
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-gray-800 border-b-2 border-purple-500 pb-2">أخطاء شائعة في اختيار الألوان</h2>
-
-              <h3 className="text-2xl font-semibold mt-8 mb-4 text-gray-700">1. الأخطاء الاستراتيجية</h3>
-
-              <p className="mb-4">
-                أخطاء يجب تجنبها عند اختيار الألوان:
-              </p>
-
-              <div className="bg-red-50 p-6 rounded-lg mb-6 border-r-4 border-red-500">
-                <h4 className="text-red-700 mb-3 font-semibold">أخطاء شائعة</h4>
-                <ul className="space-y-2 mb-0">
-                  <li>• <strong>تجاهل هوية الشركة:</strong> اختيار ألوان لا تتماشى مع العلامة التجارية</li>
-                  <li>• <strong>اتباع الموضة فقط:</strong> دون مراعاة طبيعة العمل</li>
-                  <li>• <strong>كثرة الألوان:</strong> استخدام أكثر من 4-5 ألوان</li>
-                  <li>• <strong>تجاهل الثقافة المحلية:</strong> عدم مراعاة التفضيلات الثقافية</li>
-                  <li>• <strong>عدم اختبار الألوان:</strong> عدم رؤية الألوان في بيئة العمل الفعلية</li>
-                </ul>
-              </div>
-
-              <h3 className="text-2xl font-semibold mt-8 mb-4 text-gray-700">2. الأخطاء العملية</h3>
-
-              <p className="mb-4">
-                مشاكل عملية في تطبيق الألوان:
-              </p>
-
-              <ul className="list-disc pr-8 space-y-2 mb-6 marker:text-purple-500">
-                <li><strong className="text-gray-800">عدم ثبات الألوان:</strong> اختيار ألوان تبهت بسرعة</li>
-                <li><strong className="text-gray-800">صعوبة التنسيق:</strong> ألوان لا تتماشى مع بعضها</li>
-                <li><strong className="text-gray-800">التكلفة العالية:</strong> ألوان مكلفة في الصيانة</li>
-                <li><strong className="text-gray-800">عدم التوفر:</strong> ألوان صعبة الحصول عليها</li>
-              </ul>
-
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-gray-800 border-b-2 border-purple-500 pb-2">نصائح للتطبيق الناجح</h2>
-
-              <h3 className="text-2xl font-semibold mt-8 mb-4 text-gray-700">1. مرحلة التخطيط</h3>
-
-              <p className="mb-4">
-                خطوات مهمة قبل اتخاذ القرار النهائي:
-              </p>
-
-              <ol className="list-decimal pr-8 space-y-3 mb-6">
-                <li><strong className="text-gray-800">البحث والدراسة:</strong> فهم تأثير الألوان على الجمهور المستهدف</li>
-                <li><strong className="text-gray-800">استشارة الخبراء:</strong> الحصول على رأي مصممي الأزياء</li>
-                <li><strong className="text-gray-800">اختبار العينات:</strong> تجربة الألوان في بيئة العمل</li>
-                <li><strong className="text-gray-800">استطلاع الآراء:</strong> أخذ رأي الموظفين والعملاء</li>
-                <li><strong className="text-gray-800">التقييم المالي:</strong> حساب التكلفة الإجمالية</li>
-              </ol>
-
-              <h3 className="text-2xl font-semibold mt-8 mb-4 text-gray-700">2. مرحلة التنفيذ</h3>
-
-              <div className="bg-gray-100 p-6 rounded-lg mb-8">
-                <h4 className="font-bold mb-3">خطوات التنفيذ الناجح</h4>
-                <ul className="list-disc pr-6 space-y-2 mb-0">
-                  <li>التطبيق التدريجي لتجنب الصدمة البصرية</li>
-                  <li>توثيق معايير الألوان بدقة</li>
-                  <li>تدريب الموظفين على أهمية الالتزام بالألوان</li>
-                  <li>وضع نظام للمراقبة والمتابعة</li>
-                  <li>التقييم الدوري وإجراء التعديلات اللازمة</li>
-                </ul>
-              </div>
-
-              <div className="bg-gray-100 p-6 rounded-lg mb-8">
-                <h3 className="text-purple-700 mb-3 font-semibold">رأي الخبراء</h3>
-                <p className="mb-0 italic">
-                  "اختيار ألوان الزي المؤسسي علم وفن في آن واحد. العلم يكمن في فهم تأثير الألوان النفسي والثقافي، والفن في تطبيق هذا الفهم بطريقة تخدم أهداف الشركة. في تجربتي، الشركات التي تستثمر وقتاً كافياً في اختيار الألوان المناسبة تحقق نتائج أفضل في رضا الموظفين وثقة العملاء. المفتاح هو التوازن بين الجمال والوظيفية، مع مراعاة الثقافة المحلية والقيم المؤسسية."
-                </p>
-                <p className="text-sm text-gray-600 mt-2">
-                  أ. منى الشهري، خبيرة تصميم الأزياء المؤسسية
-                </p>
-              </div>
-
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-gray-800 border-b-2 border-purple-500 pb-2">الخلاصة والتوصيات</h2>
-
-              <p className="mb-4">
-                اختيار ألوان الزي المؤسسي قرار استراتيجي يتطلب دراسة متأنية ونهجاً علمياً. الألوان المناسبة تعزز هوية الشركة، وتحسن نفسية الموظفين، وتبني ثقة العملاء. من المهم مراعاة جميع العوامل: النفسية، والثقافية، والعملية، والاقتصادية.
-              </p>
-
-              <p className="mb-4">
-                في السوق السعودي، يجب إيلاء اهتمام خاص للقيم الثقافية والدينية، مع عدم التضحية بالحداثة والاحترافية. الاستثمار في استشارة الخبراء واختبار الألوان قبل التطبيق النهائي يوفر الوقت والمال على المدى الطويل.
-              </p>
-
-              <p className="mb-0">
-                خبراء الزي الموحد تقدم استشارات متخصصة في اختيار الألوان المناسبة لكل شركة، مع مراعاة جميع العوامل المؤثرة. نحن نؤمن بأن الألوان المناسبة تحول الزي من مجرد ملابس إلى أداة قوية للتواصل وبناء الهوية. تواصل معنا لاستكشاف كيف يمكن للألوان المناسبة أن تعزز من صورة شركتك وتحقق أهدافك المؤسسية.
-              </p>
-
             </div>
           </div>
         </div>
-      </section>
+      </div>
+
+      <h2 class="text-3xl font-bold text-primary mb-8">خريطة الألوان النفسية للبيئات المؤسسية</h2>
+
+      <div class="space-y-8 mb-12">
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="bg-gradient-to-r from-blue-500 to-blue-600 p-6">
+            <h3 class="text-2xl font-bold text-white flex items-center">
+              <span class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center ml-3">1</span>
+              الأزرق: لون الثقة والاحترافية
+            </h3>
+          </div>
+          <div class="p-8">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h4 class="text-xl font-bold text-gray-900 mb-6">التأثيرات النفسية العلمية:</h4>
+                <div class="space-y-4">
+                  <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                    <h5 class="font-bold text-blue-900 mb-2">تحفيز الفص الجبهي</h5>
+                    <p class="text-blue-800 text-sm">يزيد من نشاط المناطق المسؤولة عن اتخاذ القرارات والتفكير المنطقي</p>
+                  </div>
+                  <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                    <h5 class="font-bold text-blue-900 mb-2">خفض معدل ضربات القلب</h5>
+                    <p class="text-blue-800 text-sm">يقلل من التوتر ويحسن التركيز بنسبة 15-20%</p>
+                  </div>
+                  <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                    <h5 class="font-bold text-blue-900 mb-2">تعزيز الثقة المتبادلة</h5>
+                    <p class="text-blue-800 text-sm">يزيد من مستوى الثقة بين الأشخاص بنسبة 42%</p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h4 class="text-xl font-bold text-gray-900 mb-6">التطبيقات المؤسسية المثالية:</h4>
+                <div class="space-y-4">
+                  <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-4 border border-blue-200">
+                    <h5 class="text-lg font-bold text-blue-900 mb-2">القطاع المصرفي والمالي</h5>
+                    <ul class="text-blue-800 text-sm space-y-1">
+                      <li>• يعزز الثقة في التعاملات المالية</li>
+                      <li>• يقلل من القلق المرتبط بالقرارات المالية</li>
+                      <li>• يحسن من تصور الاستقرار المؤسسي</li>
+                    </ul>
+                  </div>
+                  <div class="bg-gradient-to-r from-cyan-50 to-blue-50 rounded-lg p-4 border border-cyan-200">
+                    <h5 class="text-lg font-bold text-cyan-900 mb-2">التقنية والاستشارات</h5>
+                    <ul class="text-cyan-800 text-sm space-y-1">
+                      <li>• يعكس الكفاءة التقنية والابتكار</li>
+                      <li>• يحسن من تصور الموثوقية</li>
+                      <li>• يعزز الثقة في الحلول المقدمة</li>
+                </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+              </div>
+
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="bg-gradient-to-r from-green-500 to-emerald-500 p-6">
+            <h3 class="text-2xl font-bold text-white flex items-center">
+              <span class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center ml-3">2</span>
+              الأخضر: لون النمو والتوازن
+            </h3>
+          </div>
+          <div class="p-8">
+            <div class="grid md:grid-cols-3 gap-6">
+              <div class="text-center">
+                <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                  </svg>
+                </div>
+                <h4 class="text-lg font-bold text-gray-900 mb-2">تحفيز الإبداع</h4>
+                <p class="text-gray-600 text-sm">يزيد من النشاط في المناطق الإبداعية بالدماغ بنسبة 41%</p>
+              </div>
+
+              <div class="text-center">
+                <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                  </svg>
+                </div>
+                <h4 class="text-lg font-bold text-gray-900 mb-2">تقليل إجهاد العين</h4>
+                <p class="text-gray-600 text-sm">يقلل من التعب البصري ويحسن التركيز لفترات طويلة</p>
+              </div>
+
+              <div class="text-center">
+                <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                  </svg>
+                </div>
+                <h4 class="text-lg font-bold text-gray-900 mb-2">تعزيز الطاقة الإيجابية</h4>
+                <p class="text-gray-600 text-sm">يحفز إفراز السيروتونين ويحسن المزاج العام</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="bg-gradient-to-r from-gray-600 to-gray-700 p-6">
+            <h3 class="text-2xl font-bold text-white flex items-center">
+              <span class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center ml-3">3</span>
+              الرمادي: لون الحياد والاستقرار
+            </h3>
+          </div>
+          <div class="p-8">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h4 class="text-xl font-bold text-gray-900 mb-6">الخصائص النفسية:</h4>
+                <div class="space-y-3">
+                  <div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
+                    <h5 class="font-bold text-gray-800 mb-2">الحياد العاطفي</h5>
+                    <p class="text-gray-700 text-sm">يخلق بيئة متوازنة خالية من التحيز العاطفي</p>
+                  </div>
+                  <div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
+                    <h5 class="font-bold text-gray-800 mb-2">تعزيز التركيز</h5>
+                    <p class="text-gray-700 text-sm">يقلل من المشتتات البصرية ويحسن الانتباه</p>
+                  </div>
+                  <div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
+                    <h5 class="font-bold text-gray-800 mb-2">الجدية المهنية</h5>
+                    <p class="text-gray-700 text-sm">يعكس الاحترافية والموثوقية</p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h4 class="text-xl font-bold text-gray-900 mb-6">الاستخدامات المثالية:</h4>
+                <div class="space-y-4">
+                  <div class="bg-gradient-to-r from-gray-50 to-slate-50 rounded-lg p-4 border border-gray-200">
+                    <h5 class="text-lg font-bold text-gray-900 mb-2">البيئات التقنية</h5>
+                    <p class="text-gray-700 text-sm">مثالي للمختبرات والمراكز التقنية حيث يتطلب التركيز العالي</p>
+                  </div>
+                  <div class="bg-gradient-to-r from-slate-50 to-gray-50 rounded-lg p-4 border border-slate-200">
+                    <h5 class="text-lg font-bold text-slate-900 mb-2">الإدارة العليا</h5>
+                    <p class="text-slate-700 text-sm">يعكس السلطة والحكمة في اتخاذ القرارات</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-bold text-primary mb-8">دراسات حالة من البيئة السعودية</h2>
+
+      <div class="grid md:grid-cols-2 gap-8 mb-12">
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="bg-gradient-to-r from-green-500 to-emerald-600 p-6 text-white">
+            <h3 class="text-xl font-bold">البنك الأهلي السعودي: استراتيجية الأخضر والذهبي</h3>
+          </div>
+          <div class="p-6">
+            <div class="space-y-4">
+              <div class="bg-green-50 rounded-lg p-4 border border-green-200">
+                <h4 class="font-bold text-green-900 mb-2">الاستراتيجية اللونية:</h4>
+                <ul class="text-green-800 text-sm space-y-1">
+                  <li>• الأخضر الأساسي: يرمز للنمو والازدهار المالي</li>
+                  <li>• الذهبي المكمل: يعكس الفخامة والثقة</li>
+                  <li>• الأبيض المتوازن: يضفي النظافة والوضوح</li>
+                </ul>
+              </div>
+              <div class="bg-blue-50 rounded-lg p-4 border border-blue-200">
+                <h4 class="font-bold text-blue-900 mb-2">النتائج المحققة:</h4>
+                <div class="space-y-2 text-xs">
+                  <div class="flex justify-between">
+                    <span>زيادة ثقة العملاء:</span>
+                    <span class="font-bold text-green-600">+34%</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span>تحسن رضا الموظفين:</span>
+                    <span class="font-bold text-green-600">+28%</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span>زيادة التعرف على العلامة:</span>
+                    <span class="font-bold text-green-600">+67%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+              </div>
+
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="bg-gradient-to-r from-blue-500 to-indigo-600 p-6 text-white">
+            <h3 class="text-xl font-bold">شركة سابك: قوة الأزرق المؤسسي</h3>
+          </div>
+          <div class="p-6">
+            <div class="space-y-4">
+              <div class="bg-blue-50 rounded-lg p-4 border border-blue-200">
+                <h4 class="font-bold text-blue-900 mb-2">فلسفة الألوان:</h4>
+                <ul class="text-blue-800 text-sm space-y-1">
+                  <li>• الأزرق الداكن: يعكس الثقة والاستقرار الصناعي</li>
+                  <li>• الأبيض النقي: يرمز للنظافة والسلامة</li>
+                  <li>• اللمسات الفضية: تعكس التقنية المتقدمة</li>
+                </ul>
+              </div>
+              <div class="bg-green-50 rounded-lg p-4 border border-green-200">
+                <h4 class="font-bold text-green-900 mb-2">التأثير على الأداء:</h4>
+                <div class="space-y-2 text-xs">
+                  <div class="flex justify-between">
+                    <span>تحسن الانضباط المهني:</span>
+                    <span class="font-bold text-green-600">+45%</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span>زيادة الولاء المؤسسي:</span>
+                    <span class="font-bold text-green-600">+52%</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span>تحسن الصورة الدولية:</span>
+                    <span class="font-bold text-green-600">+73%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+              </div>
+
+      <h2 class="text-3xl font-bold text-primary mb-8">الإطار الاستراتيجي لاختيار الألوان المؤسسية</h2>
+
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-12">
+        <div class="bg-gradient-to-r from-purple-600 to-indigo-600 p-6 text-white">
+          <h3 class="text-2xl font-bold mb-2">منهجية الاختيار العلمية المتقدمة</h3>
+          <p class="text-purple-100">نموذج شامل لاتخاذ قرارات الألوان المؤسسية المدروسة</p>
+        </div>
+        <div class="p-8">
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl font-bold text-purple-600">1</span>
+              </div>
+              <h4 class="text-lg font-bold text-gray-900 mb-3">التحليل النفسي</h4>
+              <ul class="text-gray-700 text-sm space-y-1 text-right">
+                <li>• دراسة الجمهور المستهدف</li>
+                <li>• تحليل السياق الثقافي</li>
+                <li>• فهم التوقعات النفسية</li>
+                <li>• قياس التأثيرات العاطفية</li>
+              </ul>
+            </div>
+
+            <div class="text-center">
+              <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl font-bold text-blue-600">2</span>
+              </div>
+              <h4 class="text-lg font-bold text-gray-900 mb-3">التطبيق الاستراتيجي</h4>
+              <ul class="text-gray-700 text-sm space-y-1 text-right">
+                <li>• ربط الألوان بالأهداف</li>
+                <li>• تحديد التدرجات المناسبة</li>
+                <li>• اختبار التوافق البصري</li>
+                <li>• ضمان الاتساق المؤسسي</li>
+              </ul>
+            </div>
+
+            <div class="text-center">
+              <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl font-bold text-green-600">3</span>
+              </div>
+              <h4 class="text-lg font-bold text-gray-900 mb-3">القياس والتطوير</h4>
+              <ul class="text-gray-700 text-sm space-y-1 text-right">
+                <li>• مراقبة ردود الأفعال</li>
+                <li>• قياس التأثير على الأداء</li>
+                <li>• تحليل البيانات النفسية</li>
+                <li>• التحسين المستمر</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+              </div>
+
+      <div class="bg-gradient-to-r from-primary via-primary/90 to-accent text-white rounded-xl p-8 text-center mb-12">
+        <h2 class="text-3xl font-bold mb-4">الخلاصة الاستراتيجية</h2>
+        <p class="text-lg leading-relaxed mb-6 opacity-90">
+          اختيار ألوان الزي المؤسسي علم دقيق يتطلب فهماً عميقاً لعلم النفس والثقافة المؤسسية والأهداف الاستراتيجية. الألوان المختارة بعناية تصبح أداة قوية لتعزيز الهوية المؤسسية وتحسين الأداء التنظيمي وبناء الثقة مع أصحاب المصلحة.
+        </p>
+        <div class="bg-white/10 rounded-lg p-6">
+          <h3 class="text-xl font-bold mb-4">توصياتنا للقادة المؤسسيين:</h3>
+          <div class="grid md:grid-cols-3 gap-4 text-sm">
+            <div class="bg-white/20 rounded-lg p-4">
+              <h4 class="font-bold mb-2">للقطاع المالي</h4>
+              <p>الأزرق والرمادي لبناء الثقة والاستقرار</p>
+            </div>
+            <div class="bg-white/20 rounded-lg p-4">
+              <h4 class="font-bold mb-2">للقطاع الصحي</h4>
+              <p>الأبيض والأخضر للنظافة والطمأنينة</p>
+              </div>
+            <div class="bg-white/20 rounded-lg p-4">
+              <h4 class="font-bold mb-2">للقطاع التقني</h4>
+              <p>الأزرق والفضي للابتكار والحداثة</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+  
+  return (
+    <div className="max-w-4xl mx-auto">
+      <BlogPost
+        title="علم نفس الألوان في الزي المؤسسي: دليل استراتيجي متقدم لاختيار الألوان المثالية"
+        excerpt="دراسة علمية شاملة لتأثير الألوان على النفسية والإنتاجية في بيئة العمل، مع دليل استراتيجي لاختيار ألوان الزي المؤسسي المناسبة لكل صناعة وثقافة مؤسسية"
+        content={content}
+        category="blog"
+        slug="choosing-corporate-uniform-colors"
+        author={author}
+        publishDate="2025-03-25"
+        coverImage="/images/blog/choosing-corporate-uniform-colors.jpg"
+        readingTime="16 دقيقة للقراءة"
+        tags={["علم نفس الألوان", "ألوان الزي المؤسسي", "تأثير الألوان على الإنتاجية", "استراتيجية الألوان المؤسسية"]}
+      />
     </div>
   );
 }

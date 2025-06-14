@@ -12,9 +12,19 @@ const dictionaries = {
 };
 
 // Get dictionary for a specific locale
-export const getDictionary = async (locale: Locale) => {
+export const getDictionary = async (locale?: Locale) => {
   try {
-    const dictionary = await dictionaries[locale]();
+    // Use default locale if none provided
+    const targetLocale = locale || defaultLocale;
+    
+    // Ensure the locale is valid
+    if (!locales.includes(targetLocale)) {
+      console.warn(`Invalid locale "${targetLocale}", falling back to default locale: ${defaultLocale}`);
+      const dictionary = await dictionaries[defaultLocale]();
+      return dictionary;
+    }
+    
+    const dictionary = await dictionaries[targetLocale]();
     return dictionary;
   } catch (error) {
     console.error(`Failed to load dictionary for locale "${locale}":`, error);

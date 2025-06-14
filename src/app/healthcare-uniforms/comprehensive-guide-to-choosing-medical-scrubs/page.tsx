@@ -1,394 +1,406 @@
-import { Metadata } from 'next';
-import Image from 'next/image';
-import Link from 'next/link';
-import Breadcrumb from '@/components/Breadcrumb';
+import { Metadata } from 'next'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'الدليل الشامل لاختيار الزي الطبي (سكراب) المناسب للمستشفيات والعيادات السعودية',
   description: 'دليل متكامل لمعايير اختيار الزي الطبي (سكراب) المناسب للمستشفيات والعيادات في المملكة العربية السعودية، مع نصائح للجودة والراحة والمتانة والامتثال للمعايير المحلية',
-};
+  keywords: 'الزي الطبي، سكراب طبي، المستشفيات السعودية، العيادات الطبية، معايير الجودة، الراحة المهنية'
+}
 
-export default function ComprehensiveGuideToChoosingMedicalScrubsPage() {
+const breadcrumbs = [
+  { label: 'الرئيسية', href: '/' },
+  { label: 'زي القطاع الصحي', href: '/healthcare-uniforms' },
+  { label: 'الدليل الشامل لاختيار الزي الطبي', href: '/healthcare-uniforms/comprehensive-guide-to-choosing-medical-scrubs', isCurrent: true }
+]
+
+export default function ComprehensiveGuideToChoosingMedicalScrubs() {
   return (
-    <main className="max-w-4xl mx-auto px-4 py-8">
-      <Breadcrumb 
-        items={[
-          { label: 'الرئيسية', href: '/' },
-          { label: 'زي القطاع الصحي', href: '/healthcare-uniforms' },
-          { label: 'الدليل الشامل لاختيار الزي الطبي', href: '/healthcare-uniforms/comprehensive-guide-to-choosing-medical-scrubs', isCurrent: true }
-        ]} 
-      />
-      
-      <article className="bg-white rounded-lg shadow-md overflow-hidden mt-6">
-        <div className="relative h-[400px] w-full">
+    <div className="min-h-screen bg-gray-50">
+      {/* Hero Section */}
+      <div className="relative bg-gradient-to-r from-green-600 to-blue-600 text-white py-16">
+        <div className="absolute inset-0 bg-black opacity-20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Image
-            src="/images/healthcare_uniforms/comprehensive-guide-to-choosing-medical-scrubs-banner.jpg"
+            src="/images/healthcare_uniforms.jpg"
             alt="اختيار الزي الطبي المناسب للمستشفيات السعودية"
-            fill
-            style={{ objectFit: 'cover' }}
-            priority
+            width={1200}
+            height={400}
+            className="w-full h-64 object-cover rounded-lg mb-8 opacity-80"
           />
+          
+          {/* Breadcrumbs */}
+          <nav className="mb-8">
+            <ol className="flex space-x-2 text-sm">
+              {breadcrumbs.map((crumb, index) => (
+                <li key={index} className="flex items-center">
+                  {index > 0 && <span className="mx-2 text-blue-200">/</span>}
+                  {crumb.isCurrent ? (
+                    <span className="text-blue-200">{crumb.label}</span>
+                  ) : (
+                    <Link href={crumb.href} className="text-white hover:text-blue-200 transition-colors">
+                      {crumb.label}
+                    </Link>
+                  )}
+                </li>
+              ))}
+            </ol>
+          </nav>
+
+          <h1 className="text-4xl font-bold mb-6">الدليل الشامل لاختيار الزي الطبي (سكراب) المناسب للمستشفيات والعيادات السعودية</h1>
+          <p className="text-xl text-blue-100 max-w-3xl">
+            في عالم الرعاية الصحية، يعتبر الزي الطبي أو ما يُعرف بـ "السكراب" (Scrubs) أكثر من مجرد ملابس للعمل. إنه جزء أساسي من منظومة الرعاية الصحية يجمع بين الوظائف العملية والسلامة والراحة والهوية المهنية.
+          </p>
         </div>
+      </div>
+
+      {/* Main Content */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         
-        <div className="p-6">
-          <div className="flex justify-between items-center mb-3">
-            <Link href="/healthcare-uniforms" className="text-accent hover:underline font-medium">
-              زي القطاع الصحي
-            </Link>
-            <div className="flex items-center text-gray-500 text-sm">
-              <span>{new Date().toLocaleDateString('ar-SA', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-              <span className="mx-2">•</span>
-              <span>10 دقائق للقراءة</span>
-            </div>
+        {/* Introduction */}
+        <div className="prose prose-lg max-w-none mb-12">
+          <p className="text-gray-700 leading-relaxed mb-8">
+            في المملكة العربية السعودية، حيث يشهد القطاع الصحي تطوراً متسارعاً ضمن رؤية 2030، أصبح اختيار الزي الطبي المناسب أمراً يستحق الاهتمام والدراسة المتأنية. يقدم هذا الدليل الشامل للمسؤولين عن المشتريات في المستشفيات والعيادات السعودية كل ما يحتاجون معرفته لاختيار زي طبي يلبي المعايير العالمية والمتطلبات المحلية.
+          </p>
           </div>
           
-          <h1 className="text-3xl font-bold text-gray-900 mb-6">الدليل الشامل لاختيار الزي الطبي (سكراب) المناسب للمستشفيات والعيادات السعودية</h1>
+        {/* Key Factors */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">العوامل الأساسية لاختيار الزي الطبي المناسب</h2>
           
-          <div className="prose prose-lg max-w-none rtl">
-            <p>
-              في عالم الرعاية الصحية، يعتبر الزي الطبي أو ما يُعرف بـ "السكراب" (Scrubs) أكثر من مجرد ملابس للعمل. إنه جزء أساسي من منظومة الرعاية الصحية يجمع بين الوظائف العملية والسلامة والراحة والهوية المهنية. في المملكة العربية السعودية، حيث يشهد القطاع الصحي تطوراً متسارعاً ضمن رؤية 2030، أصبح اختيار الزي الطبي المناسب أمراً يستحق الاهتمام والدراسة المتأنية. يقدم هذا الدليل الشامل للمسؤولين عن المشتريات في المستشفيات والعيادات السعودية كل ما يحتاجون معرفته لاختيار زي طبي يلبي المعايير العالمية والمتطلبات المحلية.
-            </p>
-            
-            <h2>العوامل الأساسية لاختيار الزي الطبي المناسب</h2>
-            
-            <h3>المعايير التي تحدد جودة السكراب الطبي</h3>
-            <p>
+          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
+            <h3 className="text-2xl font-semibold text-green-600 mb-4">المعايير التي تحدد جودة السكراب الطبي</h3>
+            <p className="text-gray-700 mb-6">
               عند البحث عن الزي الطبي المثالي، يجب مراعاة عدة عوامل أساسية:
             </p>
-            <ul>
-              <li><strong>خامات الأقمشة:</strong>
-                <ul>
+            
+            <div className="space-y-6">
+              <div>
+                <h4 className="text-lg font-semibold text-gray-800 mb-3">خامات الأقمشة:</h4>
+                <ul className="list-disc list-inside text-gray-700 space-y-2 mr-4">
                   <li>القطن الطبي عالي الجودة: يوفر راحة وتهوية ممتازة خاصة في المناخ الحار للمملكة</li>
                   <li>البوليستر المخلوط: يمنح متانة أكبر ومقاومة للتجعد والانكماش</li>
                   <li>أقمشة المايكروفايبر: خفيفة الوزن وسريعة الجفاف ومقاومة للبقع</li>
-                  <li>الأقمشة المضادة للميكروبات: معالجة بتقنيات خاصة لتثبيط نمو البكتيريا</li>
+                  <li>الأقمشة المضادة للبكتيريا: توفر حماية إضافية في البيئات الطبية</li>
                 </ul>
-              </li>
-              <li><strong>المتانة والعمر الافتراضي:</strong>
-                <ul>
-                  <li>قوة الخياطة والتفصيل خاصة في مناطق الإجهاد (الأكمام، الجيوب، الأطراف)</li>
-                  <li>ثبات الألوان بعد الغسيل المتكرر بدرجات حرارة عالية</li>
-                  <li>مقاومة التمزق والاهتراء مع الاستخدام اليومي المكثف</li>
-                  <li>العمر الافتراضي المتوقع (عدد دورات الغسيل قبل تدهور الجودة)</li>
+              </div>
+
+              <div>
+                <h4 className="text-lg font-semibold text-gray-800 mb-3">التصميم والقطع:</h4>
+                <ul className="list-disc list-inside text-gray-700 space-y-2 mr-4">
+                  <li>القطع المريحة التي تسمح بحرية الحركة</li>
+                  <li>الجيوب العملية لحمل الأدوات الطبية الأساسية</li>
+                  <li>التصاميم التي تراعي الثقافة المحلية والمعايير الدينية</li>
+                  <li>الأكمام والأطوال المناسبة لمختلف التخصصات</li>
                 </ul>
-              </li>
-              <li><strong>الراحة وحرية الحركة:</strong>
-                <ul>
-                  <li>مرونة القماش ووزنه (خاصة للنوبات الطويلة)</li>
-                  <li>تصميم مريح يناسب ساعات العمل الطويلة</li>
-                  <li>حرية الحركة للأنشطة المختلفة (الانحناء، رفع المرضى، العمليات الجراحية)</li>
-                  <li>نفاذية الهواء والقدرة على امتصاص العرق في البيئات الحارة</li>
-                </ul>
-              </li>
-              <li><strong>الامتثال للمعايير والاشتراطات:</strong>
-                <ul>
-                  <li>مطابقة معايير وزارة الصحة السعودية</li>
-                  <li>الالتزام بسياسات المستشفى أو المنشأة الطبية</li>
-                  <li>توافق مع معايير مكافحة العدوى العالمية</li>
-                  <li>القدرة على التعقيم وفق البروتوكولات المعتمدة</li>
-                </ul>
-              </li>
-            </ul>
-            
-            <div className="bg-blue-50 p-6 rounded-lg mb-6">
-              <h3 className="text-primary mb-3">إحصائية مهمة</h3>
-              <p className="mb-0">
-                كشفت دراسة أجريت في عام 2022 بالتعاون بين الهيئة السعودية للتخصصات الصحية ومستشفى الملك فيصل التخصصي، أن 78% من العاملين في القطاع الصحي يرتدون الزي الطبي لأكثر من 10 ساعات يومياً، وأن 67% منهم يعتبرون راحة الزي وجودة الأقمشة عاملاً مؤثراً في أدائهم المهني. كما أظهرت الدراسة أن الأقمشة المعالجة بتقنيات مضادة للبكتيريا ساهمت في تقليل معدلات العدوى المرتبطة بالرعاية الصحية بنسبة 23% في الأقسام التي طبقت هذه الأزياء المتطورة.
-              </p>
+              </div>
             </div>
+          </div>
+
+          {/* Fabric Comparison Table */}
+          <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg p-8 mb-8">
+            <h3 className="text-2xl font-semibold text-green-600 mb-6">مقارنة أنواع الأقمشة الطبية</h3>
             
-            <h2>التمييز بين أنواع الزي الطبي حسب التخصص والقسم</h2>
-            
-            <h3>لكل تخصص زيه المناسب</h3>
-            <p>
-              تختلف احتياجات الزي الطبي باختلاف التخصصات والأقسام داخل المنشأة الصحية:
-            </p>
-            <ul>
-              <li><strong>زي الأطباء والممرضين في الأقسام العامة:</strong>
-                <ul>
-                  <li>تصميم كلاسيكي مريح مع جيوب متعددة لحمل الأدوات الأساسية</li>
-                  <li>ألوان موحدة حسب القسم لسهولة التعرف على التخصص</li>
-                  <li>خامات متوسطة الوزن توازن بين المتانة والراحة</li>
-                </ul>
-              </li>
-              <li><strong>زي العمليات وغرف العمليات:</strong>
-                <ul>
-                  <li>مواصفات صارمة للتعقيم وسهولة التنظيف</li>
-                  <li>خامات تمنع انتقال السوائل والملوثات</li>
-                  <li>تصميم يشمل غطاء رأس محكم وسترة خاصة</li>
-                  <li>أقمشة معالجة خصيصاً لتقليل الكهرباء الساكنة في بيئة الأكسجين</li>
-                </ul>
-              </li>
-              <li><strong>زي وحدات العناية المركزة والطوارئ:</strong>
-                <ul>
-                  <li>مواد فائقة المتانة تتحمل الحركة المستمرة</li>
-                  <li>تصميم يتيح حرية حركة قصوى للاستجابة السريعة</li>
-                  <li>جيوب إضافية للمعدات المتخصصة</li>
-                  <li>أقمشة سهلة التنظيف في حالات التلوث المفاجئ</li>
-                </ul>
-              </li>
-              <li><strong>زي أقسام الأطفال والرضع:</strong>
-                <ul>
-                  <li>ألوان زاهية وتصاميم مرحة تخفف من رهبة المستشفى</li>
-                  <li>أقمشة أكثر نعومة وأماناً للتعامل مع الأطفال</li>
-                  <li>طباعات وشخصيات محببة للأطفال حسب سياسة المستشفى</li>
-                </ul>
-              </li>
-              <li><strong>زي المختبرات والتشخيص:</strong>
-                <ul>
-                  <li>حماية إضافية ضد المواد الكيميائية والعينات</li>
-                  <li>تصميم يشمل معاطف مختبرية إضافية</li>
-                  <li>مقاومة للبقع والاحتفاظ بالألوان رغم التعرض للمواد الكيماوية</li>
-                </ul>
-              </li>
-            </ul>
-            
-            <div className="bg-gray-100 p-6 rounded-lg mb-6">
-              <h4 className="font-bold mb-3">الرموز اللونية المعتمدة في المستشفيات السعودية</h4>
-              <table className="min-w-full border border-gray-300">
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300">
                 <thead>
-                  <tr className="bg-gray-200">
-                    <th className="border border-gray-300 p-2 text-right">القسم/التخصص</th>
-                    <th className="border border-gray-300 p-2 text-right">اللون الموصى به</th>
-                    <th className="border border-gray-300 p-2 text-right">السبب والفائدة</th>
+                  <tr className="bg-green-100">
+                    <th className="border border-gray-300 px-4 py-3 text-right font-semibold">نوع القماش</th>
+                    <th className="border border-gray-300 px-4 py-3 text-right font-semibold">المزايا</th>
+                    <th className="border border-gray-300 px-4 py-3 text-right font-semibold">العيوب</th>
+                    <th className="border border-gray-300 px-4 py-3 text-right font-semibold">الاستخدام المثالي</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td className="border border-gray-300 p-2">التمريض العام</td>
-                    <td className="border border-gray-300 p-2">أزرق فاتح</td>
-                    <td className="border border-gray-300 p-2">يبعث على الهدوء والثقة، سهل التمييز</td>
+                    <td className="border border-gray-300 px-4 py-3 font-semibold">القطن 100%</td>
+                    <td className="border border-gray-300 px-4 py-3">تهوية ممتازة، راحة طبيعية، مقاوم للحساسية</td>
+                    <td className="border border-gray-300 px-4 py-3">يتجعد بسهولة، قد ينكمش</td>
+                    <td className="border border-gray-300 px-4 py-3">الأقسام العامة، المناخ الحار</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 px-4 py-3 font-semibold">القطن/البوليستر</td>
+                    <td className="border border-gray-300 px-4 py-3">متوازن، سهل العناية، مقاوم للتجعد</td>
+                    <td className="border border-gray-300 px-4 py-3">تهوية أقل من القطن الخالص</td>
+                    <td className="border border-gray-300 px-4 py-3">الاستخدام اليومي، جميع الأقسام</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 p-2">الجراحة</td>
-                    <td className="border border-gray-300 p-2">أخضر داكن</td>
-                    <td className="border border-gray-300 p-2">يقلل إجهاد العين، يخفي البقع، مريح للرؤية تحت أضواء العمليات</td>
+                    <td className="border border-gray-300 px-4 py-3 font-semibold">المايكروفايبر</td>
+                    <td className="border border-gray-300 px-4 py-3">خفيف، مقاوم للبقع، سريع الجفاف</td>
+                    <td className="border border-gray-300 px-4 py-3">قد يحتفظ بالروائح، أقل تهوية</td>
+                    <td className="border border-gray-300 px-4 py-3">غرف العمليات، الأقسام الحرجة</td>
                   </tr>
-                  <tr>
-                    <td className="border border-gray-300 p-2">العناية المركزة</td>
-                    <td className="border border-gray-300 p-2">بنفسجي</td>
-                    <td className="border border-gray-300 p-2">يعطي إحساساً بالاحترافية والتخصص العالي</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 p-2">طب الأطفال</td>
-                    <td className="border border-gray-300 p-2">ألوان متعددة مع رسومات</td>
-                    <td className="border border-gray-300 p-2">يخفف من خوف الأطفال، يخلق بيئة مريحة لهم</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 p-2">الطوارئ</td>
-                    <td className="border border-gray-300 p-2">أحمر أو برتقالي</td>
-                    <td className="border border-gray-300 p-2">سهولة التمييز في الحالات العاجلة، يرمز للجاهزية</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 p-2">المختبرات</td>
-                    <td className="border border-gray-300 p-2">أبيض مع معطف مختبر</td>
-                    <td className="border border-gray-300 p-2">يسهل ملاحظة التلوث والبقع، يعكس الدقة والنظافة</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 p-2">الأشعة</td>
-                    <td className="border border-gray-300 p-2">رمادي أو كحلي</td>
-                    <td className="border border-gray-300 p-2">يناسب بيئة العمل الأقل إضاءة، عملي مع الصبغات المستخدمة</td>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 px-4 py-3 font-semibold">الأقمشة المضادة للميكروبات</td>
+                    <td className="border border-gray-300 px-4 py-3">حماية إضافية، تقليل العدوى</td>
+                    <td className="border border-gray-300 px-4 py-3">تكلفة أعلى، قد تحتاج عناية خاصة</td>
+                    <td className="border border-gray-300 px-4 py-3">وحدات العناية المركزة، العزل</td>
                   </tr>
                 </tbody>
               </table>
             </div>
-            
-            <h2>اعتبارات مهمة لمشتريات الزي الطبي في المنشآت السعودية</h2>
-            
-            <h3>ما وراء المظهر: قرارات شراء استراتيجية</h3>
-            <p>
-              تواجه إدارات المشتريات في المستشفيات والعيادات السعودية تحديات خاصة عند اختيار الزي الطبي:
-            </p>
-            <ul>
-              <li><strong>التكلفة والميزانية:</strong>
-                <ul>
-                  <li>موازنة الجودة مع التكلفة الإجمالية على المدى الطويل</li>
-                  <li>احتساب العمر الافتراضي والحاجة للاستبدال</li>
-                  <li>تكاليف الصيانة والغسيل للخامات المختلفة</li>
-                  <li>مزايا الشراء بالجملة والتفاوض مع الموردين المحليين</li>
-                </ul>
+          </div>
+        </section>
+
+        {/* Color Standards */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">معايير الألوان في المستشفيات السعودية</h2>
+          
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h3 className="text-xl font-semibold text-blue-600 mb-4">الألوان التقليدية</h3>
+              <ul className="space-y-3 text-gray-700">
+                <li className="flex items-center">
+                  <div className="w-4 h-4 bg-white border-2 border-gray-400 rounded mr-3"></div>
+                  <span><strong>الأبيض:</strong> الأطباء والاستشاريون</span>
+                </li>
+                <li className="flex items-center">
+                  <div className="w-4 h-4 bg-blue-300 rounded mr-3"></div>
+                  <span><strong>الأزرق الفاتح:</strong> التمريض العام</span>
               </li>
-              <li><strong>الاعتبارات اللوجستية:</strong>
-                <ul>
-                  <li>توفر المقاسات المختلفة لجميع أفراد الطاقم الطبي</li>
-                  <li>زمن التوريد والحاجة إلى مخزون احتياطي</li>
-                  <li>إمكانية التخصيص (شعار المستشفى، ألوان الأقسام)</li>
-                  <li>مرونة التعامل مع التغييرات في أعداد الموظفين</li>
-                </ul>
+                <li className="flex items-center">
+                  <div className="w-4 h-4 bg-green-500 rounded mr-3"></div>
+                  <span><strong>الأخضر:</strong> غرف العمليات</span>
               </li>
-              <li><strong>المتطلبات الثقافية والدينية:</strong>
-                <ul>
-                  <li>تصاميم محتشمة تناسب المجتمع السعودي</li>
-                  <li>خيارات مريحة للحجاب والعباءة للكوادر النسائية</li>
-                  <li>مراعاة تنوع الجنسيات في القطاع الصحي السعودي</li>
-                </ul>
-              </li>
-              <li><strong>الاستدامة البيئية:</strong>
-                <ul>
-                  <li>الاتجاه المتزايد نحو خيارات صديقة للبيئة</li>
-                  <li>مصادر الأقمشة المستدامة وإمكانية إعادة التدوير</li>
-                  <li>توافق المشتريات مع أهداف الاستدامة في رؤية 2030</li>
-                </ul>
+                <li className="flex items-center">
+                  <div className="w-4 h-4 bg-pink-300 rounded mr-3"></div>
+                  <span><strong>الوردي:</strong> طب الأطفال</span>
               </li>
             </ul>
-            
-            <div className="bg-green-50 p-6 rounded-lg mb-6">
-              <h3 className="text-primary mb-3">دراسة حالة</h3>
-              <p className="mb-0">
-                نجحت إحدى مجموعات المستشفيات الخاصة الكبرى في المنطقة الشرقية في خفض تكاليف الزي الطبي بنسبة 32% مع تحسين رضا الموظفين، من خلال استراتيجية متكاملة شملت: التعاقد مباشرة مع مصنع محلي وتجنب الوسطاء، وتوحيد مواصفات الجودة عبر جميع فروع المجموعة مما سمح بطلبيات أكبر حجماً، وإنشاء مغسلة مركزية متخصصة مع بروتوكولات محددة للعناية بالزي الطبي أطالت عمره الافتراضي. كما قامت المجموعة بتطوير نظام إلكتروني لتتبع دورة حياة كل قطعة من الزي، مما قلل من الهدر والفقد بنسبة تجاوزت 40%. النتيجة كانت زياً عالي الجودة، مع توفير مالي كبير، وتحسن في مستويات الالتزام بسياسات الزي الموحد.
-              </p>
             </div>
             
-            <h2>الاتجاهات الحديثة في تصميم الزي الطبي</h2>
-            
-            <h3>تطورات تلبي متطلبات الجيل الجديد من الكوادر الطبية</h3>
-            <p>
-              يشهد مجال الزي الطبي تطورات مستمرة تواكب احتياجات القطاع الصحي المتغيرة:
-            </p>
-            <ul>
-              <li><strong>التقنيات المتقدمة في الأقمشة:</strong>
-                <ul>
-                  <li>أقمشة ذكية تتكيف مع درجة حرارة الجسم</li>
-                  <li>تقنية النانو المضادة للميكروبات والبقع</li>
-                  <li>معالجات خاصة لمقاومة السوائل مع الحفاظ على نفاذية الهواء</li>
-                  <li>أقمشة فائقة الخفة تمنح الراحة مع المتانة</li>
-                </ul>
-              </li>
-              <li><strong>تصاميم عصرية وعملية:</strong>
-                <ul>
-                  <li>قصات أكثر ملاءمة للجسم دون التضحية بالراحة</li>
-                  <li>تنوع الخيارات للأذواق المختلفة ضمن ألوان القسم</li>
-                  <li>جيوب ذكية مصممة خصيصاً للأجهزة الإلكترونية الطبية</li>
-                  <li>تصاميم مبتكرة تجمع بين المظهر الاحترافي والراحة العملية</li>
-                </ul>
-              </li>
-              <li><strong>التخصيص والتمييز الوظيفي:</strong>
-                <ul>
-                  <li>علامات وشعارات مدمجة توضح المسمى الوظيفي والتخصص</li>
-                  <li>تطريز متقدم لشعارات المستشفيات بجودة عالية</li>
-                  <li>أنظمة ألوان متطورة للتمييز بين المستويات والتخصصات</li>
-                </ul>
-              </li>
-              <li><strong>مراعاة التنوع والشمولية:</strong>
-                <ul>
-                  <li>مجموعات متنوعة من المقاسات تناسب جميع أنواع الأجسام</li>
-                  <li>تصاميم تراعي الاختلافات الثقافية والدينية</li>
-                  <li>خيارات للنساء الحوامل من الكوادر الطبية</li>
-                  <li>حلول مبتكرة للزي المحتشم دون التضحية بالجانب العملي</li>
-                </ul>
-              </li>
-            </ul>
-            
-            <div className="bg-primary-50 p-6 rounded-lg mb-6 border-r-4 border-primary">
-              <h3 className="text-primary mb-3">نصائح عملية لاختيار الزي الطبي</h3>
-              <ul className="mb-0">
-                <li className="mb-2">✓ استشر الكوادر الطبية قبل اتخاذ قرارات الشراء - فهم المستخدمون النهائيون</li>
-                <li className="mb-2">✓ اطلب عينات واختبرها في بيئة العمل الحقيقية قبل طلب كميات كبيرة</li>
-                <li className="mb-2">✓ ضع نظاماً واضحاً للصيانة والاستبدال يحافظ على المظهر الاحترافي</li>
-                <li className="mb-2">✓ حدد مواصفات دقيقة مكتوبة عند التعامل مع الموردين لضمان ثبات الجودة</li>
-                <li className="mb-2">✓ اعتمد سياسة توزيع تضمن حصول كل موظف على العدد المناسب من أطقم الزي</li>
-                <li className="mb-0">✓ قم بتقييم دوري لرضا الموظفين عن الزي واستخدم الملاحظات للتحسين المستمر</li>
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h3 className="text-xl font-semibold text-purple-600 mb-4">الألوان الحديثة</h3>
+              <ul className="space-y-3 text-gray-700">
+                <li className="flex items-center">
+                  <div className="w-4 h-4 bg-teal-500 rounded mr-3"></div>
+                  <span><strong>التيل:</strong> الأقسام التخصصية</span>
+                </li>
+                <li className="flex items-center">
+                  <div className="w-4 h-4 bg-purple-500 rounded mr-3"></div>
+                  <span><strong>البنفسجي:</strong> الطب النفسي</span>
+                </li>
+                <li className="flex items-center">
+                  <div className="w-4 h-4 bg-gray-600 rounded mr-3"></div>
+                  <span><strong>الرمادي:</strong> الخدمات المساندة</span>
+                </li>
+                <li className="flex items-center">
+                  <div className="w-4 h-4 bg-red-500 rounded mr-3"></div>
+                  <span><strong>الأحمر:</strong> الطوارئ والإسعاف</span>
+                </li>
               </ul>
             </div>
+          </div>
+        </section>
+
+        {/* Quality Standards */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">معايير الجودة والمطابقة</h2>
+          
+          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
+            <h3 className="text-2xl font-semibold text-orange-600 mb-4">المعايير الدولية والمحلية</h3>
             
-            <h2>الموردون والمصنعون الموصى بهم في المملكة</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h4 className="text-lg font-semibold text-gray-800 mb-3">المعايير الدولية:</h4>
+                <ul className="text-gray-700 space-y-2">
+                  <li>• معيار ISO 13485 للأجهزة الطبية</li>
+                  <li>• معايير OEKO-TEX للأقمشة الآمنة</li>
+                  <li>• شهادات CE للمنتجات الأوروبية</li>
+                  <li>• معايير FDA الأمريكية</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-lg font-semibold text-gray-800 mb-3">المتطلبات المحلية:</h4>
+                <ul className="text-gray-700 space-y-2">
+                  <li>• مطابقة معايير الهيئة السعودية للمواصفات</li>
+                  <li>• شهادة الجودة من وزارة الصحة</li>
+                  <li>• مراعاة المعايير الثقافية والدينية</li>
+                  <li>• التوافق مع لوائح السلامة المهنية</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Sizing Guide */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">دليل المقاسات والتصاميم</h2>
+          
+          <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-8 mb-8">
+            <h3 className="text-2xl font-semibold text-blue-600 mb-6">جدول المقاسات الموحد</h3>
             
-            <h3>مصادر موثوقة للزي الطبي عالي الجودة</h3>
-            <p>
-              يضم السوق السعودي عدداً من الموردين المتخصصين في الزي الطبي، مع تنوع في الخيارات والمزايا:
-            </p>
-            <ul>
-              <li><strong>المصنعون المحليون:</strong>
-                <ul>
-                  <li>مزايا الإنتاج المحلي: سرعة التوريد، فهم لاحتياجات السوق السعودي</li>
-                  <li>إمكانية التخصيص المباشر حسب طلب المنشأة الصحية</li>
-                  <li>سهولة التواصل ومتابعة الطلبيات والخدمة بعد البيع</li>
-                  <li>المساهمة في دعم المحتوى المحلي تماشياً مع رؤية 2030</li>
-                </ul>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300">
+                <thead>
+                  <tr className="bg-blue-100">
+                    <th className="border border-gray-300 px-4 py-3 text-center font-semibold">المقاس</th>
+                    <th className="border border-gray-300 px-4 py-3 text-center font-semibold">محيط الصدر (سم)</th>
+                    <th className="border border-gray-300 px-4 py-3 text-center font-semibold">محيط الخصر (سم)</th>
+                    <th className="border border-gray-300 px-4 py-3 text-center font-semibold">طول الكم (سم)</th>
+                    <th className="border border-gray-300 px-4 py-3 text-center font-semibold">طول البنطال (سم)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-gray-300 px-4 py-3 text-center font-semibold">XS</td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">86-91</td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">71-76</td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">58-60</td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">100-102</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 px-4 py-3 text-center font-semibold">S</td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">91-96</td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">76-81</td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">60-62</td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">102-104</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 px-4 py-3 text-center font-semibold">M</td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">96-101</td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">81-86</td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">62-64</td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">104-106</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-300 px-4 py-3 text-center font-semibold">L</td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">101-106</td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">86-91</td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">64-66</td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">106-108</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-300 px-4 py-3 text-center font-semibold">XL</td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">106-111</td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">91-96</td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">66-68</td>
+                    <td className="border border-gray-300 px-4 py-3 text-center">108-110</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        {/* Care Instructions */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">إرشادات العناية والصيانة</h2>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-green-50 rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-green-600 mb-4">الغسيل والتنظيف</h3>
+              <ul className="space-y-3 text-gray-700">
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-2">✓</span>
+                  <span>الغسيل في درجة حرارة 60-75 مئوية للتعقيم</span>
               </li>
-              <li><strong>وكلاء العلامات العالمية:</strong>
-                <ul>
-                  <li>الاستفادة من الخبرات العالمية في مجال الأقمشة والتقنيات</li>
-                  <li>ضمانات جودة معتمدة وفق المعايير الدولية</li>
-                  <li>تنوع التشكيلات والموديلات المتاحة</li>
-                </ul>
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-2">✓</span>
+                  <span>استخدام مساحيق غسيل طبية معتمدة</span>
               </li>
-              <li><strong>معايير اختيار المورد المناسب:</strong>
-                <ul>
-                  <li>سجل الأداء والسمعة في القطاع الصحي</li>
-                  <li>القدرة على توفير احتياجات الكميات الكبيرة بشكل مستمر</li>
-                  <li>الجودة المستمرة والثبات في المواصفات بين الدفعات المختلفة</li>
-                  <li>خدمات ما بعد البيع والدعم الفني</li>
-                  <li>المرونة في التعامل مع الطلبات الخاصة والعاجلة</li>
-                </ul>
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-2">✓</span>
+                  <span>فصل الألوان لتجنب التلوث المتبادل</span>
+              </li>
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-2">✓</span>
+                  <span>التجفيف في درجة حرارة مناسبة</span>
               </li>
             </ul>
-            
-            <div className="bg-indigo-50 p-6 rounded-lg mb-6">
-              <h3 className="text-primary mb-3">رأي خبير</h3>
-              <p className="mb-0 italic">
-                "من خلال خبرتي التي تمتد لأكثر من 15 عاماً في إدارة المشتريات الطبية، أرى أن الاستثمار في زي طبي عالي الجودة ليس ترفاً بل ضرورة اقتصادية. بعد تحليل بيانات المشتريات لعدة مستشفيات، وجدنا أن توفير 20-30% في السعر المبدئي للزي الرخيص يتحول إلى خسارة بنسبة 40-50% على المدى المتوسط بسبب الحاجة للاستبدال المتكرر وتأثيره السلبي على صورة المنشأة ورضا الموظفين. لذا ننصح دائماً بالتركيز على القيمة الإجمالية للملكية (Total Cost of Ownership) وليس فقط سعر الشراء الأولي. كما أن إشراك ممثلين عن الكوادر الطبية في لجان اختيار الزي يزيد معدلات الالتزام به ويحسن الرضا الوظيفي، وهو ما ينعكس إيجاباً على جودة الخدمة الصحية المقدمة."
-              </p>
-              <p className="text-sm text-gray-600 mt-2">
-                د. مها الصالح، مستشارة في إدارة سلاسل التوريد الطبية ومديرة سابقة للمشتريات في مجموعة مستشفيات رائدة
-              </p>
             </div>
             
-            <h2>الخلاصة: استراتيجية متكاملة لاختيار الزي الطبي</h2>
-            <p>
-              يتطلب اختيار الزي الطبي المثالي في المنشآت الصحية السعودية رؤية شاملة تجمع بين الجوانب العملية والاقتصادية والإدارية. فالزي الطبي ليس مجرد ملابس، بل هو استثمار في صحة وسلامة العاملين والمرضى، وعنصر مهم في الهوية المؤسسية للمنشأة الصحية.
-            </p>
-            
-            <p>
-              تشمل الاستراتيجية المتكاملة لاختيار الزي الطبي: فهم الاحتياجات المحددة لكل قسم وتخصص، واختيار الخامات المناسبة لطبيعة العمل والبيئة، وتحديد المواصفات الفنية الدقيقة، وإشراك المستخدمين النهائيين في عملية الاختيار، والموازنة بين التكلفة والجودة والعمر الافتراضي، ووضع نظام فعال للتوزيع والصيانة والاستبدال.
-            </p>
-            
-            <p>
-              في القطاع الصحي السعودي الذي يشهد تطوراً متسارعاً، أصبح الزي الطبي المتميز انعكاساً للاحترافية والتميز المؤسسي، ومساهماً في تعزيز صورة المملكة كوجهة رائدة في الرعاية الصحية على مستوى المنطقة. وبالنهج المتكامل لاختيار الزي الطبي، تستطيع المنشآت الصحية السعودية تحقيق أقصى استفادة من هذا العنصر الهام في بيئة الرعاية الصحية.
-            </p>
+            <div className="bg-blue-50 rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-blue-600 mb-4">التخزين والحفظ</h3>
+              <ul className="space-y-3 text-gray-700">
+                <li className="flex items-start">
+                  <span className="text-blue-500 mr-2">✓</span>
+                  <span>التخزين في مكان جاف ومعقم</span>
+              </li>
+                <li className="flex items-start">
+                  <span className="text-blue-500 mr-2">✓</span>
+                  <span>استخدام أكياس حفظ مناسبة</span>
+              </li>
+                <li className="flex items-start">
+                  <span className="text-blue-500 mr-2">✓</span>
+                  <span>تجنب التعرض المباشر لأشعة الشمس</span>
+              </li>
+                <li className="flex items-start">
+                  <span className="text-blue-500 mr-2">✓</span>
+                  <span>الفحص الدوري للتآكل والتلف</span>
+              </li>
+              </ul>
+            </div>
           </div>
+        </section>
+
+        {/* Budget Considerations */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">اعتبارات الميزانية والتكلفة</h2>
           
-          {/* Tags Section */}
-          <div className="mt-8 pt-6 border-t border-gray-200">
-            <h3 className="text-lg font-semibold mb-3">الوسوم:</h3>
-            <div className="flex flex-wrap gap-2">
-              {['الزي الطبي', 'السكراب الطبي', 'يونيفورم المستشفيات', 'زي العاملين الصحيين', 'سكراب طبي', 'الزي الموحد للمستشفيات', 'الملابس الطبية', 'أقمشة الزي الطبي', 'مستلزمات طبية', 'المستشفيات السعودية'].map((tag) => (
-                <span
-                  key={tag}
-                  className="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-medium text-gray-800"
-                >
-                  {tag}
-                </span>
-              ))}
+          <div className="bg-white rounded-lg shadow-md p-8">
+            <h3 className="text-2xl font-semibold text-purple-600 mb-4">تحليل التكلفة الإجمالية للملكية</h3>
+            
+            <div className="space-y-6">
+              <div>
+                <h4 className="text-lg font-semibold text-gray-800 mb-3">العوامل المؤثرة في التكلفة:</h4>
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="text-center">
+                    <div className="bg-purple-100 rounded-lg p-4">
+                      <h5 className="font-semibold text-purple-600 mb-2">التكلفة الأولية</h5>
+                      <p className="text-sm text-gray-600">سعر الشراء، الشحن، الجمارك</p>
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-blue-100 rounded-lg p-4">
+                      <h5 className="font-semibold text-blue-600 mb-2">تكلفة التشغيل</h5>
+                      <p className="text-sm text-gray-600">الغسيل، التعقيم، الصيانة</p>
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-green-100 rounded-lg p-4">
+                      <h5 className="font-semibold text-green-600 mb-2">العمر الافتراضي</h5>
+                      <p className="text-sm text-gray-600">المتانة، الاستبدال، التجديد</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+        </section>
+
+        {/* Conclusion */}
+        <section className="mb-12">
+          <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg p-8">
+            <h2 className="text-3xl font-bold text-green-900 mb-6">الخلاصة والتوصيات</h2>
+            <p className="text-gray-700 leading-relaxed mb-6">
+              اختيار الزي الطبي المناسب للمستشفيات والعيادات السعودية يتطلب توازناً دقيقاً بين الجودة والراحة والتكلفة والامتثال للمعايير المحلية والدولية. من خلال اتباع المعايير المذكورة في هذا الدليل، يمكن للمؤسسات الصحية ضمان توفير زي طبي يلبي احتياجات الكوادر الطبية ويساهم في تحسين جودة الرعاية الصحية.
+            </p>
+            <p className="text-gray-700 leading-relaxed">
+              نوصي بإجراء تقييم شامل للاحتياجات، واختبار عينات من موردين متعددين، والتشاور مع الفرق الطبية قبل اتخاذ القرار النهائي. كما ننصح بوضع خطة للمراجعة الدورية وتحديث المعايير بما يتماشى مع التطورات في مجال الرعاية الصحية.
+            </p>
+          </div>
+        </section>
           
           {/* Share Section */}
-          <div className="mt-8 flex justify-center">
-            <div className="text-center">
-              <h3 className="text-lg font-semibold mb-3">مشاركة المقال</h3>
-              <div className="flex justify-center space-x-reverse space-x-4">
-                <button className="bg-[#3b5998] text-white p-2 rounded-full w-10 h-10 flex items-center justify-center">
-                  <span className="sr-only">Facebook</span>
-                  {/* Facebook icon would go here */}
+        <div className="bg-gray-100 rounded-lg p-6 text-center">
+          <h3 className="text-lg font-semibold text-gray-800 mb-4">شارك هذا المقال</h3>
+          <div className="flex justify-center space-x-4">
+            <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+              فيسبوك
                 </button>
-                <button className="bg-[#1da1f2] text-white p-2 rounded-full w-10 h-10 flex items-center justify-center">
-                  <span className="sr-only">Twitter</span>
-                  {/* Twitter icon would go here */}
+            <button className="bg-blue-400 text-white px-4 py-2 rounded-lg hover:bg-blue-500 transition-colors">
+              تويتر
                 </button>
-                <button className="bg-[#0e76a8] text-white p-2 rounded-full w-10 h-10 flex items-center justify-center">
-                  <span className="sr-only">LinkedIn</span>
-                  {/* LinkedIn icon would go here */}
+            <button className="bg-blue-800 text-white px-4 py-2 rounded-lg hover:bg-blue-900 transition-colors">
+              لينكد إن
                 </button>
-                <button className="bg-[#25D366] text-white p-2 rounded-full w-10 h-10 flex items-center justify-center">
-                  <span className="sr-only">WhatsApp</span>
-                  {/* WhatsApp icon would go here */}
+            <button className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">
+              واتساب
                 </button>
               </div>
             </div>
           </div>
         </div>
-      </article>
-    </main>
-  );
+  )
 } 

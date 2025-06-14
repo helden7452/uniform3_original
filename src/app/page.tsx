@@ -14,6 +14,9 @@ interface LocalePageProps {
 }
 
 export default async function HomePage({ params }: LocalePageProps) {
+  // Get locale with fallback to default
+  const locale = params?.locale || 'ar-SA';
+  
   // Define uniform categories
   const categories = [
     {
@@ -45,7 +48,7 @@ export default async function HomePage({ params }: LocalePageProps) {
   return (
     <main>
       {/* Hero Section */}
-      <HeroSection locale={params.locale} dictionary={await getDictionary(params.locale)} />
+      <HeroSection locale={locale} dictionary={await getDictionary(locale)} />
 
       {/* Categories Section */}
       <section id="categories" className="py-16 bg-gray-50">

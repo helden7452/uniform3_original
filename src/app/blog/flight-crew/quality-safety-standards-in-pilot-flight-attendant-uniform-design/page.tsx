@@ -1,14 +1,14 @@
-import React from 'react';
+import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'معايير الجودة والأمان في تصميم يونيفورم الطيارين ومضيفي الطيران | خبراء الزي الموحد',
   description: 'دليل شامل حول معايير الجودة والأمان الضرورية في تصميم وتصنيع زي الطيارين ومضيفي الطيران، لضمان السلامة والراحة والمتانة',
 };
 
-export default function ArticlePage() {
+export default function QualitySafetyStandardsPage() {
   return (
     <main className="max-w-4xl mx-auto px-4 py-8">
       <Breadcrumb 
@@ -23,7 +23,7 @@ export default function ArticlePage() {
       <article className="bg-white rounded-lg shadow-md overflow-hidden mt-6">
         <div className="relative h-[400px] w-full">
           <Image
-            src="/images/aviation_uniforms/safety_quality_uniforms.jpg"
+            src="/images/blog/flight-crew/quality-safety-standards.jpg"
             alt="معايير الجودة والأمان في تصميم يونيفورم الطيارين ومضيفي الطيران"
             fill
             style={{ objectFit: 'cover' }}
@@ -37,289 +37,295 @@ export default function ArticlePage() {
               أزياء الطيران
             </Link>
             <div className="flex items-center text-gray-500 text-sm">
-              <span>{new Date().toLocaleDateString('ar-SA', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+              <span>{new Date().toLocaleDateString('ar-SA-u-ca-gregory', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
               <span className="mx-2">•</span>
-              <span>10 دقائق للقراءة</span>
+              <span>16 دقيقة للقراءة</span>
             </div>
           </div>
           
           <h1 className="text-3xl font-bold text-gray-900 mb-6">معايير الجودة والأمان في تصميم يونيفورم الطيارين ومضيفي الطيران</h1>
           
-          <div className="prose prose-lg max-w-none">
-            <p className="mb-4">
+          <div className="prose prose-lg max-w-none rtl">
+            <p>
               تتجاوز أزياء الطيارين ومضيفي الطيران كونها مجرد تصاميم أنيقة تعكس هوية شركة الطيران؛ فهي في الأساس ملابس وظيفية تخضع لمعايير صارمة من الجودة والأمان. في بيئة الطيران التي تتميز بظروف خاصة وتحديات متنوعة، يجب أن تلبي هذه الأزياء احتياجات عملية ومتطلبات سلامة محددة. في هذا المقال، نستعرض أهم معايير الجودة والأمان التي يجب مراعاتها في تصميم وتصنيع يونيفورم الطيارين ومضيفي الطيران.
             </p>
             
             <h2 className="text-2xl font-bold mt-8 mb-4">المعايير العالمية للسلامة في أزياء الطيران</h2>
-            <p className="mb-4">
-              تخضع أزياء الطيران لمجموعة من المعايير العالمية التي تُنظم جوانب السلامة المختلفة:
+            
+            <p>
+              تخضع أزياء الطيران لمجموعة من المعايير العالمية التي تنظم جوانب السلامة المختلفة:
             </p>
             
-            <h3 className="text-xl font-bold mt-6 mb-3">1. مقاومة الاشتعال والحريق</h3>
-            <p className="mb-4">
+            <h3 className="text-xl font-semibold mt-6 mb-3">1. مقاومة الاشتعال والحريق</h3>
+            <p>
               من أهم معايير السلامة في أزياء الطيران:
             </p>
             <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2">معيار ASTM F1506 الذي يحدد متطلبات مقاومة الأقمشة للاشتعال</li>
-              <li className="mb-2">الالتزام بلوائح هيئة الطيران الفيدرالية (FAA) المتعلقة بمقاومة الحريق</li>
-              <li className="mb-2">تطبيق اختبار معدل الاحتراق العمودي (Vertical Burn Rate Test)</li>
-              <li className="mb-2">استخدام أقمشة ذاتية الإطفاء (Self-extinguishing fabrics) في قطع معينة</li>
-              <li className="mb-2">تجنب الأقمشة التي تذوب عند التعرض للحرارة العالية</li>
+              <li>معيار ASTM F1506 الذي يحدد متطلبات مقاومة الأقمشة للاشتعال</li>
+              <li>الالتزام بلوائح هيئة الطيران الفيدرالية (FAA) المتعلقة بمقاومة الحريق</li>
+              <li>تطبيق اختبار معدل الاحتراق العمودي (Vertical Burn Rate Test)</li>
+              <li>استخدام أقمشة ذاتية الإطفاء (Self-extinguishing fabrics) في قطع معينة</li>
+              <li>تجنب الأقمشة التي تذوب عند التعرض للحرارة العالية</li>
             </ul>
             
-            <h3 className="text-xl font-bold mt-6 mb-3">2. المتانة والمقاومة للتمزق</h3>
-            <p className="mb-4">
+            <h3 className="text-xl font-semibold mt-6 mb-3">2. المتانة والمقاومة للتمزق</h3>
+            <p>
               تتضمن معايير المتانة:
             </p>
             <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2">معيار ISO 13934 لاختبار قوة شد الأقمشة</li>
-              <li className="mb-2">اختبارات مقاومة التمزق وفق معيار ASTM D5587</li>
-              <li className="mb-2">مقاومة التآكل والاحتكاك (Abrasion Resistance) حسب معيار ISO 12947</li>
-              <li className="mb-2">قوة الخياطة والتقاطعات وفق معايير ISO 13935</li>
-              <li className="mb-2">اختبارات تحمل دورات الغسيل المتكررة</li>
+              <li>معيار ISO 13934 لاختبار قوة شد الأقمشة</li>
+              <li>اختبارات مقاومة التمزق وفق معيار ASTM D5587</li>
+              <li>مقاومة التآكل والاحتكاك (Abrasion Resistance) حسب معيار ISO 12947</li>
+              <li>قوة الخياطة والتقاطعات وفق معايير ISO 13935</li>
+              <li>اختبارات تحمل دورات الغسيل المتكررة</li>
             </ul>
             
-            <h3 className="text-xl font-bold mt-6 mb-3">3. الرؤية والتمييز</h3>
-            <p className="mb-4">
+            <h3 className="text-xl font-semibold mt-6 mb-3">3. الرؤية والتمييز</h3>
+            <p>
               تشمل معايير الرؤية:
             </p>
             <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2">استخدام ألوان محددة للتمييز السريع لأفراد الطاقم في حالات الطوارئ</li>
-              <li className="mb-2">الالتزام بمعايير ISO 20471 للألوان عالية الرؤية في بعض أجزاء الزي</li>
-              <li className="mb-2">توافق الألوان مع إرشادات IATA لتسهيل التعرف على أفراد الطاقم</li>
-              <li className="mb-2">تضمين عناصر عاكسة في التصميم للرؤية في ظروف الإضاءة المنخفضة</li>
-              <li className="mb-2">وضوح الشارات والرتب لتمييز الرتب والأدوار المختلفة</li>
+              <li>استخدام ألوان محددة للتمييز السريع لأفراد الطاقم في حالات الطوارئ</li>
+              <li>الالتزام بمعايير ISO 20471 للألوان عالية الرؤية في بعض أجزاء الزي</li>
+              <li>وضوح الشارات والرتب والهويات التعريفية</li>
+              <li>استخدام مواد عاكسة في المناطق المحددة</li>
+              <li>ضمان وضوح الرؤية في ظروف الإضاءة المختلفة</li>
             </ul>
             
-            <h2 className="text-2xl font-bold mt-8 mb-4">معايير الجودة والمواصفات الفنية للأقمشة</h2>
-            <p className="mb-4">
-              تخضع الأقمشة المستخدمة في تصنيع أزياء الطيران لمواصفات فنية صارمة:
+            <div className="bg-red-50 p-6 rounded-lg mb-6 border-r-4 border-red-500">
+              <h3 className="text-red-700 mb-3">تحذير مهم</h3>
+              <p className="mb-0 text-red-600">
+                عدم الالتزام بمعايير السلامة في أزياء الطيران قد يؤدي إلى عواقب وخيمة في حالات الطوارئ. لذلك، يجب على جميع شركات الطيران والمصنعين الالتزام الصارم بهذه المعايير والحصول على الشهادات المطلوبة من الجهات المختصة قبل استخدام أي زي طيران.
+              </p>
+            </div>
+            
+            <h2 className="text-2xl font-bold mt-8 mb-4">معايير الراحة والأداء الوظيفي</h2>
+            
+            <h3 className="text-xl font-semibold mt-6 mb-3">التحكم في درجة الحرارة والرطوبة</h3>
+            <p>
+              تواجه أطقم الطيران تغيرات كبيرة في درجات الحرارة والضغط، مما يتطلب:
             </p>
             
-            <h3 className="text-xl font-bold mt-6 mb-3">1. خصائص الأقمشة الأساسية</h3>
-            <p className="mb-4">
-              تتضمن المواصفات التقنية للأقمشة:
-            </p>
+            <h4 className="text-lg font-semibold mt-4 mb-2">خصائص الأقمشة الحرارية</h4>
             <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2"><strong>تركيب النسيج:</strong> عادة ما يكون بوزن 150-240 جرام/متر مربع للتوازن بين المتانة والراحة</li>
-              <li className="mb-2"><strong>تركيبة الألياف:</strong> مزيج من الألياف الطبيعية والصناعية (مثل 65% بوليستر، 35% قطن)</li>
-              <li className="mb-2"><strong>متانة اللون:</strong> مقاومة للبهتان بمعدل 4-5 على مقياس الثبات اللوني العالمي</li>
-              <li className="mb-2"><strong>كثافة النسيج:</strong> عادة بين 180-300 خيط في البوصة المربعة للمتانة المثلى</li>
-              <li className="mb-2"><strong>مقاومة التجعد:</strong> معالجة خاصة للحفاظ على المظهر الأنيق طوال فترة الرحلة</li>
+              <li><strong>التنفس الطبيعي:</strong> أقمشة تسمح بتدوير الهواء وتقلل تراكم الرطوبة</li>
+              <li><strong>العزل الحراري:</strong> قدرة على الحفاظ على درجة حرارة الجسم في البيئات الباردة</li>
+              <li><strong>التبريد السريع:</strong> تقنيات تساعد على التبريد السريع في البيئات الحارة</li>
+              <li><strong>إدارة الرطوبة:</strong> امتصاص العرق ونقله بعيداً عن الجسم</li>
+              <li><strong>الجفاف السريع:</strong> أقمشة تجف بسرعة بعد التعرض للرطوبة</li>
             </ul>
             
-            <h3 className="text-xl font-bold mt-6 mb-3">2. خصائص الراحة والأداء</h3>
-            <p className="mb-4">
-              تتضمن معايير الراحة:
-            </p>
+            <h4 className="text-lg font-semibold mt-4 mb-2">المرونة والحركة</h4>
             <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2"><strong>نفاذية الهواء:</strong> معدل تدفق هواء 100-400 ملم/ثانية وفق معيار ISO 9237</li>
-              <li className="mb-2"><strong>امتصاص الرطوبة:</strong> قدرة على امتصاص 15-20% من وزنها للأقمشة المخلوطة</li>
-              <li className="mb-2"><strong>مرونة القماش:</strong> قابلية للتمدد بنسبة 10-15% على الأقل في اتجاهين</li>
-              <li className="mb-2"><strong>قدرة التبريد:</strong> معالجات خاصة لتسريع تبخر العرق وتنظيم درجة حرارة الجسم</li>
-              <li className="mb-2"><strong>ثبات الأبعاد:</strong> نسبة انكماش لا تتجاوز 2% بعد الغسيل وفق معيار ISO 5077</li>
+              <li><strong>المرونة الرباعية:</strong> أقمشة تتمدد في جميع الاتجاهات</li>
+              <li><strong>حرية الحركة:</strong> تصاميم تسمح بالحركة الطبيعية دون قيود</li>
+              <li><strong>مقاومة التجعد:</strong> الحفاظ على المظهر المرتب طوال فترات العمل الطويلة</li>
+              <li><strong>الاستعادة السريعة:</strong> عودة القماش لشكله الأصلي بعد التمدد</li>
+              <li><strong>الراحة في الجلوس:</strong> تصاميم مناسبة للجلوس لفترات طويلة</li>
             </ul>
             
-            <h3 className="text-xl font-bold mt-6 mb-3">3. المعالجات والتقنيات الخاصة</h3>
-            <p className="mb-4">
-              تتضمن المعالجات المتقدمة للأقمشة:
+            <h2 className="text-2xl font-bold mt-8 mb-4">التصميم الوظيفي والعملي</h2>
+            
+            <h3 className="text-xl font-semibold mt-6 mb-3">الجيوب والتخزين</h3>
+            <p>
+              يتطلب عمل أطقم الطيران حمل أدوات ومعدات متنوعة، مما يستدعي:
             </p>
+            
+            <h4 className="text-lg font-semibold mt-4 mb-2">تصميم الجيوب المتخصصة</h4>
             <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2"><strong>معالجة مضادة للبكتيريا:</strong> لمنع نمو البكتيريا وتقليل الروائح</li>
-              <li className="mb-2"><strong>معالجة مقاومة البقع:</strong> طبقة حماية تمنع امتصاص السوائل والبقع</li>
-              <li className="mb-2"><strong>معالجة مضادة للاستاتيكية:</strong> لتجنب تراكم الشحنات الكهربائية</li>
-              <li className="mb-2"><strong>تقنية الحماية من الأشعة فوق البنفسجية:</strong> بمعامل حماية UPF 30+ على الأقل</li>
-              <li className="mb-2"><strong>تقنيات النسيج المتقدمة:</strong> مثل نسيج التريسيتا (Tricista) لمزيد من المتانة والراحة</li>
+              <li><strong>جيوب الأدوات:</strong> جيوب مخصصة للأدوات الأساسية مثل المصباح والقلم</li>
+              <li><strong>جيوب الوثائق:</strong> جيوب آمنة للوثائق المهمة والهوية</li>
+              <li><strong>جيوب الاتصالات:</strong> جيوب مناسبة لأجهزة الراديو والهواتف</li>
+              <li><strong>الجيوب المخفية:</strong> جيوب داخلية للأشياء الشخصية القيمة</li>
+              <li><strong>سهولة الوصول:</strong> تصميم يسمح بالوصول السريع للأدوات المطلوبة</li>
             </ul>
             
-            <h2 className="text-2xl font-bold mt-8 mb-4">متطلبات خاصة بزي الطيارين</h2>
-            <p className="mb-4">
-              يخضع زي الطيارين لمتطلبات إضافية نظراً لطبيعة عملهم:
-            </p>
-            
-            <h3 className="text-xl font-bold mt-6 mb-3">1. متطلبات وظيفية</h3>
-            <p className="mb-4">
-              يجب أن يلبي زي الطيارين المتطلبات التالية:
-            </p>
+            <h4 className="text-lg font-semibold mt-4 mb-2">عناصر الأمان في التصميم</h4>
             <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2">توفير راحة مثالية أثناء الجلوس لفترات طويلة في قمرة القيادة</li>
-              <li className="mb-2">جيوب متعددة وعملية لحمل الوثائق واللوازم الضرورية</li>
-              <li className="mb-2">أكمام مصممة بشكل خاص لتسهيل حركة الذراعين أثناء التحكم بالطائرة</li>
-              <li className="mb-2">قماش خفيف الوزن لمنع الإرهاق خلال الرحلات الطويلة</li>
-              <li className="mb-2">تصميم يسمح بتهوية جيدة في بيئة قمرة القيادة المغلقة</li>
+              <li><strong>الأزرار الآمنة:</strong> أزرار لا تنفصل بسهولة أو تشكل خطراً</li>
+              <li><strong>السحابات المقاومة:</strong> سحابات عالية الجودة تتحمل الاستخدام المكثف</li>
+              <li><strong>التقوية في النقاط الحرجة:</strong> تقوية إضافية في المناطق المعرضة للضغط</li>
+              <li><strong>عدم وجود أجزاء معلقة:</strong> تجنب الحبال أو الأجزاء التي قد تعلق</li>
+              <li><strong>الحواف المدورة:</strong> تجنب الحواف الحادة التي قد تسبب إصابات</li>
             </ul>
             
-            <h3 className="text-xl font-bold mt-6 mb-3">2. شارات الرتب والتمييز</h3>
-            <p className="mb-4">
-              تخضع شارات رتب الطيارين لمعايير محددة:
-            </p>
+            <div className="bg-gray-100 p-6 rounded-lg mb-6">
+              <h4 className="font-bold mb-3">مقارنة معايير السلامة حسب نوع الطاقم</h4>
+              <div className="overflow-x-auto">
+                <table className="min-w-full border border-gray-300">
+                  <thead>
+                    <tr className="bg-gray-200">
+                      <th className="border border-gray-300 p-2 text-right">نوع الطاقم</th>
+                      <th className="border border-gray-300 p-2 text-right">مقاومة الحريق</th>
+                      <th className="border border-gray-300 p-2 text-right">المتانة</th>
+                      <th className="border border-gray-300 p-2 text-right">الرؤية</th>
+                      <th className="border border-gray-300 p-2 text-right">الراحة</th>
+                      <th className="border border-gray-300 p-2 text-right">التخزين</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td className="border border-gray-300 p-2">الطيارون</td>
+                      <td className="border border-gray-300 p-2">عالي جداً</td>
+                      <td className="border border-gray-300 p-2">عالي جداً</td>
+                      <td className="border border-gray-300 p-2">متوسط</td>
+                      <td className="border border-gray-300 p-2">عالي</td>
+                      <td className="border border-gray-300 p-2">عالي جداً</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-300 p-2">مضيفو الطيران</td>
+                      <td className="border border-gray-300 p-2">عالي</td>
+                      <td className="border border-gray-300 p-2">عالي</td>
+                      <td className="border border-gray-300 p-2">عالي</td>
+                      <td className="border border-gray-300 p-2">عالي جداً</td>
+                      <td className="border border-gray-300 p-2">متوسط</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-300 p-2">فنيو الصيانة</td>
+                      <td className="border border-gray-300 p-2">عالي جداً</td>
+                      <td className="border border-gray-300 p-2">عالي جداً</td>
+                      <td className="border border-gray-300 p-2">عالي جداً</td>
+                      <td className="border border-gray-300 p-2">متوسط</td>
+                      <td className="border border-gray-300 p-2">عالي جداً</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-300 p-2">طاقم الأرض</td>
+                      <td className="border border-gray-300 p-2">متوسط</td>
+                      <td className="border border-gray-300 p-2">عالي</td>
+                      <td className="border border-gray-300 p-2">عالي جداً</td>
+                      <td className="border border-gray-300 p-2">عالي</td>
+                      <td className="border border-gray-300 p-2">عالي</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            
+            <h2 className="text-2xl font-bold mt-8 mb-4">معايير الجودة في التصنيع</h2>
+            
+            <h3 className="text-xl font-semibold mt-6 mb-3">اختيار المواد والأقمشة</h3>
+            
+            <h4 className="text-lg font-semibold mt-4 mb-2">أنواع الأقمشة المعتمدة</h4>
             <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2">مطابقة للمعايير الدولية للطيران المدني (ICAO) في تمييز الرتب</li>
-              <li className="mb-2">استخدام مواد عالية الجودة للشرائط (عادة خيوط ذهبية أو فضية)</li>
-              <li className="mb-2">وضوح ومتانة الشارات لتحمل الاستخدام اليومي</li>
-              <li className="mb-2">تثبيت آمن على الأكتاف والأكمام يضمن عدم سقوطها أو تلفها</li>
-              <li className="mb-2">قابلية الإزالة في بعض التصاميم لتسهيل غسل وصيانة الزي</li>
+              <li><strong>الصوف المعالج:</strong> صوف طبيعي معالج بمواد مقاومة للحريق</li>
+              <li><strong>البوليستر المقاوم للهب:</strong> ألياف صناعية مطورة خصيصاً للطيران</li>
+              <li><strong>مخاليط القطن المعالج:</strong> قطن مخلوط مع ألياف مقاومة للحريق</li>
+              <li><strong>الألياف الأراميدية:</strong> مثل الكيفلار للحماية الإضافية</li>
+              <li><strong>الأقمشة التقنية المتطورة:</strong> أقمشة ذكية بخصائص متعددة</li>
             </ul>
             
-            <h3 className="text-xl font-bold mt-6 mb-3">3. ملحقات الزي الأساسية</h3>
-            <p className="mb-4">
-              تتضمن ملحقات زي الطيارين مواصفات خاصة:
-            </p>
+            <h4 className="text-lg font-semibold mt-4 mb-2">معايير الخياطة والتجميع</h4>
             <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2"><strong>القبعة (Pilot Cap):</strong> تصنع من مواد متينة مع حافة صلبة مقاومة للانحناء</li>
-              <li className="mb-2"><strong>ربطة العنق:</strong> غالباً ما تكون من مواد مقاومة للاشتعال وسهلة الفك في حالات الطوارئ</li>
-              <li className="mb-2"><strong>حزام:</strong> متين مع إبزيم غير معدني في بعض التصاميم لتجنب الإنذارات في نقاط التفتيش</li>
-              <li className="mb-2"><strong>شارة الاسم:</strong> مصنوعة من مواد متينة ومثبتة بشكل آمن</li>
-              <li className="mb-2"><strong>سترة الطيار:</strong> مصممة بتفاصيل عملية تناسب احتياجات الطيران</li>
+              <li><strong>خيوط مقاومة للحريق:</strong> استخدام خيوط خاصة تتحمل الحرارة العالية</li>
+              <li><strong>تقنيات الخياطة المتقدمة:</strong> خياطة مزدوجة في المناطق الحرجة</li>
+              <li><strong>اللحامات المقواة:</strong> تقوية إضافية في نقاط الضغط</li>
+              <li><strong>الفحص الدقيق:</strong> فحص جودة كل قطعة قبل التسليم</li>
+              <li><strong>اختبارات الجودة:</strong> اختبارات شاملة لكل دفعة إنتاج</li>
             </ul>
             
-            <h2 className="text-2xl font-bold mt-8 mb-4">متطلبات خاصة بزي مضيفي الطيران</h2>
-            <p className="mb-4">
-              يخضع زي مضيفي الطيران لمعايير خاصة نظراً لطبيعة عملهم المختلفة:
+            <h2 className="text-2xl font-bold mt-8 mb-4">الشهادات والاعتمادات المطلوبة</h2>
+            
+            <h3 className="text-xl font-semibold mt-6 mb-3">الشهادات الدولية</h3>
+            <p>
+              يجب الحصول على الشهادات التالية:
             </p>
             
-            <h3 className="text-xl font-bold mt-6 mb-3">1. متطلبات السلامة والوظيفة</h3>
-            <p className="mb-4">
-              يجب أن يلبي زي المضيفين المتطلبات التالية:
-            </p>
+            <h4 className="text-lg font-semibold mt-4 mb-2">شهادات السلامة</h4>
             <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2">تصميم يسمح بحرية الحركة للتعامل مع حالات الطوارئ</li>
-              <li className="mb-2">أقمشة مرنة تسمح بالانحناء والوصول للأماكن الضيقة</li>
-              <li className="mb-2">تجنب العناصر المتدلية التي قد تعلق بالمعدات أثناء الإخلاء</li>
-              <li className="mb-2">أحذية مريحة ذات كعب منخفض مضادة للانزلاق</li>
-              <li className="mb-2">جيوب عملية لحمل المعدات الضرورية مثل قفازات اللاتكس والمصباح اليدوي</li>
+              <li><strong>شهادة FAA:</strong> اعتماد هيئة الطيران الفيدرالية الأمريكية</li>
+              <li><strong>شهادة EASA:</strong> اعتماد وكالة سلامة الطيران الأوروبية</li>
+              <li><strong>شهادة ICAO:</strong> اعتماد منظمة الطيران المدني الدولي</li>
+              <li><strong>شهادات ISO:</strong> معايير الجودة الدولية</li>
+              <li><strong>شهادات OEKO-TEX:</strong> معايير السلامة البيئية والصحية</li>
             </ul>
             
-            <h3 className="text-xl font-bold mt-6 mb-3">2. راحة وعملية لساعات العمل الطويلة</h3>
-            <p className="mb-4">
-              نظراً لطبيعة العمل لساعات طويلة، يجب أن يوفر الزي:
-            </p>
+            <h4 className="text-lg font-semibold mt-4 mb-2">الاعتمادات المحلية</h4>
             <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2">راحة مثالية عند الوقوف والجلوس والحركة المتكررة</li>
-              <li className="mb-2">أقمشة ذات قدرة عالية على التنفس لتجنب ارتفاع درجة حرارة الجسم</li>
-              <li className="mb-2">مرونة في مناطق معينة مثل الخصر والكتف لتسهيل الحركة</li>
-              <li className="mb-2">خفة الوزن لتجنب الإرهاق خلال المناوبات الطويلة</li>
-              <li className="mb-2">تصميم قابل للتعديل للتكيف مع تغيرات درجات الحرارة على متن الطائرة</li>
+              <li><strong>الهيئة العامة للطيران المدني السعودي:</strong> الاعتماد المحلي المطلوب</li>
+              <li><strong>هيئة المواصفات والمقاييس:</strong> اعتماد المواصفات السعودية</li>
+              <li><strong>وزارة النقل:</strong> الموافقات اللازمة للاستخدام التجاري</li>
+              <li><strong>الجهات الرقابية:</strong> موافقات الجهات المختصة بالسلامة</li>
             </ul>
             
-            <h3 className="text-xl font-bold mt-6 mb-3">3. ملحقات وإكسسوارات الزي</h3>
-            <p className="mb-4">
-              تخضع إكسسوارات زي المضيفين لمعايير محددة:
-            </p>
+            <div className="bg-blue-50 p-6 rounded-lg mb-6">
+              <h3 className="text-primary mb-3">دراسة حالة: الخطوط السعودية</h3>
+              <p className="mb-0">
+                طورت الخطوط الجوية العربية السعودية نظاماً متقدماً لأزياء الطيران يجمع بين أحدث معايير السلامة والتصميم الأنيق. يتضمن النظام أقمشة مقاومة للحريق مع تقنيات التحكم في الحرارة، وتصاميم تراعي الثقافة المحلية مع الحفاظ على المعايير الدولية. كما يشمل نظام جيوب متطور وعناصر أمان متقدمة. هذا النهج المتكامل أدى إلى تحسن كبير في رضا الطاقم وكفاءة العمل، مع الحفاظ على أعلى معايير السلامة.
+              </p>
+            </div>
+            
+            <h2 className="text-2xl font-bold mt-8 mb-4">الصيانة والعناية</h2>
+            
+            <h3 className="text-xl font-semibold mt-6 mb-3">بروتوكولات الغسيل والتنظيف</h3>
+            
+            <h4 className="text-lg font-semibold mt-4 mb-2">إجراءات الغسيل الخاصة</h4>
             <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2"><strong>الوشاح/ربطة العنق:</strong> سهلة الفك في الحالات الطارئة مع تثبيت آمن</li>
-              <li className="mb-2"><strong>الحقيبة الصغيرة:</strong> متعددة الاستخدامات وآمنة الإغلاق</li>
-              <li className="mb-2"><strong>الإكسسوارات:</strong> محدودة وخفيفة الوزن ولا تتسبب في إعاقة الحركة</li>
-              <li className="mb-2"><strong>مشدات الملابس:</strong> غير ضاغطة وتسمح بالدورة الدموية الطبيعية</li>
-              <li className="mb-2"><strong>الأحزمة:</strong> مريحة مع آلية إغلاق سريعة وآمنة</li>
+              <li><strong>درجات حرارة محددة:</strong> غسيل في درجات حرارة تحافظ على خصائص الأقمشة</li>
+              <li><strong>مواد تنظيف خاصة:</strong> استخدام منظفات لا تؤثر على مقاومة الحريق</li>
+              <li><strong>دورات غسيل مخصصة:</strong> برامج غسيل مصممة خصيصاً لأزياء الطيران</li>
+              <li><strong>التجفيف الآمن:</strong> طرق تجفيف تحافظ على شكل وخصائص الزي</li>
+              <li><strong>الكي المتخصص:</strong> تقنيات كي تحافظ على المظهر المهني</li>
             </ul>
             
-            <h2 className="text-2xl font-bold mt-8 mb-4">اختبارات الجودة والاعتماد</h2>
-            <p className="mb-4">
-              تخضع أزياء الطيران لسلسلة من الاختبارات الصارمة قبل اعتمادها:
-            </p>
-            
-            <h3 className="text-xl font-bold mt-6 mb-3">1. اختبارات المواد</h3>
-            <p className="mb-4">
-              تشمل الاختبارات الأساسية للمواد:
-            </p>
+            <h4 className="text-lg font-semibold mt-4 mb-2">جدولة الاستبدال</h4>
             <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2">اختبار مقاومة الحريق وفق معايير هيئة الطيران الفيدرالية</li>
-              <li className="mb-2">اختبار المتانة والتحمل (دورات الاحتكاك)</li>
-              <li className="mb-2">اختبار الثبات اللوني بعد تعرضها للضوء والغسيل المتكرر</li>
-              <li className="mb-2">اختبار نفاذية الهواء والتنفس</li>
-              <li className="mb-2">اختبار المرونة والاستعادة (الرجوع للشكل الأصلي بعد التمدد)</li>
+              <li><strong>مراقبة التآكل:</strong> فحص دوري لحالة الأزياء وجودتها</li>
+              <li><strong>اختبارات دورية:</strong> فحص خصائص مقاومة الحريق بانتظام</li>
+              <li><strong>سجلات الاستخدام:</strong> تتبع عدد مرات الاستخدام والغسيل</li>
+              <li><strong>معايير الاستبدال:</strong> معايير واضحة لتحديد موعد الاستبدال</li>
+              <li><strong>التخطيط المسبق:</strong> وضع خطط استبدال مسبقة لتجنب النقص</li>
             </ul>
             
-            <h3 className="text-xl font-bold mt-6 mb-3">2. اختبارات الأداء الوظيفي</h3>
-            <p className="mb-4">
-              تتضمن اختبارات الأداء الوظيفي:
+            <h2 className="text-2xl font-bold mt-8 mb-4">التطورات المستقبلية</h2>
+            
+            <h3 className="text-xl font-semibold mt-6 mb-3">التقنيات الناشئة</h3>
+            <p>
+              تشهد صناعة أزياء الطيران تطورات تقنية مثيرة:
             </p>
+            
+            <h4 className="text-lg font-semibold mt-4 mb-2">الأقمشة الذكية</h4>
             <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2">اختبارات تحركات الطوارئ مع ارتداء الزي الكامل</li>
-              <li className="mb-2">محاكاة ظروف العمل لقياس الراحة والأداء على مدار ساعات طويلة</li>
-              <li className="mb-2">اختبار الملائمة لمختلف أنواع الأجسام وحرية الحركة</li>
-              <li className="mb-2">اختبار التوافق مع معدات الطوارئ الأخرى</li>
-              <li className="mb-2">تقييم سهولة العناية والصيانة</li>
+              <li><strong>مراقبة العلامات الحيوية:</strong> أقمشة تراقب نبضات القلب ودرجة الحرارة</li>
+              <li><strong>التحكم التلقائي في الحرارة:</strong> مواد تتكيف تلقائياً مع درجة الحرارة</li>
+              <li><strong>مؤشرات الضغط:</strong> أقمشة تتفاعل مع تغيرات الضغط الجوي</li>
+              <li><strong>الاتصال اللاسلكي:</strong> دمج تقنيات الاتصال في الأقمشة</li>
+              <li><strong>الطاقة المتجددة:</strong> أقمشة تولد الطاقة من الحركة أو الضوء</li>
             </ul>
             
-            <h3 className="text-xl font-bold mt-6 mb-3">3. الاعتماد والمطابقة</h3>
-            <p className="mb-4">
-              تتضمن عملية الاعتماد النهائي:
-            </p>
+            <h4 className="text-lg font-semibold mt-4 mb-2">تقنيات الحماية المتقدمة</h4>
             <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2">الحصول على شهادة مطابقة من مختبرات معتمدة دولياً</li>
-              <li className="mb-2">التحقق من الامتثال للوائح الهيئة العامة للطيران المدني في المملكة</li>
-              <li className="mb-2">الالتزام بمعايير الاتحاد الدولي للنقل الجوي (IATA)</li>
-              <li className="mb-2">الحصول على موافقة الجهات التنظيمية للصحة والسلامة المهنية</li>
-              <li className="mb-2">توثيق التجارب الميدانية ونتائج الاختبارات</li>
+              <li><strong>النانو تكنولوجي:</strong> جسيمات نانوية للحماية من المخاطر المختلفة</li>
+              <li><strong>المواد المتكيفة:</strong> مواد تتغير خصائصها حسب البيئة</li>
+              <li><strong>الحماية الإشعاعية:</strong> حماية من الإشعاع الكوني في الارتفاعات العالية</li>
+              <li><strong>مقاومة الكيماويات:</strong> حماية متقدمة من المواد الكيميائية</li>
+              <li><strong>الحماية البيولوجية:</strong> مقاومة الفيروسات والبكتيريا</li>
             </ul>
             
-            <h2 className="text-2xl font-bold mt-8 mb-4">تحديات خاصة في المنطقة العربية</h2>
-            <p className="mb-4">
-              تواجه تصاميم أزياء الطيران في المملكة العربية السعودية والمنطقة العربية تحديات خاصة:
-            </p>
-            
-            <h3 className="text-xl font-bold mt-6 mb-3">1. الموازنة بين الاحتشام والعملية</h3>
-            <p className="mb-4">
-              يتطلب الأمر:
-            </p>
-            <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2">تطوير تصاميم تراعي متطلبات الاحتشام المناسبة ثقافياً</li>
-              <li className="mb-2">ضمان أن تصاميم الحجاب لا تعيق استخدام معدات الأوكسجين في حالات الطوارئ</li>
-              <li className="mb-2">تصميم أزياء فضفاضة بشكل كافٍ مع الحفاظ على الأناقة</li>
-              <li className="mb-2">استخدام طبقات مناسبة من الملابس دون التسبب في ارتفاع درجة حرارة الجسم</li>
-              <li className="mb-2">ابتكار حلول أنيقة للعباءات والأغطية الإضافية للمضيفات</li>
+            <div className="bg-primary-50 p-6 rounded-lg mb-6 border-r-4 border-primary">
+              <h3 className="text-primary mb-3">نصائح للاختيار الأمثل</h3>
+              <ul className="mb-0">
+                <li className="mb-2">✓ التأكد من حصول المورد على جميع الشهادات المطلوبة</li>
+                <li className="mb-2">✓ إجراء اختبارات شاملة للعينات قبل الشراء الكامل</li>
+                <li className="mb-2">✓ مراعاة احتياجات كل نوع من أنواع الطاقم</li>
+                <li className="mb-2">✓ وضع برنامج صيانة وعناية شامل</li>
+                <li className="mb-2">✓ التدريب المستمر للطاقم على الاستخدام الصحيح</li>
+                <li className="mb-2">✓ المراجعة الدورية للمعايير والتحديثات</li>
+                <li className="mb-2">✓ الاستثمار في التقنيات الحديثة للحماية والراحة</li>
+                <li className="mb-0">✓ التعاون مع خبراء متخصصين في أزياء الطيران</li>
             </ul>
-            
-            <h3 className="text-xl font-bold mt-6 mb-3">2. التكيف مع المناخ الحار</h3>
-            <p className="mb-4">
-              يتطلب المناخ الصحراوي الحار:
-            </p>
-            <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2">اختيار أقمشة خاصة تناسب درجات الحرارة العالية</li>
-              <li className="mb-2">توفير مواد ذات خصائص تبريد متقدمة</li>
-              <li className="mb-2">معالجات خاصة لمقاومة العرق والحفاظ على المظهر الأنيق</li>
-              <li className="mb-2">تصميم طبقات يمكن إزالتها للتكيف مع الانتقال بين البيئات الحارة والمكيفة</li>
-              <li className="mb-2">استخدام ألوان تعكس أشعة الشمس وتقلل من امتصاص الحرارة</li>
-            </ul>
-            
-            <h3 className="text-xl font-bold mt-6 mb-3">3. دمج العناصر التراثية مع معايير السلامة</h3>
-            <p className="mb-4">
-              يتطلب دمج التراث المحلي:
-            </p>
-            <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2">تطويع العناصر التراثية لتتوافق مع متطلبات السلامة العالمية</li>
-              <li className="mb-2">استخدام الزخارف التقليدية بطريقة لا تتعارض مع الوظيفة</li>
-              <li className="mb-2">تحديث القطع التقليدية بخامات حديثة تلبي معايير الجودة</li>
-              <li className="mb-2">الموازنة بين التميز الثقافي والتوافق مع المعايير الدولية</li>
-              <li className="mb-2">إيجاد حلول إبداعية للقطع التراثية كالغتر والبشت بما يتناسب مع بيئة العمل</li>
-            </ul>
-            
-            <h2 className="text-2xl font-bold mt-8 mb-4">توصيات لمصنعي وموردي أزياء الطيران</h2>
-            <p className="mb-4">
-              بناءً على المعايير السابقة، نقدم التوصيات التالية:
-            </p>
-            <ol className="list-decimal pr-6 mb-4">
-              <li className="mb-2"><strong>التعاون مع الخبراء:</strong> العمل مع خبراء السلامة والجودة في قطاع الطيران</li>
-              <li className="mb-2"><strong>التحديث المستمر:</strong> مواكبة أحدث التقنيات والمواد المتطورة في صناعة النسيج</li>
-              <li className="mb-2"><strong>الاستثمار في الاختبارات:</strong> إجراء اختبارات شاملة ودقيقة قبل طرح المنتجات</li>
-              <li className="mb-2"><strong>التوثيق الدقيق:</strong> الاحتفاظ بسجلات تفصيلية للمواد والاختبارات والشهادات</li>
-              <li className="mb-2"><strong>تدريب العملاء:</strong> توفير إرشادات واضحة حول العناية والصيانة المناسبة</li>
-              <li className="mb-2"><strong>الاستجابة للتغذية الراجعة:</strong> الاستماع لملاحظات أطقم الطيران وتحسين التصاميم بناءً عليها</li>
-              <li className="mb-2"><strong>المرونة في التصميم:</strong> توفير خيارات متنوعة تناسب مختلف الاحتياجات والمقاسات</li>
-              <li className="mb-2"><strong>الاستدامة:</strong> دمج معايير الاستدامة البيئية دون التضحية بمعايير السلامة</li>
-            </ol>
+            </div>
             
             <h2 className="text-2xl font-bold mt-8 mb-4">خاتمة</h2>
-            <p className="mb-4">
-              تمثل معايير الجودة والأمان في تصميم يونيفورم الطيارين ومضيفي الطيران نقطة التقاء بين الفن والعلم، حيث تجتمع متطلبات الأناقة والهوية المؤسسية مع الاشتراطات الفنية الصارمة. إن الالتزام بهذه المعايير ليس مجرد امتثال للوائح، بل هو استثمار في سلامة الطاقم والركاب، وتعزيز لقدرة الطاقم على أداء مهامهم بفعالية وراحة.
+            <p>
+              معايير الجودة والأمان في تصميم يونيفورم الطيارين ومضيفي الطيران ليست مجرد متطلبات تنظيمية، بل ضرورة حيوية لضمان سلامة الطاقم والركاب على حد سواء. الاستثمار في أزياء طيران عالية الجودة ومطابقة للمعايير الدولية هو استثمار في السلامة والكفاءة والصورة المهنية.
             </p>
-            <p className="mb-4">
-              في خبراء الزي الموحد، نقدم استشارات متخصصة لشركات الطيران في المملكة العربية السعودية ودول الخليج، مع التركيز على تطوير يونيفورم يلبي أعلى معايير الجودة والسلامة العالمية، مع مراعاة المتطلبات الثقافية والمناخية المحلية. نساعد عملاءنا في تحقيق التوازن المثالي بين المتطلبات الوظيفية والجمالية، لإنتاج أزياء طيران تلبي احتياجات الطاقم وتعزز هوية الشركة وتضمن أعلى معايير السلامة.
+            <p>
+              مع التطور المستمر في تقنيات الأقمشة والتصميم، تتزايد الخيارات المتاحة لشركات الطيران لتحسين أداء أطقمها وضمان سلامتهم. المفتاح هو التوازن بين الالتزام بأعلى معايير السلامة وتوفير الراحة والأناقة المطلوبة.
+            </p>
+            <p>
+              في خبراء الزي الموحد، نقدم حلولاً متكاملة لأزياء الطيران تلتزم بأعلى المعايير الدولية، مع التركيز على الجودة والسلامة والراحة، لدعم صناعة الطيران السعودية في تحقيق أهدافها الطموحة ضمن رؤية المملكة 2030.
             </p>
           </div>
-            {/* Tags section removed */}
           
           {/* Share Section */}
           <div className="mt-8 flex justify-center">

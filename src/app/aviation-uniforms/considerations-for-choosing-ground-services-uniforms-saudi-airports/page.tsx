@@ -115,18 +115,25 @@ const content = `
 `;
 
 export default function GroundServicesUniformsPage() {
+  const author = {
+    id: 'uniform-experts-team',
+    name: 'فريق خبراء الزي الموحد',
+    title: 'فريق المحتوى المتخصص',
+    image: '/images/author/uniform-experts-team.jpg'
+  };
+
   return (
     <BlogPost
-      title="اعتبارات اختيار زي خدمات المطارات السعودية"
+      title="اعتبارات اختيار زي خدمات المطارات السعودية: دليل متخصص"
+      excerpt="دليل شامل لاختيار زي العاملين في خدمات المطارات السعودية مع مراعاة المتطلبات المحلية والمعايير الدولية والظروف البيئية الخاصة"
       content={content}
-      category="Aviation Uniforms"
-      categoryArabic="زي قطاع الطيران"
-      categorySlug="aviation-uniforms"
-      image="/images/aviation_uniforms/ground_services_uniforms.jpg"
-      date="2024-01-20"
-      author="فريق خبراء الزي الموحد"
-      authorImage="/images/authors/uniform-experts-team.jpg"
-      relatedPosts={relatedPosts}
+      category="aviation-uniforms"
+      slug="considerations-for-choosing-ground-services-uniforms-saudi-airports"
+      author={author}
+      publishDate="2024-01-20"
+      coverImage="/images/aviation_uniforms/ground_services_uniforms.jpg"
+      readingTime="14 دقيقة"
+      tags={['زي المطارات السعودية', 'خدمات المطارات', 'الزي الموحد للطيران', 'معايير السلامة']}
     />
   );
 }

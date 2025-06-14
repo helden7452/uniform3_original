@@ -4,8 +4,8 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'دليل اختيار المواد والأقمشة المناسبة لأزياء الطيران',
-  description: 'دليل شامل لاختيار أفضل الأقمشة والمواد لتصنيع أزياء الطيران، مع مراعاة متطلبات السلامة، الراحة، المتانة، والمناخ في المملكة العربية السعودية',
+  title: 'دليل اختيار المواد والأقمشة لأزياء الطيران: معايير الجودة والأداء | خبراء الزي الموحد',
+  description: 'دليل شامل لاختيار أفضل الأقمشة والمواد لتصنيع أزياء الطيران، مع مراعاة متطلبات السلامة والراحة والمتانة والمناخ في المملكة العربية السعودية',
 };
 
 export default function MaterialsFabricSelectionGuidePage() {
@@ -15,15 +15,15 @@ export default function MaterialsFabricSelectionGuidePage() {
         items={[
           { label: 'الرئيسية', href: '/' },
           { label: 'زي قطاع الطيران', href: '/aviation-uniforms' },
-          { label: 'دليل اختيار المواد والأقمشة المناسبة لأزياء الطيران', href: '/aviation-uniforms/materials-fabric-selection-guide-aviation-uniforms', isCurrent: true }
+          { label: 'دليل اختيار المواد والأقمشة', href: '/aviation-uniforms/materials-fabric-selection-guide-aviation-uniforms', isCurrent: true }
         ]} 
       />
       
       <article className="bg-white rounded-lg shadow-md overflow-hidden mt-6">
         <div className="relative h-[400px] w-full">
           <Image
-            src="/images/aviation_uniforms.jpg"
-            alt="دليل اختيار المواد والأقمشة المناسبة لأزياء الطيران"
+            src="/images/aviation-uniforms/materials-fabric-guide.jpg"
+            alt="دليل اختيار المواد والأقمشة لأزياء الطيران"
             fill
             style={{ objectFit: 'cover' }}
             priority
@@ -36,324 +36,351 @@ export default function MaterialsFabricSelectionGuidePage() {
               زي قطاع الطيران
             </Link>
             <div className="flex items-center text-gray-500 text-sm">
-              <span>{new Date().toLocaleDateString('ar-SA', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+              <span>{new Date().toLocaleDateString('ar-SA-u-ca-gregory', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
               <span className="mx-2">•</span>
-              <span>8 دقائق للقراءة</span>
+              <span>16 دقيقة للقراءة</span>
             </div>
           </div>
           
-          <h1 className="text-3xl font-bold text-gray-900 mb-6">دليل اختيار المواد والأقمشة المناسبة لأزياء الطيران</h1>
+          <h1 className="text-3xl font-bold text-gray-900 mb-6">دليل اختيار المواد والأقمشة لأزياء الطيران: معايير الجودة والأداء</h1>
           
           <div className="prose prose-lg max-w-none rtl">
             <p>
-              يعتبر اختيار الأقمشة والمواد المناسبة لتصنيع أزياء الطيران من العوامل الحاسمة التي تؤثر على جودة الزي، مستوى الراحة، المتانة، وأهم من ذلك سلامة الطاقم. في المملكة العربية السعودية، حيث يشهد قطاع الطيران نمواً متسارعاً، يأتي هذا الدليل الشامل ليقدم نظرة متعمقة حول أفضل الممارسات في اختيار المواد والأقمشة لأزياء الطيران، مع مراعاة خصوصية المناخ المحلي والمتطلبات التنظيمية في المملكة.
+              يُعتبر اختيار المواد والأقمشة المناسبة لأزياء الطيران من أهم العوامل التي تحدد جودة المنتج النهائي وأداءه في بيئة العمل المتطلبة. هذا الاختيار لا يؤثر فقط على مظهر الزي وراحة مرتديه، بل يلعب دوراً حاسماً في السلامة والحماية والكفاءة التشغيلية. في هذا الدليل الشامل، نستعرض أهم المعايير والاعتبارات التي يجب مراعاتها عند اختيار الأقمشة والمواد لأزياء الطيران، مع التركيز على المتطلبات الخاصة بالمناخ السعودي والمعايير الدولية.
             </p>
             
-            <h2>المعايير الأساسية لاختيار أقمشة أزياء الطيران</h2>
+            <h2 className="text-2xl font-bold mt-8 mb-4">المعايير الأساسية لاختيار أقمشة الطيران</h2>
             
-            <h3>1. معايير السلامة الأولية</h3>
+            <h3 className="text-xl font-semibold mt-6 mb-3">1. معايير السلامة والحماية</h3>
             <p>
-              السلامة هي الاعتبار الأول عند اختيار أقمشة أزياء الطيران:
+              السلامة هي الأولوية القصوى في اختيار أقمشة أزياء الطيران:
             </p>
-            <ul>
-              <li><strong>مقاومة الحريق:</strong> يجب أن تكون الأقمشة مقاومة للهب ومطابقة لمعايير FAR 25.853 العالمية</li>
-              <li><strong>مقاومة الانصهار:</strong> قدرة القماش على عدم الانصهار والالتصاق بالجلد عند التعرض للحرارة العالية</li>
-              <li><strong>إطفاء ذاتي:</strong> خاصية الانطفاء الذاتي بعد إزالة مصدر الاشتعال</li>
-              <li><strong>انخفاض انبعاث الدخان:</strong> إنتاج الحد الأدنى من الدخان عند التعرض للحرارة</li>
-              <li><strong>خلو من المواد السامة:</strong> عدم إطلاق أبخرة أو غازات سامة عند التعرض للحرارة</li>
+            
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>مقاومة الحريق:</strong> يجب أن تكون الأقمشة مقاومة للاشتعال وفقاً لمعيار FAR 25.853</li>
+              <li><strong>الانطفاء الذاتي:</strong> قدرة القماش على إطفاء نفسه خلال 15 ثانية من إزالة مصدر اللهب</li>
+              <li><strong>عدم السمية:</strong> عدم إطلاق غازات سامة عند التعرض للحرارة العالية</li>
+              <li><strong>مقاومة الانصهار:</strong> عدم الالتصاق بالجلد عند التعرض للحرارة</li>
+              <li><strong>كثافة دخان منخفضة:</strong> إنتاج الحد الأدنى من الدخان عند الاحتراق</li>
+            </ul>
+            
+            <h3 className="text-xl font-semibold mt-6 mb-3">2. الراحة والأداء الوظيفي</h3>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>التهوية:</strong> نفاذية الهواء لضمان الراحة أثناء العمل</li>
+              <li><strong>إدارة الرطوبة:</strong> قدرة على امتصاص وتبخير العرق بسرعة</li>
+              <li><strong>المرونة:</strong> حرية الحركة دون قيود أو تمزق</li>
+              <li><strong>خفة الوزن:</strong> تقليل الإجهاد على الطاقم أثناء العمل الطويل</li>
+              <li><strong>مقاومة التجعد:</strong> الحفاظ على المظهر الأنيق طوال اليوم</li>
+            </ul>
+            
+            <h3 className="text-xl font-semibold mt-6 mb-3">3. المتانة وطول العمر</h3>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>مقاومة التآكل:</strong> تحمل الاستخدام المكثف والاحتكاك</li>
+              <li><strong>ثبات الألوان:</strong> مقاومة البهتان والتغير اللوني</li>
+              <li><strong>مقاومة التمزق:</strong> قوة شد عالية تمنع التمزق</li>
+              <li><strong>استقرار الأبعاد:</strong> عدم الانكماش أو التمدد بعد الغسيل</li>
+              <li><strong>مقاومة الكيماويات:</strong> تحمل المواد المنظفة والمطهرة</li>
             </ul>
             
             <div className="bg-blue-50 p-6 rounded-lg mb-6">
-              <h3 className="text-primary mb-3">معايير اختبار مقاومة الحريق</h3>
+              <h3 className="text-primary mb-3">اختبارات الجودة الأساسية</h3>
               <p className="mb-0">
-                وفقاً للمعايير العالمية، يتم إخضاع أقمشة زي الطيران لاختبار الاحتراق العمودي (Vertical Flammability Test) حيث يتم تطبيق لهب بارتفاع 1.5 بوصة على حافة القماش السفلية لمدة 12 ثانية، ويجب ألا يتجاوز معدل الاحتراق 2.5 سم/دقيقة، وأن يطفئ القماش نفسه في غضون 15 ثانية بعد إزالة مصدر اللهب. وتشترط الهيئة العامة للطيران المدني السعودية (GACA) إجراء هذا الاختبار في مختبرات معتمدة دولياً، وتقديم شهادات مقاومة الحريق مع كل شحنة من أقمشة أزياء الطيران المستوردة أو المصنعة محلياً.
+                تخضع جميع الأقمشة المستخدمة في أزياء الطيران لسلسلة من الاختبارات الصارمة تشمل: اختبار الاحتراق العمودي (FAR 25.853)، اختبار قوة الشد (ISO 13934-1)، اختبار ثبات الألوان (ISO 105-C06)، واختبار مقاومة التآكل (ISO 12947-2). هذه الاختبارات تضمن أن الأقمشة تلبي أعلى معايير الجودة والسلامة المطلوبة في صناعة الطيران.
               </p>
             </div>
             
-            <h3>2. الراحة والأداء الوظيفي</h3>
-            <p>
-              الراحة ضرورية لضمان أداء الطاقم لعمله بفعالية:
-            </p>
-            <ul>
-              <li><strong>قابلية التنفس:</strong> السماح بمرور الهواء والرطوبة لتجنب الشعور بالحرارة المفرطة</li>
-              <li><strong>امتصاص العرق:</strong> قدرة على امتصاص الرطوبة ونقلها بعيداً عن الجسم</li>
-              <li><strong>مرونة وقابلية للتمدد:</strong> توفير حرية الحركة الضرورية لأداء المهام المختلفة</li>
-              <li><strong>خفة الوزن:</strong> أقمشة خفيفة لا تسبب إرهاقاً خلال ساعات العمل الطويلة</li>
-              <li><strong>ملمس ناعم:</strong> نعومة على الجلد لتجنب الاحتكاك والتهيج خلال فترات العمل الطويلة</li>
+            <h2 className="text-2xl font-bold mt-8 mb-4">أنواع الأقمشة المستخدمة في أزياء الطيران</h2>
+            
+            <h3 className="text-xl font-semibold mt-6 mb-3">الأقمشة الطبيعية المعالجة</h3>
+            
+            <h4 className="text-lg font-semibold mt-4 mb-2">القطن المعالج</h4>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>المزايا:</strong> راحة طبيعية، تهوية جيدة، سهولة العناية</li>
+              <li><strong>المعالجات:</strong> مقاومة الحريق، مقاومة التجعد، مقاومة البقع</li>
+              <li><strong>الاستخدامات:</strong> القمصان الداخلية، الجوارب، بعض قطع الزي الصيفي</li>
+              <li><strong>النسب المثلى:</strong> 60-80% قطن مع ألياف صناعية للتقوية</li>
             </ul>
             
-            <h3>3. المتانة وسهولة العناية</h3>
-            <p>
-              نظراً للاستخدام المكثف، يجب أن تتميز الأقمشة بالمتانة:
-            </p>
-            <ul>
-              <li><strong>مقاومة التآكل:</strong> قدرة على تحمل الاحتكاك المستمر دون تدهور</li>
-              <li><strong>مقاومة التجعد:</strong> الحفاظ على المظهر الأنيق حتى بعد ساعات طويلة من الارتداء</li>
-              <li><strong>ثبات الألوان:</strong> مقاومة البهتان حتى بعد الغسيل المتكرر</li>
-              <li><strong>سهولة التنظيف:</strong> إمكانية غسلها وتنظيفها بسهولة لإزالة البقع</li>
-              <li><strong>سرعة الجفاف:</strong> قدرة على الجفاف السريع بعد الغسيل</li>
+            <h4 className="text-lg font-semibold mt-4 mb-2">الصوف المعالج</h4>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>المزايا:</strong> عزل حراري ممتاز، مقاومة طبيعية للحريق، أناقة</li>
+              <li><strong>المعالجات:</strong> مقاومة الانكماش، مقاومة العث، سهولة العناية</li>
+              <li><strong>الاستخدامات:</strong> البدلات الرسمية، المعاطف، الزي الشتوي</li>
+              <li><strong>النسب المثلى:</strong> 70-90% صوف مع ألياف مرنة</li>
+            </ul>
+            
+            <h3 className="text-xl font-semibold mt-6 mb-3">الأقمشة الصناعية المتطورة</h3>
+            
+            <h4 className="text-lg font-semibold mt-4 mb-2">البوليستر عالي الأداء</h4>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>المزايا:</strong> مقاومة التجعد، سرعة الجفاف، ثبات الألوان</li>
+              <li><strong>التقنيات:</strong> ألياف مجوفة للتهوية، معالجة مضادة للبكتيريا</li>
+              <li><strong>الاستخدامات:</strong> القمصان، البناطيل، الجاكيتات الخفيفة</li>
+              <li><strong>المواصفات:</strong> وزن 150-250 جم/م²، نفاذية هواء عالية</li>
+            </ul>
+            
+            <h4 className="text-lg font-semibold mt-4 mb-2">النايلون المقوى</h4>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>المزايا:</strong> قوة شد عالية، مقاومة التآكل، مرونة ممتازة</li>
+              <li><strong>التطبيقات:</strong> المناطق عالية الإجهاد، الجيوب، التعزيزات</li>
+              <li><strong>المعالجات:</strong> طلاء مقاوم للماء، معالجة مضادة للكهرباء الساكنة</li>
+              <li><strong>النسب:</strong> 10-30% في المخاليط لتحسين المتانة</li>
+            </ul>
+            
+            <h3 className="text-xl font-semibold mt-6 mb-3">الأقمشة التقنية المتخصصة</h3>
+            
+            <h4 className="text-lg font-semibold mt-4 mb-2">أقمشة Nomex®</h4>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>الخصائص:</strong> مقاومة حريق فائقة، خفة الوزن، متانة عالية</li>
+              <li><strong>الاستخدامات:</strong> أزياء الطيارين، معدات السلامة، البطانات الواقية</li>
+              <li><strong>المعايير:</strong> يلبي ويتجاوز معايير FAR 25.853</li>
+              <li><strong>التكلفة:</strong> أعلى تكلفة لكن أداء متفوق</li>
+            </ul>
+            
+            <h4 className="text-lg font-semibold mt-4 mb-2">أقمشة Kevlar® المدمجة</h4>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>الخصائص:</strong> مقاومة قطع استثنائية، خفة وزن، مرونة</li>
+              <li><strong>الاستخدامات:</strong> مناطق التعرض للخطر، الجيوب الأمنية</li>
+              <li><strong>التطبيق:</strong> نسب صغيرة في المخاليط للحماية الإضافية</li>
+              <li><strong>الاعتبارات:</strong> تتطلب معالجة خاصة في التصنيع</li>
             </ul>
             
             <div className="bg-gray-100 p-6 rounded-lg mb-6">
-              <h4 className="font-bold mb-3">مقارنة بين أنواع الأقمشة الشائعة في صناعة أزياء الطيران</h4>
+              <h4 className="font-bold mb-3">مقارنة أنواع الأقمشة</h4>
+              <div className="overflow-x-auto">
               <table className="min-w-full border border-gray-300">
                 <thead>
                   <tr className="bg-gray-200">
-                    <th className="border border-gray-300 p-2 text-right">نوع القماش</th>
-                    <th className="border border-gray-300 p-2 text-right">مقاومة الحريق</th>
-                    <th className="border border-gray-300 p-2 text-right">الراحة</th>
-                    <th className="border border-gray-300 p-2 text-right">المتانة</th>
-                    <th className="border border-gray-300 p-2 text-right">ملاءمة للمناخ السعودي</th>
+                      <th className="border border-gray-300 p-2 text-right">نوع القماش</th>
+                      <th className="border border-gray-300 p-2 text-right">مقاومة الحريق</th>
+                      <th className="border border-gray-300 p-2 text-right">الراحة</th>
+                      <th className="border border-gray-300 p-2 text-right">المتانة</th>
+                      <th className="border border-gray-300 p-2 text-right">التكلفة</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td className="border border-gray-300 p-2">Nomex®</td>
-                    <td className="border border-gray-300 p-2">ممتازة</td>
-                    <td className="border border-gray-300 p-2">متوسطة</td>
-                    <td className="border border-gray-300 p-2">عالية جداً</td>
-                    <td className="border border-gray-300 p-2">متوسطة (ثقيلة في الصيف)</td>
+                      <td className="border border-gray-300 p-2">قطن معالج</td>
+                      <td className="border border-gray-300 p-2">جيدة</td>
+                      <td className="border border-gray-300 p-2">ممتازة</td>
+                      <td className="border border-gray-300 p-2">متوسطة</td>
+                      <td className="border border-gray-300 p-2">منخفضة</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 p-2">القطن المعالج</td>
-                    <td className="border border-gray-300 p-2">جيدة</td>
-                    <td className="border border-gray-300 p-2">ممتازة</td>
-                    <td className="border border-gray-300 p-2">متوسطة</td>
-                    <td className="border border-gray-300 p-2">جيدة جداً</td>
+                      <td className="border border-gray-300 p-2">صوف معالج</td>
+                      <td className="border border-gray-300 p-2">ممتازة</td>
+                      <td className="border border-gray-300 p-2">جيدة</td>
+                      <td className="border border-gray-300 p-2">عالية</td>
+                      <td className="border border-gray-300 p-2">متوسطة</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 p-2">الميكروفايبر</td>
-                    <td className="border border-gray-300 p-2">متوسطة (تتطلب معالجة)</td>
-                    <td className="border border-gray-300 p-2">ممتازة</td>
-                    <td className="border border-gray-300 p-2">جيدة</td>
-                    <td className="border border-gray-300 p-2">ممتازة</td>
+                      <td className="border border-gray-300 p-2">بوليستر تقني</td>
+                      <td className="border border-gray-300 p-2">جيدة</td>
+                      <td className="border border-gray-300 p-2">جيدة</td>
+                      <td className="border border-gray-300 p-2">عالية</td>
+                      <td className="border border-gray-300 p-2">متوسطة</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 p-2">بوليستر/قطن</td>
-                    <td className="border border-gray-300 p-2">متوسطة</td>
-                    <td className="border border-gray-300 p-2">جيدة</td>
-                    <td className="border border-gray-300 p-2">جيدة جداً</td>
-                    <td className="border border-gray-300 p-2">جيدة</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 p-2">أقمشة تقنية حديثة (TenCate)</td>
-                    <td className="border border-gray-300 p-2">ممتازة</td>
-                    <td className="border border-gray-300 p-2">ممتازة</td>
-                    <td className="border border-gray-300 p-2">ممتازة</td>
-                    <td className="border border-gray-300 p-2">ممتازة</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 p-2">الصوف المخلوط</td>
-                    <td className="border border-gray-300 p-2">جيدة</td>
-                    <td className="border border-gray-300 p-2">جيدة (في الشتاء)</td>
-                    <td className="border border-gray-300 p-2">جيدة جداً</td>
-                    <td className="border border-gray-300 p-2">جيدة للرحلات الدولية</td>
+                      <td className="border border-gray-300 p-2">Nomex®</td>
+                      <td className="border border-gray-300 p-2">فائقة</td>
+                      <td className="border border-gray-300 p-2">جيدة</td>
+                      <td className="border border-gray-300 p-2">فائقة</td>
+                      <td className="border border-gray-300 p-2">عالية</td>
                   </tr>
                 </tbody>
               </table>
+              </div>
             </div>
             
-            <h2>اختيار الأقمشة المناسبة للمناخ السعودي</h2>
+            <h2 className="text-2xl font-bold mt-8 mb-4">اعتبارات المناخ السعودي</h2>
             
-            <h3>1. تحديات المناخ الصحراوي</h3>
+            <h3 className="text-xl font-semibold mt-6 mb-3">التكيف مع الحرارة العالية</h3>
             <p>
-              المناخ السعودي يفرض تحديات خاصة عند اختيار أقمشة زي الطيران:
+              يتطلب المناخ الحار في المملكة اعتبارات خاصة في اختيار الأقمشة:
             </p>
-            <ul>
-              <li><strong>درجات حرارة مرتفعة:</strong> الحاجة لأقمشة تساعد على تبريد الجسم وتبخير العرق</li>
-              <li><strong>تباين درجات الحرارة:</strong> الفرق الكبير بين حرارة الخارج والتكييف داخل المطارات والطائرات</li>
-              <li><strong>الرطوبة العالية:</strong> خاصة في المناطق الساحلية، مما يتطلب أقمشة تتعامل بكفاءة مع الرطوبة</li>
-              <li><strong>التعرض لأشعة الشمس القوية:</strong> الحاجة لحماية من الأشعة فوق البنفسجية</li>
-              <li><strong>العواصف الرملية:</strong> مقاومة الغبار والأتربة وسهولة التنظيف</li>
+            
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>التهوية المحسنة:</strong> أقمشة بنسيج مفتوح يسمح بتدفق الهواء</li>
+              <li><strong>الألوان الفاتحة:</strong> تقليل امتصاص الحرارة من أشعة الشمس</li>
+              <li><strong>الألياف المجوفة:</strong> تحسين العزل الحراري والتهوية</li>
+              <li><strong>المعالجة المضادة للأشعة فوق البنفسجية:</strong> حماية من أضرار الشمس</li>
+              <li><strong>تقنيات التبريد:</strong> أقمشة تساعد في تبديد الحرارة</li>
             </ul>
             
-            <h3>2. الأقمشة الموصى بها للمناخ السعودي</h3>
-            <p>
-              بناءً على خصائص المناخ السعودي، يوصى بالأقمشة التالية:
-            </p>
-            <ul>
-              <li><strong>أقمشة القطن المعالج:</strong> خفيفة، تمتص العرق، وتوفر تهوية ممتازة مع معالجتها لتلبية معايير السلامة</li>
-              <li><strong>أقمشة CoolMax®:</strong> تقنية متطورة لإدارة الرطوبة وتبريد الجسم، مثالية للأشهر الحارة</li>
-              <li><strong>الميكروفايبر الخفيف:</strong> خفة استثنائية مع قدرة على تبخير العرق والجفاف السريع</li>
-              <li><strong>أقمشة TenCate Tecawork™:</strong> خليط متطور من الألياف يجمع بين مقاومة الحريق، خفة الوزن، والراحة</li>
-              <li><strong>أقمشة هجينة:</strong> خليط من القطن والألياف الاصطناعية المعالجة لتحقيق توازن بين الراحة والأداء</li>
+            <h3 className="text-xl font-semibold mt-6 mb-3">إدارة الرطوبة والعرق</h3>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>الامتصاص السريع:</strong> نقل الرطوبة بعيداً عن الجلد</li>
+              <li><strong>التبخر السريع:</strong> تجفيف سريع للحفاظ على الراحة</li>
+              <li><strong>المعالجة المضادة للبكتيريا:</strong> منع نمو البكتيريا والروائح</li>
+              <li><strong>التوزيع المتساوي:</strong> انتشار الرطوبة على سطح القماش</li>
+            </ul>
+            
+            <h3 className="text-xl font-semibold mt-6 mb-3">مقاومة العوامل البيئية</h3>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>مقاومة الغبار:</strong> أقمشة لا تجذب أو تحتفظ بالغبار</li>
+              <li><strong>مقاومة الملوحة:</strong> تحمل الرطوبة المالحة في المناطق الساحلية</li>
+              <li><strong>ثبات الألوان:</strong> مقاومة البهتان تحت أشعة الشمس القوية</li>
+              <li><strong>المرونة الحرارية:</strong> عدم فقدان الخصائص في درجات الحرارة العالية</li>
             </ul>
             
             <div className="bg-green-50 p-6 rounded-lg mb-6">
-              <h3 className="text-primary mb-3">تجربة ناجحة: أقمشة "الراحة الصحراوية"</h3>
+              <h3 className="text-primary mb-3">حلول مبتكرة للمناخ السعودي</h3>
               <p className="mb-0">
-                قام قسم الأبحاث والتطوير في إحدى الشركات السعودية المتخصصة بأزياء الطيران بتطوير قماش أطلق عليه اسم "الراحة الصحراوية" خصيصاً للمناخ المحلي. يتكون هذا القماش من مزيج من ألياف القطن المعالج ضد الاشتعال (65%) وألياف تقنية متقدمة (35%) تحتوي على جزيئات سيراميك مجهرية تعكس أشعة الشمس وتساعد على تبريد الجسم. أثبتت الاختبارات الميدانية أن هذا القماش يخفض درجة حرارة الجسم بمعدل 4-5 درجات مئوية مقارنة بالأقمشة التقليدية، مع الاحتفاظ بخصائص مقاومة الحريق المطلوبة. تم اعتماد هذا القماش في زي طاقم الضيافة لإحدى شركات الطيران السعودية للرحلات الداخلية خلال فصل الصيف.
+                طورت شركات النسيج المتخصصة أقمشة خاصة للمناخ الحار تجمع بين تقنيات متعددة: ألياف مجوفة للتهوية، معالجة بالفضة النانوية لمقاومة البكتيريا، وتقنيات التبريد التبخيري. هذه الأقمشة تحقق انخفاضاً في درجة الحرارة المحسوسة بمقدار 3-5 درجات مئوية مقارنة بالأقمشة التقليدية، مما يعزز بشكل كبير من راحة الطاقم في البيئة الحارة.
               </p>
             </div>
             
-            <h2>أنواع الأقمشة الموصى بها حسب نوع الزي</h2>
+            <h2 className="text-2xl font-bold mt-8 mb-4">معايير الاختيار حسب نوع الزي</h2>
             
-            <h3>1. زي الطيارين</h3>
-            <p>
-              أقمشة موصى بها لزي الطيارين، مع مراعاة الجلوس لفترات طويلة:
-            </p>
-            <ul>
-              <li><strong>صوف مخلوط خفيف:</strong> للبدلات الرسمية، يمنح مظهراً أنيقاً مع مقاومة للتجعد وملاءمة للرحلات الدولية</li>
-              <li><strong>خليط القطن والبوليستر:</strong> للقمصان، يوفر نعومة مع قدرة على الاحتفاظ بالشكل</li>
-              <li><strong>Nomex® المطور:</strong> للزي الخاص بالطيارين العسكريين، لضمان أقصى درجات السلامة</li>
-              <li><strong>أقمشة مقاومة للتجعد:</strong> خاصية مهمة نظراً لطبيعة العمل التي تتطلب الجلوس لفترات طويلة</li>
-              <li><strong>أقمشة بطانة تنفس:</strong> استخدام بطانات خاصة تسمح بتهوية الجسم تحت الزي الرسمي</li>
+            <h3 className="text-xl font-semibold mt-6 mb-3">أزياء الطيارين</h3>
+            
+            <h4 className="text-lg font-semibold mt-4 mb-2">المتطلبات الخاصة</h4>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>مقاومة الكهرباء الساكنة:</strong> منع التداخل مع الأجهزة الإلكترونية</li>
+              <li><strong>المتانة الفائقة:</strong> تحمل الاستخدام المكثف والجلوس الطويل</li>
+              <li><strong>المظهر الرسمي:</strong> أقمشة تحافظ على الشكل الأنيق</li>
+              <li><strong>الراحة في الجلوس:</strong> مرونة في المناطق الحرجة</li>
             </ul>
             
-            <h3>2. زي طاقم الضيافة</h3>
-            <p>
-              أقمشة مناسبة لطاقم الضيافة، مع مراعاة الحركة المستمرة:
-            </p>
-            <ul>
-              <li><strong>أقمشة مرنة:</strong> تحتوي على نسبة من الإيلاستين أو الليكرا لتوفير مرونة في الحركة</li>
-              <li><strong>ميكروفايبر معالج:</strong> خفيف، مقاوم للتجعد، سهل العناية، مثالي للتنقل السريع</li>
-              <li><strong>أقمشة مركبة:</strong> تجمع بين مزايا الألياف الطبيعية والاصطناعية</li>
-              <li><strong>أقمشة مقاومة للبقع:</strong> معالجة خاصة لمقاومة انسكاب السوائل والمشروبات</li>
-              <li><strong>خامات التبريد النشط:</strong> أقمشة متطورة تحتوي على تقنيات تبريد لفترات العمل الطويلة</li>
+            <h4 className="text-lg font-semibold mt-4 mb-2">الأقمشة المفضلة</h4>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>مخاليط الصوف والبوليستر:</strong> 70% صوف، 30% بوليستر</li>
+              <li><strong>أقمشة Nomex® للمناطق الحساسة:</strong> حماية إضافية</li>
+              <li><strong>بطانات تقنية:</strong> لتحسين الراحة والأداء</li>
+              <li><strong>تعزيزات في المناطق عالية الإجهاد:</strong> الركب والأكواع</li>
             </ul>
             
-            <h3>3. زي الطاقم الأرضي</h3>
-            <p>
-              أقمشة ملائمة للعمل في بيئات متنوعة:
-            </p>
-            <ul>
-              <li><strong>أقمشة متينة:</strong> تتحمل الاستخدام الشاق في بيئة المطار</li>
-              <li><strong>قطن مخلوط ثقيل:</strong> للسترات والبناطيل، يوفر المتانة والحماية</li>
-              <li><strong>أقمشة واقية:</strong> مقاومة للماء والزيوت للعاملين في صيانة الطائرات</li>
-              <li><strong>أقمشة عاكسة للضوء:</strong> عناصر عاكسة مدمجة للعمل في مناطق مختلفة من المطار</li>
-              <li><strong>أقمشة مرنة للخدمات الأرضية:</strong> تسمح بحرية الحركة مع الالتزام بالمظهر المهني</li>
+            <h3 className="text-xl font-semibold mt-6 mb-3">أزياء طاقم الضيافة</h3>
+            
+            <h4 className="text-lg font-semibold mt-4 mb-2">المتطلبات الخاصة</h4>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>حرية الحركة:</strong> مرونة للحركة المستمرة في الممرات</li>
+              <li><strong>مقاومة البقع:</strong> حماية من انسكاب المشروبات والطعام</li>
+              <li><strong>سهولة العناية:</strong> غسيل وكي سريع ومتكرر</li>
+              <li><strong>المظهر الأنيق:</strong> الحفاظ على الشكل طوال الرحلة</li>
             </ul>
             
-            <h2>المعالجات والتقنيات المتقدمة</h2>
-            
-            <h3>1. معالجات تحسين الأداء</h3>
-            <p>
-              تقنيات متقدمة تضاف للأقمشة لتحسين أدائها:
-            </p>
-            <ul>
-              <li><strong>معالجة مقاومة الحريق:</strong> إضافة مواد كيميائية تمنع أو تؤخر اشتعال القماش</li>
-              <li><strong>معالجة مضادة للبكتيريا:</strong> تقنيات تمنع نمو البكتيريا المسببة للروائح</li>
-              <li><strong>معالجة مقاومة البقع:</strong> طبقة واقية تمنع امتصاص السوائل والبقع</li>
-              <li><strong>معالجة الحماية من الأشعة فوق البنفسجية:</strong> تقنيات تمنع وصول الأشعة الضارة للجسم</li>
-              <li><strong>معالجة التبريد:</strong> تقنيات تساعد في خفض درجة حرارة الجسم</li>
+            <h4 className="text-lg font-semibold mt-4 mb-2">الأقمشة المفضلة</h4>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>مخاليط البوليستر والقطن:</strong> 65% بوليستر، 35% قطن</li>
+              <li><strong>أقمشة مقاومة للبقع:</strong> معالجة تيفلون أو مشابهة</li>
+              <li><strong>ألياف مرنة:</strong> 2-5% إيلاستين للمرونة</li>
+              <li><strong>أقمشة سريعة الجفاف:</strong> لسهولة العناية</li>
             </ul>
             
-            <h3>2. تقنيات النسيج المبتكرة</h3>
-            <p>
-              ابتكارات حديثة في صناعة النسيج تناسب أزياء الطيران:
-            </p>
-            <ul>
-              <li><strong>أقمشة المرحلة المتغيرة (PCM):</strong> تمتص الحرارة الزائدة وتطلقها عند الحاجة للحفاظ على درجة حرارة مريحة</li>
-              <li><strong>النسيج الذكي:</strong> أقمشة مزودة بمستشعرات أو ألياف خاصة تستجيب للظروف المحيطة</li>
-              <li><strong>تقنية النسيج ثلاثي الأبعاد:</strong> هيكلية نسيجية توفر تهوية استثنائية وراحة أكبر</li>
-              <li><strong>تقنية النانو:</strong> معالجة الأقمشة بجزيئات نانوية لتحسين خصائصها المختلفة</li>
-              <li><strong>الألياف المدمجة:</strong> دمج ألياف متعددة في قماش واحد للجمع بين ميزات مختلفة</li>
+            <h3 className="text-xl font-semibold mt-6 mb-3">الزي الأرضي والصيانة</h3>
+            
+            <h4 className="text-lg font-semibold mt-4 mb-2">المتطلبات الخاصة</h4>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>مقاومة الزيوت والوقود:</strong> حماية من المواد الكيميائية</li>
+              <li><strong>المتانة الفائقة:</strong> تحمل البيئة الصناعية القاسية</li>
+              <li><strong>الرؤية العالية:</strong> ألوان زاهية أو شرائط عاكسة</li>
+              <li><strong>الحماية من الطقس:</strong> مقاومة الرياح والمطر</li>
             </ul>
             
-            <h2>اعتبارات اختيار الموردين والمصنعين</h2>
-            
-            <p>
-              نصائح لاختيار موردين ومصنعين موثوقين لأقمشة أزياء الطيران:
-            </p>
-            <ul>
-              <li><strong>الشهادات والاعتمادات:</strong> التأكد من امتلاك المصنع للشهادات اللازمة مثل ISO 9001 وشهادات السلامة</li>
-              <li><strong>سجل الخبرة:</strong> اختيار مصنعين لديهم خبرة سابقة في توريد أقمشة للطيران</li>
-              <li><strong>قدرات الاختبار:</strong> امتلاك مختبرات لفحص الأقمشة أو التعاون مع جهات اختبار معتمدة</li>
-              <li><strong>الالتزام بالتسليم:</strong> قدرة المورد على الالتزام بمواعيد التسليم المحددة</li>
-              <li><strong>القدرة على التطوير:</strong> استعداد المصنع للعمل على تطوير أقمشة مخصصة لتلبية متطلبات محددة</li>
-              <li><strong>سياسات الاستدامة:</strong> النظر في ممارسات الشركة البيئية والاجتماعية</li>
-              <li><strong>خدمات ما بعد البيع:</strong> توفير خدمات دعم ومتابعة بعد توريد الأقمشة</li>
+            <h4 className="text-lg font-semibold mt-4 mb-2">الأقمشة المفضلة</h4>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>أقمشة مقاومة للكيماويات:</strong> معالجة خاصة للحماية</li>
+              <li><strong>نايلون مقوى:</strong> للمتانة الفائقة</li>
+              <li><strong>أقمشة عاكسة:</strong> لتحسين الرؤية والسلامة</li>
+              <li><strong>طبقات متعددة:</strong> للحماية والراحة</li>
             </ul>
             
-            <h2>توصيات للشركات السعودية</h2>
+            <h2 className="text-2xl font-bold mt-8 mb-4">عملية الاختيار والتقييم</h2>
             
-            <p>
-              نصائح عملية لشركات الطيران السعودية عند اختيار أقمشة أزياء الطاقم:
-            </p>
-            <ul>
-              <li><strong>اختبار الأقمشة في البيئة المحلية:</strong> إجراء اختبارات ميدانية في الظروف المناخية المحلية قبل اعتماد الأقمشة بشكل واسع</li>
-              <li><strong>استشارة الطاقم:</strong> إشراك موظفي الطيران في تقييم الأقمشة وجمع ملاحظاتهم</li>
-              <li><strong>التوازن بين التكلفة والجودة:</strong> موازنة الاعتبارات المالية مع متطلبات الجودة والسلامة</li>
-              <li><strong>الاستثمار في التطوير:</strong> دعم الأبحاث المحلية لتطوير أقمشة تناسب البيئة السعودية</li>
-              <li><strong>التحديث المستمر:</strong> مواكبة أحدث التطورات في صناعة الأقمشة التقنية</li>
-              <li><strong>الامتثال للمعايير المحلية والدولية:</strong> ضمان توافق الأقمشة مع متطلبات الهيئة العامة للطيران المدني السعودية والمعايير الدولية</li>
-              <li><strong>اعتماد إستراتيجية المخزون:</strong> وضع خطة لضمان توفر الأقمشة المطلوبة بشكل مستمر</li>
+            <h3 className="text-xl font-semibold mt-6 mb-3">مراحل التقييم</h3>
+            
+            <h4 className="text-lg font-semibold mt-4 mb-2">التقييم الأولي</h4>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>مراجعة المواصفات:</strong> التأكد من مطابقة المعايير الأساسية</li>
+              <li><strong>فحص الشهادات:</strong> التحقق من شهادات الجودة والسلامة</li>
+              <li><strong>تقييم العينات:</strong> فحص بصري ولمسي للأقمشة</li>
+              <li><strong>مقارنة الخيارات:</strong> تقييم البدائل المتاحة</li>
             </ul>
             
-            <h2>الخلاصة</h2>
-            <p>
-              يعد اختيار الأقمشة والمواد المناسبة لأزياء الطيران قراراً استراتيجياً يؤثر على سلامة الطاقم، راحتهم، وكفاءة أدائهم. في البيئة السعودية ذات الظروف المناخية الخاصة، يزداد أهمية اختيار الأقمشة التي تلبي متطلبات السلامة العالمية مع توفير أقصى درجات الراحة في المناخ الحار.
-            </p>
+            <h4 className="text-lg font-semibold mt-4 mb-2">الاختبارات المعملية</h4>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>اختبارات السلامة:</strong> مقاومة الحريق والسمية</li>
+              <li><strong>اختبارات الأداء:</strong> المتانة والراحة والوظائف</li>
+              <li><strong>اختبارات البيئة:</strong> التأثر بالحرارة والرطوبة</li>
+              <li><strong>اختبارات العناية:</strong> الغسيل والكي والتخزين</li>
+            </ul>
             
+            <h4 className="text-lg font-semibold mt-4 mb-2">التجربة العملية</h4>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>اختبار الطاقم:</strong> تجربة الأقمشة في ظروف العمل الفعلية</li>
+              <li><strong>تقييم الراحة:</strong> ملاحظات الطاقم حول الراحة والأداء</li>
+              <li><strong>اختبار المتانة:</strong> مراقبة الأداء على مدى فترة زمنية</li>
+              <li><strong>التقييم النهائي:</strong> جمع جميع البيانات واتخاذ القرار</li>
+            </ul>
+            
+            <h3 className="text-xl font-semibold mt-6 mb-3">معايير اتخاذ القرار</h3>
+            
+            <h4 className="text-lg font-semibold mt-4 mb-2">الأولويات الأساسية</h4>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>السلامة (40%):</strong> الأولوية القصوى في جميع الاختيارات</li>
+              <li><strong>الراحة (25%):</strong> تأثير مباشر على أداء الطاقم</li>
+              <li><strong>المتانة (20%):</strong> التكلفة الإجمالية للملكية</li>
+              <li><strong>المظهر (10%):</strong> الصورة المهنية للشركة</li>
+              <li><strong>التكلفة (5%):</strong> الموازنة بين الجودة والسعر</li>
+            </ul>
+            
+            <h4 className="text-lg font-semibold mt-4 mb-2">العوامل المساعدة</h4>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>توفر المورد:</strong> استقرار التوريد وسرعة التسليم</li>
+              <li><strong>الدعم التقني:</strong> خدمات ما بعد البيع والاستشارات</li>
+              <li><strong>الابتكار:</strong> قدرة المورد على التطوير والتحسين</li>
+              <li><strong>الاستدامة:</strong> الأثر البيئي وإعادة التدوير</li>
+            </ul>
+            
+            <h2 className="text-2xl font-bold mt-8 mb-4">الاتجاهات المستقبلية</h2>
+            
+            <h3 className="text-xl font-semibold mt-6 mb-3">التقنيات الناشئة</h3>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>الأقمشة الذكية:</strong> تفاعل مع البيئة والجسم</li>
+              <li><strong>النانو تكنولوجي:</strong> تحسين الخصائص على المستوى الجزيئي</li>
+              <li><strong>الألياف الحيوية:</strong> مواد مستدامة من مصادر طبيعية</li>
+              <li><strong>التقنيات الرقمية:</strong> مراقبة الأداء والصحة</li>
+            </ul>
+            
+            <h3 className="text-xl font-semibold mt-6 mb-3">الاستدامة البيئية</h3>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>المواد المعاد تدويرها:</strong> تقليل الأثر البيئي</li>
+              <li><strong>الإنتاج الأخضر:</strong> عمليات صديقة للبيئة</li>
+              <li><strong>دورة الحياة الكاملة:</strong> من الإنتاج إلى التخلص</li>
+              <li><strong>الاقتصاد الدائري:</strong> إعادة استخدام وتدوير المواد</li>
+            </ul>
+            
+            <h2 className="text-2xl font-bold mt-8 mb-4">خاتمة</h2>
             <p>
-              مع التطور المستمر في صناعة النسيج وظهور تقنيات متقدمة، أصبح بإمكان شركات الطيران السعودية الاستفادة من أقمشة تجمع بين خصائص متعددة لتلبية احتياجاتها. ويبقى الالتزام بالمعايير والاختبار الدقيق والمتابعة المستمرة هي الركائز الأساسية لضمان اختيار أفضل الأقمشة التي تعزز الأداء المهني والراحة والسلامة لطواقم الطيران في المملكة.
+              إن اختيار المواد والأقمشة المناسبة لأزياء الطيران عملية معقدة تتطلب خبرة عميقة وفهماً شاملاً للمتطلبات المتنوعة. هذا الاختيار يؤثر بشكل مباشر على سلامة الطاقم وراحتهم وأدائهم، وبالتالي على جودة الخدمة المقدمة للركاب.
+            </p>
+            <p>
+              في خبراء الزي الموحد، نعتمد على خبرتنا الواسعة ومعرفتنا العميقة بأحدث التقنيات والمواد لنقدم لعملائنا أفضل الحلول. نعمل مع أفضل موردي الأقمشة عالمياً ونجري اختبارات صارمة لضمان أن جميع المواد المستخدمة تلبي أعلى معايير الجودة والسلامة.
+            </p>
+            <p>
+              نؤمن بأن الاستثمار في أقمشة عالية الجودة هو استثمار في مستقبل الشركة وسلامة موظفيها، ونسعى دائماً لتقديم منتجات تجمع بين أفضل ما تقدمه التكنولوجيا الحديثة والحرفية التقليدية.
             </p>
           </div>
           
-          {/* Tags Section */}
-          <div className="mt-8 pt-6 border-t border-gray-200">
-            <h3 className="text-lg font-semibold mb-3">الوسوم:</h3>
-            <div className="flex flex-wrap gap-2">
-              {['أقمشة زي الطيران', 'اختيار مواد أزياء الطيران', 'أقمشة مقاومة للحريق', 'أقمشة للمناخ الحار', 'زي الطيران السعودي', 'مواد تقنية للطيران', 'راحة طاقم الطيران', 'Nomex', 'أقمشة ذكية', 'تقنيات النسيج المتقدمة'].map((tag) => (
-                <span key={tag} className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </div>
-          
-          {/* Author Section */}
-          <div className="mt-8 pt-6 border-t border-gray-200 flex items-center">
-            <div className="relative h-16 w-16 rounded-full overflow-hidden">
-              <Image
-                src="/images/authors/ahmed-abdullah.jpg"
-                alt="أحمد ناصر"
-                fill
-                style={{ objectFit: 'cover' }}
-              />
-            </div>
-            <div className="mr-4">
-              <h3 className="text-lg font-semibold">أحمد ناصر</h3>
-              <p className="text-gray-600 text-sm">خبير في تكنولوجيا المنسوجات المتقدمة مع خبرة 18 عاماً في تطوير أقمشة للاستخدامات الخاصة في قطاع الطيران والملابس الواقية</p>
-            </div>
-          </div>
-          
-          {/* Related Articles Section */}
-          <div className="mt-8 pt-6 border-t border-gray-200">
-            <h3 className="text-xl font-bold mb-4">مقالات ذات صلة</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <Link href="/aviation-uniforms/innovative-design-trends-modern-aviation-uniforms" className="block group">
-                <div className="bg-gray-50 rounded-lg overflow-hidden shadow-sm transition-all group-hover:shadow-md">
-                  <div className="relative h-40 w-full">
-                    <Image
-                      src="/images/aviation_uniforms.jpg"
-                      alt="الاتجاهات المبتكرة في تصميم زي الطيران الحديث"
-                      fill
-                      style={{ objectFit: 'cover' }}
-                    />
-                  </div>
-                  <div className="p-4">
-                    <h4 className="font-semibold text-gray-900 group-hover:text-accent transition-colors">الاتجاهات المبتكرة في تصميم زي الطيران الحديث</h4>
-                    <p className="text-gray-600 text-sm mt-1">استكشف أحدث اتجاهات تصميم زي الطيران وكيف تجمع بين الوظائف العملية والأناقة</p>
-                  </div>
+          {/* Share Section */}
+          <div className="mt-8 flex justify-center">
+            <div className="text-center">
+              <h3 className="text-lg font-semibold mb-3">مشاركة المقال</h3>
+              <div className="flex justify-center space-x-reverse space-x-4">
+                <button className="bg-[#3b5998] text-white p-2 rounded-full w-10 h-10 flex items-center justify-center">
+                  <span className="sr-only">Facebook</span>
+                </button>
+                <button className="bg-[#1da1f2] text-white p-2 rounded-full w-10 h-10 flex items-center justify-center">
+                  <span className="sr-only">Twitter</span>
+                </button>
+                <button className="bg-[#0e76a8] text-white p-2 rounded-full w-10 h-10 flex items-center justify-center">
+                  <span className="sr-only">LinkedIn</span>
+                </button>
+                <button className="bg-[#25D366] text-white p-2 rounded-full w-10 h-10 flex items-center justify-center">
+                  <span className="sr-only">WhatsApp</span>
+                </button>
                 </div>
-              </Link>
-              <Link href="/aviation-uniforms/safety-standards-for-aviation-uniforms" className="block group">
-                <div className="bg-gray-50 rounded-lg overflow-hidden shadow-sm transition-all group-hover:shadow-md">
-                  <div className="relative h-40 w-full">
-                    <Image
-                      src="/images/aviation_uniforms.jpg"
-                      alt="معايير السلامة في زي الطيران"
-                      fill
-                      style={{ objectFit: 'cover' }}
-                    />
-                  </div>
-                  <div className="p-4">
-                    <h4 className="font-semibold text-gray-900 group-hover:text-accent transition-colors">معايير السلامة الأساسية في زي الطيران</h4>
-                    <p className="text-gray-600 text-sm mt-1">تعرف على المعايير والمواصفات الضرورية لسلامة أزياء طواقم الطيران</p>
-                  </div>
-                </div>
-              </Link>
             </div>
           </div>
         </div>

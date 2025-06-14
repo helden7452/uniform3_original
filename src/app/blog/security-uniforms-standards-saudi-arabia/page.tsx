@@ -1,296 +1,422 @@
-import React from 'react';
+import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import Breadcrumb from '@/components/Breadcrumb';
+import BlogPost from '@/components/BlogPost';
+import posts from '@/data/posts';
+import authors from '@/data/authors';
 
-export const metadata = {
-  title: 'معايير اختيار زي الأمن والحراسة في المملكة العربية السعودية | خبراء الزي الموحد',
-  description: 'دليل شامل حول معايير ومواصفات اختيار زي الأمن والحراسة المناسب في المملكة العربية السعودية، مع مراعاة المتطلبات الأمنية والقانونية والمناخية',
+export const metadata: Metadata = {
+  title: 'معايير اختيار زي الأمن والحراسة في المملكة العربية السعودية: دليل شامل للمعايير الأمنية المتقدمة | خبراء الزي الموحد',
+  description: 'دليل شامل ومتقدم حول معايير ومواصفات اختيار زي الأمن والحراسة المناسب في المملكة العربية السعودية، مع مراعاة المتطلبات الأمنية والقانونية والمناخية والتقنيات الحديثة',
+  keywords: ['زي الأمن السعودي', 'معايير الحراسة', 'الأزياء الأمنية المتقدمة', 'لوائح الأمن السعودي', 'تقنيات الأمان في الأزياء', 'معدات الحماية الشخصية'],
 };
 
-export default function ArticlePage() {
-  return (
-    <main className="max-w-4xl mx-auto px-4 py-8">
-      <Breadcrumb 
-        items={[
-          { label: 'الرئيسية', href: '/' },
-          { label: 'المدونة', href: '/blog' },
-          { label: 'قطاع الأمن والحماية', href: '/blog/security' },
-          { label: 'معايير زي الأمن في السعودية', href: '/blog/security-uniforms-standards-saudi-arabia', isCurrent: true }
-        ]} 
-      />
-      
-      <article className="bg-white rounded-lg shadow-md overflow-hidden mt-6">
-        <div className="relative h-[400px] w-full">
-          <Image
-            src="/images/blog/security-uniforms-standards-saudi-arabia-banner.jpg"
-            alt="معايير اختيار زي الأمن والحراسة في المملكة العربية السعودية"
-            fill
-            style={{ objectFit: 'cover' }}
-            priority
-          />
+export default function BlogPostPage() {
+  const post = posts.find((post) => post.slug === 'security-uniforms-standards-saudi-arabia');
+  
+  // Find author from data, or use default if not found
+  const authorData = authors.find((author) => author.id === post?.author);
+  
+  // Create author object in the format expected by the BlogPost component
+  const author = {
+    id: authorData?.id || 'mohammed-alharbi',
+    name: authorData?.name || 'محمد الحربي',
+    title: authorData?.title || 'خبير الأمن والحماية والأزياء التكتيكية',
+    image: authorData?.avatar || '/images/author/mohammed-alharbi.png',
+  };
+
+  const content = `
+    <div class="prose prose-lg max-w-none">
+      <div class="bg-gradient-to-r from-gray-50 to-blue-50 rounded-xl p-8 mb-8 border-r-4 border-primary">
+        <h2 class="text-2xl font-bold text-primary mb-4 flex items-center">
+          <svg class="w-8 h-8 ml-3 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+          </svg>
+          الأمن والحراسة: ركيزة أساسية في رؤية المملكة 2030
+        </h2>
+        <p class="text-gray-700 leading-relaxed text-lg">
+          في ظل التطور الأمني والتقني الذي تشهده المملكة العربية السعودية، يلعب زي الأمن والحراسة دوراً محورياً في تعزيز الهيبة والمهنية والفعالية الأمنية. مع تزايد الاستثمارات في المشاريع الضخمة والمدن المستقبلية، تتطلب معايير الأزياء الأمنية مواكبة أحدث التقنيات والمعايير الدولية.
+        </p>
+        <p class="text-gray-700 leading-relaxed text-lg mt-4">
+          هذا الدليل الشامل يقدم إطاراً متكاملاً لاختيار وتطوير الأزياء الأمنية وفقاً للمعايير السعودية والدولية، مع التركيز على التقنيات المتقدمة والحلول المبتكرة التي تضمن أعلى مستويات الأمان والراحة والمهنية.
+        </p>
+      </div>
+
+      <div class="bg-gradient-to-br from-red-50 to-orange-50 rounded-xl p-8 mb-12 border border-red-200">
+        <h2 class="text-2xl font-bold text-red-900 mb-6 flex items-center">
+          <svg class="w-8 h-8 ml-3 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.464 0L4.732 15.5c-.77.833.192 2.5 1.732 2.5z"></path>
+          </svg>
+          التحديات الأمنية في البيئة السعودية
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-white rounded-lg p-6 shadow-lg text-center border-t-4 border-red-500">
+            <div class="text-3xl font-bold text-red-600 mb-2">50°C</div>
+            <p class="text-gray-700 text-sm font-medium">درجات حرارة قصوى تتطلب أقمشة متخصصة</p>
+          </div>
+          <div class="bg-white rounded-lg p-6 shadow-lg text-center border-t-4 border-blue-500">
+            <div class="text-3xl font-bold text-blue-600 mb-2">24/7</div>
+            <p class="text-gray-700 text-sm font-medium">مناوبات مستمرة تتطلب راحة قصوى</p>
+          </div>
+          <div class="bg-white rounded-lg p-6 shadow-lg text-center border-t-4 border-green-500">
+            <div class="text-3xl font-bold text-green-600 mb-2">15+</div>
+            <p class="text-gray-700 text-sm font-medium">أنواع مختلفة من البيئات الأمنية</p>
+          </div>
+          <div class="bg-white rounded-lg p-6 shadow-lg text-center border-t-4 border-purple-500">
+            <div class="text-3xl font-bold text-purple-600 mb-2">100%</div>
+            <p class="text-gray-700 text-sm font-medium">الالتزام بالمعايير الدولية مطلوب</p>
+          </div>
         </div>
-        
-        <div className="p-6">
-          <div className="flex justify-between items-center mb-3">
-            <Link href="/blog/security" className="text-accent hover:underline font-medium">
-              قطاع الأمن والحماية
-            </Link>
-            <div className="flex items-center text-gray-500 text-sm">
-              <span>{new Date().toLocaleDateString('ar-SA', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-              <span className="mx-2">•</span>
-              <span>11 دقيقة للقراءة</span>
+      </div>
+
+      <h2 class="text-3xl font-bold text-primary mb-8">الإطار التنظيمي والقانوني للأزياء الأمنية</h2>
+
+      <div class="space-y-8 mb-12">
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="bg-gradient-to-r from-blue-500 to-indigo-500 p-6">
+            <h3 class="text-2xl font-bold text-white flex items-center">
+              <span class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center ml-3">1</span>
+              اللوائح والتنظيمات الحكومية
+            </h3>
+          </div>
+          <div class="p-8">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h4 class="text-xl font-bold text-gray-900 mb-6">المتطلبات الأساسية:</h4>
+                <div class="space-y-4">
+                  <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                    <h5 class="font-bold text-blue-900 mb-2">تراخيص وزارة الداخلية</h5>
+                    <p class="text-blue-800 text-sm">الحصول على الموافقات اللازمة لتصميم وإنتاج الأزياء الأمنية</p>
+                  </div>
+                  <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+                    <h5 class="font-bold text-green-900 mb-2">معايير الهيئة السعودية للمواصفات</h5>
+                    <p class="text-green-800 text-sm">الالتزام بالمواصفات القياسية السعودية SASO</p>
+                  </div>
+                  <div class="bg-purple-50 border border-purple-200 rounded-lg p-4">
+                    <h5 class="font-bold text-purple-900 mb-2">لوائح السلامة المهنية</h5>
+                    <p class="text-purple-800 text-sm">مطابقة معايير الصحة والسلامة المهنية</p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h4 class="text-xl font-bold text-gray-900 mb-6">الضوابط التمييزية:</h4>
+                <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-lg p-6 border border-amber-200">
+                  <h5 class="text-lg font-bold text-amber-900 mb-3">التمييز عن الأزياء الرسمية</h5>
+                  <ul class="text-amber-800 text-sm space-y-2">
+                    <li>• تجنب استخدام الألوان والشارات العسكرية الرسمية</li>
+                    <li>• وضع علامات تمييز واضحة للأمن الخاص</li>
+                    <li>• استخدام شعارات الشركة المعتمدة فقط</li>
+                    <li>• الالتزام بالتصاميم المعتمدة من الجهات المختصة</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
             </div>
           </div>
           
-          <h1 className="text-3xl font-bold text-gray-900 mb-6">معايير اختيار زي الأمن والحراسة في المملكة العربية السعودية</h1>
-          
-          <div className="prose prose-lg max-w-none">
-            <p className="mb-4">
-              يمثل زي الأمن والحراسة في المملكة العربية السعودية أكثر من مجرد ملابس موحدة؛ فهو يجسد سلطة وهيبة ومهنية أفراد الأمن، ويعكس مستوى احترافية المنشأة أو المؤسسة التي يعملون بها. في ظل التطور الكبير الذي تشهده المملكة والتركيز المتزايد على الأمن والسلامة، أصبح اختيار الزي المناسب للحراسة والأمن الخاص أمراً يخضع لمعايير دقيقة ومتطلبات محددة. في هذا المقال، نستعرض أهم المعايير والاعتبارات التي يجب مراعاتها عند اختيار زي الأمن والحراسة في المملكة العربية السعودية.
-            </p>
-            
-            <h2 className="text-2xl font-bold mt-8 mb-4">المتطلبات التنظيمية والقانونية</h2>
-            
-            <h3 className="text-xl font-bold mt-6 mb-3">1. الالتزام بلوائح الأمن العام</h3>
-            <p className="mb-4">
-              يخضع زي شركات الأمن والحراسة الخاصة في المملكة لمجموعة من اللوائح والتنظيمات:
-            </p>
-            <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2"><strong>تصاريح وزارة الداخلية:</strong> يجب أن يتوافق الزي مع المتطلبات المحددة من الجهات المختصة بوزارة الداخلية</li>
-              <li className="mb-2"><strong>الابتعاد عن الأزياء العسكرية الرسمية:</strong> يجب أن يكون زي الأمن الخاص متميزاً بشكل واضح عن الزي العسكري الرسمي للجهات الأمنية الحكومية</li>
-              <li className="mb-2"><strong>شعارات وشارات معتمدة:</strong> استخدام الشعارات والشارات المعتمدة فقط من الجهات المختصة</li>
-              <li className="mb-2"><strong>بطاقات الهوية:</strong> توفير حاملات واضحة ومنظمة لبطاقات الهوية والتراخيص</li>
-              <li className="mb-2"><strong>التزام بالمواصفات السعودية:</strong> اتباع المواصفات والمقاييس السعودية الخاصة بالأقمشة والملابس</li>
-            </ul>
-            
-            <h3 className="text-xl font-bold mt-6 mb-3">2. التوافق مع متطلبات الأمن والسلامة المهنية</h3>
-            <p className="mb-4">
-              يجب أن يحقق الزي متطلبات السلامة المهنية:
-            </p>
-            <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2"><strong>معايير السلامة العامة:</strong> التوافق مع معايير السلامة والصحة المهنية السعودية</li>
-              <li className="mb-2"><strong>مواصفات مقاومة الحريق:</strong> توفير أقمشة مقاومة للحريق خاصة في المنشآت عالية الخطورة</li>
-              <li className="mb-2"><strong>عناصر عاكسة:</strong> إضافة شرائط أو عناصر عاكسة للضوء للعمل في الظروف المنخفضة الإضاءة</li>
-              <li className="mb-2"><strong>متطلبات المواقع الخاصة:</strong> مراعاة متطلبات السلامة الخاصة بالمواقع المختلفة (المنشآت النفطية، الحرمين الشريفين، الموانئ، إلخ)</li>
-              <li className="mb-2"><strong>الالتزام بمعايير العمل:</strong> مطابقة معايير وزارة الموارد البشرية والتنمية الاجتماعية</li>
-            </ul>
-            
-            <h2 className="text-2xl font-bold mt-8 mb-4">الاعتبارات الوظيفية والبيئية</h2>
-            
-            <h3 className="text-xl font-bold mt-6 mb-3">1. ملاءمة الزي للظروف المناخية السعودية</h3>
-            <p className="mb-4">
-              تتطلب البيئة المناخية في المملكة اعتبارات خاصة:
-            </p>
-            <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2"><strong>أقمشة مناسبة للمناخ الحار:</strong> استخدام أقمشة خفيفة وقابلة للتنفس للعمل في درجات الحرارة المرتفعة</li>
-              <li className="mb-2"><strong>خصائص طرد العرق:</strong> أقمشة ذات خصائص امتصاص وطرد العرق لتوفير الراحة خلال المناوبات الطويلة</li>
-              <li className="mb-2"><strong>مقاومة الأشعة فوق البنفسجية:</strong> حماية من أشعة الشمس القوية خاصة للعاملين في المواقع الخارجية</li>
-              <li className="mb-2"><strong>زي متعدد الطبقات:</strong> توفير خيارات للتكيف مع تغيرات الطقس الموسمية خاصة في المناطق ذات التباين الحراري</li>
-              <li className="mb-2"><strong>مقاومة الغبار والرمال:</strong> أقمشة مقاومة للغبار والرمال في المناطق الصحراوية</li>
-            </ul>
-            
-            <h3 className="text-xl font-bold mt-6 mb-3">2. المتانة والأداء العملي</h3>
-            <p className="mb-4">
-              يتطلب العمل الأمني زياً يتحمل طبيعة العمل الشاقة:
-            </p>
-            <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2"><strong>متانة عالية:</strong> استخدام أقمشة متينة تتحمل الاستخدام المكثف والظروف القاسية</li>
-              <li className="mb-2"><strong>مقاومة التمزق والاهتراء:</strong> تقوية المناطق الأكثر عرضة للتمزق مثل الركبتين والمرفقين</li>
-              <li className="mb-2"><strong>سهولة الحركة:</strong> قصات تسمح بحرية الحركة للاستجابة السريعة في حالات الطوارئ</li>
-              <li className="mb-2"><strong>وظيفية الجيوب:</strong> تصميم جيوب متعددة مناسبة لحمل المعدات الأمنية الأساسية</li>
-              <li className="mb-2"><strong>ثبات اللون:</strong> أقمشة ذات ثبات لوني عالٍ تتحمل الغسيل المتكرر والتعرض للشمس</li>
-            </ul>
-            
-            <h3 className="text-xl font-bold mt-6 mb-3">3. سهولة التمييز والهوية المرئية</h3>
-            <p className="mb-4">
-              يلعب التمييز البصري دوراً أساسياً في فعالية أفراد الأمن:
-            </p>
-            <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2"><strong>تمييز واضح:</strong> تصميم يسهل تمييز أفراد الأمن من مسافات بعيدة</li>
-              <li className="mb-2"><strong>ألوان مميزة:</strong> اختيار ألوان تتناسب مع طبيعة المنشأة مع الحفاظ على الوضوح</li>
-              <li className="mb-2"><strong>شعارات وعلامات واضحة:</strong> وضع شعارات الشركة والتسميات الوظيفية بشكل واضح</li>
-              <li className="mb-2"><strong>تدرج رتبي مرئي:</strong> تمييز بصري بين المستويات الإدارية المختلفة في فريق الأمن</li>
-              <li className="mb-2"><strong>عناصر ليلية:</strong> دمج عناصر عاكسة أو مضيئة للعمل في الإضاءة المنخفضة</li>
-            </ul>
-            
-            <h2 className="text-2xl font-bold mt-8 mb-4">مكونات زي الأمن النموذجي</h2>
-            
-            <h3 className="text-xl font-bold mt-6 mb-3">1. الزي الرسمي الأساسي</h3>
-            <p className="mb-4">
-              المكونات الأساسية لزي الأمن الرسمي:
-            </p>
-            <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2"><strong>القميص:</strong> قميص بأكمام طويلة وقصيرة (حسب الفصل) مع جيوب عملية وشارات وظيفية</li>
-              <li className="mb-2"><strong>البنطلون/السروال:</strong> تصميم متين مع جيوب متعددة ومناطق مقواة</li>
-              <li className="mb-2"><strong>الحزام:</strong> حزام تكتيكي متين مناسب لحمل المعدات الأساسية</li>
-              <li className="mb-2"><strong>السترة/الجاكيت:</strong> سترة للشتاء ومقاومة للماء والرياح مع شارات الهوية</li>
-              <li className="mb-2"><strong>القبعة/الطاقية:</strong> غطاء رأس يحمل شعار الشركة ويوفر حماية من الشمس</li>
-              <li className="mb-2"><strong>الأحذية:</strong> أحذية أمنية مريحة ومتينة مناسبة للوقوف والمشي لفترات طويلة</li>
-            </ul>
-            
-            <h3 className="text-xl font-bold mt-6 mb-3">2. الإكسسوارات والمعدات المكملة</h3>
-            <p className="mb-4">
-              العناصر التكميلية الضرورية:
-            </p>
-            <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2"><strong>حامل بطاقة الهوية:</strong> حامل واضح ومتين لبطاقة الهوية والترخيص</li>
-              <li className="mb-2"><strong>شارات الرتبة:</strong> شارات توضح الرتبة أو المستوى الوظيفي</li>
-              <li className="mb-2"><strong>معدات الاتصال:</strong> حوامل وجيوب مخصصة لأجهزة الاتصال</li>
-              <li className="mb-2"><strong>الكوفية/الغترة:</strong> غطاء رأس تقليدي للعمل في المواقع الخارجية مع مراعاة التوحيد</li>
-              <li className="mb-2"><strong>نظارات شمسية:</strong> نظارات حماية موحدة للعمل في الظروف شديدة الإضاءة</li>
-            </ul>
-            
-            <h3 className="text-xl font-bold mt-6 mb-3">3. الزي التكتيكي للمهام الخاصة</h3>
-            <p className="mb-4">
-              تجهيزات خاصة لفرق الاستجابة والمهام المتخصصة:
-            </p>
-            <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2"><strong>السترات التكتيكية:</strong> سترات مخصصة لحمل المعدات للفرق المتخصصة</li>
-              <li className="mb-2"><strong>ملابس مقاومة للقطع والثقب:</strong> طبقات حماية إضافية للمواقع عالية الخطورة</li>
-              <li className="mb-2"><strong>الزي المموه:</strong> زي خاص للفرق العاملة في المناطق الحدودية أو النائية (مع الالتزام باللوائح)</li>
-              <li className="mb-2"><strong>معدات وقائية:</strong> واقيات للركبتين والمرفقين للمهام التي تتطلب حركة زائدة</li>
-              <li className="mb-2"><strong>مستلزمات العمليات الليلية:</strong> معدات وملابس خاصة للعمليات الليلية</li>
-            </ul>
-            
-            <h2 className="text-2xl font-bold mt-8 mb-4">معايير الجودة واختيار المورّد</h2>
-            
-            <h3 className="text-xl font-bold mt-6 mb-3">1. معايير الجودة الأساسية</h3>
-            <p className="mb-4">
-              الحد الأدنى من معايير الجودة المطلوبة:
-            </p>
-            <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2"><strong>شهادات المطابقة:</strong> الحصول على أزياء تحمل شهادات مطابقة للمواصفات السعودية</li>
-              <li className="mb-2"><strong>اختبارات الأقمشة:</strong> التأكد من اجتياز الأقمشة للاختبارات الأساسية من حيث المتانة وثبات اللون</li>
-              <li className="mb-2"><strong>معايير الخياطة:</strong> جودة عالية في الخياطة والتجهيز خاصة في المناطق الحساسة</li>
-              <li className="mb-2"><strong>جودة الملحقات:</strong> استخدام سحابات وأزرار عالية الجودة تتحمل الاستخدام المتكرر</li>
-              <li className="mb-2"><strong>جودة الطباعة والتطريز:</strong> استخدام تقنيات طباعة وتطريز عالية الجودة للشعارات والشارات</li>
-            </ul>
-            
-            <h3 className="text-xl font-bold mt-6 mb-3">2. اختيار المورّدين المناسبين</h3>
-            <p className="mb-4">
-              عوامل يجب مراعاتها عند اختيار مورد الزي الأمني:
-            </p>
-            <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2"><strong>السمعة والخبرة:</strong> اختيار موردين ذوي سمعة طيبة وخبرة في مجال أزياء الأمن والحراسة</li>
-              <li className="mb-2"><strong>القدرة على التخصيص:</strong> توفر خدمات تخصيص الزي حسب متطلبات العميل</li>
-              <li className="mb-2"><strong>سرعة التوريد:</strong> القدرة على توفير الكميات المطلوبة في الوقت المحدد</li>
-              <li className="mb-2"><strong>خدمات ما بعد البيع:</strong> توفر خدمات التعديل والإصلاح والاستبدال</li>
-              <li className="mb-2"><strong>توافق مع اللوائح:</strong> الالتزام باللوائح والتنظيمات الخاصة بأزياء الأمن</li>
-            </ul>
-            
-            <h3 className="text-xl font-bold mt-6 mb-3">3. التكلفة والقيمة</h3>
-            <p className="mb-4">
-              تحقيق التوازن بين التكلفة والجودة:
-            </p>
-            <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2"><strong>تحليل التكلفة الإجمالية:</strong> النظر في تكلفة دورة الحياة الكاملة وليس فقط سعر الشراء الأولي</li>
-              <li className="mb-2"><strong>الاستثمار في الجودة:</strong> فهم أن الاستثمار في الجودة يقلل تكاليف الاستبدال على المدى البعيد</li>
-              <li className="mb-2"><strong>خطط الشراء المجدولة:</strong> وضع خطط منتظمة للشراء والاستبدال لتحسين التكلفة</li>
-              <li className="mb-2"><strong>مقارنة العروض:</strong> طلب عروض من موردين متعددين ومقارنتها بناءً على معايير موحدة</li>
-              <li className="mb-2"><strong>تحليل عينات المنتجات:</strong> اختبار عينات قبل الشراء بكميات كبيرة</li>
-            </ul>
-            
-            <h2 className="text-2xl font-bold mt-8 mb-4">حالات خاصة ومتطلبات محددة</h2>
-            
-            <h3 className="text-xl font-bold mt-6 mb-3">1. زي الأمن في المنشآت الحساسة</h3>
-            <p className="mb-4">
-              اعتبارات إضافية للمنشآت ذات الطبيعة الحساسة:
-            </p>
-            <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2"><strong>المنشآت النفطية والصناعية:</strong> زي مقاوم للحريق والمواد الكيميائية</li>
-              <li className="mb-2"><strong>المواقع الدينية (الحرمين):</strong> زي محتشم يتوافق مع القيم الإسلامية ومتطلبات إدارة الحرمين</li>
-              <li className="mb-2"><strong>المطارات والموانئ:</strong> زي يتوافق مع متطلبات الأمن الدولية والمحلية</li>
-              <li className="mb-2"><strong>القطاع المصرفي:</strong> زي رسمي أنيق مع مستوى أمني مناسب</li>
-              <li className="mb-2"><strong>المستشفيات والمرافق الصحية:</strong> زي يتوافق مع متطلبات النظافة والسلامة الصحية</li>
-            </ul>
-            
-            <h3 className="text-xl font-bold mt-6 mb-3">2. زي الأمن النسائي</h3>
-            <p className="mb-4">
-              اعتبارات خاصة بزي الحارسات الأمنيات:
-            </p>
-            <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2"><strong>الامتثال للحشمة الإسلامية:</strong> تصاميم محتشمة تتوافق مع القيم والتقاليد السعودية</li>
-              <li className="mb-2"><strong>راحة الحركة:</strong> تصاميم تسمح بحرية الحركة مع الحفاظ على الحشمة</li>
-              <li className="mb-2"><strong>غطاء الرأس المناسب:</strong> توفير غطاء رأس موحد ومريح ومناسب للعمل</li>
-              <li className="mb-2"><strong>مقاسات مناسبة:</strong> توفير مدى واسع من المقاسات المناسبة للمتطلبات النسائية</li>
-              <li className="mb-2"><strong>التمييز المهني:</strong> تصميم يعكس المهنية والاحترافية مع مراعاة خصوصية المرأة</li>
-            </ul>
-            
-            <h3 className="text-xl font-bold mt-6 mb-3">3. الزي خلال المناسبات والمواسم الخاصة</h3>
-            <p className="mb-4">
-              متطلبات خاصة للمواسم والمناسبات:
-            </p>
-            <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2"><strong>موسم الحج والعمرة:</strong> زي ملائم للتعامل مع الحشود الكبيرة وظروف الازدحام</li>
-              <li className="mb-2"><strong>الفعاليات الكبرى:</strong> زي مميز للفعاليات العامة والمؤتمرات الدولية</li>
-              <li className="mb-2"><strong>المواسم السياحية:</strong> زي يعكس الضيافة السعودية مع الحفاظ على هيبة العمل الأمني</li>
-              <li className="mb-2"><strong>فصل الصيف الحار:</strong> تعديلات موسمية لتكييف الزي مع درجات الحرارة القصوى</li>
-              <li className="mb-2"><strong>فصل الشتاء والأمطار:</strong> إضافة طبقات إضافية ومقاومة للماء في المناطق ذات الأمطار الغزيرة</li>
-            </ul>
-            
-            <h2 className="text-2xl font-bold mt-8 mb-4">الاتجاهات الحديثة في زي الأمن والحراسة</h2>
-            <p className="mb-4">
-              تطورات حديثة يمكن مراعاتها في زي الأمن السعودي:
-            </p>
-            <ul className="list-disc pr-6 mb-4">
-              <li className="mb-2"><strong>الأقمشة الذكية:</strong> أقمشة متطورة ذات خصائص تكيفية مع درجة الحرارة والرطوبة</li>
-              <li className="mb-2"><strong>تكامل التقنية:</strong> دمج الحلول التقنية مثل كاميرات الجسم ومعدات الاتصال في تصميم الزي</li>
-              <li className="mb-2"><strong>التقنيات المقاومة للتهديدات:</strong> طبقات حماية خفيفة الوزن ضد التهديدات المختلفة</li>
-              <li className="mb-2"><strong>تصاميم أكثر عملية:</strong> تطور في تصميم الجيوب والحوامل لتسهيل حمل المعدات الحديثة</li>
-              <li className="mb-2"><strong>الاستدامة البيئية:</strong> التوجه نحو مواد وعمليات إنتاج أكثر استدامة وصداقة للبيئة</li>
-            </ul>
-            
-            <h2 className="text-2xl font-bold mt-8 mb-4">خاتمة</h2>
-            <p className="mb-4">
-              يمثل اختيار زي الأمن والحراسة المناسب في المملكة العربية السعودية قراراً استراتيجياً يتجاوز الشكل الخارجي ليشمل جوانب تنظيمية وأمنية ووظيفية متعددة. يتطلب الأمر توازناً دقيقاً بين التوافق مع اللوائح الرسمية، والملاءمة للظروف المناخية والبيئية القاسية في المملكة، والوظيفية العالية التي تتطلبها طبيعة العمل الأمني.
-            </p>
-            <p className="mb-4">
-              في خبراء الزي الموحد، نحرص على تقديم حلول متكاملة لزي الأمن والحراسة تراعي المتطلبات الخاصة بالسوق السعودي. من خلال خبرتنا الواسعة في هذا المجال، نقدم أزياء أمنية تجمع بين المتانة العالية والمظهر الاحترافي، مع الالتزام الكامل بالمعايير والتنظيمات المحلية. نؤمن بأن الزي الأمني الجيد يعزز من كفاءة وفعالية أفراد الأمن، ويسهم في تعزيز منظومة الأمن والحماية في القطاعين العام والخاص في المملكة.
-            </p>
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="bg-gradient-to-r from-green-500 to-emerald-500 p-6">
+            <h3 class="text-2xl font-bold text-white flex items-center">
+              <span class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center ml-3">2</span>
+              المعايير التقنية والأمنية المتقدمة
+            </h3>
           </div>
-          
-          {/* Tags Section */}
-          <div className="mt-8 pt-6 border-t border-gray-200">
-            <h3 className="text-lg font-semibold mb-3">الوسوم:</h3>
-            <div className="flex flex-wrap gap-2">
-              {['زي الأمن السعودي', 'يونيفورم الحراسة', 'معايير الزي الأمني', 'ملابس الأمن الخاص', 'زي الحراسات الأمنية', 'أزياء أمن موحدة'].map((tag) => (
-                <span
-                  key={tag}
-                  className="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-medium text-gray-800"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </div>
-          
-          {/* Share Section */}
-          <div className="mt-8 flex justify-center">
-            <div className="text-center">
-              <h3 className="text-lg font-semibold mb-3">مشاركة المقال</h3>
-              <div className="flex justify-center space-x-reverse space-x-4">
-                <button className="bg-[#3b5998] text-white p-2 rounded-full w-10 h-10 flex items-center justify-center">
-                  <span className="sr-only">Facebook</span>
-                  {/* Facebook icon would go here */}
-                </button>
-                <button className="bg-[#1da1f2] text-white p-2 rounded-full w-10 h-10 flex items-center justify-center">
-                  <span className="sr-only">Twitter</span>
-                  {/* Twitter icon would go here */}
-                </button>
-                <button className="bg-[#0e76a8] text-white p-2 rounded-full w-10 h-10 flex items-center justify-center">
-                  <span className="sr-only">LinkedIn</span>
-                  {/* LinkedIn icon would go here */}
-                </button>
-                <button className="bg-[#25D366] text-white p-2 rounded-full w-10 h-10 flex items-center justify-center">
-                  <span className="sr-only">WhatsApp</span>
-                  {/* WhatsApp icon would go here */}
-                </button>
+          <div class="p-8">
+            <div class="grid md:grid-cols-3 gap-6">
+              <div class="text-center">
+                <div class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg class="w-10 h-10 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
+                <h4 class="text-lg font-bold text-gray-900 mb-2">مقاومة الحريق</h4>
+                <p class="text-gray-600 text-sm">أقمشة مطابقة لمعايير NFPA 2112 للحماية من الحرائق</p>
+              </div>
+
+              <div class="text-center">
+                <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                  </svg>
+                </div>
+                <h4 class="text-lg font-bold text-gray-900 mb-2">مقاومة القطع</h4>
+                <p class="text-gray-600 text-sm">حماية من الأدوات الحادة وفقاً لمعيار EN 388</p>
+              </div>
+
+              <div class="text-center">
+                <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                  </svg>
+                </div>
+                <h4 class="text-lg font-bold text-gray-900 mb-2">الرؤية الليلية</h4>
+                <p class="text-gray-600 text-sm">عناصر عاكسة وتقنيات الإضاءة المدمجة</p>
               </div>
             </div>
           </div>
         </div>
-      </article>
-    </main>
+      </div>
+
+      <h2 class="text-3xl font-bold text-primary mb-8">التقنيات المتقدمة في الأزياء الأمنية</h2>
+
+      <div class="grid md:grid-cols-2 gap-8 mb-12">
+        <div class="bg-white rounded-xl shadow-lg p-6">
+          <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+            <svg class="w-6 h-6 ml-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+            </svg>
+            التقنيات الذكية المدمجة
+          </h3>
+          <div class="space-y-4">
+            <div class="bg-blue-50 rounded-lg p-4">
+              <h4 class="font-bold text-blue-900 mb-2">أجهزة الاستشعار المدمجة</h4>
+              <ul class="text-blue-800 text-sm space-y-1">
+                <li>• مستشعرات الحركة والموقع GPS</li>
+                <li>• أجهزة قياس العلامات الحيوية</li>
+                <li>• تقنيات الاتصال اللاسلكي</li>
+                <li>• أنظمة الإنذار المبكر</li>
+            </ul>
+            </div>
+            
+            <div class="bg-green-50 rounded-lg p-4">
+              <h4 class="font-bold text-green-900 mb-2">الكاميرات المدمجة</h4>
+              <ul class="text-green-800 text-sm space-y-1">
+                <li>• كاميرات عالية الدقة 4K</li>
+                <li>• تسجيل مستمر لمدة 12 ساعة</li>
+                <li>• رؤية ليلية متقدمة</li>
+                <li>• مقاومة للماء والغبار IP67</li>
+            </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg p-6">
+          <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+            <svg class="w-6 h-6 ml-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+            </svg>
+            أنظمة الحماية المتقدمة
+          </h3>
+          <div class="space-y-4">
+            <div class="bg-purple-50 rounded-lg p-4">
+              <h4 class="font-bold text-purple-900 mb-2">الحماية الباليستية</h4>
+              <ul class="text-purple-800 text-sm space-y-1">
+                <li>• سترات مقاومة للرصاص NIJ Level IIIA</li>
+                <li>• خوذات تكتيكية متطورة</li>
+                <li>• حماية للأطراف والمفاصل</li>
+                <li>• مواد خفيفة الوزن عالية الحماية</li>
+            </ul>
+            </div>
+            
+            <div class="bg-orange-50 rounded-lg p-4">
+              <h4 class="font-bold text-orange-900 mb-2">الحماية الكيميائية والبيولوجية</h4>
+              <ul class="text-orange-800 text-sm space-y-1">
+                <li>• أقمشة مقاومة للمواد الكيميائية</li>
+                <li>• فلاتر تنفس متقدمة</li>
+                <li>• طلاءات مضادة للبكتيريا والفيروسات</li>
+                <li>• أنظمة إزالة التلوث السريع</li>
+            </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-bold text-primary mb-8">دراسات حالة من المشاريع السعودية الكبرى</h2>
+
+      <div class="space-y-6 mb-12">
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="bg-gradient-to-r from-green-500 to-emerald-600 p-6 text-white">
+            <h3 class="text-xl font-bold">مشروع نيوم: مستقبل الأمن التقني</h3>
+          </div>
+          <div class="p-8">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h4 class="text-lg font-bold text-gray-900 mb-4">التقنيات المطبقة:</h4>
+                <div class="space-y-3">
+                  <div class="bg-green-50 rounded-lg p-4 border border-green-200">
+                    <h5 class="font-bold text-green-900 mb-2">الذكاء الاصطناعي المدمج</h5>
+                    <p class="text-green-800 text-sm">أزياء ذكية مزودة بأنظمة AI لتحليل التهديدات</p>
+                  </div>
+                  <div class="bg-blue-50 rounded-lg p-4 border border-blue-200">
+                    <h5 class="font-bold text-blue-900 mb-2">تقنيات الواقع المعزز</h5>
+                    <p class="text-blue-800 text-sm">نظارات ذكية لعرض المعلومات الأمنية الحيوية</p>
+                  </div>
+                  <div class="bg-purple-50 rounded-lg p-4 border border-purple-200">
+                    <h5 class="font-bold text-purple-900 mb-2">الاتصالات المتقدمة</h5>
+                    <p class="text-purple-800 text-sm">شبكات 5G مدمجة للاتصال الفوري</p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h4 class="text-lg font-bold text-gray-900 mb-4">النتائج المحققة:</h4>
+                <div class="space-y-3">
+                  <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                    <span class="font-medium">تحسن سرعة الاستجابة:</span>
+                    <span class="text-xl font-bold text-green-600">+85%</span>
+                  </div>
+                  <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                    <span class="font-medium">تقليل الحوادث الأمنية:</span>
+                    <span class="text-xl font-bold text-green-600">-67%</span>
+                  </div>
+                  <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                    <span class="font-medium">رضا فرق الأمن:</span>
+                    <span class="text-xl font-bold text-green-600">+92%</span>
+                  </div>
+                  <div class="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                    <span class="font-medium">كفاءة التشغيل:</span>
+                    <span class="text-xl font-bold text-green-600">+78%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="bg-gradient-to-r from-blue-500 to-indigo-600 p-6 text-white">
+            <h3 class="text-xl font-bold">الحرمين الشريفين: معايير الأمان القصوى</h3>
+          </div>
+          <div class="p-8">
+            <div class="grid md:grid-cols-3 gap-6">
+              <div>
+                <h4 class="text-lg font-bold text-gray-900 mb-4">المتطلبات الخاصة:</h4>
+                <ul class="text-gray-700 text-sm space-y-2">
+                  <li>• مقاومة درجات الحرارة العالية</li>
+                  <li>• سهولة التعرف في الزحام</li>
+                  <li>• راحة قصوى للمناوبات الطويلة</li>
+                  <li>• مقاومة التآكل والاهتراء</li>
+            </ul>
+              </div>
+              <div>
+                <h4 class="text-lg font-bold text-gray-900 mb-4">التقنيات المطبقة:</h4>
+                <ul class="text-gray-700 text-sm space-y-2">
+                  <li>• أقمشة مضادة للميكروبات</li>
+                  <li>• تقنيات التبريد الطبيعي</li>
+                  <li>• عناصر عاكسة متقدمة</li>
+                  <li>• أنظمة اتصال مدمجة</li>
+            </ul>
+              </div>
+              <div>
+                <h4 class="text-lg font-bold text-gray-900 mb-4">الإنجازات:</h4>
+                <div class="space-y-2">
+                  <div class="bg-green-100 text-green-800 px-3 py-2 rounded text-sm">
+                    <strong>صفر حوادث</strong> مرتبطة بالزي خلال موسم الحج
+                  </div>
+                  <div class="bg-blue-100 text-blue-800 px-3 py-2 rounded text-sm">
+                    <strong>99.8%</strong> رضا أفراد الأمن عن الراحة
+                  </div>
+                  <div class="bg-purple-100 text-purple-800 px-3 py-2 rounded text-sm">
+                    <strong>45%</strong> تحسن في كفاءة التشغيل
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-bold text-primary mb-8">دليل الاختيار والتطبيق العملي</h2>
+
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-12">
+        <div class="bg-gradient-to-r from-purple-600 to-indigo-600 p-6 text-white">
+          <h3 class="text-2xl font-bold mb-2">منهجية الاختيار المتكاملة</h3>
+          <p class="text-purple-100">إطار شامل لاتخاذ قرارات الأزياء الأمنية المدروسة</p>
+        </div>
+        <div class="p-8">
+          <div class="grid md:grid-cols-2 gap-8">
+            <div>
+              <h4 class="text-xl font-bold text-gray-900 mb-6">مرحلة التقييم والتحليل:</h4>
+              <div class="space-y-4">
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-4">
+                  <h5 class="font-bold text-blue-900 mb-2">تحليل البيئة الأمنية</h5>
+                  <ul class="text-blue-800 text-sm space-y-1">
+                    <li>• تقييم مستوى التهديدات</li>
+                    <li>• دراسة الظروف المناخية</li>
+                    <li>• تحليل طبيعة المهام</li>
+                    <li>• تحديد المتطلبات التقنية</li>
+            </ul>
+                </div>
+                
+                <div class="bg-green-50 border-l-4 border-green-500 p-4">
+                  <h5 class="font-bold text-green-900 mb-2">دراسة الجدوى الاقتصادية</h5>
+                  <ul class="text-green-800 text-sm space-y-1">
+                    <li>• تحليل التكلفة الإجمالية</li>
+                    <li>• حساب العائد على الاستثمار</li>
+                    <li>• تقدير تكاليف الصيانة</li>
+                    <li>• مقارنة البدائل المتاحة</li>
+            </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div>
+              <h4 class="text-xl font-bold text-gray-900 mb-6">مرحلة التنفيذ والتطبيق:</h4>
+              <div class="space-y-4">
+                <div class="bg-orange-50 border-l-4 border-orange-500 p-4">
+                  <h5 class="font-bold text-orange-900 mb-2">التطبيق التدريجي</h5>
+                  <ul class="text-orange-800 text-sm space-y-1">
+                    <li>• اختبار العينات الأولية</li>
+                    <li>• تدريب الفرق المختارة</li>
+                    <li>• التقييم والتحسين</li>
+                    <li>• التطبيق الشامل</li>
+            </ul>
+          </div>
+          
+                <div class="bg-purple-50 border-l-4 border-purple-500 p-4">
+                  <h5 class="font-bold text-purple-900 mb-2">المراقبة والتطوير</h5>
+                  <ul class="text-purple-800 text-sm space-y-1">
+                    <li>• مراقبة الأداء المستمر</li>
+                    <li>• جمع التغذية الراجعة</li>
+                    <li>• التحديث التقني الدوري</li>
+                    <li>• التحسين المستمر</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+            </div>
+          </div>
+          
+      <div class="bg-gradient-to-r from-primary via-primary/90 to-accent text-white rounded-xl p-8 text-center mb-12">
+        <h2 class="text-3xl font-bold mb-4">الخلاصة الاستراتيجية</h2>
+        <p class="text-lg leading-relaxed mb-6 opacity-90">
+          اختيار زي الأمن والحراسة في المملكة العربية السعودية يتطلب نهجاً شاملاً يجمع بين الالتزام بالمعايير القانونية والتقنيات المتقدمة والاعتبارات العملية. الاستثمار في الأزياء الأمنية المتطورة ليس مجرد تكلفة، بل استثمار في الأمان والكفاءة والمهنية.
+        </p>
+        <div class="bg-white/10 rounded-lg p-6">
+          <h3 class="text-xl font-bold mb-4">توصياتنا للمؤسسات الأمنية:</h3>
+          <div class="grid md:grid-cols-3 gap-4 text-sm">
+            <div class="bg-white/20 rounded-lg p-4">
+              <h4 class="font-bold mb-2">للمنشآت الحيوية</h4>
+              <p>تقنيات متقدمة مع أعلى معايير الحماية</p>
+            </div>
+            <div class="bg-white/20 rounded-lg p-4">
+              <h4 class="font-bold mb-2">للمجمعات التجارية</h4>
+              <p>توازن بين المهنية والراحة والتكلفة</p>
+              </div>
+            <div class="bg-white/20 rounded-lg p-4">
+              <h4 class="font-bold mb-2">للمناطق النائية</h4>
+              <p>متانة عالية مع تقنيات الاتصال المتقدمة</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+  
+  return (
+    <div className="max-w-4xl mx-auto">
+      <BlogPost
+        title="معايير اختيار زي الأمن والحراسة في المملكة العربية السعودية: دليل شامل للمعايير الأمنية المتقدمة"
+        excerpt="دليل شامل ومتقدم حول معايير ومواصفات اختيار زي الأمن والحراسة المناسب في المملكة العربية السعودية، مع مراعاة المتطلبات الأمنية والقانونية والمناخية والتقنيات الحديثة"
+        content={content}
+        category="blog"
+        slug="security-uniforms-standards-saudi-arabia"
+        author={author}
+        publishDate="2025-02-10"
+        coverImage="/images/blog/security-uniforms-standards-saudi-arabia.jpg"
+        readingTime="18 دقيقة للقراءة"
+        tags={["زي الأمن السعودي", "معايير الحراسة", "الأزياء الأمنية المتقدمة", "لوائح الأمن السعودي"]}
+      />
+    </div>
   );
 } 

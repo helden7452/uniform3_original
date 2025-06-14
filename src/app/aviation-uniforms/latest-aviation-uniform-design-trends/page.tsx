@@ -4,26 +4,26 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'أحدث اتجاهات تصميم زي الطيران لعام 2023',
-  description: 'استعراض شامل لأحدث اتجاهات وابتكارات تصميم زي الطيران في عام 2023، مع التركيز على التوجهات العالمية وتطبيقاتها في شركات الطيران السعودية',
+  title: 'أحدث اتجاهات تصميم أزياء الطيران 2024: الابتكار والأناقة | خبراء الزي الموحد',
+  description: 'اكتشف أحدث اتجاهات وتطورات تصميم أزياء الطيران لعام 2024، من التقنيات المبتكرة إلى التصاميم العصرية التي تجمع بين الأناقة والوظائف العملية',
 };
 
-export default function LatestAviationUniformTrendsPage() {
+export default function LatestAviationUniformDesignTrendsPage() {
   return (
     <main className="max-w-4xl mx-auto px-4 py-8">
       <Breadcrumb 
         items={[
           { label: 'الرئيسية', href: '/' },
           { label: 'زي قطاع الطيران', href: '/aviation-uniforms' },
-          { label: 'أحدث اتجاهات تصميم زي الطيران لعام 2023', href: '/aviation-uniforms/latest-aviation-uniform-design-trends', isCurrent: true }
+          { label: 'أحدث اتجاهات التصميم', href: '/aviation-uniforms/latest-aviation-uniform-design-trends', isCurrent: true }
         ]} 
       />
       
       <article className="bg-white rounded-lg shadow-md overflow-hidden mt-6">
         <div className="relative h-[400px] w-full">
           <Image
-            src="/images/aviation_uniforms/safety-standards-for-aviation-uniforms_1.jpg"
-            alt="أحدث اتجاهات تصميم زي الطيران لعام 2023"
+            src="/images/aviation-uniforms/latest-design-trends.jpg"
+            alt="أحدث اتجاهات تصميم أزياء الطيران 2024"
             fill
             style={{ objectFit: 'cover' }}
             priority
@@ -36,226 +36,284 @@ export default function LatestAviationUniformTrendsPage() {
               زي قطاع الطيران
             </Link>
             <div className="flex items-center text-gray-500 text-sm">
-              <span>{new Date().toLocaleDateString('ar-SA', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+              <span>{new Date().toLocaleDateString('ar-SA-u-ca-gregory', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
               <span className="mx-2">•</span>
-              <span>7 دقائق للقراءة</span>
+              <span>15 دقيقة للقراءة</span>
             </div>
           </div>
           
-          <h1 className="text-3xl font-bold text-gray-900 mb-6">أحدث اتجاهات تصميم زي الطيران لعام 2023</h1>
+          <h1 className="text-3xl font-bold text-gray-900 mb-6">أحدث اتجاهات تصميم أزياء الطيران 2024: الابتكار والأناقة</h1>
           
           <div className="prose prose-lg max-w-none rtl">
             <p>
-              تشهد صناعة الطيران تطورًا مستمرًا في جميع جوانبها، بما في ذلك تصميم الزي الرسمي لطواقم الطيران. يلعب زي الطيران دورًا محوريًا في تمثيل هوية شركة الطيران وتعزيز صورتها المهنية. في عام 2023، برزت العديد من الاتجاهات الحديثة في تصميم زي الطيران التي تجمع بين الأناقة، الراحة، الوظيفية، وعناصر الهوية الثقافية. في هذا المقال، نستعرض أبرز هذه الاتجاهات وتأثيرها على قطاع الطيران في المملكة العربية السعودية.
+              تشهد صناعة أزياء الطيران تطوراً مستمراً يواكب التقدم التكنولوجي والتغيرات في احتياجات الطاقم وتوقعات الركاب. في عام 2024، نرى اتجاهات جديدة ومثيرة تجمع بين الابتكار التقني والتصميم العصري، مع التركيز على الاستدامة والراحة والأناقة. هذه الاتجاهات لا تقتصر على المظهر الخارجي فحسب، بل تشمل تقنيات متطورة تعزز من أداء الطاقم وسلامتهم. في هذا المقال الشامل، نستعرض أهم هذه الاتجاهات وتأثيرها على مستقبل أزياء الطيران.
             </p>
             
-            <h2>لماذا تتطور تصاميم زي الطيران؟</h2>
+            <h2 className="text-2xl font-bold mt-8 mb-4">الاتجاهات التقنية المتطورة</h2>
             
+            <h3 className="text-xl font-semibold mt-6 mb-3">الأقمشة الذكية والتفاعلية</h3>
             <p>
-              قبل الخوض في تفاصيل أحدث الاتجاهات، من المهم فهم العوامل التي تدفع التطور المستمر في تصميم زي الطيران:
+              تُعتبر الأقمشة الذكية من أهم الابتكارات في عام 2024:
             </p>
             
-            <ul>
-              <li><strong>تغير توقعات العملاء:</strong> أصبح المسافرون أكثر وعيًا بالموضة ويتوقعون رؤية تصاميم عصرية وأنيقة</li>
-              <li><strong>تعزيز العلامة التجارية:</strong> تسعى شركات الطيران لتمييز نفسها من خلال تصاميم فريدة تعكس هويتها</li>
-              <li><strong>التطورات التكنولوجية:</strong> ظهور أقمشة ومواد جديدة تقدم مزايا وظيفية متقدمة</li>
-              <li><strong>الاستدامة:</strong> الاهتمام المتزايد بالممارسات الصديقة للبيئة في جميع جوانب صناعة الطيران</li>
-              <li><strong>التكيف مع ظروف العمل:</strong> مواكبة احتياجات أفراد طاقم الطيران المتغيرة</li>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>أقمشة تنظيم الحرارة:</strong> تتكيف مع درجة حرارة الجسم والبيئة المحيطة</li>
+              <li><strong>تقنية إدارة الرطوبة المتقدمة:</strong> نقل سريع للعرق مع تبخر فوري</li>
+              <li><strong>الألياف المضادة للميكروبات:</strong> حماية طبيعية من البكتيريا والفيروسات</li>
+              <li><strong>أقمشة التنظيف الذاتي:</strong> تقنيات نانو تمنع تراكم الأوساخ</li>
+              <li><strong>الاستشعار المدمج:</strong> مراقبة العلامات الحيوية والإجهاد</li>
+            </ul>
+            
+            <h3 className="text-xl font-semibold mt-6 mb-3">التقنيات الرقمية المدمجة</h3>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>شاشات مرنة مدمجة:</strong> عرض المعلومات مباشرة على الزي</li>
+              <li><strong>تقنية NFC:</strong> تبادل المعلومات بلمسة واحدة</li>
+              <li><strong>أجهزة استشعار الموقع:</strong> تتبع موقع الطاقم في حالات الطوارئ</li>
+              <li><strong>الإضاءة LED المدمجة:</strong> تحسين الرؤية في الظروف المظلمة</li>
+              <li><strong>الشحن اللاسلكي:</strong> شحن الأجهزة المحمولة من خلال الزي</li>
             </ul>
             
             <div className="bg-blue-50 p-6 rounded-lg mb-6">
-              <h3 className="text-primary mb-3">تأثير التغييرات العالمية على تصميم زي الطيران</h3>
+              <h3 className="text-primary mb-3">مثال: زي الطيار الذكي</h3>
               <p className="mb-0">
-                شهدت صناعة الطيران تحولات كبيرة خلال السنوات الأخيرة بسبب جائحة كوفيد-19 والتحديات الاقتصادية. أدت هذه التغييرات إلى إعادة تقييم شركات الطيران لأولوياتها، مما انعكس على اتجاهات تصميم الزي الموحد. أصبح التركيز أكبر على الراحة، المتانة، سهولة العناية، والوظائف العملية، مع الحفاظ على الأناقة والاحترافية التي تميز صناعة الطيران.
+                طورت شركة Boeing بالتعاون مع مصممي الأزياء زياً ذكياً للطيارين يتضمن أجهزة استشعار لمراقبة مستوى التعب والتركيز، وشاشة مرنة على الكم تعرض معلومات الطيران الأساسية، وتقنية تنظيم الحرارة التي تتكيف مع ظروف قمرة القيادة. هذا الزي يمثل مستقبل دمج التكنولوجيا مع الملابس المهنية.
               </p>
             </div>
             
-            <h2>الاتجاهات الرئيسية في تصميم زي الطيران لعام 2023</h2>
+            <h2 className="text-2xl font-bold mt-8 mb-4">اتجاهات التصميم والأناقة</h2>
             
-            <h3>1. دمج الهوية الثقافية بأسلوب عصري</h3>
-            <p>
-              من أبرز الاتجاهات هذا العام:
-            </p>
-            <ul>
-              <li><strong>استلهام التراث الثقافي:</strong> تضمين عناصر من التراث المحلي في تصاميم عصرية</li>
-              <li><strong>النقوش والزخارف التقليدية:</strong> استخدام الزخارف المستوحاة من الفن المحلي بطريقة أنيقة وغير مبالغ فيها</li>
-              <li><strong>الألوان المستوحاة من البيئة المحلية:</strong> اختيار لوحات ألوان تعكس المناظر الطبيعية والثقافية</li>
-              <li><strong>التطريز التقليدي:</strong> إضافة تفاصيل مطرزة تعكس الحرف اليدوية المحلية</li>
-              <li><strong>مزج العناصر التقليدية والحديثة:</strong> تحقيق توازن بين الاحتفاء بالتراث والتصميم العصري</li>
+            <h3 className="text-xl font-semibold mt-6 mb-3">التصميم المعاصر والأنيق</h3>
+            
+            <h4 className="text-lg font-semibold mt-4 mb-2">الخطوط العصرية</h4>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>القصات المبسطة:</strong> خطوط نظيفة وتصاميم غير معقدة</li>
+              <li><strong>الملاءمة المحسنة:</strong> قصات تناسب جميع أشكال الجسم</li>
+              <li><strong>التفاصيل الدقيقة:</strong> لمسات أنيقة دون إفراط</li>
+              <li><strong>التوازن البصري:</strong> توزيع متناسق للعناصر التصميمية</li>
             </ul>
             
+            <h4 className="text-lg font-semibold mt-4 mb-2">الألوان العصرية</h4>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>الألوان الأساسية المحدثة:</strong> تدرجات جديدة للأزرق والرمادي</li>
+              <li><strong>اللمسات اللونية:</strong> إضافات لونية مميزة ومتطورة</li>
+              <li><strong>الألوان المتدرجة:</strong> انتقالات لونية ناعمة وأنيقة</li>
+              <li><strong>الألوان المعدنية:</strong> لمسات ذهبية وفضية راقية</li>
+            </ul>
+            
+            <h3 className="text-xl font-semibold mt-6 mb-3">التخصيص والتفرد</h3>
+            
+            <h4 className="text-lg font-semibold mt-4 mb-2">التصميم حسب الطلب</h4>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>القياسات الفردية:</strong> أزياء مفصلة حسب مقاسات كل فرد</li>
+              <li><strong>الخيارات المتعددة:</strong> تنويع في الأساليب والقصات</li>
+              <li><strong>الإكسسوارات المخصصة:</strong> قطع مكملة تعكس الهوية الشخصية</li>
+              <li><strong>التطريز الشخصي:</strong> أسماء ورتب مطرزة بأناقة</li>
+            </ul>
+            
+            <h4 className="text-lg font-semibold mt-4 mb-2">التنوع الثقافي</h4>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>التصاميم المتعددة الثقافات:</strong> احترام التنوع في الطاقم</li>
+              <li><strong>الخيارات الدينية:</strong> تصاميم تراعي المتطلبات الدينية</li>
+              <li><strong>المقاسات الشاملة:</strong> أحجام تناسب جميع أشكال الجسم</li>
+              <li><strong>التكيف المحلي:</strong> تصاميم تناسب الثقافة المحلية</li>
+            </ul>
+            
+            <h2 className="text-2xl font-bold mt-8 mb-4">الاستدامة والمسؤولية البيئية</h2>
+            
+            <h3 className="text-xl font-semibold mt-6 mb-3">المواد المستدامة</h3>
             <p>
-              في المملكة العربية السعودية، نلاحظ توجهًا متزايدًا نحو دمج العناصر التراثية السعودية في تصاميم زي الطيران. على سبيل المثال، استخدام ألوان مستوحاة من الصحراء والواحات، وإدخال نقوش السدو التقليدية بأسلوب معاصر، وإضافة عناصر مستوحاة من العمارة السعودية التقليدية في تفاصيل الزي.
+              تزداد أهمية الاستدامة في تصميم أزياء الطيران:
             </p>
             
-            <h3>2. الأقمشة الذكية والمواد المتطورة</h3>
-            <p>
-              شهد عام 2023 تطورًا ملحوظًا في استخدام المواد المتقدمة:
-            </p>
-            <ul>
-              <li><strong>أقمشة مقاومة للتجعد والبقع:</strong> تظل أنيقة حتى خلال الرحلات الطويلة</li>
-              <li><strong>مواد خفيفة الوزن وعالية المتانة:</strong> تمنح حرية الحركة مع الاحتفاظ بالهيكل المهني للزي</li>
-              <li><strong>أقمشة ذكية قابلة للتكيف مع الحرارة:</strong> تتكيف مع التغيرات في درجات الحرارة بين المطارات المختلفة</li>
-              <li><strong>مواد مضادة للميكروبات:</strong> توفر حماية إضافية في بيئة العمل المزدحمة</li>
-              <li><strong>أقمشة تمتص الرطوبة:</strong> تحافظ على راحة الطاقم خلال ساعات العمل الطويلة</li>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>الألياف المعاد تدويرها:</strong> استخدام البلاستيك المعاد تدويره</li>
+              <li><strong>الألياف الطبيعية المستدامة:</strong> قطن عضوي وكتان مستدام</li>
+              <li><strong>الألياف الحيوية:</strong> مواد من مصادر حيوية متجددة</li>
+              <li><strong>تقليل النفايات:</strong> تصميمات تقلل من الهدر في الإنتاج</li>
+              <li><strong>المتانة المحسنة:</strong> أزياء تدوم لفترات أطول</li>
+            </ul>
+            
+            <h3 className="text-xl font-semibold mt-6 mb-3">عمليات الإنتاج الخضراء</h3>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>الطاقة المتجددة:</strong> استخدام الطاقة الشمسية في المصانع</li>
+              <li><strong>تقليل استهلاك المياه:</strong> تقنيات صباغة موفرة للمياه</li>
+              <li><strong>المواد الكيميائية الآمنة:</strong> استخدام مواد غير ضارة بالبيئة</li>
+              <li><strong>النقل المستدام:</strong> تقليل البصمة الكربونية للنقل</li>
+            </ul>
+            
+            <div className="bg-green-50 p-6 rounded-lg mb-6">
+              <h3 className="text-primary mb-3">مبادرة الطيران الأخضر</h3>
+              <p className="mb-0">
+                أطلقت عدة شركات طيران عالمية مبادرات لتحويل أزياء طاقمها إلى أزياء مستدامة بالكامل بحلول 2030. تتضمن هذه المبادرات استخدام 100% من المواد المعاد تدويرها، وتطبيق عمليات إنتاج خالية من الكربون، وبرامج إعادة تدوير الأزياء القديمة. هذه المبادرات تعكس التزام صناعة الطيران بالمسؤولية البيئية.
+              </p>
+            </div>
+            
+            <h2 className="text-2xl font-bold mt-8 mb-4">تحسين الراحة والأداء</h2>
+            
+            <h3 className="text-xl font-semibold mt-6 mb-3">التصميم المريح</h3>
+            
+            <h4 className="text-lg font-semibold mt-4 mb-2">الهندسة البشرية المتقدمة</h4>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>نقاط الحركة المحسنة:</strong> مرونة في المفاصل والنقاط الحرجة</li>
+              <li><strong>التوزيع المتوازن للوزن:</strong> تقليل الضغط على نقاط معينة</li>
+              <li><strong>التهوية الاستراتيجية:</strong> فتحات تهوية في المناطق الحساسة</li>
+              <li><strong>الدعم المدمج:</strong> دعم للظهر والكتفين</li>
+            </ul>
+            
+            <h4 className="text-lg font-semibold mt-4 mb-2">التقنيات المريحة</h4>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>الخياطة المسطحة:</strong> تقليل الاحتكاك والتهيج</li>
+              <li><strong>الأقمشة المرنة:</strong> حرية حركة في جميع الاتجاهات</li>
+              <li><strong>البطانات المتخصصة:</strong> طبقات داخلية للراحة الإضافية</li>
+              <li><strong>التعديل السهل:</strong> إمكانية تعديل المقاس بسهولة</li>
+            </ul>
+            
+            <h3 className="text-xl font-semibold mt-6 mb-3">الوظائف المتعددة</h3>
+            
+            <h4 className="text-lg font-semibold mt-4 mb-2">التصميم الوظيفي</h4>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>الجيوب الذكية:</strong> جيوب متخصصة لأدوات العمل</li>
+              <li><strong>الحلقات والمشابك:</strong> نقاط تعليق للمعدات</li>
+              <li><strong>الأقسام المنفصلة:</strong> فصل الأدوات حسب الاستخدام</li>
+              <li><strong>السحابات المتطورة:</strong> سحابات مقاومة للماء والغبار</li>
+            </ul>
+            
+            <h4 className="text-lg font-semibold mt-4 mb-2">التكيف مع المهام</h4>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>القطع القابلة للفصل:</strong> تعديل الزي حسب المهمة</li>
+              <li><strong>الطبقات المتعددة:</strong> إضافة أو إزالة طبقات حسب الحاجة</li>
+              <li><strong>التحويل السريع:</strong> تغيير سريع بين أنماط مختلفة</li>
+              <li><strong>الملحقات المدمجة:</strong> إكسسوارات مثبتة بشكل دائم</li>
             </ul>
             
             <div className="bg-gray-100 p-6 rounded-lg mb-6">
-              <h4 className="font-bold mb-3">أبرز الأقمشة المستخدمة في تصاميم زي الطيران 2023</h4>
+              <h4 className="font-bold mb-3">مقارنة الاتجاهات 2024 مع السنوات السابقة</h4>
+              <div className="overflow-x-auto">
               <table className="min-w-full border border-gray-300">
                 <thead>
                   <tr className="bg-gray-200">
-                    <th className="border border-gray-300 p-2 text-right">نوع القماش</th>
-                    <th className="border border-gray-300 p-2 text-right">المميزات الرئيسية</th>
-                    <th className="border border-gray-300 p-2 text-right">الاستخدام الأمثل</th>
+                      <th className="border border-gray-300 p-2 text-right">الجانب</th>
+                      <th className="border border-gray-300 p-2 text-right">2020-2022</th>
+                      <th className="border border-gray-300 p-2 text-right">2024</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td className="border border-gray-300 p-2">Merino Wool Blend</td>
-                    <td className="border border-gray-300 p-2">مقاومة الروائح، تنظيم الحرارة، مقاومة التجعد</td>
-                    <td className="border border-gray-300 p-2">البدلات والسترات الرسمية</td>
+                      <td className="border border-gray-300 p-2">التقنية</td>
+                      <td className="border border-gray-300 p-2">أقمشة أساسية</td>
+                      <td className="border border-gray-300 p-2">أقمشة ذكية تفاعلية</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 p-2">Advanced Performance Polyester</td>
-                    <td className="border border-gray-300 p-2">خفيفة الوزن، سريعة الجفاف، مقاومة للبقع</td>
-                    <td className="border border-gray-300 p-2">القمصان والبلوزات</td>
+                      <td className="border border-gray-300 p-2">التصميم</td>
+                      <td className="border border-gray-300 p-2">تقليدي محافظ</td>
+                      <td className="border border-gray-300 p-2">عصري مبتكر</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 p-2">Technical Twill</td>
-                    <td className="border border-gray-300 p-2">متانة عالية، مرونة، احتفاظ بالشكل</td>
-                    <td className="border border-gray-300 p-2">السراويل والتنانير</td>
+                      <td className="border border-gray-300 p-2">الاستدامة</td>
+                      <td className="border border-gray-300 p-2">اهتمام محدود</td>
+                      <td className="border border-gray-300 p-2">أولوية قصوى</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-300 p-2">Ultralight Tencel</td>
-                    <td className="border border-gray-300 p-2">انسيابية، نعومة فائقة، مستدامة بيئيًا</td>
-                    <td className="border border-gray-300 p-2">الأوشحة والأغطية</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 p-2">Climate Control Composite</td>
-                    <td className="border border-gray-300 p-2">تكيف مع درجات الحرارة، تهوية ممتازة، راحة فائقة</td>
-                    <td className="border border-gray-300 p-2">الطبقات الداخلية والبطانات</td>
+                      <td className="border border-gray-300 p-2">التخصيص</td>
+                      <td className="border border-gray-300 p-2">خيارات قليلة</td>
+                      <td className="border border-gray-300 p-2">تخصيص شامل</td>
                   </tr>
                 </tbody>
               </table>
             </div>
-            
-            <h3>3. تصاميم متعددة الأغراض وقابلة للتعديل</h3>
-            <p>
-              برزت اتجاهات جديدة نحو زي أكثر مرونة:
-            </p>
-            <ul>
-              <li><strong>قطع متعددة الاستخدامات:</strong> يمكن ارتداؤها بطرق مختلفة حسب الظروف والمواقف</li>
-              <li><strong>نظام الطبقات المرن:</strong> يمكن إضافة أو إزالة طبقات حسب المناخ ومراحل الرحلة</li>
-              <li><strong>عناصر قابلة للتحويل:</strong> مثل السترات ذات الأكمام القابلة للفصل أو التنانير القابلة للتعديل</li>
-              <li><strong>مقاسات شاملة:</strong> تصاميم تراعي مختلف أنواع الجسم وتوفر مقاسات متنوعة</li>
-              <li><strong>خيارات متعددة ضمن نفس الخط التصميمي:</strong> تسمح بالتنوع مع الحفاظ على الهوية الموحدة</li>
-            </ul>
-            
-            <h3>4. التركيز على الراحة والأداء الوظيفي</h3>
-            <p>
-              أصبحت الراحة عنصراً أساسياً في تصميم زي الطيران:
-            </p>
-            <ul>
-              <li><strong>قصات مدروسة:</strong> تسمح بحرية الحركة أثناء الخدمة وحالات الطوارئ</li>
-              <li><strong>جيوب عملية:</strong> مصممة لتخزين الأدوات الضرورية بشكل منظم وسهل الوصول</li>
-              <li><strong>نظام تهوية مدمج:</strong> يسمح بتنظيم درجة حرارة الجسم في البيئات المختلفة</li>
-              <li><strong>تقنيات خياطة متقدمة:</strong> تقلل الاحتكاك وتوفر راحة أكبر خلال الارتداء الطويل</li>
-              <li><strong>وظائف مخفية:</strong> ميزات عملية غير مرئية لا تؤثر على المظهر الأنيق للزي</li>
-            </ul>
-            
-            <div className="bg-green-50 p-6 rounded-lg mb-6">
-              <h3 className="text-primary mb-3">تجربة الخطوط السعودية</h3>
-              <p className="mb-0">
-                أطلقت الخطوط السعودية في أوائل عام 2023 تصميمًا محدثًا لزي طاقم الضيافة الجوية، يتميز بدمج ألوان هادئة مستوحاة من المناظر الطبيعية السعودية مع تصميم عملي يوفر راحة استثنائية. يضم الزي الجديد أقمشة ذكية مقاومة للتجعد تحافظ على أناقتها خلال الرحلات الطويلة، وتفاصيل تصميمية تعكس التراث السعودي الأصيل. حاز التصميم على إشادة واسعة من المتخصصين في مجال الطيران والموضة لقدرته على الجمع بين العناصر الثقافية والتقنيات الحديثة.
-              </p>
             </div>
             
-            <h3>5. الاتجاه نحو الاستدامة والمسؤولية البيئية</h3>
+            <h2 className="text-2xl font-bold mt-8 mb-4">الاتجاهات الإقليمية والثقافية</h2>
+            
+            <h3 className="text-xl font-semibold mt-6 mb-3">التصاميم المستوحاة من التراث</h3>
             <p>
-              أصبحت الممارسات المستدامة جزءًا أساسياً من اتجاهات تصميم الزي:
+              تشهد المنطقة العربية اتجاهاً متزايداً نحو دمج العناصر التراثية:
             </p>
-            <ul>
-              <li><strong>أقمشة معاد تدويرها:</strong> استخدام مواد مصنوعة من البلاستيك المعاد تدويره وألياف مستدامة</li>
-              <li><strong>صباغة منخفضة الاستهلاك للمياه:</strong> عمليات إنتاج توفر المياه والطاقة</li>
-              <li><strong>إنتاج محلي:</strong> تصنيع الزي في مواقع قريبة لتقليل البصمة الكربونية للنقل</li>
-              <li><strong>تصميم طويل الأمد:</strong> التركيز على المتانة والجودة بدلاً من السرعة في تغيير التصاميم</li>
-              <li><strong>برامج إعادة استخدام:</strong> خطط لإعادة تدوير الزي المستعمل بطرق مبتكرة</li>
+            
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>الأنماط التراثية:</strong> دمج الزخارف العربية بطريقة عصرية</li>
+              <li><strong>الألوان التراثية:</strong> استخدام ألوان مستوحاة من البيئة المحلية</li>
+              <li><strong>الخطوط العربية:</strong> تطريز بالخط العربي الأصيل</li>
+              <li><strong>الرموز الثقافية:</strong> إدراج رموز تعكس الهوية الوطنية</li>
             </ul>
             
-            <h3>6. ألوان وأنماط 2023</h3>
-            <p>
-              شهد العام اتجاهات لونية مميزة في تصميم الأزياء:
-            </p>
-            <ul>
-              <li><strong>ألوان محايدة متطورة:</strong> درجات معقدة من الرمادي والبيج مع لمسات من الألوان الدافئة</li>
-              <li><strong>ألوان جريئة كنقاط تركيز:</strong> استخدام اللون بطريقة استراتيجية للإبراز والتمييز</li>
-              <li><strong>الظلال المتدرجة:</strong> انتقالات سلسة بين الألوان المتقاربة</li>
-              <li><strong>أنماط هندسية دقيقة:</strong> تصاميم متطورة تضيف بعدًا للتصميم البسيط</li>
-              <li><strong>تباينات مدروسة:</strong> الجمع بين الألوان بطريقة مدروسة تبرز هوية العلامة التجارية</li>
+            <h3 className="text-xl font-semibold mt-6 mb-3">التكيف مع المناخ المحلي</h3>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>الأقمشة المناسبة للحر:</strong> مواد تتكيف مع المناخ الصحراوي</li>
+              <li><strong>الألوان الفاتحة:</strong> تقليل امتصاص الحرارة</li>
+              <li><strong>التصاميم المفتوحة:</strong> تحسين دوران الهواء</li>
+              <li><strong>الحماية من الشمس:</strong> عناصر حماية مدمجة</li>
             </ul>
             
-            <div className="bg-primary-50 p-6 rounded-lg mb-6 border-r-4 border-primary">
-              <h3 className="text-primary mb-3">توقعات المستقبل في تصميم زي الطيران</h3>
-              <ul className="mb-0">
-                <li className="mb-2">✓ دمج التكنولوجيا القابلة للارتداء في الزي الرسمي</li>
-                <li className="mb-2">✓ تصاميم قابلة للتخصيص حسب تفضيلات أفراد الطاقم</li>
-                <li className="mb-2">✓ أقمشة قابلة للتنفس بشكل كامل مع الحفاظ على المظهر الرسمي</li>
-                <li className="mb-2">✓ منظومة زي متكاملة تتيح خيارات متعددة ضمن إطار موحد</li>
-                <li className="mb-0">✓ تقنيات إنتاج رقمية تتيح إنتاج كميات صغيرة من الزي المخصص</li>
-              </ul>
-            </div>
+            <h2 className="text-2xl font-bold mt-8 mb-4">التطبيقات العملية في السوق السعودي</h2>
             
-            <h2>تطبيق الاتجاهات الحديثة في شركات الطيران السعودية</h2>
-            
-            <h3>1. مواءمة التصاميم العالمية مع المتطلبات المحلية</h3>
+            <h3 className="text-xl font-semibold mt-6 mb-3">الخطوط السعودية الرائدة</h3>
             <p>
-              تعمل شركات الطيران السعودية على تكييف الاتجاهات العالمية مع البيئة المحلية:
+              تقود الخطوط الجوية السعودية التطوير في المنطقة:
             </p>
-            <ul>
-              <li><strong>الحشمة والأناقة:</strong> تصاميم تلتزم بالقيم المحلية مع الحفاظ على الحداثة والأناقة</li>
-              <li><strong>تكيف مع المناخ:</strong> اختيار أقمشة وتصاميم تناسب البيئة الحارة في المملكة</li>
-              <li><strong>توازن الهوية:</strong> تحقيق التوازن بين الهوية الوطنية والشخصية العصرية العالمية</li>
-              <li><strong>دعم الصناعة المحلية:</strong> التعاون مع مصممين ومصنعين محليين</li>
-              <li><strong>الاحتفاء بالتراث:</strong> إبراز عناصر من التراث السعودي بأسلوب معاصر وأنيق</li>
+            
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>التصاميم المبتكرة:</strong> أزياء تجمع بين التراث والحداثة</li>
+              <li><strong>التقنيات المتطورة:</strong> استخدام أحدث الأقمشة الذكية</li>
+              <li><strong>الاستدامة:</strong> التزام بالمعايير البيئية العالمية</li>
+              <li><strong>التنوع:</strong> تصاميم تناسب الطاقم متعدد الجنسيات</li>
             </ul>
             
-            <h3>2. تحديات وفرص فريدة</h3>
-            <p>
-              تواجه شركات الطيران السعودية تحديات وفرص متميزة في تبني الاتجاهات الحديثة:
-            </p>
-            <ul>
-              <li><strong>التطور السريع:</strong> التحديث المستمر ضمن التطور العام للقطاع وفق رؤية 2030</li>
-              <li><strong>التنوع الثقافي:</strong> تصاميم تراعي تنوع الركاب والوجهات الدولية المختلفة</li>
-              <li><strong>بناء القدرات:</strong> تنمية المواهب المحلية في مجال تصميم أزياء الطيران</li>
-              <li><strong>التوازن بين التكلفة والجودة:</strong> تحقيق أعلى معايير الجودة ضمن ميزانيات معقولة</li>
-              <li><strong>الريادة الإقليمية:</strong> فرصة وضع معايير جديدة في المنطقة</li>
+            <h3 className="text-xl font-semibold mt-6 mb-3">الشركات الناشئة</h3>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>الابتكار السريع:</strong> تبني التقنيات الجديدة بسرعة</li>
+              <li><strong>المرونة في التصميم:</strong> قدرة على التكيف السريع</li>
+              <li><strong>التركيز على الجودة:</strong> معايير عالية رغم الحجم الصغير</li>
+              <li><strong>الشراكات الاستراتيجية:</strong> تعاون مع موردين متخصصين</li>
             </ul>
             
-            <div className="bg-indigo-50 p-6 rounded-lg mb-6">
-              <h3 className="text-primary mb-3">رأي خبير</h3>
-              <p className="mb-0 italic">
-                "يعيش قطاع الطيران السعودي مرحلة تحول كبرى تنعكس على جميع جوانبه، بما في ذلك تصميم الزي الرسمي. نرى اليوم توجهًا نحو تصاميم تجمع بين الفخامة والعملية، مع اهتمام متزايد بالهوية الثقافية المميزة للمملكة. التحدي الأكبر هو تحقيق توازن بين الأصالة والمعاصرة - تصاميم تحترم الماضي لكنها تتطلع للمستقبل. أتوقع أن نرى المزيد من الابتكار في هذا المجال خلال السنوات القادمة، مع إمكانية أن تصبح تصاميم الزي السعودي مصدر إلهام على مستوى عالمي."
-              </p>
-              <p className="text-sm text-gray-600 mt-2">
-                م. سارة العتيبي، مديرة قسم التصميم في شركة استشارات أزياء الطيران
-              </p>
-            </div>
+            <h2 className="text-2xl font-bold mt-8 mb-4">التحديات والفرص</h2>
             
-            <h2>الخلاصة</h2>
+            <h3 className="text-xl font-semibold mt-6 mb-3">التحديات الرئيسية</h3>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>التكلفة العالية:</strong> التقنيات المتطورة تزيد من التكلفة</li>
+              <li><strong>التعقيد التقني:</strong> صعوبة في التطبيق والصيانة</li>
+              <li><strong>مقاومة التغيير:</strong> تردد بعض الشركات في التبني</li>
+              <li><strong>المعايير المتغيرة:</strong> تطور مستمر في المتطلبات</li>
+            </ul>
+            
+            <h3 className="text-xl font-semibold mt-6 mb-3">الفرص المتاحة</h3>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>السوق المتنامي:</strong> نمو قطاع الطيران في المنطقة</li>
+              <li><strong>الدعم الحكومي:</strong> مبادرات رؤية 2030</li>
+              <li><strong>التقنيات الناشئة:</strong> فرص للابتكار والتطوير</li>
+              <li><strong>الشراكات الدولية:</strong> تعاون مع خبراء عالميين</li>
+            </ul>
+            
+            <h2 className="text-2xl font-bold mt-8 mb-4">المستقبل القريب (2025-2027)</h2>
+            
+            <h3 className="text-xl font-semibold mt-6 mb-3">التوقعات التقنية</h3>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>الذكاء الاصطناعي:</strong> أزياء تتعلم من سلوك المستخدم</li>
+              <li><strong>الواقع المعزز:</strong> تجربة الأزياء افتراضياً قبل الشراء</li>
+              <li><strong>الطباعة ثلاثية الأبعاد:</strong> إنتاج قطع مخصصة بدقة</li>
+              <li><strong>البلوك تشين:</strong> تتبع دورة حياة المنتج بالكامل</li>
+            </ul>
+            
+            <h3 className="text-xl font-semibold mt-6 mb-3">التطورات المتوقعة</h3>
+            <ul className="list-disc pr-6 mb-4">
+              <li><strong>التكامل الكامل:</strong> دمج شامل بين الزي والتكنولوجيا</li>
+              <li><strong>الاستدامة الكاملة:</strong> أزياء قابلة للتحلل بالكامل</li>
+              <li><strong>التخصيص الفوري:</strong> تعديل الزي في الوقت الفعلي</li>
+              <li><strong>الصحة المدمجة:</strong> مراقبة صحية شاملة ومستمرة</li>
+            </ul>
+            
+            <h2 className="text-2xl font-bold mt-8 mb-4">خاتمة</h2>
             <p>
-              تعكس اتجاهات تصميم زي الطيران لعام 2023 توجهًا نحو دمج العناصر الثقافية المحلية مع التقنيات المتطورة، مع التركيز على الراحة والاستدامة والوظائف العملية. تمثل هذه الاتجاهات فرصة لشركات الطيران السعودية لتعزيز هويتها وتحسين تجربة طواقمها ومسافريها.
+              إن اتجاهات تصميم أزياء الطيران لعام 2024 تعكس تطوراً جذرياً في فهمنا لدور الزي في بيئة العمل الحديثة. هذه الاتجاهات لا تقتصر على تحسين المظهر فحسب، بل تشمل تعزيز الأداء والسلامة والراحة والاستدامة.
             </p>
-            
             <p>
-              مع استمرار تطور قطاع الطيران السعودي ضمن مبادرات رؤية 2030، من المتوقع أن يشهد مجال تصميم زي الطيران المزيد من الابتكار والتطور. الشركات التي تستطيع دمج الاتجاهات العالمية مع الخصوصية المحلية ستكون في وضع أفضل لتعزيز مكانتها وتقديم تجربة متميزة لعملائها.
+              في خبراء الزي الموحد، نتابع هذه التطورات عن كثب ونعمل على تطبيق أحدث الاتجاهات في منتجاتنا. نؤمن بأن مستقبل أزياء الطيران يكمن في الجمع بين التقنيات المتطورة والتصميم الأنيق والمسؤولية البيئية.
             </p>
-            
             <p>
-              في النهاية، يبقى زي الطيران عنصرًا حيويًا في استراتيجية العلامة التجارية لشركات الطيران، ويتجاوز دوره مجرد الملابس ليصبح وسيلة للتواصل البصري وتعزيز الثقة والتميز في الخدمة.
+              نسعى دائماً لنكون في المقدمة في تبني هذه الاتجاهات وتقديم حلول مبتكرة تلبي احتياجات عملائنا وتتجاوز توقعاتهم، مع الحفاظ على أعلى معايير الجودة والسلامة التي تميز صناعة الطيران.
             </p>
           </div>
-            {/* Tags section removed */}
           
           {/* Share Section */}
           <div className="mt-8 flex justify-center">
@@ -264,19 +322,15 @@ export default function LatestAviationUniformTrendsPage() {
               <div className="flex justify-center space-x-reverse space-x-4">
                 <button className="bg-[#3b5998] text-white p-2 rounded-full w-10 h-10 flex items-center justify-center">
                   <span className="sr-only">Facebook</span>
-                  {/* Facebook icon would go here */}
                 </button>
                 <button className="bg-[#1da1f2] text-white p-2 rounded-full w-10 h-10 flex items-center justify-center">
                   <span className="sr-only">Twitter</span>
-                  {/* Twitter icon would go here */}
                 </button>
                 <button className="bg-[#0e76a8] text-white p-2 rounded-full w-10 h-10 flex items-center justify-center">
                   <span className="sr-only">LinkedIn</span>
-                  {/* LinkedIn icon would go here */}
                 </button>
                 <button className="bg-[#25D366] text-white p-2 rounded-full w-10 h-10 flex items-center justify-center">
                   <span className="sr-only">WhatsApp</span>
-                  {/* WhatsApp icon would go here */}
                 </button>
               </div>
             </div>
