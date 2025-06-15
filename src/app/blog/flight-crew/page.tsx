@@ -21,7 +21,7 @@ export default function FlightCrewPage() {
       title: 'أهمية الأزياء المهنية لطاقم الطيران في صورة الشركة',
       description: 'كيف تؤثر أزياء طاقم الطيران على صورة شركة الطيران وثقة المسافرين',
       href: '/blog/flight-crew/importance-of-professional-aviation-crew-uniforms-company-image',
-      image: '/images/aviation_uniforms/aviation_uniform_visual_identity.jpg',
+      image: '/images/aviation_uniforms/professional_crew_uniforms.jpg',
       category: 'صورة الشركة',
       readTime: '8 دقائق'
     },
@@ -29,7 +29,7 @@ export default function FlightCrewPage() {
       title: 'أحدث اتجاهات تصميم الأزياء في قطاع الطيران',
       description: 'استكشاف أحدث التطورات والاتجاهات في تصميم أزياء طاقم الطيران',
       href: '/blog/flight-crew/latest-aviation-uniform-design-trends',
-      image: '/images/aviation_uniforms/innovative_uniform_materials.jpg',
+      image: '/images/aviation_uniforms/air_crew_attire.jpg',
       category: 'التصميم',
       readTime: '10 دقائق'
     },
@@ -37,7 +37,7 @@ export default function FlightCrewPage() {
       title: 'تاريخ تطور زي مضيفي الطيران',
       description: 'رحلة عبر تاريخ تطور أزياء مضيفي الطيران من البدايات حتى اليوم',
       href: '/blog/flight-crew/history-of-flight-attendant-uniform-design',
-      image: '/images/aviation_uniforms/history-evolution-saudi-airlines-uniform-header.jpg',
+      image: '/images/aviation_uniforms/history-evolution-saudi-airlines-uniform-content-3.jpg',
       category: 'التاريخ',
       readTime: '12 دقائق'
     },
@@ -45,7 +45,7 @@ export default function FlightCrewPage() {
       title: 'معايير الجودة والسلامة في تصميم أزياء الطيارين ومضيفي الطيران',
       description: 'المعايير الدولية والمحلية للسلامة والجودة في أزياء طاقم الطيران',
       href: '/blog/flight-crew/quality-safety-standards-in-pilot-flight-attendant-uniform-design',
-      image: '/images/aviation_uniforms/safety-standards-for-aviation-uniforms-banner.jpg',
+      image: '/images/aviation_uniforms/flight_safety_standards.jpg',
       category: 'السلامة',
       readTime: '15 دقائق'
     },
@@ -53,7 +53,7 @@ export default function FlightCrewPage() {
       title: 'تصميم أزياء الطيران الخاص والفاخر',
       description: 'أزياء مخصصة لطاقم الطيران الخاص والطائرات التجارية الفاخرة',
       href: '/blog/flight-crew/private-aviation-uniform-design-luxury',
-      image: '/images/aviation_uniforms/luxury_private_jet_uniforms.jpg',
+      image: '/images/aviation_uniforms/private_aviation_uniforms.jpg',
       category: 'الطيران الخاص',
       readTime: '9 دقائق'
     },
@@ -61,7 +61,7 @@ export default function FlightCrewPage() {
       title: 'كيفية اختيار الأقمشة المناسبة لأزياء الطيران في المناخ السعودي',
       description: 'دليل شامل لاختيار أفضل الأقمشة المناسبة للمناخ الحار في المملكة',
       href: '/blog/flight-crew/how-to-choose-suitable-fabrics-for-aviation-uniforms-in-saudi-climate',
-      image: '/images/aviation_uniforms/how-to-choose-suitable-fabrics-for-aviation-uniforms-in-saudi-climate-banner.jpg',
+      image: '/images/aviation_uniforms/how-to-choose-suitable-fabrics-for-aviation-uniforms-in-saudi-climate-content-2.jpg',
       category: 'الأقمشة',
       readTime: '11 دقائق'
     },
@@ -69,7 +69,7 @@ export default function FlightCrewPage() {
       title: 'أزياء خدمات الأرض: الوظائف والعلامة التجارية',
       description: 'تصميم أزياء فعالة لفرق خدمات الأرض في المطارات',
       href: '/blog/flight-crew/ground-service-uniforms-functionality-branding',
-      image: '/images/aviation_uniforms/ground_service_uniforms.jpg',
+      image: '/images/aviation_uniforms/ground_services_uniforms.jpg',
       category: 'خدمات الأرض',
       readTime: '7 دقائق'
     },
@@ -77,7 +77,7 @@ export default function FlightCrewPage() {
       title: 'تأثير الأزياء على معنويات وأداء طاقم الطيران',
       description: 'كيف تؤثر جودة وتصميم الأزياء على أداء ورضا طاقم الطيران',
       href: '/blog/flight-crew/aviation-uniforms-impact-crew-morale-performance',
-      image: '/images/aviation_uniforms/crew_morale.jpg',
+      image: '/images/aviation_uniforms/flight_crew_performance.jpg',
       category: 'الأداء',
       readTime: '13 دقائق'
     },
@@ -85,7 +85,7 @@ export default function FlightCrewPage() {
       title: 'ابتكارات تقنية الأقمشة في صناعة الطيران',
       description: 'أحدث التقنيات والابتكارات في أقمشة أزياء الطيران',
       href: '/blog/flight-crew/aviation-fabric-technology-innovations',
-      image: '/images/aviation_uniforms/aviation_fabric_technology.jpg',
+      image: '/images/aviation_uniforms/aviation_fabrics.jpg',
       category: 'التقنية',
       readTime: '14 دقائق'
     }
@@ -231,7 +231,7 @@ export default function FlightCrewPage() {
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
               <div className="relative h-64 md:h-80">
                 <Image
-                  src="/images/aviation_uniforms/aviation_uniform_visual_identity.jpg"
+                  src="/images/aviation_uniforms/professional_crew_uniforms.jpg"
                   alt="أزياء طاقم الطيران المهنية"
                   fill
                   style={{ objectFit: 'cover' }}
