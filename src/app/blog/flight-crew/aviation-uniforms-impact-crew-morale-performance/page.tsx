@@ -23,7 +23,7 @@ export default function ArticlePage() {
       <article className="bg-white rounded-lg shadow-md overflow-hidden mt-6">
         <div className="relative w-full">
           <BlogImage
-            src="/images/aviation_uniforms/crew_morale_uniform_impact.jpg"
+            src="/images/aviation_uniforms/flight_crew_performance.jpg"
             alt="تأثير الزي الموحد للطيران على معنويات الطاقم والأداء"
             width={1200}
             height={630}
@@ -78,7 +78,7 @@ export default function ArticlePage() {
             </ul>
             
             <BlogImage
-              src="/images/aviation_uniforms/crew_team_spirit.jpg"
+              src="/images/aviation_uniforms/airline_team_spirit.jpg"
               alt="طاقم طيران بزي موحد يعكس روح الفريق"
               width={800}
               height={500}
@@ -170,7 +170,7 @@ export default function ArticlePage() {
             </ul>
             
             <BlogImage
-              src="/images/aviation_uniforms/diverse_crew_uniform_options.jpg"
+              src="/images/aviation_uniforms/crew_compliance_uniforms.jpg"
               alt="خيارات متنوعة من الزي الموحد لطاقم متنوع ثقافياً"
               width={800}
               height={500}
@@ -229,7 +229,7 @@ export default function ArticlePage() {
             </ul>
             
             <BlogImage
-              src="/images/aviation_uniforms/uniform_design_workshop.jpg"
+              src="/images/aviation_uniforms/aviation_uniform_manufacturer.jpg"
               alt="ورشة عمل تشاركية لتصميم زي طاقم الطيران"
               width={800}
               height={500}
