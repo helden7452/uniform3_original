@@ -1,19 +1,27 @@
-'use client';
-
+import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
 import Breadcrumb from '@/components/Breadcrumb';
+import { generateSafeMetadata } from '@/components/SafeMetadata';
+
+export const metadata: Metadata = generateSafeMetadata({
+  title: 'دليل شامل لأزياء طاقم الطيران | خبراء الزي الموحد',
+  description: 'دليل متكامل لأزياء طاقم الطيران في المملكة العربية السعودية - معايير الجودة، التصميم، والسلامة لطياري الطائرات ومضيفي الطيران',
+  keywords: 'أزياء طاقم الطيران، زي الطيارين، زي مضيفي الطيران، معايير السلامة، الطيران السعودي',
+  openGraph: {
+    title: 'دليل شامل لأزياء طاقم الطيران | خبراء الزي الموحد',
+    description: 'دليل متكامل لأزياء طاقم الطيران في المملكة العربية السعودية',
+    images: ['/images/aviation_uniforms/professional_crew_uniforms.jpg'],
+  },
+});
 
 export default function FlightCrewPage() {
-  const [selectedCategory, setSelectedCategory] = useState('جميع المقالات');
-
   const articles = [
     {
       title: 'أهمية الأزياء المهنية لطاقم الطيران في صورة الشركة',
       description: 'كيف تؤثر أزياء طاقم الطيران على صورة شركة الطيران وثقة المسافرين',
       href: '/blog/flight-crew/importance-of-professional-aviation-crew-uniforms-company-image',
-      image: '/images/aviation_uniforms/professional_crew_uniforms.jpg',
+      image: '/images/aviation_uniforms/aviation_uniform_visual_identity.jpg',
       category: 'صورة الشركة',
       readTime: '8 دقائق'
     },
@@ -21,7 +29,7 @@ export default function FlightCrewPage() {
       title: 'أحدث اتجاهات تصميم الأزياء في قطاع الطيران',
       description: 'استكشاف أحدث التطورات والاتجاهات في تصميم أزياء طاقم الطيران',
       href: '/blog/flight-crew/latest-aviation-uniform-design-trends',
-      image: '/images/aviation_uniforms/modern_aviation_design.jpg',
+      image: '/images/aviation_uniforms/innovative_uniform_materials.jpg',
       category: 'التصميم',
       readTime: '10 دقائق'
     },
@@ -29,7 +37,7 @@ export default function FlightCrewPage() {
       title: 'تاريخ تطور زي مضيفي الطيران',
       description: 'رحلة عبر تاريخ تطور أزياء مضيفي الطيران من البدايات حتى اليوم',
       href: '/blog/flight-crew/history-of-flight-attendant-uniform-design',
-      image: '/images/aviation_uniforms/flight_attendant_history.jpg',
+      image: '/images/aviation_uniforms/history-evolution-saudi-airlines-uniform-header.jpg',
       category: 'التاريخ',
       readTime: '12 دقائق'
     },
@@ -37,7 +45,7 @@ export default function FlightCrewPage() {
       title: 'معايير الجودة والسلامة في تصميم أزياء الطيارين ومضيفي الطيران',
       description: 'المعايير الدولية والمحلية للسلامة والجودة في أزياء طاقم الطيران',
       href: '/blog/flight-crew/quality-safety-standards-in-pilot-flight-attendant-uniform-design',
-      image: '/images/aviation_uniforms/safety_standards_uniforms.jpg',
+      image: '/images/aviation_uniforms/safety-standards-for-aviation-uniforms-banner.jpg',
       category: 'السلامة',
       readTime: '15 دقائق'
     },
@@ -45,7 +53,7 @@ export default function FlightCrewPage() {
       title: 'تصميم أزياء الطيران الخاص والفاخر',
       description: 'أزياء مخصصة لطاقم الطيران الخاص والطائرات التجارية الفاخرة',
       href: '/blog/flight-crew/private-aviation-uniform-design-luxury',
-      image: '/images/aviation_uniforms/luxury_aviation_uniforms.jpg',
+      image: '/images/aviation_uniforms/luxury_private_jet_uniforms.jpg',
       category: 'الطيران الخاص',
       readTime: '9 دقائق'
     },
@@ -53,7 +61,7 @@ export default function FlightCrewPage() {
       title: 'كيفية اختيار الأقمشة المناسبة لأزياء الطيران في المناخ السعودي',
       description: 'دليل شامل لاختيار أفضل الأقمشة المناسبة للمناخ الحار في المملكة',
       href: '/blog/flight-crew/how-to-choose-suitable-fabrics-for-aviation-uniforms-in-saudi-climate',
-      image: '/images/aviation_uniforms/fabric_selection_guide.jpg',
+      image: '/images/aviation_uniforms/how-to-choose-suitable-fabrics-for-aviation-uniforms-in-saudi-climate-banner.jpg',
       category: 'الأقمشة',
       readTime: '11 دقائق'
     },
@@ -61,7 +69,7 @@ export default function FlightCrewPage() {
       title: 'أزياء خدمات الأرض: الوظائف والعلامة التجارية',
       description: 'تصميم أزياء فعالة لفرق خدمات الأرض في المطارات',
       href: '/blog/flight-crew/ground-service-uniforms-functionality-branding',
-      image: '/images/aviation_uniforms/ground_services_uniforms.jpg',
+      image: '/images/aviation_uniforms/ground_service_uniforms.jpg',
       category: 'خدمات الأرض',
       readTime: '7 دقائق'
     },
@@ -69,7 +77,7 @@ export default function FlightCrewPage() {
       title: 'تأثير الأزياء على معنويات وأداء طاقم الطيران',
       description: 'كيف تؤثر جودة وتصميم الأزياء على أداء ورضا طاقم الطيران',
       href: '/blog/flight-crew/aviation-uniforms-impact-crew-morale-performance',
-      image: '/images/aviation_uniforms/crew_performance_uniforms.jpg',
+      image: '/images/aviation_uniforms/crew_morale.jpg',
       category: 'الأداء',
       readTime: '13 دقائق'
     },
@@ -77,13 +85,13 @@ export default function FlightCrewPage() {
       title: 'ابتكارات تقنية الأقمشة في صناعة الطيران',
       description: 'أحدث التقنيات والابتكارات في أقمشة أزياء الطيران',
       href: '/blog/flight-crew/aviation-fabric-technology-innovations',
-      image: '/images/aviation_uniforms/fabric_technology_innovation.jpg',
+      image: '/images/aviation_uniforms/aviation_fabric_technology.jpg',
       category: 'التقنية',
       readTime: '14 دقائق'
     }
   ];
 
-  const categories = [
+  const categoryList = [
     { name: 'جميع المقالات', count: articles.length },
     { name: 'التصميم', count: articles.filter(a => a.category === 'التصميم').length },
     { name: 'السلامة', count: articles.filter(a => a.category === 'السلامة').length },
@@ -96,10 +104,11 @@ export default function FlightCrewPage() {
     { name: 'خدمات الأرض', count: articles.filter(a => a.category === 'خدمات الأرض').length }
   ];
 
-  // Filter articles based on selected category
-  const filteredArticles = selectedCategory === 'جميع المقالات' 
-    ? articles 
-    : articles.filter(article => article.category === selectedCategory);
+  // Server-side initial category (will be updated by client-side JS)
+  const initialCategory = 'جميع المقالات';
+
+  // Server-side filtered articles
+  const filteredArticles = articles;
 
   return (
     <main className="max-w-7xl mx-auto px-4 py-8">
@@ -163,13 +172,14 @@ export default function FlightCrewPage() {
         <aside className="lg:col-span-1">
           <div className="bg-white rounded-xl shadow-lg p-6 sticky top-8">
             <h3 className="text-xl font-bold mb-6 text-gray-800">التصنيفات</h3>
-            <ul className="space-y-3">
-              {categories.map((category, index) => (
+            <ul className="space-y-3" id="category-list">
+              {categoryList.map((category, index) => (
                 <li key={index}>
-                  <button 
-                    onClick={() => setSelectedCategory(category.name)}
-                    className={`w-full text-right p-3 rounded-lg transition-colors ${
-                      selectedCategory === category.name
+                  <a 
+                    href={`#${encodeURIComponent(category.name)}`}
+                    data-category={category.name}
+                    className={`block w-full text-right p-3 rounded-lg transition-colors ${
+                      category.name === initialCategory
                         ? 'bg-primary text-white' 
                         : 'hover:bg-gray-100 text-gray-700'
                     }`}
@@ -177,14 +187,14 @@ export default function FlightCrewPage() {
                     <div className="flex justify-between items-center">
                       <span>{category.name}</span>
                       <span className={`text-sm px-2 py-1 rounded-full ${
-                        selectedCategory === category.name
+                        category.name === initialCategory
                           ? 'bg-white/20' 
                           : 'bg-gray-200 text-gray-600'
                       }`}>
                         {category.count}
                       </span>
                     </div>
-                  </button>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -216,58 +226,55 @@ export default function FlightCrewPage() {
         {/* Main Content */}
         <main className="lg:col-span-3">
           {/* Featured Article */}
-          {selectedCategory === 'جميع المقالات' && (
-            <section className="mb-12">
-              <h2 className="text-2xl font-bold mb-6 text-gray-800">المقال المميز</h2>
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-                <div className="relative h-64 md:h-80">
-                  <Image
-                    src="/images/aviation_uniforms/professional_crew_uniforms.jpg"
-                    alt="أزياء طاقم الطيران المهنية"
-                    fill
-                    style={{ objectFit: 'cover' }}
-                    className="transition-transform duration-300 hover:scale-105"
-                  />
-                  <div className="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
-                    مميز
-                  </div>
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-4 mb-3 text-sm text-gray-500">
-                    <span className="bg-primary/10 text-primary px-2 py-1 rounded">صورة الشركة</span>
-                    <span>8 دقائق للقراءة</span>
-                    <span>{new Date().toLocaleDateString('ar-SA')}</span>
-                  </div>
-                  <h3 className="text-xl font-bold mb-3 text-gray-800">
-                    أهمية الأزياء المهنية لطاقم الطيران في صورة الشركة
-                  </h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed">
-                    تلعب أزياء طاقم الطيران دوراً محورياً في تشكيل الانطباع الأول للمسافرين وبناء ثقتهم في شركة الطيران. 
-                    اكتشف كيف يمكن للتصميم المدروس والجودة العالية أن تعزز من صورة علامتك التجارية.
-                  </p>
-                  <Link 
-                    href="/blog/flight-crew/importance-of-professional-aviation-crew-uniforms-company-image"
-                    className="inline-flex items-center text-primary font-medium hover:underline"
-                  >
-                    اقرأ المزيد
-                    <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                    </svg>
-                  </Link>
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold mb-6 text-gray-800">المقال المميز</h2>
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="relative h-64 md:h-80">
+                <Image
+                  src="/images/aviation_uniforms/aviation_uniform_visual_identity.jpg"
+                  alt="أزياء طاقم الطيران المهنية"
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  className="transition-transform duration-300 hover:scale-105"
+                />
+                <div className="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
+                  مميز
                 </div>
               </div>
-            </section>
-          )}
+              <div className="p-6">
+                <div className="flex items-center gap-4 mb-3 text-sm text-gray-500">
+                  <span className="bg-primary/10 text-primary px-2 py-1 rounded">صورة الشركة</span>
+                  <span>8 دقائق للقراءة</span>
+                  <span>{new Date().toLocaleDateString('ar-SA')}</span>
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-gray-800">
+                  أهمية الأزياء المهنية لطاقم الطيران في صورة الشركة
+                </h3>
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  تلعب أزياء طاقم الطيران دوراً محورياً في تشكيل الانطباع الأول للمسافرين وبناء ثقتهم في شركة الطيران. 
+                  اكتشف كيف يمكن للتصميم المدروس والجودة العالية أن تعزز من صورة علامتك التجارية.
+                </p>
+                <Link 
+                  href="/blog/flight-crew/importance-of-professional-aviation-crew-uniforms-company-image"
+                  className="inline-flex items-center text-primary font-medium hover:underline"
+                >
+                  اقرأ المزيد
+                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+          </section>
 
           {/* Articles Grid */}
           <section>
-            <h2 className="text-2xl font-bold mb-6 text-gray-800">
-              {selectedCategory === 'جميع المقالات' ? 'جميع المقالات' : `مقالات ${selectedCategory}`}
-              <span className="text-sm font-normal text-gray-500 mr-2">({filteredArticles.length} مقال)</span>
+            <h2 className="text-2xl font-bold mb-6 text-gray-800" id="articles-heading">
+              جميع المقالات
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6" id="articles-grid">
               {filteredArticles.map((article, index) => (
-                <article key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <article key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300" data-category={article.category}>
                   <div className="relative h-48">
                     <Image
                       src={article.image}
@@ -303,22 +310,85 @@ export default function FlightCrewPage() {
                 </article>
               ))}
             </div>
-
-            {/* No Results Message */}
-            {filteredArticles.length === 0 && (
-              <div className="text-center py-12">
-                <div className="text-gray-400 text-6xl mb-4">📝</div>
-                <h3 className="text-xl font-semibold text-gray-600 mb-2">لا توجد مقالات في هذا التصنيف</h3>
-                <p className="text-gray-500">جرب تصنيفاً آخر أو تصفح جميع المقالات</p>
-                <button 
-                  onClick={() => setSelectedCategory('جميع المقالات')}
-                  className="mt-4 bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors"
-                >
-                  عرض جميع المقالات
-                </button>
-              </div>
-            )}
           </section>
+
+          {/* Client-side script to handle category filtering */}
+          <script dangerouslySetInnerHTML={{
+            __html: `
+              document.addEventListener('DOMContentLoaded', function() {
+                // Get all category links
+                const categoryLinks = document.querySelectorAll('#category-list a');
+                const articlesHeading = document.getElementById('articles-heading');
+                const articles = document.querySelectorAll('#articles-grid article');
+                
+                // Initial setup based on hash
+                updateCategoryUI();
+                
+                // Add click event listeners to category links
+                categoryLinks.forEach(link => {
+                  link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const category = this.getAttribute('data-category');
+                    window.location.hash = encodeURIComponent(category);
+                    updateCategoryUI();
+                  });
+                });
+                
+                // Listen for hash changes
+                window.addEventListener('hashchange', updateCategoryUI);
+                
+                function updateCategoryUI() {
+                  const hash = window.location.hash.replace('#', '');
+                  const selectedCategory = hash ? decodeURIComponent(hash) : 'جميع المقالات';
+                  
+                  // Update category buttons
+                  categoryLinks.forEach(link => {
+                    const category = link.getAttribute('data-category');
+                    const isActive = category === selectedCategory;
+                    
+                    if (isActive) {
+                      link.classList.add('bg-primary', 'text-white');
+                      link.classList.remove('hover:bg-gray-100', 'text-gray-700');
+                      const badge = link.querySelector('span:last-child');
+                      if (badge) {
+                        badge.classList.add('bg-white/20');
+                        badge.classList.remove('bg-gray-200', 'text-gray-600');
+                      }
+                    } else {
+                      link.classList.remove('bg-primary', 'text-white');
+                      link.classList.add('hover:bg-gray-100', 'text-gray-700');
+                      const badge = link.querySelector('span:last-child');
+                      if (badge) {
+                        badge.classList.remove('bg-white/20');
+                        badge.classList.add('bg-gray-200', 'text-gray-600');
+                      }
+                    }
+                  });
+                  
+                  // Update articles display
+                  let visibleCount = 0;
+                  
+                  articles.forEach(article => {
+                    const category = article.getAttribute('data-category');
+                    
+                    if (selectedCategory === 'جميع المقالات' || category === selectedCategory) {
+                      article.style.display = '';
+                      visibleCount++;
+                    } else {
+                      article.style.display = 'none';
+                    }
+                  });
+                  
+                  // Update heading
+                  if (articlesHeading) {
+                    articlesHeading.textContent = selectedCategory === 'جميع المقالات' 
+                      ? 'جميع المقالات' 
+                      : 'مقالات: ' + selectedCategory;
+                  }
+                }
+              });
+            `
+          }} />
 
           {/* Call to Action */}
           <section className="mt-12 bg-gradient-to-r from-primary to-accent text-white rounded-xl p-8 text-center">
