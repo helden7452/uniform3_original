@@ -522,7 +522,7 @@ export default function ArticlePage() {
         slug="housekeeping-uniform-comfortable-and-practical-design"
         author={author}
         publishDate="2024-11-18"
-        coverImage="/images/hospitality-uniforms/housekeeping-design.jpg"
+        coverImage="/images/hospitality_uniforms/housekeeping-uniform-comfortable-and-practical-design.jpg"
         readingTime="17 دقيقة للقراءة"
         tags={["زي التدبير المنزلي", "زي الضيافة", "تصميم مريح", "زي الفنادق", "التدبير المنزلي"]}
       />

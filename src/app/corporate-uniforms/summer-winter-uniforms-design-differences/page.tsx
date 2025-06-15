@@ -538,7 +538,7 @@ export default function SummerWinterUniformsPage() {
       author={author}
       slug="summer-winter-uniforms-design-differences"
       publishDate="2024-12-19"
-      coverImage="/images/corporate_uniforms.jpg"
+      coverImage="/images/corporate_uniforms/summer-winter-uniforms-design-differences.jpg"
       readingTime="25 دقيقة"
       category="التصميم الموسمي"
       tags={["أزياء صيفية شتوية", "تصميم موسمي", "أقمشة موسمية", "يونيفورم فصلي", "ملابس عمل موسمية", "تصاميم مناخية"]}

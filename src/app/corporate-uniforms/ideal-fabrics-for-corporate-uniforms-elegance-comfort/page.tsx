@@ -424,7 +424,7 @@ export default function ArticlePage() {
         slug="ideal-fabrics-for-corporate-uniforms-elegance-comfort"
         author={author}
         publishDate="2024-11-20"
-        coverImage="/images/corporate-uniforms/ideal-fabrics.jpg"
+        coverImage="/images/corporate_uniforms/ideal-fabrics-for-corporate-uniforms-elegance-comfort.jpg"
         readingTime="19 دقيقة للقراءة"
         tags={["أقمشة الزي الموحد", "أقمشة مؤسسية", "راحة الأقمشة", "جودة الأقمشة", "أقمشة أنيقة"]}
       />

@@ -22,7 +22,7 @@ export default function HistoryEvolutionSaudiAirlinesUniformPage() {
       <article className="bg-white rounded-lg shadow-md overflow-hidden mt-6">
         <div className="relative h-[400px] w-full">
           <Image
-            src="/images/aviation-uniforms/saudi-airlines-uniform-history.jpg"
+            src="/images/aviation_uniforms/history-evolution-saudi-airlines-uniform-header.jpg"
             alt="تاريخ وتطور زي الخطوط الجوية العربية السعودية"
             fill
             style={{ objectFit: 'cover' }}

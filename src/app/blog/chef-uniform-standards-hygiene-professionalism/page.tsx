@@ -48,7 +48,7 @@ export default function ChefUniformStandardsHygieneProfessionalism() {
 
 **الأكمام الطويلة**: ضرورية لحماية الذراعين من الحروق والبقع. يُفضل أن تكون قابلة للطي عند الكوع مع أزرار أو كبسات تثبيت.
 
-**الجيوب الوظيفية**: جيب صدر للترمومتر والأقلام، جيوب جانبية للمناشف والأدوات الصغيرة. يجب أن تكون محكمة الإغلاق لمنع سقوط الأدوات في الطعام.
+**الجيوب الوظيفية**: جيب صدر للترمومتر والأقلام، جيوب جانبية للمناشف والأدوات الصغيرة。 يجب أن تكون محكمة الإغلاق لمنع سقوط الأدوات في الطعام.
 
 #### مواصفات القماش:
 - **المادة**: 65% قطن، 35% بوليستر للمتانة وسهولة العناية
@@ -411,7 +411,7 @@ export default function ChefUniformStandardsHygieneProfessionalism() {
         image: "/images/authors/abdullah-alshahri.jpg"
       }}
       publishDate="2024-01-30"
-      coverImage="/images/hospitality-uniforms/chef-uniform-standards.jpg"
+      coverImage="/images/hospitality_uniforms/chef-uniform-standards-for-hygiene-and-professionalism.jpg"
       readingTime="20 دقيقة"
       tags={['سلامة الغذاء', 'النظافة الصحية', 'معايير المطاعم', 'زي الطهاة', 'الاحترافية المهنية']}
     />

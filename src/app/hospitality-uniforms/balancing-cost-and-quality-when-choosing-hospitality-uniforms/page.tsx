@@ -397,7 +397,7 @@ export default function ArticlePage() {
         slug="balancing-cost-and-quality-when-choosing-hospitality-uniforms"
         author={author}
         publishDate="2024-11-15"
-        coverImage="/images/hospitality-uniforms/cost-quality-balance.jpg"
+        coverImage="/images/hospitality_uniforms/balancing-cost-and-quality-when-choosing-hospitality-uniforms.jpg"
         readingTime="16 دقيقة للقراءة"
         tags={["زي الضيافة", "التوازن بين التكلفة والجودة", "عائد الاستثمار", "إدارة التكاليف", "جودة الأزياء"]}
       />

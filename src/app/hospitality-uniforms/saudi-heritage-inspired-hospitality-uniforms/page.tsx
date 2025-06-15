@@ -520,7 +520,7 @@ export default function SaudiHeritageInspiredUniformsPage() {
       author={author}
       slug="saudi-heritage-inspired-hospitality-uniforms"
       publishDate="2024-12-19"
-      coverImage="/images/hospitality_uniforms.jpg"
+      coverImage="/images/hospitality_uniforms/saudi-heritage-inspired-hospitality-uniforms.jpg"
       readingTime="26 دقيقة"
       category="التراث والتصميم"
       tags={["زي تراثي سعودي", "ضيافة تراثية", "تصاميم أصيلة", "هوية ثقافية", "تراث سعودي", "أزياء تقليدية عصرية"]}

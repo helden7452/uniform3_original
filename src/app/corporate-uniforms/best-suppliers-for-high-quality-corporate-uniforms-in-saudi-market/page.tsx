@@ -537,7 +537,7 @@ export default function ArticlePage() {
         slug="best-suppliers-for-high-quality-corporate-uniforms-in-saudi-market"
         author={author}
         publishDate="2024-11-10"
-        coverImage="/images/corporate-uniforms/best-suppliers.jpg"
+        coverImage="/images/corporate_uniforms/best-suppliers-for-high-quality-corporate-uniforms-in-saudi-market.jpg"
         readingTime="18 دقيقة للقراءة"
         tags={["موردي الزي الموحد", "موردين سعوديين", "جودة الزي الموحد", "مصانع الأزياء", "الموردين المحليين"]}
       />

@@ -390,7 +390,7 @@ export default function ArticlePage() {
         slug="accessories-complementing-corporate-uniforms"
         author={author}
         publishDate="2024-11-20"
-        coverImage="/images/corporate-uniforms/accessories.jpg"
+        coverImage="/images/corporate_uniforms/accessories-complementing-corporate-uniforms.jpg"
         readingTime="14 دقيقة للقراءة"
         tags={["إكسسوارات الزي الموحد", "الإكسسوارات المهنية", "التنسيق المؤسسي", "الأناقة المهنية", "التقنيات الذكية"]}
       />

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "قصص نجاح: فنادق ومطاعم سعودية تميزت بالزي الموحد الفريد",
     description: "استكشف قصص النجاح الملهمة للفنادق والمطاعم السعودية الرائدة",
-    images: ['/images/hospitality_uniforms.jpg'],
+    images: ['/images/hospitality_uniforms/success-stories-saudi-hotels-restaurants-with-unique-uniforms.jpg'],
   },
 };
 
@@ -576,7 +576,7 @@ export default function SuccessStoriesPage() {
       author={author}
       slug="success-stories-saudi-hotels-restaurants-with-unique-uniforms"
       publishDate="2024-12-19"
-      coverImage="/images/hospitality_uniforms.jpg"
+      coverImage="/images/hospitality_uniforms/success-stories-saudi-hotels-restaurants-with-unique-uniforms.jpg"
       readingTime="28 دقيقة"
       category="قصص نجاح"
       tags={["قصص نجاح فنادق سعودية", "أزياء فريدة مطاعم", "تجربة ضيوف", "ضيافة سعودية", "يونيفورم مميز", "نجاح زي ضيافة"]}
