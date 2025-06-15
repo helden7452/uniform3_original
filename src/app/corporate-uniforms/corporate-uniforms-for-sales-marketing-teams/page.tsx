@@ -353,7 +353,7 @@ export default function ArticlePage() {
         slug="corporate-uniforms-for-sales-marketing-teams"
         author={author}
         publishDate="2024-11-30"
-        coverImage="/images/corporate-uniforms/sales-marketing-teams.jpg"
+        coverImage="/images/corporate_uniforms/corporate-uniforms-for-sales-marketing-teams.jpg"
         readingTime="15 دقيقة للقراءة"
         tags={["زي المبيعات", "زي التسويق", "الإقناع والمبيعات", "علم النفس التجاري", "الثقة المهنية"]}
       />

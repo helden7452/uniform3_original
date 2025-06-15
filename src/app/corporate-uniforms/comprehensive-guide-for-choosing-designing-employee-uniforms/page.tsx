@@ -562,7 +562,7 @@ export default function ArticlePage() {
         slug="comprehensive-guide-for-choosing-designing-employee-uniforms"
         author={author}
         publishDate="2024-11-10"
-        coverImage="/images/corporate-uniforms/comprehensive-guide.jpg"
+        coverImage="/images/corporate_uniforms/comprehensive-guide-for-choosing-designing-employee-uniforms.jpg"
         readingTime="25 دقيقة للقراءة"
         tags={["دليل الزي الموحد", "تصميم زي الموظفين", "اختيار الزي المؤسسي", "إدارة الزي الموحد", "الهوية المؤسسية"]}
       />

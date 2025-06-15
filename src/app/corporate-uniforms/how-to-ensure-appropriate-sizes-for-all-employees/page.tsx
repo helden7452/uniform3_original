@@ -429,7 +429,7 @@ export default function ArticlePage() {
         slug="how-to-ensure-appropriate-sizes-for-all-employees"
         author={author}
         publishDate="2024-12-15"
-        coverImage="/images/corporate-uniforms/sizing-guide.jpg"
+        coverImage="/images/corporate_uniforms/how-to-ensure-appropriate-sizes-for-all-employees.jpg"
         readingTime="16 دقيقة للقراءة"
         tags={["مقاسات الزي الموحد", "تقنيات القياس", "إدارة المقاسات", "التخصيص المؤسسي", "تحسين الإنتاجية"]}
       />

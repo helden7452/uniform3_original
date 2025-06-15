@@ -543,7 +543,7 @@ export default function ArticlePage() {
         slug="differences-between-administrative-frontline-staff-uniforms"
         author={author}
         publishDate="2024-11-25"
-        coverImage="/images/corporate-uniforms/admin-frontline-differences.jpg"
+        coverImage="/images/corporate_uniforms/differences-between-administrative-frontline-staff-uniforms.jpg"
         readingTime="16 دقيقة للقراءة"
         tags={["الزي الإداري", "زي الخطوط الأمامية", "الفروق بين الأزياء", "التمييز الوظيفي", "الهيكل التنظيمي"]}
       />

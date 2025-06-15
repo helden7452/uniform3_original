@@ -257,7 +257,7 @@ export default function ArticlePage() {
         slug="common-mistakes-to-avoid-when-choosing-corporate-uniforms"
         author={author}
         publishDate="2024-12-10"
-        coverImage="/images/corporate-uniforms/common-mistakes.jpg"
+        coverImage="/images/corporate_uniforms/common-mistakes-to-avoid-when-choosing-corporate-uniforms.jpg"
         readingTime="12 دقيقة للقراءة"
         tags={["أخطاء الزي الموحد", "اختيار الزي المؤسسي", "أفضل الممارسات", "إدارة الزي الموحد", "نصائح الخبراء"]}
       />

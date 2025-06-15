@@ -386,7 +386,7 @@ export default function ArticlePage() {
         slug="summer-winter-corporate-uniforms-design-material-differences"
         author={author}
         publishDate="2024-11-25"
-        coverImage="/images/corporate-uniforms/seasonal-uniforms.jpg"
+        coverImage="/images/corporate_uniforms/summer-winter-corporate-uniforms-design-material-differences.jpg"
         readingTime="17 دقيقة للقراءة"
         tags={["الزي الموحد الصيفي", "الزي الموحد الشتوي", "أقمشة موسمية", "تصميم مناخي", "راحة الموظفين"]}
       />

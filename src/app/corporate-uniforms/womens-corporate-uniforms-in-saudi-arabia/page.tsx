@@ -507,7 +507,7 @@ export default function WomensCorporateUniformsPage() {
       author={author}
       slug="womens-corporate-uniforms-in-saudi-arabia"
       publishDate="2024-12-19"
-      coverImage="/images/corporate_uniforms.jpg"
+      coverImage="/images/corporate_uniforms/womens-corporate-uniforms-in-saudi-arabia.jpg"
       readingTime="27 دقيقة"
       category="الأزياء النسائية"
       tags={["زي نسائي شركات", "يونيفورم نساء", "أزياء مهنية محتشمة", "زي موحد سعودي", "ملابس عمل نسائية", "تصاميم مهنية"]}

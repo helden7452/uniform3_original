@@ -425,7 +425,7 @@ export default function ArticlePage() {
         slug="latest-fashion-trends-in-corporate-uniform-design"
         author={author}
         publishDate="2024-11-15"
-        coverImage="/images/corporate-uniforms/fashion-trends.jpg"
+        coverImage="/images/corporate_uniforms/latest-fashion-trends-in-corporate-uniform-design.jpg"
         readingTime="16 دقيقة للقراءة"
         tags={["اتجاهات الموضة", "تصميم الزي الموحد", "موضة مؤسسية", "تطورات التصميم", "أزياء عصرية"]}
       />

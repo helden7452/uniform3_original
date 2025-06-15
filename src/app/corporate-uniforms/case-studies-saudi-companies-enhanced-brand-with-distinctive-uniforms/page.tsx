@@ -414,7 +414,7 @@ export default function ArticlePage() {
         slug="case-studies-saudi-companies-enhanced-brand-with-distinctive-uniforms"
         author={author}
         publishDate="2024-12-05"
-        coverImage="/images/corporate-uniforms/saudi-case-studies.jpg"
+        coverImage="/images/corporate_uniforms/case-studies-saudi-companies-enhanced-brand-with-distinctive-uniforms.jpg"
         readingTime="18 دقيقة للقراءة"
         tags={["دراسات حالة سعودية", "الزي الموحد والعلامة التجارية", "قصص نجاح", "الهوية المؤسسية", "التميز التجاري"]}
       />
